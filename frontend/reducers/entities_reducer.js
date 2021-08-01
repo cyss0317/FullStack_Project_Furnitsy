@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 import { UsersReducer } from "./users_reducer";
 
-const EntitiesReducer = (combineReducers => {
+const EntitiesReducer = combineReducers ({
     users: UsersReducer
 })
 

@@ -1,7 +1,7 @@
 //takes care of the actions and returns a correspoding value
 import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from "../actions/session_actions";
 
-const SessionReducer = (oldState, action) => {
+const SessionReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
 
     switch (action.type) {
