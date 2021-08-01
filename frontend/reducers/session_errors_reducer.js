@@ -15,4 +15,4 @@ const SessionErrorsReducer = (oldState = [], action) => {
 }
 
 
-export default SessionSessionErrors;
+export default SessionErrorsReducer;
