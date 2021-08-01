@@ -1,13 +1,15 @@
 class Api::SessionsController < ApplicationController
-    require
+
+    before_action :require_login, only: [:destroy]
+
     def create
-        @user = User.find_by_credential(params[:user][:username], params[:user][:password])
+        @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
 
         if @user
             login!(@user)
-            render "api/users"
+            render json: ["successful"]
         else
-            render json: ["Invalid username or password"], status: 401
+            render json: ["Invalid email or password"], status: 401
         end
     end
 
@@ -15,8 +17,6 @@ class Api::SessionsController < ApplicationController
         @user = current_user
         if @user
             logout!
-            render  "api/users"
-        else
             render json: ["Successfully logged out"]
         end
 
