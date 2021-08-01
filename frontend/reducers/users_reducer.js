@@ -12,4 +12,4 @@ const UsersReducer = (oldState = {}, action) => {
 }
 
 
-export const UsersReducer;
+export default UsersReducer;

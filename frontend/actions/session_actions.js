@@ -1,7 +1,7 @@
 import * as SessionApiUtil from "../util/session_api_util";
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER"
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER"
-export const RECEIVE_ERRORS = "RECEIVE_ERRORS"
+export const RECEIVE_SESSION_ERRORS = "RECEIVE_ERRORS"
 
 //wrtie action creators
 export const receiveCurrentUser = (currentUser) => ({
@@ -12,18 +12,18 @@ export const receiveCurrentUser = (currentUser) => ({
 export const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER,
 })
-export const receiveCurrentUser = (errors) => ({
-    type: RECEIVE_ERRORS,
+export const receiveErrors = (errors) => ({
+    type: RECEIVE_SESSION_ERRORS,
     errors
 })
 
 //thunk action creator
-export const login! = (user) => dispatch => (
+export const login = (user) => dispatch => (
     SessionApiUtil.$login(user)
         .then(res =>  dispatch(receiveCurrentUser(res)))
 )
 
-export const logout! = () => dispatch => (
+export const logout = () => dispatch => (
     SessionApiUtil.$login(user)
         .then(() => dispatch(logoutCurrentUser(user)))
 )
