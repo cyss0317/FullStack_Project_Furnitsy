@@ -14,5 +14,4 @@ document.addEventListener("DOMContentLoaded", () => {
     ReactDOM.render( <h1>react is working</h1>, root )
 
 
-
 })
