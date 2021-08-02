@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Greeting = (props) => {
-
+    
     const ifLoggedIn = () => (
+
         <div className="welcome-message-and-logout-button">
             <h3 className='welcome-message'>Welcom, {props.currentUser.first_name}</h3>
             <button className="logout-button" onClick={props.logout} >Logout</button>
@@ -17,7 +19,7 @@ const Greeting = (props) => {
         </div>
     )
 
-    return currentUser ? ifLoggedIn() : ifLoggedOut();
+    return props.currentUser ? ifLoggedIn() : ifLoggedOut();
 
 }
 
