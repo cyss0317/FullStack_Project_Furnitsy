@@ -13,7 +13,8 @@ class SessionForm extends React.Component {
 
     submitHandler(e){
         e.preventDefault();
-        this.props.action(this.props.formType);
+        const user = Object.assign({}, this.state)
+        this.props.action(user);
     }
 
     changeHandler(field){
@@ -24,6 +25,9 @@ class SessionForm extends React.Component {
         return (
             <div className="session-container">
                 <form  className="session-forms"onSubmit={this.submitHandler}>
+                    Welcome to Furnitsy!
+                    <br />
+                    Please {this.props.formType}
                     <label >Email:
                         <input className="session-forms-email" type="text" value={this.state.email} onChange={this.changeHandler("email")} />
                     </label>
@@ -33,7 +37,7 @@ class SessionForm extends React.Component {
                     <label  >First name:
                         <input className="session-forms-first_name" type="text" value={this.state.first_name} onChange={this.changeHandler("first_name")} />
                     </label>
-                    <button value={this.props.formType}>{this.props.formType}</button>
+                    <input type="submit" className="session-form-submit"value={this.props.formType}></input>
                 </form>
             </div>
         )
