@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"; 
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -49,7 +50,7 @@ class SessionForm extends React.Component {
     }
 
     closingButton(){
-        <Link to={}></Link>
+        <Link to='/'></Link>
     }
 
 
@@ -57,8 +58,11 @@ class SessionForm extends React.Component {
 
         return (
             <div className="session-container">
-                <section className="modal-screen"></section>
-                <span className="x-closing-button" onClick={this.closingButton}>&#215;</span>
+                
+                <div>
+                    <span className="x-closing-button" onClick={this.closingButton}>&#215;</span>
+                    <a href="/3000"></a>
+                </div>
                     <form  className="session-forms"onSubmit={this.submitHandler}>
                         <p className="welcome-message"> Welcome to <span className="furnitsy-logo">Furnitsy</span>! </p>
                         <p className="form-type-message"> Please {this.props.formType} </p>
@@ -98,7 +102,7 @@ class SessionForm extends React.Component {
                         </div>
                     </form>
 
-                
+                <section className="modal-screen"></section>
             </div>
         )
     }

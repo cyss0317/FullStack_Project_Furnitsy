@@ -6,7 +6,7 @@ const Greeting = (props) => {
     const ifLoggedIn = () => (
 
         <div className="welcome-message-and-logout-button">
-            <h3 className='welcome-message'>Welcome, {props.currentUser.first_name}</h3>
+            <p className='welcome-message'>Welcome, {props.currentUser.first_name}</p>
             <button className="logout-button" onClick={props.logout} >Logout</button>
         </div>
     )

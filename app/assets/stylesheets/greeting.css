@@ -1,11 +1,11 @@
 
  /* sign up and sign in styling */
- .signup-login {
+ .signup-login, .welcome-message-and-logout-button {
 	position: absolute;
     top: 8px;
     right: 8px;
 	background-color: white;
-    font-size: 13px;
+    font-size: 15px;
 
  }
  .signup {
@@ -44,6 +44,11 @@
 	background-color: #d7cec7;
 	border-radius: 10px;
 	color: white;
+ }
+
+ .welcome-message-and-logout-button{
+     display: flex;
+     flex-direction: column;
  }
 
 
