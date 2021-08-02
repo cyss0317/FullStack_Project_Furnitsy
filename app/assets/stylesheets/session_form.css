@@ -1,0 +1,167 @@
+/* session form submit buttons styling */
+ .buttons {
+	width: 100%px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+ }
+
+ .session-form-submit {
+	background-color: #565656; /* dark gray */
+	border: none;
+	color: white;
+	padding: 4px 13px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 13px;
+	margin-right:8px;
+	box-shadow: 3px 3px 3px rgb(99, 96, 91);
+ }
+
+ .demo-button {
+	background-color: #565656; /* dark gray */
+	border: none;
+	color: white;
+	padding: 4px 13px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 13px;
+	margin-left:8px;
+	box-shadow: 3px 3px 3px rgb(99, 96, 91);
+ }
+
+
+ .session-form-submit:hover {
+	cursor: pointer;
+	box-shadow: 2px 2px 2px rgb(121, 119, 117);
+ }
+
+ .demo-button:hover {
+	cursor: pointer;
+	box-shadow: 2px 2px 2px rgb(121, 119, 117);
+ }
+
+
+ .logout-button {
+	background-color: #565656; /* dark gray */
+	border: none;
+	color: white;
+	padding: 4px 13px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 13px;
+ }
+
+
+ .logout-button:hover {
+	cursor: pointer;
+ }
+
+ .input-sections {
+	height: 130px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly; 
+
+ }
+
+ /* messages */
+
+ .welcome-message{
+	 font-size: 24px;
+ }
+
+ .form-type-message {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-weight: bold;
+ }
+
+ .furnitsy-logo {
+	font-size: 30px;
+	font-weight: bold;
+	color: #c09f80;
+ }
+
+
+ .session-container {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	border: #565656;
+	box-shadow: 1px 5px 5px rgb(104, 102, 102);
+	padding: 20px;
+	padding-bottom: 40px;
+ }
+
+ .session-forms {
+
+	 margin-top: 50px;
+	 display: flex;
+	 flex-direction: column;
+	align-items: center;
+ }
+
+ .form-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: .5em;
+  }
+  .form-row  {
+    padding: .5em 1em .5em 0;
+    flex: 1;
+  }
+  .form-row  {
+    flex: 2;
+  }
+
+
+
+  /* error styling */
+
+  .errors-container {
+    display: flex;
+
+	height: 60px;
+    color: red;
+  }
+  .error {
+      margin-bottom: 8px;
+  }
+
+/* x-closing button */
+  .x-closing-button {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      line-height: 2;
+  }
+
+  .x-closing-button:hover {
+    cursor: pointer;
+    color: red;
+  }
+  /* modal-screen */
+
+  .modal-screen {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  }
+
+

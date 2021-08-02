@@ -19,7 +19,7 @@ const App = () => {
             <AuthRoute path="/signup" component={SignupFormContainer}/>
         </Switch>
     </div>
-    )
+    )   
 };
 
 export default App;
