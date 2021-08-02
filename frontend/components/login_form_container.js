@@ -8,7 +8,8 @@ const mSTP = (state, ownProps) => ({
 })
 
 const mDTP = (dispatch) => ({
-    action: user => dispatch(login(user))
+    action: user => dispatch(login(user)),
+    login: user => dispatch(login(user))
 })
 
 

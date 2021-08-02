@@ -14,15 +14,10 @@ const App = () => {
             <h1>Furnitsy</h1>
             <GreetingContainer />
         </header>
-        {/* <div>{
-            props.isFeatured ? (
-                <div className="featured_ovelay_icon">lol</div>
-
-            ) : ("")
-        }
-        </div> */}
-        <AuthRoute path="/login" component={LoginFormContainer} />
-        <AuthRoute path="/signup" component={SignupFormContainer}/>
+        <Switch>
+            <AuthRoute path="/login" component={LoginFormContainer} />
+            <AuthRoute path="/signup" component={SignupFormContainer}/>
+        </Switch>
     </div>
     )
 };

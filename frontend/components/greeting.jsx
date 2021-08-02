@@ -13,10 +13,9 @@ const Greeting = (props) => {
 
     const ifLoggedOut = () => (
         <div className="signup-login">
-            <h4>Please choose one of the options below</h4>
-            <Link to={`/signup`}>Sign Up</Link>
+            <Link className="signup"to={`/signup`}>Sign Up</Link>
             &nbsp;or&nbsp;
-            <Link to={`/login`}>Log In</Link>
+            <Link className="login" to={`/login`}>Log In</Link>
         </div>
     )
 
