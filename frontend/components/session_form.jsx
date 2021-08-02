@@ -60,12 +60,11 @@ class SessionForm extends React.Component {
             <div className="session-container">
                 
                 <div>
-                    <span className="x-closing-button" onClick={this.closingButton}>&#215;</span>
-                    <a href="/3000"></a>
+                    <a href="/" className="x-closing-button" >&#215;</a>
                 </div>
                     <form  className="session-forms"onSubmit={this.submitHandler}>
-                        <p className="welcome-message"> Welcome to <span className="furnitsy-logo">Furnitsy</span>! </p>
-                        <p className="form-type-message"> Please {this.props.formType} </p>
+                        <p className="welcome-message"><span className="furnitsy-logo">Sign in to continue</span> </p>
+                        <p className="form-type-message">  Sign in or register with your email address </p>
                         <div>
                             { 
                             this.props.errors.length > 0 ?(
@@ -76,20 +75,20 @@ class SessionForm extends React.Component {
 
                         <ul className="input-sections">
                             <li className="form-row">
-                                <label className="labels" >Email:    
-                                    <input className="session-forms-email" type="text" placeholder="ex)furnitsy@google.com" value={this.state.email} onChange={this.changeHandler("email")} />
+                                <label className="labels" >Email address    
+                                    <input id="session-forms" className="session-forms-email" type="text" placeholder="ex)furnitsy@google.com" value={this.state.email} onChange={this.changeHandler("email")} />
                                 </label>
                             </li>
                             <li className="form-row">
-                                <label className="labels">Password:
-                                    <input className="session-forms-password" type="password" placeholder="Enter Password" value={this.state.passowrd} onChange={this.changeHandler("password")} />
+                                <label className="labels">Password
+                                <input id="session-forms" className="session-forms-password" type="password" placeholder="Enter Password" value={this.state.passowrd} onChange={this.changeHandler("password")} />
                                 </label>
                             </li>
                             <li className="form-row">
                                 <div>
                                     {  this.props.formType === "Sign up" ? (
-                                        <label className="labels" >First name:
-                                            <input className="session-forms-first_name" type="text" placeholder="Enter First Name" value={this.state.first_name} onChange={this.changeHandler("first_name")} />
+                                        <label className="labels" >First name
+                                        <input id="session-forms" className="session-forms-first_name" type="text" placeholder="Enter First Name" value={this.state.first_name} onChange={this.changeHandler("first_name")} />
                                             </label>
                                     ) : ("")
                                     }     
