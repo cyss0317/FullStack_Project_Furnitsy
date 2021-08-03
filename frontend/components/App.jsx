@@ -5,11 +5,13 @@ import LoginFormContainer from "./login_form_container";
 import SignupFormContainer from "./signup_form_container"
 import { Route, Switch, Link } from "react-router";
 import { AuthRoute } from "../util/route_util";
+import Modal from "./modal"
 
 const App = () => {
 
     return(
    <div>
+       <Modal/>
         <header>
             <h1>Furnitsy</h1>
             <GreetingContainer />
