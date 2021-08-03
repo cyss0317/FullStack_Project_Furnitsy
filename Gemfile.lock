@@ -206,6 +206,7 @@ GEM
 PLATFORMS
   linux
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   annotate
@@ -235,4 +236,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   2.2.25
+   2.1.14
