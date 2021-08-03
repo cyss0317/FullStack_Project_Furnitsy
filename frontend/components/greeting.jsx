@@ -15,7 +15,7 @@ const Greeting = ({currentUser, logout, openModal}) => {
         <div className="signup-login">
                 {/* <Link className="signup"to={`/signup`}>Sign Up</Link> */}
             <button className='login' onClick={() => openModal("Login")}>Login</button>
-            &nbsp;or&nbsp;
+            &nbsp;<span className="or">or</span>&nbsp;
                 {/* <Link className="login" to={`/login`}>Log In</Link> */}
             <button className='signup' onClick={() => openModal("Sign Up")}>Sign Up</button>
         </div>
