@@ -17,13 +17,13 @@ class SessionForm extends React.Component {
 
         e.preventDefault();
         const user = Object.assign({}, this.state)
-        this.props.action(user);
+        this.props.action(user).then(this.props.closeModal);
     }
 
     demoHandler(e){
         e.preventDefault();
         const user = Object.assign({}, {id: 4, email: "demo_user", password: "password"})
-        this.props.login(user);
+        this.props.login(user).then(this.props.closeModal);
     }
 
     changeHandler(field){
@@ -39,7 +39,7 @@ class SessionForm extends React.Component {
                     errors.map((error) => {
                         return(
                         <li className="error" >
-                            {error}
+                            - {error}
                         </li>
                         )
                     })
@@ -49,18 +49,13 @@ class SessionForm extends React.Component {
         )
     }
 
-    closingButton(){
-        <Link to='/'></Link>
-    }
-
-
     render() {
 
         return (
             <div className="session-container">
                 
                 <div>
-                    <a href="/" className="x-closing-button" >&#215;</a>
+                    <div onClick={this.props.closeModal} className="x-closing-button" >&#215;</div>
                 </div>
                     <form  className="session-forms"onSubmit={this.submitHandler}>
                         <p className="welcome-message"><span className="furnitsy-logo">Sign in to continue</span> </p>
@@ -76,7 +71,7 @@ class SessionForm extends React.Component {
                         <ul className="input-sections">
                             <li className="form-row">
                                 <label className="labels" >Email address    
-                                    <input id="session-forms" className="session-forms-email" type="text" placeholder="ex)furnitsy@google.com" value={this.state.email} onChange={this.changeHandler("email")} />
+                                    <input id="session-forms" className="session-forms-email" type="text" placeholder="Enter Email" value={this.state.email} onChange={this.changeHandler("email")} />
                                 </label>
                             </li>
                             <li className="form-row">

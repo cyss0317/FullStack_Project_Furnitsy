@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         store = configureStore();
     }
+    window.login = login;
 
     window.getState = store.getState;
 

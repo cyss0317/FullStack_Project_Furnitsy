@@ -13,17 +13,17 @@ const Greeting = ({currentUser, logout, openModal}) => {
 
     const ifLoggedOut = () => (
         <div className="signup-login">
-            {/* <Link className="signup"to={`/signup`}>Sign Up</Link> */}
-            <button onClick={() => openModal("Login")}>Login</button>
+                {/* <Link className="signup"to={`/signup`}>Sign Up</Link> */}
+            <button className='login' onClick={() => openModal("Login")}>Login</button>
             &nbsp;or&nbsp;
-            {/* <Link className="login" to={`/login`}>Log In</Link> */}
-            <button onClick={() => openModal("Sign Up")}>Sign Up</button>
+                {/* <Link className="login" to={`/login`}>Log In</Link> */}
+            <button className='signup' onClick={() => openModal("Sign Up")}>Sign Up</button>
         </div>
     )
 
-    return currentUser ? ifLoggedIn(currentUser, logout) : ifLoggedOut();
+    return currentUser ? ifLoggedIn() : ifLoggedOut();
                     // ifLoggedIn(currentUser, logout)
-                    // question, why do we need to pass these as param
+                    // question1, why do we need to pass these as param
 
 }
 
