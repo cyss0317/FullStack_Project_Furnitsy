@@ -1,0 +1,198 @@
+/* session form submit buttons styling */
+ .buttons {
+	/* width: 100%px; */
+	margin-bottom: 1%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+	box-sizing: inherit;
+	width: inherit;
+	/* height: 80px; */
+
+ }
+.session-container {
+	background-color: white;
+	border-radius: 24px;
+	box-sizing: border-box;
+	border: #565656;
+	box-shadow: 1px 5px 5px rgb(104, 102, 102);
+	padding: 20px;
+	padding-bottom: 40px;
+    width: 300px;
+    height: 410px;
+}
+
+ .session-form-submit {
+	background-color: #565656; /* dark gray */
+	border: none;
+	color: white;
+
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	height: 38px;
+	border-radius: 24px;
+	font-size: 13px;
+	box-shadow: 3px 3px 3px rgb(99, 96, 91);
+
+ }
+
+ .demo-button {
+	background-color: #565656; /* dark gray */
+	border: none;
+	color: white;
+	text-align: center;
+	border-radius: 24px;
+	text-decoration: none;
+	width: 100%;
+	height: 38px;
+	margin: 7px;
+	display: inline-block;
+	font-size: 13px;
+	box-shadow: 3px 3px 3px rgb(99, 96, 91);
+ }
+.session-forms{
+	height: 390px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+
+ #session-forms{
+	 padding-top: 9px;
+	 padding-bottom: 9px;
+	 padding-right: 12px;
+	 padding-left: 12px;
+	 border-width: 1px;
+	 width: 90%;
+	 height: inherit;
+	 font-size: 14px;
+	 outline: none;
+	 display: inline-table;
+	 border-radius: 6px;
+	 border-color: #565656;
+ }
+
+ .session-form-submit:hover {
+	cursor: pointer;
+	box-shadow: 2px 2px 2px rgb(121, 119, 117);
+ }
+
+ .demo-button:hover {
+	cursor: pointer;
+	box-shadow: 2px 2px 2px rgb(121, 119, 117);
+ }
+
+
+ .logout-button {
+	background-color: #565656; /* dark gray */
+	border: none;
+	color: white;
+	padding: 4px 13px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 13px;
+ }
+
+
+ .logout-button:hover {
+	cursor: pointer;
+ }
+
+ .input-sections {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly; 
+
+ }
+
+ /* messages */
+
+
+
+ .form-type-message {
+
+	font-size: 10px;
+	font-weight: bold;
+ }
+
+
+ .furnitsy-logo {
+	top: 5px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #c09f80;
+ }
+
+
+
+/* 
+ .form-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: .5em;
+  }
+  .form-row  {
+    padding: .5em 1em .5em 0;
+    flex: 1;
+  }
+  .form-row  {
+    flex: 2;
+  } */
+
+
+
+  /* error styling */
+
+  .errors-container {
+    display: flex;
+	width: 100%;
+    color: red;
+  }
+  .error {
+	  font-size: 11px;
+	  margin: 4px;
+	  width: inherit;
+
+  }
+
+/* x-closing button */
+  .x-closing-button {
+      position: absolute;
+      top: -7px;
+      right: 51px;
+	  font-size: 30px;
+      line-height: 2;
+	  color: white;
+      text-decoration: none;
+  }
+
+  .x-closing-button:hover {
+    cursor: pointer;
+    color: red;
+  }
+
+
+.labels {
+	font-size: 10px;
+}
+
+  /* modal-screen */
+/* 
+
+.modal-screen {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+ */

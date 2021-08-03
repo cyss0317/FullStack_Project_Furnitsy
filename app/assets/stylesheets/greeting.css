@@ -1,0 +1,66 @@
+
+ /* sign up and sign in styling */
+ .signup-login, .welcome-message-and-logout-button {
+	position: absolute;
+    top: 8px;
+    right: 8px;
+	background-color: white;
+    font-size: 13px;
+
+ }
+/* .signup{
+	padding: 0;
+} */
+
+
+
+.or {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+ .signup, .login {
+	/* padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-decoration: none;
+	color: black; */
+	padding: 0;
+	background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+ }
+
+ .signup:hover, .login:hover {
+	cursor: pointer;
+	/* text-decoration:underline; */
+	font-size: 13px;
+	font-weight: bold;
+	padding-bottom: 2px;
+	border-bottom-style: solid ;
+	border-bottom-width: 1px;
+	width: fit-content;
+ }
+
+
+ /* .login:hover {
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: bold;
+	background-color: #d7cec7;
+	border-radius: 10px;
+	color: white;
+ } */
+
+ .welcome-message-and-logout-button{
+     display: flex;
+     flex-direction: column;
+ } 
+
+
+ 
