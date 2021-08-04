@@ -24,7 +24,7 @@ Fabric Details
 Body and One Side Toss Pillows: Polyester (100)%
 Oneside Toss Pillows: Polyester (100)%
 Weight
-124 lbs. (56.25 kgs.)", category: "Couch and Sofa", measurement: '"Width: 89.00", Depth: 38.00", Height: 39.00"' ,color: "Natural and Smoke", price: 649.00 })
+124 lbs. (56.25 kgs.)", category: "Couch and Sofa", measurement: '"Width: 89.00"  Depth: 38.00"  Height: 39.00"' ,color: "Natural and Smoke", price: 649.00 })
 # question1. what if there are two color options, should that be type "array?"
 # Couch and Sofa
 # t.string :color, array: true, default: []

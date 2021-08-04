@@ -1,9 +1,14 @@
 class Api::ProductsController < ApplicationController
 
+    def index
+        @products = Product.all
+        render :index
+    end
+
     def show
-        @product = Product.find_by(product_params)
+        @product = Product.find_by(id: params[:id])
         if @product
-            render "api/products/show"
+            render :show
         else
             render json: @product.errors.full_messages, status: 404
         end
@@ -11,7 +16,7 @@ class Api::ProductsController < ApplicationController
 
     private
     def product_params
-        params.require(:product).permit(:name, :color, :category, :price)
+        params.require(:product).permit(:id, :name, :color, :category, :price)
     end
-    
+
 end
