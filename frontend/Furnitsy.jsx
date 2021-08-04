@@ -4,7 +4,9 @@ import Root from "./components/root"
 import { $login, $logout } from "./util/session_api_util"
 import { login, logout } from "./actions/session_actions"
 import { $receiveProduct, $receiveProducts } from "./util/product_api_util";
+import { ThunkReceiveProduct, ThunkReceiveProducts } from "./actions/product_actions";
 import configureStore from './store/store'
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root")
@@ -26,8 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
     //question!!!!!!!
     //testing
     window.login = login;
-    window.receiveProduct = $receiveProduct;
-    window.receiveProducts = $receiveProducts;
+    window.receiveProduct = ThunkReceiveProduct;
+    window.receiveProducts = ThunkReceiveProducts;
+    window.store = store;
 
     window.getState = store.getState;
 

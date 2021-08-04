@@ -16,12 +16,12 @@ export const receiveProducts = (products) => ({
 
 //thunk actions
 
-export const receiveProduct = productId => dispatch =>(
+export const ThunkReceiveProduct = productId => dispatch =>(
     ProductAPIUtil.$receiveProduct(productId)
         .then( res => dispatch(receiveProduct(res)) )
 )
 
-export const receiveProducts = () => dispatch => (
-    ProductAPIUtil.receiveProducts()
+export const ThunkReceiveProducts = () => dispatch => (
+    ProductAPIUtil.$receiveProducts()
         .then(res => dispatch(receiveProducts(res)))
 )
