@@ -6,6 +6,7 @@ import SignupFormContainer from "./signup_form_container"
 import { Route, Switch, Link } from "react-router";
 import { AuthRoute } from "../util/route_util";
 import Modal from "./modal"
+import ProductIndexContainer from "./products/products_index_container"
 
 const App = () => {
 
@@ -15,6 +16,7 @@ const App = () => {
         <header>
             <h1>Furnitsy</h1>
             <GreetingContainer />
+            <
         </header>
         <Switch>
             {/* <AuthRoute path="/login" component={LoginFormContainer} />
