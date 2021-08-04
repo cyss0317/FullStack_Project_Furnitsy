@@ -1,1 +1,1 @@
-json.extract! @product, :id, :name, :description, :category, :color, :measurement, :price
+json.partial! "api/products/product", product: @product

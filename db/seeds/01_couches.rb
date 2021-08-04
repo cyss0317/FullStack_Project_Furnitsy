@@ -24,7 +24,7 @@ Fabric Details
 Body and One Side Toss Pillows: Polyester (100)%
 Oneside Toss Pillows: Polyester (100)%
 Weight
-124 lbs. (56.25 kgs.)", category: "Couch and Sofa", measurement: '"Width: 89.00"  Depth: 38.00"  Height: 39.00"' ,color: "Natural and Smoke", price: 649.00 })
+124 lbs. (56.25 kgs.)", category: "Couch and Sofa", measurement: '"Width: 89.00"  Depth: 38.00"  Height: 39.00"' ,color: "Natural, Smoke", price: 649.00 })
 # question1. what if there are two color options, should that be type "array?"
 # Couch and Sofa
 # t.string :color, array: true, default: []
@@ -34,6 +34,7 @@ Weight
 # could i change the layout of product description to be left
 
 # item number should be added?
+
 Product.create({name: "Lyman Sofa", description: "
 Mixing mid-century inspiration with modern attitude, the Lyman sofa is as retro chic as it is fashion forward. Loaded with multi-tonal interest, the granite gray upholstery is the essence of earthy elegance. Design elements include 2-over-2 cushion styling, t-cushions wrapping around slim track arms and tapered accent legs that are right on point.
 Corner-blocked frame

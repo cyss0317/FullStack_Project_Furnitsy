@@ -1,15 +1,15 @@
-export const receiveProduct = product => (
+export const $receiveProduct = productId => (
 
     $.ajax({
-        url: `/api/products/${product.id}`,
+        url: `/api/products/${productId}`,
         
     })
 )
 
-export const receiverProducts = () => (
+export const $receiveProducts = () => (
 
     $.ajax({
         url: "/api/products"
-        
+
     })
 )

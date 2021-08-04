@@ -3,10 +3,14 @@ import ReactDOM from "react-dom";
 import Root from "./components/root"
 import { $login, $logout } from "./util/session_api_util"
 import { login, logout } from "./actions/session_actions"
+import { $receiveProduct, $receiveProducts } from "./util/product_api_util";
 import configureStore from './store/store'
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root")
+
+    // saves login user's session into preloadedState, that is being used to create store
+    // prevents to refresh session when page is refreshed, keeps the user logged in.
     let store;
     if ( window.currentUser){
         let preloadedState = {
@@ -18,9 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
         store = configureStore(preloadedState);
         delete window.currentUser;
     } else {
-        store = configureStore();
-    }
+        store = configureStore(); }
+    //question!!!!!!!
+    //testing
     window.login = login;
+    window.receiveProduct = $receiveProduct;
+    window.receiveProducts = $receiveProducts;
 
     window.getState = store.getState;
 
