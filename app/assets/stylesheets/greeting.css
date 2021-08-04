@@ -12,6 +12,10 @@
 	padding: 0;
 } */
 
+ body{
+	font-family: 'Recursive', sans-serif;
+	font-weight: bold;
+ }
 
 
 .or {
