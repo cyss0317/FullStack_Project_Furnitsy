@@ -28,7 +28,13 @@ Weight
 # question1. what if there are two color options, should that be type "array?"
 # Couch and Sofa
 # t.string :color, array: true, default: []
-Product.create({name: "Lyman Sofa", description: "Description
+
+# width should be array type?, to be dotted
+
+# could i change the layout of product description to be left
+
+# item number should be added?
+Product.create({name: "Lyman Sofa", description: "
 Mixing mid-century inspiration with modern attitude, the Lyman sofa is as retro chic as it is fashion forward. Loaded with multi-tonal interest, the granite gray upholstery is the essence of earthy elegance. Design elements include 2-over-2 cushion styling, t-cushions wrapping around slim track arms and tapered accent legs that are right on point.
 Corner-blocked frame
 Attached back and loose seat cushions
@@ -40,7 +46,7 @@ Smooth platform foundation maintains tight, wrinkle-free look without dips or sa
 Fabric Details
 Body: Polyester (100)%
 Weight
-103 lbs. (46.72 kgs.)", category: "Couch and Sofa", measurement: 'Width: 82.00"Depth: 40.00"Height: 36.00"', color: "Graphite", price: 749.00 })
+103 lbs. (46.72 kgs.)", category: "Couch and Sofa", measurement: 'Width: 82.00"  Depth: 40.00"  Height: 36.00"', color: "Graphite", price: 749.00 })
 
 Product.create({name: "Gaddis Flip Flop Sofa", description: "Love furniture with a mid-century modern twist? Then you’re sure to flip for the gorgeous Gaddis flip flop sofa in gray. This brilliantly styled sofa-futon is the ultimate choice if you’re short on space but long for form and function. Tailored touches including tapered wood-tone legs and tufted box cushions exude an upscale mood reflecting your fine taste.
 Attached back and seat cushions
@@ -69,7 +75,7 @@ Fabric Details
 Body: Polyester (100)%
 Body and Pillows: Polyester (100)%
 Weight
-215 lbs. (96.75 kgs.)", category: "Couch and Sofa", measurement: 'Width: 112.00"Depth: 40.00"Height: 37.00"', color: "Ivory, Dark Gray ", price: 1599.00 })
+215 lbs. (96.75 kgs.)", category: "Couch and Sofa", measurement: 'Width: 112.00" Depth: 40.00" Height: 37.00"', color: "Ivory, Dark Gray ", price: 1599.00 })
 
 Product.create({name: "Alcona Sofa", description: "Whether you’re creating a warm and cozy modern farmhouse or cool and contemporary escape, the Alcona sofa is sure to look right at home. High armrests with a rounded track design provide a chic, sheltering effect. Light linen-tone upholstery and 3-over-2 cushion styling is a beauty to behold.
 Corner-blocked frame
@@ -88,5 +94,4 @@ Oneside Kidney Pillow: Polyester (91)%,Rayon (9)%
 Toss Pillows: Linen (9)%,Polyester (91)%
 Weight
 148 lbs. (67.13 kgs.)", category: "Couch and Sofa", measurement: 'Width: 95.00"Depth: 40.00"Height: 40.00"', color: "Linen", price: 949.00})
-Product.create({name: "", description: "", category: "Couch and Sofa", measurement: '', color: "", price: })
-Product.create({name: "", description: "", category: "Couch and Sofa", measurement: '', color: "", price: })
+

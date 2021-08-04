@@ -1,0 +1,5 @@
+Product.create({name: "", description: "", category: "", measurement: '', color: "", price:  })
+Product.create({name: "", description: "", category: "", measurement: '', color: "", price:  })
+Product.create({name: "", description: "", category: "", measurement: '', color: "", price:  })
+Product.create({name: "", description: "", category: "", measurement: '', color: "", price:  })
+Product.create({name: "", description: "", category: "", measurement: '', color: "", price:  })
