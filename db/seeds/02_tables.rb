@@ -49,3 +49,22 @@ Assembly required
 Estimated Assembly Time: 30 Minutes
 Weight
 108 lbs. (48.99 kgs.)", category: "Console Table", measurement: 'Width: 64.00"Depth: 15.00"Height: 30.00"', color: "Brown/White", price: 599.00 })
+
+# OUTDOOR TABLE
+
+Product.create({name: "Preston Bay Outdoor Fire Pit Table and 4 Chairs", description: 'Bring the relaxed aesthetic of modern farmhouse design outdoors with this 7-piece outdoor dining set. Finished in creamy white—with a wood-look table top for charming contrast—the rust-proof aluminum frames ensure carefree living with easy-breezy appeal. Zippered cushions with Velcro® ties covered in high-performing Nuvella® fabric enhance the comfort and beauty of this outdoor furniture set that’s pretty enough for indoor use.
+Includes 5 pieces: fire pit tab and 4 swivel lounge chairs
+Table and chairs with all-weather, rust-free aluminum frame
+Chairs with 360-degree swivel, zippered cushions with Velcro® ties covered in high-performing Nuvella® fabric
+All-weather foam cushion core wrapped in soft polyester
+Clean fabric with mild soap and water, let air dry; for stubborn stains, use a solution of 1 cup bleach to 1 gallon water
+Imported fabric and fill
+47" square fire pit table with CSA-approved 55,000 BTU stainless steel burner with glass beads, burner cover and protective weather cover
+Door conceals gas propane tank (not included)
+Convertible to natural gas
+Assembly required
+Assembly of fire pit table provided with in-home delivery; connection to propane tank or connector hose not provided
+Estimated Assembly Time: 120 Minutes
+Weight
+250 lbs. (113.4 kgs.)', category: "Outdoor Dining Sets", measurement: 'Width: 45.00"  Depth: 45.00"  Height: 25.50"', color: "Antique White", price: 3149.00  })
+Product.create({name: "", description: "", category: "", measurement: '', color: "", price:  })

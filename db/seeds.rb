@@ -8,3 +8,5 @@
 
 require_relative './seeds/01_couches.rb'
 require_relative './seeds/02_tables.rb'
+require_relative './seeds/03_beds.rb'
+require_relative './seeds/04_chairs.rb'
