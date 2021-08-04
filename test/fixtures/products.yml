@@ -4,7 +4,7 @@
 #
 #  id          :bigint           not null, primary key
 #  name        :string           not null
-#  description :string           not null
+#  description :text             not null
 #  category    :string           not null
 #  measurement :string
 #  color       :string           not null
