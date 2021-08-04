@@ -30,6 +30,7 @@ Weight
 # should categories should be nested in categories
 
 
+
 # Product.create({name: "", description: "", category: "", measurement: '', color: "", price:  })
 # Product.create({name: "", description: "", category: "", measurement: '', color: "", price:  })
 # Product.create({name: "", description: "", category: "", measurement: '', color: "", price:  })

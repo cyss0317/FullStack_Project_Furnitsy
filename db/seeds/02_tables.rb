@@ -21,6 +21,7 @@ Weight
 140 lbs. (63.5 kgs.)", category: "Dining Table", measurement: 'Width: 65.00"  Depth: 30.00"  Height: 36.13"
 ', color: "Two-Tone(brown, ivory)", price: 799.00 })
 
+
 Product.create({name: "Skempton Counter Height Dining Table and Bar Stools (Set of 3)", description: "The Skempton counter height table and bar stool set invites you to raise the bar on small space living. An inspired choice for coastal chic or modern farmhouse settings, this clean-lined, simply striking set doubles the charm with brown tone plank effect tops, paired with grayish white bases with rub through effect for timeworn appeal. The table’s built-in open shelves make the most of every inch of space.
 Includes counter height table and 2 bar stools
 Made of wood, acacia veneer and engineered wood
@@ -67,4 +68,4 @@ Assembly of fire pit table provided with in-home delivery; connection to propane
 Estimated Assembly Time: 120 Minutes
 Weight
 250 lbs. (113.4 kgs.)', category: "Outdoor Dining Sets", measurement: 'Width: 45.00"  Depth: 45.00"  Height: 25.50"', color: "Antique White", price: 3149.00  })
-Product.create({name: "", description: "", category: "", measurement: '', color: "", price:  })
+# Product.create({name: "", description: "", category: "", measurement: '', color: "", price:  })

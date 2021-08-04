@@ -61,9 +61,9 @@ Fabric Details
 Weight
 111 lbs. (50.35 kgs.)", category: "Couch and Sofa", measurement: 'Width: 78.00"Depth: 32.00"Height: 32.00"', color: "Gray", price: 599.00 })
 
-Product.create({name: "Saveto 3-Piece Modular Sofa", description: "Looking comfortable. Feeling comfortable. That’s what modern farmhouse living is all about. What better way to embrace the modern farmhouse trend than with the Savesto 3-piece sectional sofa in ivory white. As casually cool as they are luxurious, the sectional’s reversible back and seat cushions are feather filled and wrapped in a cottony soft fabric for cloud-like comfort. Crisp, clean lines and track arm styling simply work.
+Product.create({name: "Saveto 3-Piece Modular Sofa", description: 'Looking comfortable. Feeling comfortable. That’s what modern farmhouse living is all about. What better way to embrace the modern farmhouse trend than with the Savesto 3-piece sectional sofa in ivory white. As casually cool as they are luxurious, the sectional’s reversible back and seat cushions are feather filled and wrapped in a cottony soft fabric for cloud-like comfort. Crisp, clean lines and track arm styling simply work.
 Includes 3 pieces: armless chair, left-arm facing corner chair and right-arm facing corner chair
-"Left-arm" and "right-arm" describe the position of the arm when you face the piece
+"left-arm" and "right-arm" describe the position of the arm when you face the piece
 Corner-block frame
 Loose feather-blend cushions
 2 toss pillows included
@@ -75,7 +75,7 @@ Fabric Details
 Body: Polyester (100)%
 Body and Pillows: Polyester (100)%
 Weight
-215 lbs. (96.75 kgs.)", category: "Couch and Sofa", measurement: 'Width: 112.00" Depth: 40.00" Height: 37.00"', color: "Ivory, Dark Gray ", price: 1599.00 })
+215 lbs. (96.75 kgs.)"', category: "Couch and Sofa", measurement: 'Width: 112.00" Depth: 40.00" Height: 37.00"', color: "Ivory, Dark Gray ", price: 1599.00 })
 
 Product.create({name: "Alcona Sofa", description: "Whether you’re creating a warm and cozy modern farmhouse or cool and contemporary escape, the Alcona sofa is sure to look right at home. High armrests with a rounded track design provide a chic, sheltering effect. Light linen-tone upholstery and 3-over-2 cushion styling is a beauty to behold.
 Corner-blocked frame

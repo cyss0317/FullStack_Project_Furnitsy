@@ -24,7 +24,9 @@ Goldtone handle on back
 Solid kiln dried wood frame
 Assembly required
 Weight
-26.5 lbs. (12.02 kgs.)", category: "Dining Room Chairs", measurement: 'Width: 22.00"  Depth: 25.20"  Height: 33.70"', color: "Blue/Gold, Pink/Gold", price: 499.00 })
+26.5 lbs. (12.02 kgs.)", category: "Dining Chairs", measurement: 'Width: 22.00"  Depth: 25.20"  Height: 33.70"', color: "Blue/Gold, Pink/Gold", price: 499.00 })
+
+
 Product.create({name: "Dinara Accent Chair", description: "Give your classic style a modern edge with the Dinara accent chair. The diamond tufted back and dove gray color combine to create an elevated piece that pays homage to time-honored design while remaining entirely current.
 Polyester upholstery
 Diamond tufted back
