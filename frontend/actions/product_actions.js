@@ -3,10 +3,13 @@ export const RECEIVE_PRODUCT = "RECEIVE_PRODUCT";
 export const RECEIVE_PRODUCTS = "RECEIVE_PRODUCTS";
 
 
-export const receiveProduct = (product) => ({
-    type: RECEIVE_PRODUCT,
-    product
-})
+export const receiveProduct = (product) => {
+    debugger
+    return ({
+        type: RECEIVE_PRODUCT,
+        product
+    })
+}
 
 export const receiveProducts = (products) => ({
     type: RECEIVE_PRODUCTS,

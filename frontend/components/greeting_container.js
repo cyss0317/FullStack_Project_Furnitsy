@@ -6,7 +6,7 @@ import { openModal } from "../actions/modal_actions";
 const mSTP = ( state ) => {
 
     return({
-        currentUser: state.entities.users[state.session.id],
+        currentUser: state.entities.users[state.session.id]
     })
 }
 

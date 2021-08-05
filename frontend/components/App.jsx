@@ -18,9 +18,9 @@ const App = () => {
                 <h1 className="header-logo">Furnitsy</h1>
                 <input type="text" className="header-searchbar"/>
                 <GreetingContainer className="greeting-component"/>
-                <ProductIndexContainer/>
             </header>
        </div>
+            <ProductIndexContainer/>
         <Switch>
             {/* <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer}/> */}

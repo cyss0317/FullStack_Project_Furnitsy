@@ -2,9 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ProductIndexItem = props => {
-    const { product, key } = props 
+    const { product, keyId } = props; 
     return(
-        <Link >{product.name}</Link>
+        <li>
+            <Link className={`${keyId}`}>{keyId}-{product.name}</Link>
+        </li>
     )
 }
 

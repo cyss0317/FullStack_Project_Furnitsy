@@ -4,14 +4,16 @@ import { ThunkReceiveProducts } from "../../actions/product_actions";
 
 
 const mSTP = (state) => {
-    debugger
+    // debugger
     return ({
-        products: state.entities.products
+        //IMPORTANT 
+        //I completely forgot to change object into a form of an array
+        products: Object.values(state.entities.products)
     })
 }
 
 const mDTP = dispatch => ({
-    receiveProducts: products => dispatch(ThunkReceiveProducts(products))
+    fetchProducts: () => dispatch(ThunkReceiveProducts())
 })
 
 export default connect(mSTP, mDTP)(ProductIndex)

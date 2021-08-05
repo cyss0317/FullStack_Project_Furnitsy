@@ -6,20 +6,24 @@ class ProductIndex extends React.Component{
         super(props)
     }
 
+    componentDidMount(){
+        this.props.fetchProducts();
+    }
+
     render(){
-        const { products, receiveProducts } = this.props;
+        const { products } = this.props;
         return (
             <div>
                 <ul className="products-index">
-                    {products}
-                        {/* {
+                    {/* {products} */}
+                        {
                         products.map(product => (       
                             <ProductIndexItem
                                 product={product}
-                                key={product.id}
+                                keyId={product.id}
                             />
                            )
-                        )} */}
+                        )}
                 </ul>
             </div>
         )
