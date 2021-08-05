@@ -26,7 +26,7 @@ const App = () => {
         <Switch>
             <Route path ="/products/:productId" component={ProductShowContainer}/>
             <Route path="/products" component={ProductIndexContainer} />
-            <Route path="/"/>
+            <Route path="/" component={ProductIndexContainer}/>
             {/* <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer}/> */}
         </Switch>
