@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+require 'open_uri'
 require_relative './seeds/01_couches.rb'
 require_relative './seeds/02_tables.rb'
 require_relative './seeds/03_beds.rb'

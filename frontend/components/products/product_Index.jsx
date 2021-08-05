@@ -14,7 +14,7 @@ class ProductIndex extends React.Component{
         const { products } = this.props;
         return (
             <div>
-                <ul className="products-index">
+                <ul className="products-index-container">
                     {/* {products} */}
                         {
                         products.map(product => (       
