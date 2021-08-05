@@ -1,10 +1,16 @@
 import {connect} from "react-redux";
 import ProductIndex from "./product_Index"
+import { ThunkReceiveProducts } from "../../actions/product_actions"; 
 
 const mSTP = (state) => ({
-
+    products: state.entities.products
 })
 
+const mDTP = dispatch => ({
+    receiveProducts: products => dispatch(ThunkReceiveProducts(products))
+})
+
+export default connect(mSTP, mDTP)(ProductIndex)
 
 // export default connect(mSTP, mDTP)(ProductIndex)
 

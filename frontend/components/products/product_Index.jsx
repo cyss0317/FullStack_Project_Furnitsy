@@ -6,8 +6,13 @@ class ProductIndex extends React.Component{
     }
 
     render(){
+        const { products } = this.props.products;
         return (
-            <p>MY PRODUCTS ARE HERE</p>
+            <div>
+                <ul className={`${products.}`}>
+
+                </ul>
+            </div>
         )
     }
 }
