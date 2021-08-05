@@ -1,12 +1,14 @@
 import React from "react";
 import GreetingContainer from "./greeting_container";
-import SessionForm from "./session_form"
+import SessionForm from "./session_form";
 import LoginFormContainer from "./login_form_container";
-import SignupFormContainer from "./signup_form_container"
+import SignupFormContainer from "./signup_form_container";
 import { Route, Switch, Link } from "react-router";
 import { AuthRoute } from "../util/route_util";
-import Modal from "./modal"
-import ProductIndexContainer from "./products/products_index_container"
+import Modal from "./modal";
+import ProductIndexContainer from "./products/products_index_container";
+import PostShowContainer from "./products/product_show_container";
+
 
 const App = () => {
 
@@ -22,6 +24,7 @@ const App = () => {
        </div>
             <ProductIndexContainer/>
         <Switch>
+            <Route exact path ="/products/:productId" component={PostShowContainer}/>
             {/* <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer}/> */}
         </Switch>
