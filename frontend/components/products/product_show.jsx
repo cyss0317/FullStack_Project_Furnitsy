@@ -10,7 +10,12 @@ class ProductShow extends React.Component {
     }
 
     render (){
+        //question!! 
+        //why returning null wouldn't stop the lifecycle, 
         const { product } = this.props;
+        if (product === undefined){
+            return null;
+        }
         return(
             <section >
                 <p>Category: {product.category} </p>

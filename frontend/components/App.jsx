@@ -17,16 +17,16 @@ const App = () => {
        <Modal/>
        <div className="header-container">
             <header className="header">
-                <h1 className="header-logo">Furnitsy</h1>
+                <a className="header-logo" href="/" >Furnitsy</a>
                 <input type="text" className="header-searchbar"/>
                 <GreetingContainer className="greeting-component"/>
             </header>
        </div>
             {/* <ProductIndexContainer/> */}
         <Switch>
-            <Route  exact path="/" component={ProductIndexContainer} />
-            <Route exact path ="/products/:productId" component={ProductShowContainer}/>
-            <Route  path="/products" component={ProductIndexContainer} />
+            <Route path ="/products/:productId" component={ProductShowContainer}/>
+            <Route path="/products" component={ProductIndexContainer} />
+            <Route path="/"/>
             {/* <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer}/> */}
         </Switch>

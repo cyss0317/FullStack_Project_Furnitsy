@@ -20,7 +20,7 @@ class ProductIndex extends React.Component{
                         products.map(product => (       
                             <ProductIndexItem
                                 product={product}
-                                keyId={product.id}
+                                key={product.id}
                             />
                            )
                         )}
