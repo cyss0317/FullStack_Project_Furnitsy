@@ -1,8 +1,15 @@
 .products-index-container{
     width: 90vw;
-    height: 100vw;
+    height: 40vh;
 }
 
-.products {
+.products-index-container-ul{
+    display: flex;
+    flex-wrap: wrap;
 
+}
+
+.product-image {
+    width: 15vw;
+    height: 15vh;
 }

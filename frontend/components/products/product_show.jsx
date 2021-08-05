@@ -20,6 +20,7 @@ class ProductShow extends React.Component {
             <section >
                 <p>Category: {product.category} </p>
                 <h4>Name:  {product.name} </h4>
+                <input type="file" onChange={e => this.setState({photos: e.target.files})} multiple />
                 <p>Color:  {product.color} </p>
                 <p>Price:  {product.price} </p>
                 <p>description:  {product.description} </p>

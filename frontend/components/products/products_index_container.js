@@ -4,11 +4,16 @@ import { ThunkReceiveProducts } from "../../actions/product_actions";
 
 
 const mSTP = (state) => {
-    // debugger
+
+    const products = Object.values(state.entities.products)
+    let couchAndSofa = products.filter((product) => (
+        product.category === "Couch and Sofa"
+    ))
     return ({
         //IMPORTANT 
         //I completely forgot to change object into a form of an array
-        products: Object.values(state.entities.products)
+        products: Object.values(state.entities.products),
+        couchAndSofa: couchAndSofa
     })
 }
 
