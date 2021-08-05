@@ -4,7 +4,7 @@ export const RECEIVE_PRODUCTS = "RECEIVE_PRODUCTS";
 
 
 export const receiveProduct = (product) => {
-    debugger
+
     return ({
         type: RECEIVE_PRODUCT,
         product

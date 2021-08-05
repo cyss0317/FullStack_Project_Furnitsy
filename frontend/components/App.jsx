@@ -7,7 +7,7 @@ import { Route, Switch, Link } from "react-router";
 import { AuthRoute } from "../util/route_util";
 import Modal from "./modal";
 import ProductIndexContainer from "./products/products_index_container";
-import PostShowContainer from "./products/product_show_container";
+import ProductShowContainer from "./products/product_show_container";
 
 
 const App = () => {
@@ -22,9 +22,11 @@ const App = () => {
                 <GreetingContainer className="greeting-component"/>
             </header>
        </div>
-            <ProductIndexContainer/>
+            {/* <ProductIndexContainer/> */}
         <Switch>
-            <Route exact path ="/products/:productId" component={PostShowContainer}/>
+            <Route  exact path="/" component={ProductIndexContainer} />
+            <Route exact path ="/products/:productId" component={ProductShowContainer}/>
+            <Route  path="/products" component={ProductIndexContainer} />
             {/* <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer}/> */}
         </Switch>

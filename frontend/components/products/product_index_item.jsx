@@ -5,7 +5,7 @@ const ProductIndexItem = props => {
     const { product, keyId } = props; 
     return(
         <li className={`${keyId}`}>
-            <Link >{keyId}-{product.name}</Link>
+            <Link to={`/products/${keyId}`}>{keyId}-{product.name}</Link>
         </li>
     )
 }
