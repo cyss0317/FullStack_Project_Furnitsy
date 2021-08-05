@@ -1,0 +1,30 @@
+
+
+.header{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 23px;
+    padding-right: 23px;
+    border-bottom: 1px solid black;
+    height: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.header-logo{
+    width: 10%;
+}
+
+.header-searchbar{
+    width: 65%;
+    height: 28px;
+    border: 1.5px solid black;
+    border-radius: 100px;
+    padding-left: 15px;
+}
+
+.greeting-component{
+    width: 10%;
+}

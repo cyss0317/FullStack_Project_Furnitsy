@@ -13,11 +13,14 @@ const App = () => {
     return(
    <div>
        <Modal/>
-        <header>
-            <h1>Furnitsy</h1>
-            <GreetingContainer />
-            <
-        </header>
+       <div className="header-container">
+            <header className="header">
+                <h1 className="header-logo">Furnitsy</h1>
+                <input type="text" className="header-searchbar"/>
+                <GreetingContainer className="greeting-component"/>
+                
+            </header>
+       </div>
         <Switch>
             {/* <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer}/> */}

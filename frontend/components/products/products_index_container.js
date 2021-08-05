@@ -1,7 +1,12 @@
 import {connect} from "react-redux";
-import ProductIndex from 
+import ProductIndex from "./product_Index"
+
+const mSTP = (state) => ({
+
+})
 
 
+// export default connect(mSTP, mDTP)(ProductIndex)
 
 // ProductIndex(presentational)
 //     product_index_container
