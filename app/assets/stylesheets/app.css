@@ -7,7 +7,7 @@
     padding-left: 23px;
     padding-right: 23px;
     border-bottom: 1px solid black;
-    height: 40px;
+    height: 58px;
     justify-content: space-evenly;
     align-items: center;
 
@@ -15,15 +15,22 @@
 
 .header-logo{
     width: 10%;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 40px;
+    color: #F1641E;
+    transform: rotate(-5deg);
 }
 
 .header-searchbar{
     width: 65%;
-    height: 28px;
-    border: 1.5px solid black;
+    height: 43px;
+    border: 2.2px solid black;
     border-radius: 100px;
     padding-left: 15px;
+    background-color: rgb(243, 243, 243);
 }
+/* get rid of outline when you click on input */
+input:focus {outline:none;}
 
 .greeting-component{
     width: 10%;
