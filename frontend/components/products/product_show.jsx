@@ -17,14 +17,27 @@ class ProductShow extends React.Component {
         if (product === undefined){
             return null;
         }
+
+        const arrHighlights = product.highlights.split("!")
+
         return(
             <section className="product-show-container" >
                 <div className="product-show-info">
-                    <p className="show-category">Category: {product.category} </p>
-                    <p className="show-name">Name:  {product.name} </p>
-                    <p className="show-color">Color:  {product.color} </p>
-                    <p className="show-price">Price:  {product.price} </p>
-                    <p className="show-description">Description:  {product.description} </p>
+                    <p className="show-category">{product.category} </p>
+                    <p className="show-name">Name :  {product.name} </p>
+                    <p className="show-color">Color :  {product.color} </p>
+                    <p className="show-price"><span></span> Price :  {product.price}.00 </p>
+                    <p className="show-description"><span>Description :</span>  {product.description} </p>
+                    <ul>
+                        <button className="highlights-button">Highlights </button>
+                        {
+                            arrHighlights.map((highlight) => (
+                            <li className="highlight-item">
+                                &#9745;  {highlight}
+                            </li>
+                            ))
+                        }
+                    </ul>
                     <p className="show-measurement">Measurement:  {product.measurement}</p>
                 </div>
                 

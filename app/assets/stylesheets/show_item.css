@@ -36,19 +36,13 @@ svg{
     background-color: rgb(237, 234, 234, .25) ;
 }
 
-.picture-container-list {
-    width: 15%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .main-picture-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+    
 }
 
 .picture-container-main{
@@ -56,9 +50,19 @@ svg{
     height: 420px;
 }
 
+.picture-container-list {
+    width: 18%;
+    height: 420px;
+    overflow: auto;
+    /* overflow-y: hidden; */
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .picture-container-list-item{
     width: 100%;
-    height: 100%;
+    height: 60px;
     border: 5px rgb(139, 129, 129);
     border-radius: 18px !important;
     /* overflow: hidden !important; */
@@ -88,6 +92,31 @@ svg{
 }
 
 
-.product-show-info > p{
+.product-show-info > *{
     padding-top: 20px;
+}
+
+.highlight-item{
+    padding-top: 10px;
+}
+
+.show-description{
+    line-height: 1.6;
+}
+
+.highlights-button{
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    outline: none;
+    border: none;
+    background-color: white;
+}
+.highlights-button:hover{
+    background-color: rgb(246, 246, 246);
+    transition: all 0.5s linear;
+    cursor: pointer;
+    
 }
