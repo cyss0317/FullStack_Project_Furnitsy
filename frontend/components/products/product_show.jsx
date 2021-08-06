@@ -10,6 +10,7 @@ class ProductShow extends React.Component {
     }
 
     render (){
+
         //question!! 
         //why returning null wouldn't stop the lifecycle, 
         const { product } = this.props;
@@ -20,11 +21,11 @@ class ProductShow extends React.Component {
             <section >
                 <p>Category: {product.category} </p>
                 <h4>Name:  {product.name} </h4>
-                <input type="file" onChange={e => this.setState({photos: e.target.files})} multiple />
                 <p>Color:  {product.color} </p>
                 <p>Price:  {product.price} </p>
                 <p>description:  {product.description} </p>
                 <p>measurement:  {product.measurement}</p>
+                <img src={product.photoUrls[0]} alt="" />
             </section>
         )
     }

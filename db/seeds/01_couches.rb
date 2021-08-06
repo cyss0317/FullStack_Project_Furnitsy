@@ -1,4 +1,5 @@
-Product.create(name: "Belcampo Sofa", description: "The sumptuously comfortable Belcampo sofa makes it easy to camp out in style. Inspired by quality menswear, the linen-weave upholstery naturally works in a rich jute tone. Crisply tailored box cushions and roll arms give the sofa a modern classic shape sure to complement so many aesthetics. Sporting shades of warm terracotta and indigo blue, four decorative pillows add fashionable flair.
+require "open-uri"
+p1 = Product.create(name: "Belcampo Sofa", description: "The sumptuously comfortable Belcampo sofa makes it easy to camp out in style. Inspired by quality menswear, the linen-weave upholstery naturally works in a rich jute tone. Crisply tailored box cushions and roll arms give the sofa a modern classic shape sure to complement so many aesthetics. Sporting shades of warm terracotta and indigo blue, four decorative pillows add fashionable flair.
 Corner-blocked frame
 Attached back and loose seat cushions
 High-resiliency foam cushions wrapped in thick poly fiber
@@ -11,6 +12,30 @@ Fabric Details
 Body and One Side Toss Pillows: Polyester (100)%
 Oneside Toss Pillows: Polyester (100)%
 140 lbs. (63.5 kgs.)", category: "Couch and Sofa", measurement: 'Width: 102.00", Depth: 41.00", Height: 40.00"', color: "gray", price: 899.00)
+file = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/main_13405-38-SET.webp')
+file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/1340538-10x8-CROP.png')
+file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/13405-MOOD-A.webp')
+file3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/13405-38-SW-P1-KO.webp')
+file4 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/13405-38-35.webp')
+file5 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/13405-38-35-T046-ALT.webp')
+
+p1.images.attach(io:file, filename: 'images/belcampo sofa/main_13405-38-SET.webp')
+p1.images.attach(io:file1, filename: 'images/belcampo sofa/1340538-10x8-CROP.png')
+p1.images.attach(io:file2, filename: 'images/belcampo sofa/13405-MOOD-A.webp')
+p1.images.attach(io:file3, filename: 'images/belcampo sofa/13405-38-SW-P1-KO.webp')
+p1.images.attach(io:file4, filename: 'images/belcampo sofa/13405-38-35.webp')
+p1.images.attach(io:file5, filename: 'images/belcampo sofa/13405-38-35-T046-ALT.webp')
+
+file1 = open('')
+p1.images.attach(io:file1, filename: '')
+file1 = open('')
+p1.images.attach(io:file1, filename: '')
+file1 = open('')
+p1.images.attach(io:file1, filename: '')
+file1 = open('')
+p1.images.attach(io:file1, filename: '')
+file1 = open('')
+p1.images.attach(io:file1, filename: '')
 
 Product.create({name: "Abinger Sofa", description: "If you’re looking to lighten the mood, you’re sure to find the space-conscious, budget-conscious Abinger sofa a breath of fresh air. Covered in a cream-tone chenille upholstery loaded with plush texture, this less-is-more contemporary sofa is dressed to impress with angled side profiling and track armrests wrapped with a layer of pillowy softness for that little something extra. Crisp and clean, the 2-over-2 cushion styling adds up to one sensational look.
 Corner-blocked frame

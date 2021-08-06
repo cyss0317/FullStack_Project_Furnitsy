@@ -15,4 +15,4 @@ const ProductIndexItem = props => {
     )
 }
 
-export default ProductIndexItem;
+export default ProductIndexItem

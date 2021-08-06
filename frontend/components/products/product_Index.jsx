@@ -12,6 +12,7 @@ class ProductIndex extends React.Component{
 
     render(){
         const { products, couchAndSofa } = this.props;
+
         return (
             <div className="products-index-container" >
                 <ul className="products-index-container-ul">
