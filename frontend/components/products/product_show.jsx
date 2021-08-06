@@ -18,19 +18,26 @@ class ProductShow extends React.Component {
             return null;
         }
         return(
-            <section >
-                <p>Category: {product.category} </p>
-                <h4>Name:  {product.name} </h4>
-                <p>Color:  {product.color} </p>
-                <p>Price:  {product.price} </p>
-                <p>description:  {product.description} </p>
-                <p>measurement:  {product.measurement}</p>
-                {
-                    product.photoUrls.map((photo) => (
-                        <img src={photo} alt="" />
-                    ))
-                }
-                <img src={product.photoUrls[4]} alt="" />
+            <section className="product-show-container" >
+                <p className="show-category">Category: {product.category} </p>
+                <h4 className="show-name">Name:  {product.name} </h4>
+                <p className="show-color">Color:  {product.color} </p>
+                <p className="show-price">Price:  {product.price} </p>
+                <p className="show-description">description:  {product.description} </p>
+                <p className="show-measurement">measurement:  {product.measurement}</p>
+                <div className="product-show-picture-container">
+                    <div className="picture-container-main"></div>
+                    <ul className="picture-container-list">
+                        {product.photoUrls.map((photo) => (
+                        <li >
+                            <img src={photo} alt="" />
+                        </li>
+                        ))
+                        }
+                    </ul>
+                </div>
+
+
             </section>
         )
     }
