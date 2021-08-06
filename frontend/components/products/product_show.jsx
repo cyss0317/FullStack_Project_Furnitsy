@@ -11,7 +11,7 @@ class ProductShow extends React.Component {
 
     render (){
 
-        //question!! 
+        //answered
         //why returning null wouldn't stop the lifecycle, 
         const { product } = this.props;
         if (product === undefined){
@@ -19,18 +19,29 @@ class ProductShow extends React.Component {
         }
         return(
             <section className="product-show-container" >
-                <p className="show-category">Category: {product.category} </p>
-                <h4 className="show-name">Name:  {product.name} </h4>
-                <p className="show-color">Color:  {product.color} </p>
-                <p className="show-price">Price:  {product.price} </p>
-                <p className="show-description">description:  {product.description} </p>
-                <p className="show-measurement">measurement:  {product.measurement}</p>
+                <div className="product-show-info">
+                    <p className="show-category">Category: {product.category} </p>
+                    <h4 className="show-name">Name:  {product.name} </h4>
+                    <p className="show-color">Color:  {product.color} </p>
+                    <p className="show-price">Price:  {product.price} </p>
+                    <p className="show-description">description:  {product.description} </p>
+                    <p className="show-measurement">measurement:  {product.measurement}</p>
+                </div>
+                
                 <div className="product-show-picture-container">
-                    <div className="picture-container-main"></div>
+                    <div className="main-picture-container">
+                        <button className="svg-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16,21a0.994,0.994,0,0,1-.664-0.253L5.5,12l9.841-8.747a1,1,0,0,1,1.328,1.494L8.5,12l8.159,7.253A1,1,0,0,1,16,21Z"></path></svg>
+                        </button>
+                        <img className="picture-container-main"src={ product.photoUrls[0] } alt="" />
+                        <button className="svg-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8,21a1,1,0,0,1-.664-1.747L15.5,12,7.336,4.747A1,1,0,0,1,8.664,3.253L18.5,12,8.664,20.747A0.994,0.994,0,0,1,8,21Z"></path></svg>
+                        </button>
+                    </div>
                     <ul className="picture-container-list">
                         {product.photoUrls.map((photo) => (
-                        <li >
-                            <img src={photo} alt="" />
+                        <li className="picture-container-list-item-container">
+                            <img className="picture-container-list-item" src={photo} alt="" />
                         </li>
                         ))
                         }

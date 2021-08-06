@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
         delete window.currentUser;
     } else {
         store = configureStore(); }
-    //question!!!!!!!
     //testing
     window.login = login;
     window.receiveProduct = ThunkReceiveProduct;
