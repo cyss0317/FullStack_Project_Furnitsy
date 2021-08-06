@@ -97,7 +97,8 @@ svg{
 }
 
 .highlight-item{
-    padding-top: 10px;
+    padding: 5px;
+    font-size: 18px;
 }
 
 .show-description{
