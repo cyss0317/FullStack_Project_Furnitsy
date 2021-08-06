@@ -11,6 +11,7 @@ const ProductIndexItem = props => {
                 src={product.photoUrls[0]}
                 />
             </Link>
+            <p>{product.name}</p>
         </li>
     )
 }

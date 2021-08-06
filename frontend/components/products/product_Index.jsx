@@ -15,6 +15,7 @@ class ProductIndex extends React.Component{
 
         return (
             <div className="products-index-container" >
+                <p className="best-selling-items">Best selling items</p>
                 <ul className="products-index-container-ul">
                         {
                         couchAndSofa.map(product => (       

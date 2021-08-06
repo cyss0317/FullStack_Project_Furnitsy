@@ -13,7 +13,7 @@ import ProductShowContainer from "./products/product_show_container";
 const App = () => {
 
     return(
-   <div>
+   <div className="main-div">
        <Modal/>
        <div className="header-container">
             <header className="header">
