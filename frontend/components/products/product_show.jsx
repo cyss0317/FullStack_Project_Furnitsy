@@ -21,11 +21,11 @@ class ProductShow extends React.Component {
             <section className="product-show-container" >
                 <div className="product-show-info">
                     <p className="show-category">Category: {product.category} </p>
-                    <h4 className="show-name">Name:  {product.name} </h4>
+                    <p className="show-name">Name:  {product.name} </p>
                     <p className="show-color">Color:  {product.color} </p>
                     <p className="show-price">Price:  {product.price} </p>
-                    <p className="show-description">description:  {product.description} </p>
-                    <p className="show-measurement">measurement:  {product.measurement}</p>
+                    <p className="show-description">Description:  {product.description} </p>
+                    <p className="show-measurement">Measurement:  {product.measurement}</p>
                 </div>
                 
                 <div className="product-show-picture-container">

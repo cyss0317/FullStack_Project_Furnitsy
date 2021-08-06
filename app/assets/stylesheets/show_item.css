@@ -81,5 +81,13 @@ svg{
 
 .product-show-info{
     width: 35%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 20px;
+}
 
+
+.product-show-info > p{
+    padding-top: 20px;
 }
