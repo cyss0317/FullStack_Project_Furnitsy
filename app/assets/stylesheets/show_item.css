@@ -18,8 +18,6 @@
 
     border-radius: 50%;
     border: 0.5px rgb(205, 203, 203);
-    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
-    filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, .5));
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -61,15 +59,19 @@ svg{
 .picture-container-list-item{
     width: 100%;
     height: 100%;
-    border: 1px rgb(139, 129, 129);
-    border-radius: 10px;
+    border: 5px rgb(139, 129, 129);
+    border-radius: 18px !important;
+    /* overflow: hidden !important; */
 
 }
 
 .picture-container-list-item:hover{
     cursor: pointer;
-    border-radius: 10px;
-    border: 1px rgb(153, 63, 63);
+    border: 1.5px solid rgb(48, 48, 48);
+    width: 100%;
+    height: 100%;
+    border-radius: 18px !important;
+
 }
 
 .picture-container-list-item-container{

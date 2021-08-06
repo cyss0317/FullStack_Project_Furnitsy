@@ -11,12 +11,24 @@
     /* box-sizing: content-box; */
 }
 
+.index-container-logo{
+    font-size: 33px;
+    font-weight: 100;
+}
+
+.best-selling-items{
+    font-size: 20px;
+    font-weight:bold;
+    top: 20px;
+
+}
+
 .products-index-container-ul{
 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 220px;
+
     
 }
 
