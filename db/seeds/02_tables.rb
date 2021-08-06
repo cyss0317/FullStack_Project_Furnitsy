@@ -1,3 +1,5 @@
+require 'open-uri'
+
 Product.create({name: "Havalance Dining Table and 6 Chairs Set", description: "Have your fill of modern farmhouse style with the Havalance 7-piece dining set. Distressed, vintage-style finishes blend weathered neutrals for an utterly charming effect. The table boasts robust legs for a hearty, substantial look while the bent slat back design and cushioned upholstered seat of the dining chairs cater to your aesthetic.
 Includes dining table and 6 dining side chairs
 Table made of pine wood, pine veneer and engineered wood with two-tone distressed finish: weathered gray top; vintage white base
@@ -8,7 +10,16 @@ Assembly required
 Estimated Assembly Time: 195 Minutes
 Weight
 342 lbs. (102.09 kgs.)", category: "Dining Table", measurement: 'Width: 42.13" Depth: 84.00" Height: 30.00"', color: "White/Gray", price: 1599.00 })
-
+file1 = open('')
+p1.images.attach(io:file1, filename: '')
+file1 = open('')
+p1.images.attach(io:file1, filename: '')
+file1 = open('')
+p1.images.attach(io:file1, filename: '')
+file1 = open('')
+p1.images.attach(io:file1, filename: '')
+file1 = open('')
+p1.images.attach(io:file1, filename: '')
 Product.create({name: "Bolanburg Counter Height Dining Table", description: "The beauty and practicality of the Bolanburg counter height table is something to savor. Two-tone textural finish gives this dining table with plank-effect top a double helping of charm. Designed for more than cozy meals, this counter height table includes a built-in cabinet and drawer to store everything from serving essentials to craft and office supplies.
 Made of veneers, wood and engineered wood
 Two-tone textural finish; weathered oak finished top and antique white base

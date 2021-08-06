@@ -25,7 +25,7 @@ class ProductShow extends React.Component {
                 <p>Price:  {product.price} </p>
                 <p>description:  {product.description} </p>
                 <p>measurement:  {product.measurement}</p>
-                <img src={product.photoUrls[0]} alt="" />
+                <img src={product.photoUrls[4]} alt="" />
             </section>
         )
     }
