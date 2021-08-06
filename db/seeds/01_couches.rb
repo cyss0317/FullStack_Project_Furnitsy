@@ -11,7 +11,7 @@ Exposed feet with faux wood finish!
 Excluded from promotional discounts and coupons!
 Fabric Details Body and One Side Toss Pillows: Polyester (100)%!
 Oneside Toss Pillows: Polyester (100)%!
-140 lbs. (63.5 kgs.)!",
+140 lbs. (63.5 kgs.)",
  category: "Couch and Sofa", measurement: 'Width: 102.00", Depth: 41.00", Height: 40.00"', color: "gray", price: 899.00)
 p1_0 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/main_13405-38-SET.webp')
 p1_1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/1340538-10x8-CROP.png')
@@ -42,7 +42,7 @@ Fabric Details!
 Body and One Side Toss Pillows: Polyester (100)%!
 Oneside Toss Pillows: Polyester (100)%!
 Weight!
-124 lbs. (56.25 kgs.)!",
+124 lbs. (56.25 kgs.)",
  category: "Couch and Sofa", measurement: '"Width: 89.00"  Depth: 38.00"  Height: 39.00"' ,color: "Natural, Smoke", price: 649.00 })
 
 p2_1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/main_8390438-SET-10X8-CROP.webp')
@@ -72,7 +72,7 @@ Exposed feet with faux wood finish!
 Platform foundation system resists sagging 3x better than spring system after 20,000 testing cycles by providing more even support!
 Smooth platform foundation maintains tight, wrinkle-free look without dips or sags that can occur over time with sinuous spring foundations!
 Fabric Details Body: Polyester (100)%!
-Weight 103 lbs. (46.72 kgs.)!",
+Weight 103 lbs. (46.72 kgs.)",
  category: "Couch and Sofa", measurement: 'Width: 82.00"  Depth: 40.00"  Height: 36.00"', color: "Graphite", price: 749.00 })
 file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/lyman_sofa/main_93303-38-SET-10X8-CROP.webp')
 p3.images.attach(io:file1, filename: 'images/lyman_sofa/main_93303-38-SET-10X8-CROP.webp')
@@ -96,7 +96,7 @@ Tufted details!
 Exposed wood-tone legs!
 Estimated Assembly Time: 30 Minutes!
 Fabric Details: Polyester (100)%!
-Weight 111 lbs. (50.35 kgs.)!", category: "Couch and Sofa", measurement: 'Width: 78.00"Depth: 32.00"Height: 32.00"', color: "Gray", price: 599.00 })
+Weight 111 lbs. (50.35 kgs.)", category: "Couch and Sofa", measurement: 'Width: 78.00"Depth: 32.00"Height: 32.00"', color: "Gray", price: 599.00 })
 file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/gaddis_sofa/main_68206-65-UP-10X8-CROP.webp')
 p4.images.attach(io:file1, filename: 'images/gaddis_sofa/main_68206-65-UP-10X8-CROP.webp')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/gaddis_sofa/68206-SWATCH-BODY-A-500.webp')
@@ -133,7 +133,7 @@ Exposed feet with faux wood finish!
 Estimated Assembly Time: 10 Minutes!
 Fabric Details Body: Polyester (100)%!
 Body and Pillows: Polyester (100)%!
-Weight 215 lbs. (96.75 kgs.)!", category: "Couch and Sofa", measurement: 'Width: 112.00" Depth: 40.00" Height: 37.00"', color: "Ivory, Dark Gray ", price: 1599.00 })
+Weight 215 lbs. (96.75 kgs.)", category: "Couch and Sofa", measurement: 'Width: 112.00" Depth: 40.00" Height: 37.00"', color: "Ivory, Dark Gray ", price: 1599.00 })
 
 file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/saveto_sofa/main_31102-64-46-65-10X8-CROP.webp')
 p5.images.attach(io:file1, filename: 'images/saveto_sofa/main_31102-64-46-65-10X8-CROP.webp')
@@ -156,7 +156,7 @@ Fabric Details Body and Oneside Toss and Kidney: Polyester (100)%!
 Ottoman Top: Polyester (100)%!
 Oneside Kidney Pillow: Polyester (91)%,Rayon (9)%!
 Toss Pillows: Linen (9)%,Polyester (91)%!
-Weight 148 lbs. (67.13 kgs.)!", category: "Couch and Sofa", measurement: 'Width: 95.00"Depth: 40.00"Height: 40.00"', color: "Linen", price: 949.00})
+Weight 148 lbs. (67.13 kgs.)", category: "Couch and Sofa", measurement: 'Width: 95.00"Depth: 40.00"Height: 40.00"', color: "Linen", price: 949.00})
 file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/alcona_sofa/main_98310-38-SET.webp')
 p6.images.attach(io:file1, filename: 'images/alcona_sofa/main_98310-38-SET.webp')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/alcona_sofa/9831038-Alcona-DIM.webp')
