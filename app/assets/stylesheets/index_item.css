@@ -1,15 +1,20 @@
 .products-index-container{
     width: 90vw;
     height: 40vh;
+    background-color: #ddebe3;
+    display: flex;
+    justify-content: space-between;
 }
 
 .products-index-container-ul{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ddebe3;
 
 }
 
-.product-image {
+.hot-items-image-thumnail {
     width: 15vw;
-    height: 15vh;
+    height: 100px;
 }

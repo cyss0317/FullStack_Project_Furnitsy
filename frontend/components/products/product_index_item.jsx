@@ -5,10 +5,10 @@ const ProductIndexItem = props => {
     const { product } = props; 
     
     return(
-        <li className={`products`}>
+        <li className={`products-hot-items`}>
             <Link to={`/products/${product.id}`}>
-                <img className="product-image" 
-                src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/main_13405-38-SET.webp" 
+                <img className="hot-items-image-thumnail" 
+                src={product.photoUrls[0]}
                 />
             </Link>
         </li>

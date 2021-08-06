@@ -12,19 +12,19 @@ Fabric Details
 Body and One Side Toss Pillows: Polyester (100)%
 Oneside Toss Pillows: Polyester (100)%
 140 lbs. (63.5 kgs.)", category: "Couch and Sofa", measurement: 'Width: 102.00", Depth: 41.00", Height: 40.00"', color: "gray", price: 899.00)
-p1-0 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/main_13405-38-SET.webp')
-p1-1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/1340538-10x8-CROP.png')
-p1-2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/13405-MOOD-A.webp')
-p1-3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/13405-38-SW-P1-KO.webp')
-p1-4 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/13405-38-35.webp')
-p1-5 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/13405-38-35-T046-ALT.webp')
+p1_0 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/main_13405-38-SET.webp')
+p1_1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/1340538-10x8-CROP.png')
+p1_2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/13405-MOOD-A.webp')
+p1_3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/13405-38-SW-P1-KO.webp')
+p1_4 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/13405-38-35.webp')
+p1_5 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/13405-38-35-T046-ALT.webp')
 
-p1.images.attach(io:p1-0, filename: 'images/belcampo sofa/main_13405-38-SET.webp')
-p1.images.attach(io:p1-1, filename: 'images/belcampo sofa/1340538-10x8-CROP.png')
-p1.images.attach(io:p1-2, filename: 'images/belcampo sofa/13405-MOOD-A.webp')
-p1.images.attach(io:p1-3, filename: 'images/belcampo sofa/13405-38-SW-P1-KO.webp')
-p1.images.attach(io:p1-4, filename: 'images/belcampo sofa/13405-38-35.webp')
-p1.images.attach(io:p1-5, filename: 'images/belcampo sofa/13405-38-35-T046-ALT.webp')
+p1.images.attach(io:p1_0, filename: 'images/belcampo sofa/main_13405-38-SET.webp')
+p1.images.attach(io:p1_1, filename: 'images/belcampo sofa/1340538-10x8-CROP.png')
+p1.images.attach(io:p1_2, filename: 'images/belcampo sofa/13405-MOOD-A.webp')
+p1.images.attach(io:p1_3, filename: 'images/belcampo sofa/13405-38-SW-P1-KO.webp')
+p1.images.attach(io:p1_4, filename: 'images/belcampo sofa/13405-38-35.webp')
+p1.images.attach(io:p1_5, filename: 'images/belcampo sofa/13405-38-35-T046-ALT.webp')
 
 
 
@@ -42,20 +42,20 @@ Oneside Toss Pillows: Polyester (100)%
 Weight
 124 lbs. (56.25 kgs.)", category: "Couch and Sofa", measurement: '"Width: 89.00"  Depth: 38.00"  Height: 39.00"' ,color: "Natural, Smoke", price: 649.00 })
 
-p2-1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/main_8390438-SET-10X8-CROP.webp')
-p2.images.attach(io:p2-1, filename: 'images/abinger_sofa/main_8390438-SET-10X8-CROP.webp')
-p2-2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/8390438-Abinger-DIM.webp')
-p2.images.attach(io:p2-2, filename: 'images/abinger_sofa/8390438-Abinger-DIM.webp')
-p2-3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/83904-SWATCH-BODY-A-500.jpeg')
-p2.images.attach(io:p2-3, filename: 'images/abinger_sofa/83904-SWATCH-BODY-A-500.jpeg')
-p2-4 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/83904-38-SIDE-SW-P1-KO.webp')
-p2.images.attach(io:p2-4, filename: 'images/abinger_sofa/83904-38-SIDE-SW-P1-KO.webp')
-p2-5 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/83904-38-HEAD-ON-SW-P1-KO.webp')
-p2.images.attach(io:p2-5, filename: 'images/abinger_sofa/83904-38-HEAD-ON-SW-P1-KO.webp')
-p2-6 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/83904-38-BACK-SW-P1-KO.webp')
-p2.images.attach(io:p2-6, filename: 'images/abinger_sofa/83904-38-BACK-SW-P1-KO.webp')
-p2-7 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/83904-38-ANGLE-SW-P1-KO.webp')
-p2.images.attach(io:p2-7, filename: 'images/abinger_sofa/83904-38-ANGLE-SW-P1-KO.webp')
+p2_1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/main_8390438-SET-10X8-CROP.webp')
+p2.images.attach(io:p2_1, filename: 'images/abinger_sofa/main_8390438-SET-10X8-CROP.webp')
+p2_2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/8390438-Abinger-DIM.webp')
+p2.images.attach(io:p2_2, filename: 'images/abinger_sofa/8390438-Abinger-DIM.webp')
+p2_3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/83904-SWATCH-BODY-A-500.jpeg')
+p2.images.attach(io:p2_3, filename: 'images/abinger_sofa/83904-SWATCH-BODY-A-500.jpeg')
+p2_4 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/83904-38-SIDE-SW-P1-KO.webp')
+p2.images.attach(io:p2_4, filename: 'images/abinger_sofa/83904-38-SIDE-SW-P1-KO.webp')
+p2_5 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/83904-38-HEAD-ON-SW-P1-KO.webp')
+p2.images.attach(io:p2_5, filename: 'images/abinger_sofa/83904-38-HEAD-ON-SW-P1-KO.webp')
+p2_6 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/83904-38-BACK-SW-P1-KO.webp')
+p2.images.attach(io:p2_6, filename: 'images/abinger_sofa/83904-38-BACK-SW-P1-KO.webp')
+p2_7 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/83904-38-ANGLE-SW-P1-KO.webp')
+p2.images.attach(io:p2_7, filename: 'images/abinger_sofa/83904-38-ANGLE-SW-P1-KO.webp')
 
 
 p3 = Product.create({name: "Lyman Sofa", description: "
@@ -133,8 +133,9 @@ Body: Polyester (100)%
 Body and Pillows: Polyester (100)%
 Weight
 215 lbs. (96.75 kgs.)"', category: "Couch and Sofa", measurement: 'Width: 112.00" Depth: 40.00" Height: 37.00"', color: "Ivory, Dark Gray ", price: 1599.00 })
+
 file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/saveto_sofa/main_31102-64-46-65-10X8-CROP.webp')
-p5.images.attach(io:file1 filename: 'images/saveto_sofa/main_31102-64-46-65-10X8-CROP.webp')
+p5.images.attach(io:file1, filename: 'images/saveto_sofa/main_31102-64-46-65-10X8-CROP.webp')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/saveto_sofa/31102-SWATCH-BODY-A-500.webp')
 p5.images.attach(io:file2, filename: 'images/saveto_sofa/31102-SWATCH-BODY-A-500.webp')
 
