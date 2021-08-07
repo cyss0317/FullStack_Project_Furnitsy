@@ -1,6 +1,6 @@
 .products-index-container{
 
-    height: 40vh;
+    height: 45vh;
     background-color: #ddebe3;
     display: flex;
     flex-direction: column;
@@ -24,10 +24,11 @@
 }
 
 .products-index-container-ul{
-
+    width: 95%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-bottom: 30px;
 
     
 }
@@ -62,8 +63,8 @@ element.style {
 }
 
 .hot-items-image-thumnail {
-    width: 14vmax;
-    height: 12vmax;
+    width: 12vmax;
+    height: 10vmax;
     border-radius: 50%;
     padding: 10px;
 
