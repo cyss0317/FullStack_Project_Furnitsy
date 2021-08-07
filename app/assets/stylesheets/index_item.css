@@ -1,6 +1,6 @@
 .products-index-container{
 
-    height: 45vh;
+    height: 35vh;
     background-color: #ddebe3;
     display: flex;
     flex-direction: column;
@@ -76,8 +76,11 @@ element.style {
     
 }
 
-.hot-items-image-thumnails > p {
-    margin-top: 20px;
+.hot-items-image-thumnails > span {
+    margin-top: -8px;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
 }
 
 .hot-items-image-thumnail {
@@ -89,6 +92,11 @@ element.style {
 
 }
 
+.thumnail-p{
+    text-decoration: none;
+}
+
 .hot-items-image-thumnail > p {
     text-decoration: none;
+    display: inline-block;
 }

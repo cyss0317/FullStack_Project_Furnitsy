@@ -10,6 +10,27 @@ Mattress available, sold separately
 Estimated Assembly Time: 50 Minutes
 Weight
 187 lbs. (84.82 kgs.)", category: "Beds", measurement: 'Width: 66.00"  Depth: 95.00"  Height: 56.00"', color: "Dark/Brown", price: 1049.00  })
+file1 = open('')
+p1.images.attach(io:file1, filename: '')
+file2 = open('')
+p1.images.attach(io:file2, filename: '')
+file3 = open('')
+p1.images.attach(io:file3, filename: '')
+file4 = open('')
+p1.images.attach(io:file4, filename: '')
+file5 = open('')
+p1.images.attach(io:file5, filename: '')
+file6 = open('')
+p1.images.attach(io:file6, filename: '')
+file7 = open('')
+p1.images.attach(io:file7, filename: '')
+file8 = open('')
+p1.images.attach(io:file8, filename: '')
+file9 = open('')
+p1.images.attach(io:file9, filename: '')
+file10 = open('')
+p1.images.attach(io:file10, filename: '')
+
 # answered bed size options, should be array
 Product.create({name: "Dinsmore Twin over Twin Bunk Bed with Ladder", description: "Step up to a higher level of style in kids bedroom furniture with the Dinsmore twin bunk bed. A cool response to the trend in modern industrial design, this metal bunk bed sports a black and gray finish for a welcome touch of maturity.
 Includes twin/twin bunk bed with ladder
@@ -23,6 +44,27 @@ Excluded from promotional discounts and coupons
 Estimated Assembly Time: 90 Minutes
 Weight
 103 lbs. (46.72 kgs.)", category: "Kids Bunk Beds", measurement: 'Width: 40.75"  Depth: 75.00"  Height: 61.63"', color: "Black/Gray", price: 479.00  })
+file1 = open('')
+p1.images.attach(io:file1, filename: '')
+file2 = open('')
+p1.images.attach(io:file2, filename: '')
+file3 = open('')
+p1.images.attach(io:file3, filename: '')
+file4 = open('')
+p1.images.attach(io:file4, filename: '')
+file5 = open('')
+p1.images.attach(io:file5, filename: '')
+file6 = open('')
+p1.images.attach(io:file6, filename: '')
+file7 = open('')
+p1.images.attach(io:file7, filename: '')
+file8 = open('')
+p1.images.attach(io:file8, filename: '')
+file9 = open('')
+p1.images.attach(io:file9, filename: '')
+file10 = open('')
+p1.images.attach(io:file10, filename: '')
+
 #answered home/ kids/ kids furnitures/ product
 # should categories should be nested in categories
 
