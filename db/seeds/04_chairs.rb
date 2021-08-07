@@ -1,4 +1,5 @@
-Product.create({name: "Safavieh Nynette Sofa Chair", description: "Make a bold statement in any room with the retro mid-century look of this sofa chair. Its geometric angles allow for a generous seat with maximum style. A designer favorite, its light gray velvet and legs with goldtone caps bring instant character to any modern space.",
+require 'open-uri'
+p1 = Product.create({name: "Safavieh Nynette Sofa Chair", description: "Make a bold statement in any room with the retro mid-century look of this sofa chair. Its geometric angles allow for a generous seat with maximum style. A designer favorite, its light gray velvet and legs with goldtone caps bring instant character to any modern space.",
 highlights:'
 Light gray upholstery; legs with goldtone caps
 Made with polyester velvet and iron
@@ -22,7 +23,7 @@ p1.images.attach(io:file7, filename: 'images/safavieh_chair/A600025594_2.jpeg')
 file8 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/safavieh_chair/A600025594_10.webp')
 p1.images.attach(io:file8, filename: 'images/safavieh_chair/A600025594_10.webp')
 
-Product.create({name: "Novelda Rocker Accent Chair", description: "Novelda accent chair is a natural beauty. Neutral fabric on light wood tone frame expresses a humble and inviting quality. Sleek rocking chair profile is a worthy addition to a reading nook or sitting area. And with cushions so plush, you’re in for a relaxing time.",
+p2 = Product.create({name: "Novelda Rocker Accent Chair", description: "Novelda accent chair is a natural beauty. Neutral fabric on light wood tone frame expresses a humble and inviting quality. Sleek rocking chair profile is a worthy addition to a reading nook or sitting area. And with cushions so plush, you’re in for a relaxing time.",
 highlights:"
 Attached back and seat cushions!
 High-resiliency foam cushions wrapped in thick poly fiber!
@@ -50,7 +51,7 @@ file8 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/image
 p2.images.attach(io:file8, filename: 'images/rocker_chair/A3000081-BACK-SW-QL.jpeg')
 
 
-Product.create({name: "Beatrix Side Chair", description: "Sit pretty in this sumptuous yet durable velvet chair. The Beatrix dazzles as a dining chair or as an accent piece. Available in several colors with fab goldtone stainless steel legs and a matching handle on the back. Layer it into any room for a well curated effect.",
+p3 = Product.create({name: "Beatrix Side Chair", description: "Sit pretty in this sumptuous yet durable velvet chair. The Beatrix dazzles as a dining chair or as an accent piece. Available in several colors with fab goldtone stainless steel legs and a matching handle on the back. Layer it into any room for a well curated effect.",
 highlights:"
 Handmade elegantly curved design!
 Durable yet sumptuous velvet upholstery!
@@ -58,64 +59,61 @@ Fab goldtone stainless steel legs!
 Goldtone handle on back!
 Solid kiln dried wood frame!
 Assembly required!
-Weight 26.5 lbs. (12.02 kgs.)", category: "Dining Chairs", measurement: 'Width: 22.00",Depth: 25.20",Height: 33.70"', color: "Blue/Gold, Pink/Gold", price: 499.00 })
-file1 = open('')
-p3.images.attach(io:file1, filename: '')
-file2 = open('')
-p3.images.attach(io:file2, filename: '')
-file3 = open('')
-p3.images.attach(io:file3, filename: '')
-file4 = open('')
-p3.images.attach(io:file4, filename: '')
-file5 = open('')
-p3.images.attach(io:file5, filename: '')
-file6 = open('')
-p3.images.attach(io:file6, filename: '')
-file7 = open('')
-p3.images.attach(io:file7, filename: '')
-file8 = open('')
-p3.images.attach(io:file8, filename: '')
-file9 = open('')
-p3.images.attach(io:file9, filename: '')
-file10 = open('')
-p3.images.attach(io:file10, filename: '')
+Weight 26.5 lbs. (12.02 kgs.)", category: "Dining Chairs", measurement: 'Width: 22.00",Depth: 25.20",Height: 33.70"', color: "Pink/Gold", price: 499.00 })
+file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/beatrix_chair/main_D600002554_9.jpeg')
+p3.images.attach(io:file1, filename: 'images/beatrix_chair/main_D600002554_9.jpeg')
+file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/beatrix_chair/D600002554_8.webp')
+p3.images.attach(io:file2, filename: 'images/beatrix_chair/D600002554_8.webp')
+file3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/beatrix_chair/D600002554_7.webp')
+p3.images.attach(io:file3, filename: 'images/beatrix_chair/D600002554_7.webp')
+file4 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/beatrix_chair/D600002554_6.jpeg')
+p3.images.attach(io:file4, filename: 'images/beatrix_chair/D600002554_6.jpeg')
+file5 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/beatrix_chair/D600002554_5.jpeg')
+p3.images.attach(io:file5, filename: 'images/beatrix_chair/D600002554_5.jpeg')
+file6 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/beatrix_chair/D600002554_4.jpeg')
+p3.images.attach(io:file6, filename: 'images/beatrix_chair/D600002554_4.jpeg')
+file7 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/beatrix_chair/D600002554_2.jpeg')
+p3.images.attach(io:file7, filename: 'images/beatrix_chair/D600002554_2.jpeg')
+file8 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/beatrix_chair/D600002554_1.webp')
+p3.images.attach(io:file8, filename: 'images/beatrix_chair/D600002554_1.webp')
 
 
-Product.create({name: "Dinara Accent Chair", description: "Give your classic style a modern edge with the Dinara accent chair. The diamond tufted back and dove gray color combine to create an elevated piece that pays homage to time-honored design while remaining entirely current.",
-highlights:"
-Polyester upholstery!
-Diamond tufted back!
-High-resiliency foam cushions wrapped in thick poly fiber!
-Attached back and t-seat cushion!
-Turned wood legs in light brown finish!
-Platform foundation system resists sagging 3x better than spring system after 20,000 testing cycles by providing more even support!
-Smooth platform foundation maintains tight, wrinkle-free look without dips or sags that can occur over time with sinuous spring foundations!
-Estimated Assembly Time: 15 Minutes!
-Fabric Details!
-Body: Polyester (100)%!
-Weight 61 lbs. (27.67 kgs.)", category: "Accent Chairs", measurement: 'Width: 30.50",Depth: 36.00",Height: 38.00"', color: "Dove Gray", price: 499.00  })
-file1 = open('')
-p4.images.attach(io:file1, filename: '')
-file2 = open('')
-p4.images.attach(io:file2, filename: '')
-file3 = open('')
-p4.images.attach(io:file3, filename: '')
-file4 = open('')
-p4.images.attach(io:file4, filename: '')
-file5 = open('')
-p4.images.attach(io:file5, filename: '')
-file6 = open('')
-p4.images.attach(io:file6, filename: '')
-file7 = open('')
-p4.images.attach(io:file7, filename: '')
-file8 = open('')
-p4.images.attach(io:file8, filename: '')
-file9 = open('')
-p4.images.attach(io:file9, filename: '')
-file10 = open('')
-p4.images.attach(io:file10, filename: '')
 
-Product.create({name: "Porter Dining Chair", description: "Satisfying your taste for traditional furnishings, the Porter upholstered dining room chair is elegant, without looking fussy. Rolled-back design gives the classic profile a touch of flair and drama. Chair’s back is upholstered on both sides for a posh feel and welcome warmth.",
+# p4 = Product.create({name: "Dinara Accent Chair", description: "Give your classic style a modern edge with the Dinara accent chair. The diamond tufted back and dove gray color combine to create an elevated piece that pays homage to time-honored design while remaining entirely current.",
+# highlights:"
+# Polyester upholstery!
+# Diamond tufted back!
+# High-resiliency foam cushions wrapped in thick poly fiber!
+# Attached back and t-seat cushion!
+# Turned wood legs in light brown finish!
+# Platform foundation system resists sagging 3x better than spring system after 20,000 testing cycles by providing more even support!
+# Smooth platform foundation maintains tight, wrinkle-free look without dips or sags that can occur over time with sinuous spring foundations!
+# Estimated Assembly Time: 15 Minutes!
+# Fabric Details!
+# Body: Polyester (100)%!
+# Weight 61 lbs. (27.67 kgs.)", category: "Accent Chairs", measurement: 'Width: 30.50",Depth: 36.00",Height: 38.00"', color: "Dove Gray", price: 499.00  })
+# file1 = open('')
+# p4.images.attach(io:file1, filename: '')
+# file2 = open('')
+# p4.images.attach(io:file2, filename: '')
+# file3 = open('')
+# p4.images.attach(io:file3, filename: '')
+# file4 = open('')
+# p4.images.attach(io:file4, filename: '')
+# file5 = open('')
+# p4.images.attach(io:file5, filename: '')
+# file6 = open('')
+# p4.images.attach(io:file6, filename: '')
+# file7 = open('')
+# p4.images.attach(io:file7, filename: '')
+# file8 = open('')
+# p4.images.attach(io:file8, filename: '')
+# file9 = open('')
+# p4.images.attach(io:file9, filename: '')
+# file10 = open('')
+# p4.images.attach(io:file10, filename: '')
+
+p5 = Product.create({name: "Porter Dining Chair", description: "Satisfying your taste for traditional furnishings, the Porter upholstered dining room chair is elegant, without looking fussy. Rolled-back design gives the classic profile a touch of flair and drama. Chair’s back is upholstered on both sides for a posh feel and welcome warmth.",
 highlights:"
 Made of wood and engineered wood!
 Hand-finished!

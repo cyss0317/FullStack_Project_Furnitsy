@@ -55,7 +55,7 @@ p2.images.attach(io:file9, filename: 'images/bolanburg_dining_table/D647-32-10x8
 
 
 p3 = Product.create({name: "Skempton Counter Height Dining Table and Bar Stools (Set of 3)", description: "The Skempton counter height table and bar stool set invites you to raise the bar on small space living. An inspired choice for coastal chic or modern farmhouse settings, this clean-lined, simply striking set doubles the charm with brown tone plank effect tops, paired with grayish white bases with rub through effect for timeworn appeal. The table’s built-in open shelves make the most of every inch of space.",
-hightlights:'
+highlights:'
 Includes counter height table and 2 bar stools!
 Made of wood, acacia veneer and engineered wood!
 Distressed grayish white finish!
@@ -140,8 +140,6 @@ Clean fabric with mild soap and water, let air dry; for stubborn stains, use a s
 Assembly required!
 Estimated Assembly Time: 120 Minutes!
 Weight 328 lbs. (148.78 kgs.)', category: "Outdoor", measurement: 'Width: 42.38",Depth: 84.38",Height: 29.50""', color: "Beige", price: 3849.00  })
-
-
 file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/benchcroft-outdoor/main-P791-625-601(2)-601A(2)-600.webp')
 p6.images.attach(io:file1, filename: 'images/benchcroft-outdoor/main-P791-625-601(2)-601A(2)-600.webp')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/benchcroft-outdoor/P791-SWATCH-BODY-500.jpeg')
