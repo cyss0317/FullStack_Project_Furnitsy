@@ -1,0 +1,71 @@
+.products-index-container{
+
+    height: 40vh;
+    background-color: #ddebe3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 36px;
+    padding-right: 36px;
+    /* box-sizing: content-box; */
+}
+
+.index-container-logo{
+    font-size: 33px;
+    font-weight: 100;
+}
+
+.best-selling-items{
+    font-size: 20px;
+    font-weight:bold;
+    top: 20px;
+
+}
+
+.products-index-container-ul{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+/* question */
+element.style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.products-hot-items{
+
+    width: 14vmax;
+    height: 12vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-overflow: ellipsis;
+}
+
+.products-hot-items > p {
+    display: flex;
+    justify-content: center;
+}
+
+.hot-items-image-thumnail {
+    width: 14vmax;
+    height: 12vmax;
+    border-radius: 50%;
+    padding: 10px;
+
+
+}

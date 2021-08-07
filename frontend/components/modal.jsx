@@ -4,9 +4,9 @@ import React from "react";
 import LoginFormContainer from "./login_form_container";
 import SignupFormContainer from "./signup_form_container";
 
-//question3: why container and presentational have to be in the same file.
+//answered: why container and presentational have to be in the same file.
             //it didn't render the session form when they were not in the same file
-    //question 4: why do we need to put "React from 'react'" signup and login container now, 
+    //answered 4: why do we need to put "React from 'react'" signup and login container now, 
     //              when we didn't need that when we used to render in app <Link component=signupFormContainer> 
 
 //if state.ui.modal is not null, render modal???
@@ -16,7 +16,7 @@ const Modal = ({ modal, closeModal }) => {
         return null
     }
     let component;
-    //question2, when does modal gets assign to either login or sign up
+    //answered, when does modal gets assign to either login or sign up
         //inside of greeting.jsx, i assign it through onclick
     switch(modal){
         case "Login":

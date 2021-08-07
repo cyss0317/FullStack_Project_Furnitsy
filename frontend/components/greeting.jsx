@@ -23,7 +23,7 @@ const Greeting = ({currentUser, logout, openModal}) => {
 
     return currentUser ? ifLoggedIn() : ifLoggedOut();
                     // ifLoggedIn(currentUser, logout)
-                    // question1, why do we need to pass these as param
+                    // answered, why do we need to pass these as param
 
 }
 

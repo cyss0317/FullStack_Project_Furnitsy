@@ -1,17 +1,21 @@
 
  /* sign up and sign in styling */
- .signup-login, .welcome-message-and-logout-button {
+ /* .signup-login, .welcome-message-and-logout-button {
 	position: absolute;
     top: 8px;
     right: 8px;
-	background-color: white;
-    font-size: 13px;
 
- }
+    font-size: 15px;
+
+ } */
 /* .signup{
 	padding: 0;
 } */
 
+ body{
+	font-family: 'Recursive', sans-serif;
+	font-weight: bold;
+ }
 
 
 .or {
@@ -38,9 +42,8 @@
  .signup:hover, .login:hover {
 	cursor: pointer;
 	/* text-decoration:underline; */
-	font-size: 13px;
+	font-size: 16px;
 	font-weight: bold;
-	padding-bottom: 2px;
 	border-bottom-style: solid ;
 	border-bottom-width: 1px;
 	width: fit-content;
