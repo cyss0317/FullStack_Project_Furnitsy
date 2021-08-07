@@ -44,7 +44,7 @@ element.style {
     align-items: center;
     flex-direction: column;
 }
-
+/* 
 .products-hot-items{
 
     width: 14vmax;
@@ -56,10 +56,28 @@ element.style {
 
     text-overflow: ellipsis;
 }
+ */
 
-.products-hot-items > p {
+.hot-items-image-thumnails{
+
+    width: 14vmax;
+    height: 12vmax;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-overflow: ellipsis;
+}
+
+.products-hot-items {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.hot-items-image-thumnails > p {
+    margin-top: 20px;
 }
 
 .hot-items-image-thumnail {
@@ -69,4 +87,8 @@ element.style {
     padding: 10px;
 
 
+}
+
+.hot-items-image-thumnail > p {
+    text-decoration: none;
 }

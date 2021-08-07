@@ -6,12 +6,12 @@ const ProductIndexItem = props => {
     
     return(
         <li className={`products-hot-items`}>
-            <Link to={`/products/${product.id}`}>
+            <Link to={`/products/${product.id}`} className="hot-items-image-thumnails">
                 <img className="hot-items-image-thumnail" 
                 src={product.photoUrls[0]}
                 />
+                <p>{product.name}</p>
             </Link>
-            <p>{product.name}</p>
         </li>
     )
 }
