@@ -40,7 +40,7 @@ class ProductShow extends React.Component {
                     <p className="show-name">Name :  {product.name} </p>
                     <p className="show-color">Color :  {product.color} </p>
                     <p className="show-price"><span></span> Price :  {product.price}.00 </p>
-                    <p className="show-description"><span>Description :</span>  {product.description} </p>
+                    <p className="show-description"><button className="buttons">Description :</button>  {product.description} </p>
                     <ul>
                         <button className="highlights-button">Highlights </button>
                         {
@@ -68,6 +68,7 @@ class ProductShow extends React.Component {
                         <ul className="picture-container-list">
                             {product.photoUrls.map((photo) => (
                             <li className="picture-container-list-item-container">
+                                {/* important! */}
                                 <img className="picture-container-list-item" src={photo} alt={photo} onClick={this.clickPictureHandler}  />
                             </li>
                             ))
