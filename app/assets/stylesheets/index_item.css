@@ -81,6 +81,8 @@ element.style {
     text-decoration: none;
     font-size: 13px;
     display: inline-block;
+    height: 40px;
+    text-align: center;
 }
 
 .hot-items-image-thumnail {

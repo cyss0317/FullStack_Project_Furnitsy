@@ -1,0 +1,13 @@
+.nav-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 12px 36px 12px 36px;
+
+}
+
+.nav-item {
+    padding: 8px 12px 8px 12px;
+    text-align: center;
+
+    font-weight: 100;
+}
