@@ -6,14 +6,27 @@ import { ThunkReceiveProducts } from "../../actions/product_actions";
 const mSTP = (state) => {
 
     const products = Object.values(state.entities.products)
+
     let couchAndSofa = products.filter((product) => (
         product.category === "Couch and Sofa"
     ))
+    debugger
+    let randomItem = [];
+    {
+        // debugger
+        for (let i = 0; i < 6; i++) {
+            randomItem.push(products[Math.floor(Math.random() * products.length)])
+        }
+    }
+    
+
+
     return ({
         //IMPORTANT 
         //I completely forgot to change object into a form of an array
         products: Object.values(state.entities.products),
-        couchAndSofa: couchAndSofa
+        couchAndSofa: couchAndSofa,
+        randomitem: randomItem
     })
 }
 

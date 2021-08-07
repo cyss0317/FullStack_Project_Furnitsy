@@ -11,7 +11,7 @@ class ProductIndex extends React.Component{
     }
 
     render(){
-        const { products, couchAndSofa } = this.props;
+        const { products, couchAndSofa, randomItem } = this.props;
         const categories = ["Couch and Sofa",
             "Console Table",
             "Outdoor Dining Sets",
@@ -38,7 +38,7 @@ class ProductIndex extends React.Component{
                     <p className="best-selling-items">Best selling items</p>
                     <ul className="products-index-container-ul">
                             {
-                            couchAndSofa.map(product => (       
+                            randomItem.map(product => (       
                                 <ProductIndexItem
                                     product={product}
                                     key={product.id}
