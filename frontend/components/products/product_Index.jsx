@@ -11,34 +11,32 @@ class ProductIndex extends React.Component{
     }
 
     render(){
-        const { products, couchAndSofa, randomItem } = this.props;
-        const categories = ["Couch and Sofa",
-            "Console Table",
-            "Outdoor Dining Sets",
-            "Dining Table",
-            "Coffee Table",
-            "Kids Bunk Bed",
-            "Accent Chairs",
-            "Dining Chairs",
-            "Outdoor"]
+        const { products, couchAndSofa, coffeeTable, randomItem, outdoor} = this.props;
+        
+        // const randomItem = [];
 
+        // // {
+        //     debugger
+        //     for (let i = 0; i < 6; i++) {
+        //         randomItem.push(products[Math.floor(Math.random() * products.length)]);
+        //     }
+        // // }
+        // if (randomItem === undefined){
+        //     return null;
+        // }
+
+
+        // debugger
         return (
             <div className="index-main-container">
-                <nav className="nav-container">
-                    {
-                        categories.map((category) => (
-                            <a className="nav-item">
-                                {category}
-                            </a>
-                        ))
-                    }
-                </nav>
+
                 <div className="products-index-container" >
                     <h2 className="index-container-logo">Furnitures made just for you.</h2>
                     <p className="best-selling-items">Best selling items</p>
                     <ul className="products-index-container-ul">
                             {
-                            randomItem.map(product => (       
+
+                            coffeeTable.map(product => (       
                                 <ProductIndexItem
                                     product={product}
                                     key={product.id}

@@ -36,7 +36,7 @@ class ProductShow extends React.Component {
         return(
             <section className="product-show-container" >
                 <div className="product-show-info">
-                    <p className="show-category">{product.category} </p>
+                    <p className="show-category">Category:  {product.category} </p>
                     <p className="show-name">Name :  {product.name} </p>
                     <p className="show-color">Color :  {product.color} </p>
                     <p className="show-price"><span></span> Price :  {product.price}.00 </p>

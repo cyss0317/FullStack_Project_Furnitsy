@@ -8,7 +8,7 @@ import { AuthRoute } from "../util/route_util";
 import Modal from "./modal";
 import ProductIndexContainer from "./products/products_index_container";
 import ProductShowContainer from "./products/product_show_container";
-
+import ProductNav from "./products/product_nav_index";
 
 const App = () => {
 
@@ -17,9 +17,12 @@ const App = () => {
        <Modal/>
        <div className="header-container">
             <header className="header">
-                <a className="header-logo" href="/" >Furnitsy</a>
-                <input type="text" className="header-searchbar"/>
-                <GreetingContainer className="greeting-component"/>
+                <div className="logo-searchbar-sign">
+                    <a className="header-logo" href="/" >Furnitsy</a>
+                    <input type="text" className="header-searchbar"/>
+                    <GreetingContainer className="greeting-component"/>
+                </div>
+                {/* <ProductNav className="product-nav"/> */}
             </header>
        </div>
             {/* <ProductIndexContainer/> */}
