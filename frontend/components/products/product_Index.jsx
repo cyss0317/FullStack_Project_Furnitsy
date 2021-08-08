@@ -36,7 +36,7 @@ class ProductIndex extends React.Component{
                     <ul className="products-index-container-ul">
                             {
 
-                            coffeeTable.map(product => (       
+                            couchAndSofa.map(product => (       
                                 <ProductIndexItem
                                     product={product}
                                     key={product.id}

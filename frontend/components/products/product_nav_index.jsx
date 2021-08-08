@@ -23,18 +23,19 @@ class ProductNav extends React.Component{
         return(
             <div className="nav-static">
                 <nav className="nav-container">
-                    {
-                        categories.map((category, index) => (
-                            <a className="nav-item">
-                                {/* take user to show index page for category */}
-                                {/* render other component and pass in coresponding info */}
-                                <ProductNavShowList products={categories_selector[index]} />
-                                {category}
-                            </a>
-                        ))
- 
-
-                    }
+                    <li>
+                        {
+                            categories.map((category, index) => {
+                               return(
+                               <a className="nav-item">
+                                    {/* take user to show index page for category */}
+                                    {/* render other component and pass in coresponding info */}
+                                    {category}
+                                    <ProductNavShowList products={categories_selector[index]} />
+                                </a>
+                            )})
+                        }
+                    </li>
                 </nav>
             </div>
         )

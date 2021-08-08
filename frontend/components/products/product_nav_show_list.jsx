@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductNavShowList = (props) => {
     const {products} = props;
-    debugger
+
     return(
         <div>
             <ul>
