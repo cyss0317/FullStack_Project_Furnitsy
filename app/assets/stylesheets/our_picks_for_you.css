@@ -1,0 +1,11 @@
+.picks-for-you{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.picks-for-you > p {
+    padding-top: 30px;
+    font-size: 37px;
+}

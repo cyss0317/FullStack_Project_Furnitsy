@@ -1,6 +1,6 @@
-import {connect} from "react-redux";
-import ProductIndex from "./product_Index"
-import { ThunkReceiveProducts } from "../../actions/product_actions"; 
+import { connect } from "react-redux";
+// import ProductNav from "./product_nav_index"
+import { ThunkReceiveProducts } from "../../actions/product_actions";
 
 
 const mSTP = (state) => {
@@ -28,53 +28,6 @@ const mSTP = (state) => {
     let diningChairs = products.filter((product) => (
         product.category === "Dining Chairs"
     ))
-    
-    let randomItem8 = [];
-
-    // important to under stand!! 
-    // 
-
-    if (products.length !== 0) {
-        while (randomItem8.length < 8) {
-            let random = products[Math.floor(Math.random() * products.length)]
-            if (!randomItem8.includes(random)){
-            randomItem8.push(random)}
-        }
-    }
-
-    // let random = function(arr, number){
-    //     for (let i = 0; i < number; i++) {
-    //         arr.push(products[Math.floor(Math.random() * products.length)]);
-    //     }
-    //     return arr;
-    // }
-
-
-
-    // random(randomItem8, 8);
-    // if (products === undefined){
-    //     return null;
-    // } else{
-    //     return random(randomItem8, 8);
-    // }
-
-    // let randomItem = [];
-    // for (let i = 0; i < 8; i++) {
-    //     randomItem.push(products[Math.floor(Math.random() * products.length)]);
-
-    // }
-
-
-    // // question 5 
-    // let randomItem = [];
-    // {
-    //     // debugger
-    //     for (let i = 0; i < 6; i++) {
-    //         randomItem.push(products[Math.floor(Math.random() * products.length)]);
-    //     }
-    // }
-    
-
 
     return ({
         //IMPORTANT 
@@ -82,14 +35,12 @@ const mSTP = (state) => {
         products: products,
         couchAndSofa: couchAndSofa,
         outdoor: outdoor,
-        randomItem8: randomItem8,
+        // // randomitem: randomItem
         diningTable: diningTable,
         coffeeTable: coffeeTable,
         kidsBunkBed: kidsBunkBed,
         accentChairs: accentChairs,
-        diningChairs: diningChairs,
-        // recentlyViews: recentlyViews
-
+        diningChairs: diningChairs
     })
 }
 
@@ -97,7 +48,7 @@ const mDTP = dispatch => ({
     fetchProducts: () => dispatch(ThunkReceiveProducts())
 })
 
-export default connect(mSTP, mDTP)(ProductIndex)
+export default connect(mSTP, mDTP)(ProductNav)
 
 // export default connect(mSTP, mDTP)(ProductIndex)
 
