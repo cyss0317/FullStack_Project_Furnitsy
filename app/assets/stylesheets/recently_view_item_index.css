@@ -28,7 +28,7 @@
 }
 .recently-view-item > span {
     position: relative;
-    top: 160px;
+    top: -30px;
     right: -10px;
     background-color: rgb(245, 245, 245);
     border-radius: 15px;
