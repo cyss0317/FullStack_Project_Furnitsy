@@ -28,23 +28,42 @@ const mSTP = (state) => {
     let diningChairs = products.filter((product) => (
         product.category === "Dining Chairs"
     ))
-
     
-    // Array.prototype.random = function(arr = [], number){
+    let randomItem8 = [];
+
+    // important to under stand!! 
+    // 
+
+    if (products.length !== 0) {
+        while (randomItem8.length < 8) {
+            let random = products[Math.floor(Math.random() * products.length)]
+            if (!randomItem8.includes(random)){
+            randomItem8.push(random)}
+        }
+    }
+
+    // let random = function(arr, number){
     //     for (let i = 0; i < number; i++) {
-    //         arr.push(this[Math.floor(Math.random() * this.length)]);
+    //         arr.push(products[Math.floor(Math.random() * products.length)]);
     //     }
     //     return arr;
     // }
 
-    let randomItem = [];
-    for (let i = 0; i < 8; i++) {
-        randomItem.push(products[Math.floor(Math.random() * products.length)]);
 
-    }
 
-    console.log(randomItem);
-    // products.random(randomItem, 8)
+    // random(randomItem8, 8);
+    // if (products === undefined){
+    //     return null;
+    // } else{
+    //     return random(randomItem8, 8);
+    // }
+
+    // let randomItem = [];
+    // for (let i = 0; i < 8; i++) {
+    //     randomItem.push(products[Math.floor(Math.random() * products.length)]);
+
+    // }
+
 
     // // question 5 
     // let randomItem = [];
@@ -63,7 +82,7 @@ const mSTP = (state) => {
         products: products,
         couchAndSofa: couchAndSofa,
         outdoor: outdoor,
-        randomitem: randomItem,
+        randomItem8: randomItem8,
         diningTable: diningTable,
         coffeeTable: coffeeTable,
         kidsBunkBed: kidsBunkBed,

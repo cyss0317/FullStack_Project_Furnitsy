@@ -1,11 +1,12 @@
 .recently-view-item {
 
-    width: 250px;
+    width: 270px;
 
-    height: 180px;
+    height: 230px;
     object-fit: contain;
     border-radius: 30px;
-    padding-bottom: 13px;
+    padding-bottom: 15px;
+    padding-right: 15px;
 
 }
 .recently-viewed-container > p{
@@ -67,7 +68,12 @@
 .recently-viewed-items{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: center;
+}
+
+.recently-viewed-items li img {
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
 }

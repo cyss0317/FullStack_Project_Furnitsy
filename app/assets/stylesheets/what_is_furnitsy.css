@@ -60,21 +60,27 @@
     padding-bottom: 13px ;
 }
 
-.submit_to_eamil{
-    border: 1px #222222;
-    background-color: transparent;
-    /* outline: none; */
+.submit_to_email{
+    /* border: 1px solid #222222; */
+    outline: none;
+    border: none;
     border-radius: 15px;
     font-size: 20px;
     /* margin: 10px 0 36px 0; */
-        padding-top: 6px;
-    padding-bottom:36px;
+    padding-top: 6px;
+    padding-bottom:6px;
     padding-left: 9px;
     padding-right: 9px;
     margin-bottom: 36px;
-
+    margin-top: 10px;
+    background-color: #eeb161;
 }
 
-.submit_to_eamil:hover{
+.submit_to_email:hover{
     cursor: pointer;
+    background-color: #f37c40;
+    color: #e9dac7;
+
+    /* border: 1px solid #FAECD5; */
+    /* border: 1px solid #eeb161; */
 }
