@@ -63,26 +63,40 @@ class ProductIndex extends React.Component{
                     </ul>
                 </div>
 
-                <div className="picks-for-you">
+                {/* <div className="picks-for-you">
                         <p>Our picks for you</p>
                         <div>
-                            {/*  */}
+
                         </div>
 
-                </div>
+                </div> */}
 
                 <div className="what_is_furnitsy">
-            
+                    <div>
                         <h1>What is Furnitsy?</h1>
-
-                    <div>
-                        <h2>A community doing good</h2>
-                        <p>Etsy is a global online marketplace, where people come together to make, sell, buy, and collect unique items. We’re also a community pushing for positive change for small businesses, people, and the planet. Here are some of the ways we’re making a positive impact, together.</p>
                     </div>
-                    <div>
-                        <h2></h2>
+                    <div id="what_is_furnitsy_inner">
+                        <div id="furnitsy_inner_div">
+                            <h2>A community doing good</h2>
+                            <p>Furnitsy is a global online marketplace, where people come together to make, sell, buy, and collect unique items. We’re also a community pushing for positive change for small businesses, people, and the planet. Here are some of the ways we’re making a positive impact, together.</p>
+                        </div>
+                        <div id="furnitsy_inner_div">
+                            <h2>Sell furnitures to customers</h2>
+                            <p>We sell Ashely furnitures on our website. Whatever you can find on this website, you can also find it on actual Ashley furnitures.</p>
+                        </div>
+                        <div id="furnitsy_inner_div">
+                            {/* ignores text align prop */}
+                            <h2>Peace of mind</h2>
+                            <p>Your privacy is the highest priority of our dedicated team. And if you ever need assistance, we are always ready to step in for support.</p>
+                        </div>
                     </div>
-
+                    <div id="contact-me">
+                        <h3>If you want to hire me, contact me here!</h3>
+                        {/* <button onClick="document.location= 'mailto:cyss0317@gmail.com'">Contact Yun Choi</button> */}
+                        <form action="mailto:cyss0317@gmail.com" method="POST" encType="text/plain">
+                            <input className='submit_to_email'type="submit"  value="Contact Yun Sung Choi" />
+                        </form>
+                    </div>
                 </div>
                 
 

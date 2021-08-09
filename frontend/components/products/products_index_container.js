@@ -28,17 +28,23 @@ const mSTP = (state) => {
     let diningChairs = products.filter((product) => (
         product.category === "Dining Chairs"
     ))
-    let recentlyViews = products[0,4,7,8,11,15,17,18];
+
     
-    Array.prototype.random = function(arr = [], number){
-        for (let i = 0; i < number; i++) {
-            arr.push(this[Math.floor(Math.random() * this.length)]);
-        }
-        return arr;
-    }
+    // Array.prototype.random = function(arr = [], number){
+    //     for (let i = 0; i < number; i++) {
+    //         arr.push(this[Math.floor(Math.random() * this.length)]);
+    //     }
+    //     return arr;
+    // }
 
     let randomItem = [];
-    products.random(randomItem, 8)
+    for (let i = 0; i < 8; i++) {
+        randomItem.push(products[Math.floor(Math.random() * products.length)]);
+
+    }
+
+    console.log(randomItem);
+    // products.random(randomItem, 8)
 
     // // question 5 
     // let randomItem = [];
@@ -63,7 +69,7 @@ const mSTP = (state) => {
         kidsBunkBed: kidsBunkBed,
         accentChairs: accentChairs,
         diningChairs: diningChairs,
-        recentlyViews: recentlyViews
+        // recentlyViews: recentlyViews
 
     })
 }

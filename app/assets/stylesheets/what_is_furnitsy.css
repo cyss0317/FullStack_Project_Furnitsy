@@ -3,8 +3,78 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
-    height: 500px;
+    width: 94%;
+    margin-top: 30px;
     object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 12px 36px 12px 36px;
+}
+
+#what_is_furnitsy_inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    align-items: flex-start;
     
+}
+#furnitsy_inner_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    width: 26%;
+    text-align: center;
+
+}
+
+#furnitsy_inner_div p{
+    padding-top: 13px;
+}
+
+.what_is_furnitsy h1{
+    font-size: 38px;
+    padding-top: 20px;
+}
+
+.what_is_furnitsy h2{
+    font-size: 25px;
+}
+.what_is_furnitsy p{
+    font-size: 17px;
+}
+
+#contact-me {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#contact-me h3{
+    font-size: 30px;
+    font-weight: bolder;
+    padding-bottom: 13px ;
+}
+
+.submit_to_eamil{
+    border: 1px #222222;
+    background-color: transparent;
+    /* outline: none; */
+    border-radius: 15px;
+    font-size: 20px;
+    /* margin: 10px 0 36px 0; */
+        padding-top: 6px;
+    padding-bottom:36px;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-bottom: 36px;
+
+}
+
+.submit_to_eamil:hover{
+    cursor: pointer;
 }
