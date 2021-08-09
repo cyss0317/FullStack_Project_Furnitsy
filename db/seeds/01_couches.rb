@@ -45,8 +45,8 @@ Weight!
 124 lbs. (56.25 kgs.)",
  category: "Couch and Sofa", measurement: '"Width: 89.00",Depth: 38.00",Height: 39.00"' ,color: "Natural, Smoke", price: 649.00 })
 
-p2_1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/main_8390438-SET-10X8-CROP.webp')
-p2.images.attach(io:p2_1, filename: 'images/abinger_sofa/main_8390438-SET-10X8-CROP.webp')
+p2_1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/main_8390438-SET-10X8-CROP.png')
+p2.images.attach(io:p2_1, filename: 'images/abinger_sofa/main_8390438-SET-10X8-CROP.png')
 p2_2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/8390438-Abinger-DIM.webp')
 p2.images.attach(io:p2_2, filename: 'images/abinger_sofa/8390438-Abinger-DIM.webp')
 p2_3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/83904-SWATCH-BODY-A-500.jpeg')
@@ -75,8 +75,8 @@ Exposed wood-tone legs!
 Estimated Assembly Time: 30 Minutes!
 Fabric Details: Polyester (100)%!
 Weight 111 lbs. (50.35 kgs.)", category: "Couch and Sofa", measurement: 'Width: 78.00",Depth: 32.00",Height: 32.00"', color: "Gray", price: 599.00 })
-file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/gaddis_sofa/main_68206-65-UP-10X8-CROP.webp')
-p4.images.attach(io:file1, filename: 'images/gaddis_sofa/main_68206-65-UP-10X8-CROP.webp')
+file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/gaddis_sofa/main_68206-65-UP-10X8-CROP.png')
+p4.images.attach(io:file1, filename: 'images/gaddis_sofa/main_68206-65-UP-10X8-CROP.png')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/gaddis_sofa/68206-SWATCH-BODY-A-500.webp')
 p4.images.attach(io:file2, filename: 'images/gaddis_sofa/68206-SWATCH-BODY-A-500.webp')
 file3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/gaddis_sofa/68206-65-USB-DETAIL.webp')
@@ -111,8 +111,8 @@ Smooth platform foundation maintains tight, wrinkle-free look without dips or sa
 Fabric Details Body: Polyester (100)%!
 Weight 103 lbs. (46.72 kgs.)",
  category: "Couch and Sofa", measurement: 'Width: 82.00",Depth: 40.00",Height: 36.00"', color: "Graphite", price: 749.00 })
-file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/lyman_sofa/main_93303-38-SET-10X8-CROP.webp')
-p3.images.attach(io:file1, filename: 'images/lyman_sofa/main_93303-38-SET-10X8-CROP.webp')
+file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/lyman_sofa/main_93303-38-SET-10X8-CROP.png')
+p3.images.attach(io:file1, filename: 'images/lyman_sofa/main_93303-38-SET-10X8-CROP.png')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/lyman_sofa/93303-38-SIDE-SW-P1-KO.webp')
 p3.images.attach(io:file2, filename: 'images/lyman_sofa/93303-38-SIDE-SW-P1-KO.webp')
 file3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/lyman_sofa/93303-38-HEAD-ON-SW-P1-KO.webp')
@@ -138,8 +138,8 @@ Fabric Details Body: Polyester (100)%!
 Body and Pillows: Polyester (100)%!
 Weight 215 lbs. (96.75 kgs.)", category: "Couch and Sofa", measurement: 'Width: 112.00",Depth: 40.00",Height: 37.00"', color: "Ivory, Dark Gray ", price: 1599.00 })
 
-file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/The+Man-Den+Triple+Power+Reclining+Sofa/main-U8530515-SET-10X8-CROP.webp')
-p5.images.attach(io:file1, filename: 'images/The Man-Den Triple Power Reclining Sofa/main-U8530515-SET-10X8-CROP.webp')
+file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/The+Man-Den+Triple+Power+Reclining+Sofa/main-U8530515-SET-10X8-CROP.png')
+p5.images.attach(io:file1, filename: 'images/The Man-Den Triple Power Reclining Sofa/main-U8530515-SET-10X8-CROP.png')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/The+Man-Den+Triple+Power+Reclining+Sofa/U85305-15-CLSD-ANGLE-SW-P1-KO.webp')
 p5.images.attach(io:file2, filename: 'images/The Man-Den Triple Power Reclining Sofa/U85305-15-CLSD-ANGLE-SW-P1-KO.webp')
 file3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/The+Man-Den+Triple+Power+Reclining+Sofa/U85305-15-CUP-HLDRS.jpeg')

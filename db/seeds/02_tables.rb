@@ -10,8 +10,8 @@ Distressed vintage white finish!
 Assembly required!
 Estimated Assembly Time: 195 Minutes!
 Weight 342 lbs. (102.09 kgs.)', category: "Dining Table", measurement: 'Width: 42.13",Depth:,84.00",Height: 30.00"', color: "White/Gray", price: 1599.00 })
-file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/havalance_dining_table/main_D814-25-01(6)-10X8-CROP.webp')
-p1.images.attach(io:file1, filename: 'images/havalance_dining_table/main_D814-25-01(6)-10X8-CROP.webp')
+file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/havalance_dining_table/main_D814-25-01(6)-10X8-CROP.png')
+p1.images.attach(io:file1, filename: 'images/havalance_dining_table/main_D814-25-01(6)-10X8-CROP.png')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/havalance_dining_table/D814-25-TOP.webp')
 p1.images.attach(io:file2, filename: 'images/havalance_dining_table/D814-25-TOP.webp')
 file3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/havalance_dining_table/D814-25-DETAIL.jpeg')
@@ -34,8 +34,8 @@ Assembly required!
 Estimated Assembly Time: 45 Minutes!
 Weight 140 lbs. (63.5 kgs.)", category: "Dining Table", measurement: 'Width: 65.00",Depth: 30.00",Height: 36.13"
 ', color: "Two-Tone(brown, ivory)", price: 799.00 })
-file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/bolanburg_dining_table/main_D647-32-MOOD-C.webp')
-p2.images.attach(io:file1, filename: 'images/bolanburg_dining_table/main_D647-32-MOOD-C.webp')
+file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/bolanburg_dining_table/main_D647-32-MOOD-C.png')
+p2.images.attach(io:file1, filename: 'images/bolanburg_dining_table/main_D647-32-MOOD-C.png')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/bolanburg_dining_table/D647-32-TOP-DETAIL.jpeg')
 p2.images.attach(io:file2, filename: 'images/bolanburg_dining_table/D647-32-TOP-DETAIL.jpeg')
 file3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/bolanburg_dining_table/D647-32-MOOD-B.jpeg')
@@ -64,8 +64,8 @@ Cushioned seat with polyester upholstery!
 Assembly required!
 Estimated Assembly Time: 60 Minutes!
 Weight 106 lbs. (48.08 kgs.)', category: "Dining Table", measurement: 'Width: 36.00",Depth: 30.00",Height: 36.00"', color: "White/Light Brown", price: 529.00 })
-file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/skempton_dining_table/main_D394-113.webp')
-p3.images.attach(io:file1, filename: 'images/skempton_dining_table/main_D394-113.webp')
+file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/skempton_dining_table/main_D394-113.png')
+p3.images.attach(io:file1, filename: 'images/skempton_dining_table/main_D394-113.png')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/skempton_dining_table/D394-113-SW-P1-KO.webp')
 p3.images.attach(io:file2, filename: 'images/skempton_dining_table/D394-113-SW-P1-KO.webp')
 file3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/skempton_dining_table/D394-113-MOOD-V.webp')
@@ -82,8 +82,8 @@ Two-tone distressed finish: weathered gray top; vintage white base!
 Assembly required!
 Estimated Assembly Time: 30 Minutes!
 Weight 75 lbs. (34.02 kgs.)", category: "Coffee Table", measurement: 'Width: 46.13",Depth: 32.13",Height: 19.00"', color: "Gray/white", price: 499.00 })
-file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/havalance_coffee_table/main_T814-1-10X8-CROP.webp')
-p4.images.attach(io:file1, filename: 'images/havalance_coffee_table/main_T814-1-10X8-CROP.webp')
+file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/havalance_coffee_table/main_T814-1-10X8-CROP.png')
+p4.images.attach(io:file1, filename: 'images/havalance_coffee_table/main_T814-1-10X8-CROP.png')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/havalance_coffee_table/T814-1-Havalance-DIM.webp')
 p4.images.attach(io:file2, filename: 'images/havalance_coffee_table/T814-1-Havalance-DIM.webp')
 file3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/havalance_coffee_table/T814-1-SW-P1-KO.webp')

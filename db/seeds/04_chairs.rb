@@ -6,8 +6,8 @@ Made with polyester velvet and iron
 Assembly required
 Weight 50 lbs. (22.68 kgs.)', category: "Accent Chairs", measurement: 'Width: 32.00",Depth: 31.00",Height: 35.50"', color: "Light Gray", price:760.00  })
 
-file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/safavieh_chair/main_A600025594_1.webp')
-p1.images.attach(io:file1, filename: 'images/safavieh_chair/main_A600025594_1.webp')
+file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/safavieh_chair/main_A600025594_1.png')
+p1.images.attach(io:file1, filename: 'images/safavieh_chair/main_A600025594_1.png')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/safavieh_chair/A600025594_9.jpeg')
 p1.images.attach(io:file2, filename: 'images/safavieh_chair/A600025594_9.jpeg')
 file3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/safavieh_chair/A600025594_7.jpeg')
@@ -33,8 +33,8 @@ Estimated Assembly Time: 30 Minutes!
 Fabric Details : Cotton (30)%,Linen (70)%!
 Weight 44 lbs. (19.96 kgs.)", category: "Accent Chairs", measurement: 'Width: 25.50",Depth: 33.00",Height: 31.75"', color: "Neutral", price: 459.00  })
 
-file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/rocker_chair/main_A3000081-10x8-CROP.webp')
-p2.images.attach(io:file1, filename: 'images/rocker_chair/main_A3000081-10x8-CROP.webp')
+file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/rocker_chair/main_A3000081-10x8-CROP.png')
+p2.images.attach(io:file1, filename: 'images/rocker_chair/main_A3000081-10x8-CROP.png')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/rocker_chair/A3000081-SWATCH-BODY-A-500.webp')
 p2.images.attach(io:file2, filename: 'images/rocker_chair/A3000081-SWATCH-BODY-A-500.webp')
 file3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/rocker_chair/A3000081-SW-KO.webp')
@@ -60,8 +60,8 @@ Goldtone handle on back!
 Solid kiln dried wood frame!
 Assembly required!
 Weight 26.5 lbs. (12.02 kgs.)", category: "Dining Chairs", measurement: 'Width: 22.00",Depth: 25.20",Height: 33.70"', color: "Pink/Gold", price: 499.00 })
-file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/beatrix_chair/main_D600002554_9.jpeg')
-p3.images.attach(io:file1, filename: 'images/beatrix_chair/main_D600002554_9.jpeg')
+file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/beatrix_chair/main_D600002554_9.png')
+p3.images.attach(io:file1, filename: 'images/beatrix_chair/main_D600002554_9.png')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/beatrix_chair/D600002554_8.webp')
 p3.images.attach(io:file2, filename: 'images/beatrix_chair/D600002554_8.webp')
 file3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/beatrix_chair/D600002554_7.webp')

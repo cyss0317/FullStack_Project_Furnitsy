@@ -4,10 +4,36 @@
     min-height: 100px;
     max-height: 200px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 30px;
+    padding-bottom: 13px;
 }
 .recently-viewed-container > p{
     font-size: 19px;
+}
+
+.recently-view-item > span > p {
+    font-size: 15px;
+    color: #258635 !important;
+    font-weight: bold;
+}
+.recently-view-item > span {
+    position: relative;
+    top: 160px;
+    right: -19px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 15px;
+    border: .6px #258635;
+    color: inherit;
+    display: inline-block;
+    word-break: break-word;
+    line-height: 1;
+    font-size: 13px;
+    font-weight: normal;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 9px;
+    padding-right: 9px;
+    min-width: 25px;
 }
 
 .recently-viewed-container{
