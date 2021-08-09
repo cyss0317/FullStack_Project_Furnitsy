@@ -72,7 +72,17 @@ class ProductIndex extends React.Component{
                 </div>
 
                 <div className="what_is_furnitsy">
-                        
+            
+                        <h1>What is Furnitsy?</h1>
+
+                    <div>
+                        <h2>A community doing good</h2>
+                        <p>Etsy is a global online marketplace, where people come together to make, sell, buy, and collect unique items. We’re also a community pushing for positive change for small businesses, people, and the planet. Here are some of the ways we’re making a positive impact, together.</p>
+                    </div>
+                    <div>
+                        <h2></h2>
+                    </div>
+
                 </div>
                 
 
