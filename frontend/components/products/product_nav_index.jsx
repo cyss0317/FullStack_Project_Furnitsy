@@ -5,13 +5,15 @@ class ProductNav extends React.Component{
     constructor(props){
         super(props)
     }
+
     componentDidMount(){
+        // question !! fetchproducts is not a function
         this.props.fetchProducts();
     }
 
     render (){
-        debugger
-        const { products, couchAndSofa, outdoor, diningChairs, diningTable, coffeeTable, kidsBunkBed, accentChairs} = this.props;
+
+        const {  couchAndSofa, outdoor, diningChairs, diningTable, coffeeTable, kidsBunkBed, accentChairs} = this.props;
         const categories_selector = [couchAndSofa, diningTable, coffeeTable, kidsBunkBed, accentChairs, diningChairs, outdoor];
         const categories = ["Couch and Sofa",
             "Dining Table",
@@ -23,7 +25,7 @@ class ProductNav extends React.Component{
         return(
             <div className="nav-static">
                 <nav className="nav-container">
-                    <li>
+                    <div>
                         {
                             categories.map((category, index) => {
                                return(
@@ -31,11 +33,11 @@ class ProductNav extends React.Component{
                                     {/* take user to show index page for category */}
                                     {/* render other component and pass in coresponding info */}
                                     {category}
-                                    <ProductNavShowList products={categories_selector[index]} />
+                                    {/* <ProductNavShowList products={categories_selector[index]} /> */}
                                 </a>
                             )})
                         }
-                    </li>
+                    </div>
                 </nav>
             </div>
         )

@@ -31,7 +31,7 @@ const mSTP = (state) => {
 
 
 
-    // // debugger
+    // // question 5 
     // let randomItem = [];
     // {
     //     // debugger
@@ -48,7 +48,7 @@ const mSTP = (state) => {
         products: products,
         couchAndSofa: couchAndSofa,
         outdoor: outdoor,
-        // // randomitem: randomItem
+        // randomitem: randomItem,
         diningTable: diningTable,
         coffeeTable: coffeeTable,
         kidsBunkBed: kidsBunkBed,

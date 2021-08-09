@@ -22,7 +22,8 @@ const App = () => {
                     <input type="text" className="header-searchbar"/>
                     <GreetingContainer className="greeting-component"/>
                 </div>
-                <ProductNav className="product-nav"/>
+
+                {/* <ProductNav className="product-nav"/> */}
             </header>
        </div>
             {/* <ProductIndexContainer/> */}
