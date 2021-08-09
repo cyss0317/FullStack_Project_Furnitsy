@@ -33,7 +33,7 @@ class ProductNav extends React.Component{
                                     {/* take user to show index page for category */}
                                     {/* render other component and pass in coresponding info */}
                                     {category}
-                                    {/* <ProductNavShowList products={categories_selector[index]} /> */}
+                                    <ProductNavShowList products={categories_selector[index]} />
                                 </a>
                             )})
                         }

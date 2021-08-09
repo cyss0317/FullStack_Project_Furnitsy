@@ -9,6 +9,8 @@
     padding-right: 15px;
 
 }
+
+
 .recently-viewed-container > p{
     font-size: 19px;
 }
@@ -26,14 +28,32 @@
     font-weight: bold;
     text-decoration: none;
 }
-.recently-view-item > span {
+
+/* .recently-view-item  Link  p {
+    font-size: 15px;
+    color: #258635 !important;
+    font-weight: bold;
+    text-decoration: none;
+} */
+
+
+.recently-view-item  link img{
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+       width: 250px;
+
+    height: 180px;
+}
+
+.recently-view-item a span {
     position: relative;
-    top: 160px;
+    top: -46px;
     right: -10px;
     background-color: rgb(245, 245, 245);
     border-radius: 15px;
     border: .6px #258635;
-    color: inherit;
+    color: #258635;
     display: inline-block;
     word-break: break-word;
     line-height: 1;
@@ -44,6 +64,7 @@
     padding-left: 9px;
     padding-right: 9px;
     min-width: 25px;
+
 }
 
 .recently-view-item  link img{
