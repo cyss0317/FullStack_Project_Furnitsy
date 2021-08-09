@@ -1,0 +1,25 @@
+.recently-view-item {
+    min-width: 100px;
+    max-width: 250px;
+    min-height: 100px;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.recently-viewed-container > p{
+    font-size: 19px;
+}
+
+.recently-viewed-container{
+    padding: 12px 36px 12px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+}
+.recently-viewed-items{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

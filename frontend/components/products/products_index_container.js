@@ -28,8 +28,17 @@ const mSTP = (state) => {
     let diningChairs = products.filter((product) => (
         product.category === "Dining Chairs"
     ))
+    let recentlyViews = products[0,4,7,8,11,15,17,18];
+    
+    Array.prototype.random = function(arr = [], number){
+        for (let i = 0; i < number; i++) {
+            arr.push(this[Math.floor(Math.random() * this.length)]);
+        }
+        return arr;
+    }
 
-
+    let randomItem = [];
+    products.random(randomItem, 8)
 
     // // question 5 
     // let randomItem = [];
@@ -48,12 +57,14 @@ const mSTP = (state) => {
         products: products,
         couchAndSofa: couchAndSofa,
         outdoor: outdoor,
-        // randomitem: randomItem,
+        randomitem: randomItem,
         diningTable: diningTable,
         coffeeTable: coffeeTable,
         kidsBunkBed: kidsBunkBed,
         accentChairs: accentChairs,
-        diningChairs: diningChairs
+        diningChairs: diningChairs,
+        recentlyViews: recentlyViews
+
     })
 }
 

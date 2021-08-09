@@ -7,9 +7,9 @@ const RecentlyViewItemIndex = props => {
     const { product } = props;
 
     return (
-        <li className={`products-hot-items`}>
-            <Link to={`/products/${product.id}`} className="hot-items-image-thumnails">
-                <img className="hot-items-image-thumnail"
+        <li className={`recently-view-item`}>
+            <Link to={`/products/${product.id}`} >
+                <img 
                     src={product.photoUrls[0]}
                 />
             </Link>

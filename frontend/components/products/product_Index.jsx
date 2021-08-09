@@ -13,7 +13,7 @@ class ProductIndex extends React.Component{
     }
 
     render(){
-        const { products, couchAndSofa, coffeeTable,  outdoor, diningTable, diningChairs, kidsBunkBed, accentChairs} = this.props;
+        const { products, couchAndSofa, randomItem, coffeeTable,  recentlyViews, outdoor, diningTable, diningChairs, kidsBunkBed, accentChairs} = this.props;
         
         // const randomItem = [];
 
@@ -48,9 +48,9 @@ class ProductIndex extends React.Component{
                 </div>
                 <div className='recently-viewed-container'>
                     <p>Recently viewed <span>&amp;</span> more</p>
-                    <ul>
+                    <ul className="recently-viewed-items">
                         {
-                                diningTable.map(product => (
+                                couchAndSofa.map(product => (
                                     <RecentlyViewItemIndex
                                         product={product}
                                         key={product.id}
