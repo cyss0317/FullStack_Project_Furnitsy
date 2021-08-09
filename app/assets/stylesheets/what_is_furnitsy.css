@@ -1,0 +1,10 @@
+.what_is_furnitsy{
+    background-image: url('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/main_bottom_background.JPG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 500px;
+    object-fit: cover;
+    
+}

@@ -12,9 +12,12 @@ const ProductIndexItem = props => {
                 />
                 {/* {product.name} */}
                 {/*question! how to get rid of text decoration */}
-                <span>{product.name}</span>
+                {/* <a href={`/products/${product.id}`}>{product.name}</a> */}
                 {/* <p className="thumnail-p">{product.name}</p> */}
             </Link>
+            <span>
+                <a href={`/products/${product.id}`}>{product.name}</a>
+            </span>
         </li>
     )
 }

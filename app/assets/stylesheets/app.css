@@ -20,14 +20,13 @@ html,body{
     padding-bottom: 10px;
     padding-left: 36px;
     padding-right: 36px;
-    height: 58px;
     justify-content: space-evenly;
     align-items: center;
 
 }
 
 .header-logo{
-    width: 10%;
+    width: 11%;
     font-family: 'Love Ya Like A Sister', cursive;
     font-size: 40px;
     color: #F1641E;

@@ -1,6 +1,5 @@
 .products-index-container{
 
-    height: 35vh;
     background-color: #ddebe3;
     display: flex;
     flex-direction: column;
@@ -14,12 +13,13 @@
 .index-container-logo{
     font-size: 33px;
     font-weight: 100;
+    padding-top: 27px;
 }
 
 .best-selling-items{
     font-size: 20px;
     font-weight:bold;
-    top: 20px;
+    padding-top: 18px;
 
 }
 
@@ -61,7 +61,7 @@ element.style {
 .hot-items-image-thumnails{
 
     width: 14vmax;
-    height: 12vmax;
+    height: 14vmax;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,16 +73,20 @@ element.style {
 .products-hot-items {
     display: flex;
     justify-content: center;
-    
+    flex-direction: column;
+
 }
 
-.hot-items-image-thumnails > span {
+
+.products-hot-items > span> a{
     margin-top: -8px;
     text-decoration: none;
+    color: #222222;
     font-size: 13px;
     display: inline-block;
-    height: 40px;
+    width: 14vw;
     text-align: center;
+    font-weight: bold;
 }
 
 .hot-items-image-thumnail {

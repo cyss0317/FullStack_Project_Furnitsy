@@ -47,7 +47,10 @@ class ProductIndex extends React.Component{
                     </ul>
                 </div>
                 <div className='recently-viewed-container'>
-                    <p>Recently viewed <span>&amp;</span> more</p>
+                    <div id="recently-words">
+                        <p>Recently viewed <span>&amp;</span> more</p>
+                        {/* <p id="show-more-from">Show more from the <span id="Ashely">Ashely</span> shop</p> */}
+                    </div>
                     <ul className="recently-viewed-items">
                         {
                                 couchAndSofa.map(product => (
@@ -60,7 +63,17 @@ class ProductIndex extends React.Component{
                     </ul>
                 </div>
 
-                
+                <div className="picks-for-you">
+                        <p>Our picks for you</p>
+                        <div>
+                            {/*  */}
+                        </div>
+
+                </div>
+
+                <div className="what_is_furnitsy">
+                        
+                </div>
                 
 
             </div>
