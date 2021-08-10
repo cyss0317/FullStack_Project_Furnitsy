@@ -7,8 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # require 'open_uri'
 require 'open-uri'
+
 Product.delete_all
 User.delete_all
+Cart.delete_all
+CartItem.delete_all
 
 User.create({email: "demo_user", password: "password", first_name:"DEMO_USER"})
 

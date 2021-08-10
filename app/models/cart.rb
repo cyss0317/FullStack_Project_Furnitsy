@@ -8,7 +8,7 @@
 #  updated_at :datetime         not null
 #
 class Cart < ApplicationRecord
-    validates :user_id, uniqueness: true, presence: true
+    validates :user_id, presence: true
     
     belongs_to :user,
         class_name: :User,

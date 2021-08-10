@@ -5,30 +5,32 @@ export const RECEIVECARTITEMS = "RECEIVECARTITEMS";
 export const DELETECARTITEM = "DELETECARTITEM";
 
 
-export const createCartItem = (userId, productId)({
+export const createCartItem = (cartItem) => ({
     type: CREATECARTITEM,
-    userId,
-    productId
+    cartItem
 })
-export const receiveCartItems = (userId)({
+export const receiveCartItems = (cartItems) =>  ({
     type: RECEIVECARTITEMS,
-    userId
+    cartItems
+
 })
-export const deleteCartItem = (userId, productId)({
-    type: CREATECARTITEM,
-    userId,
-    productId
+export const deleteCartItem = (cartItemId) => ({
+    type: DELETE_CART_ITEM
+
 })
 
 
-export const ThunkCreateCartItem = (userId, productId) => dispatch => (
-    CartItemsAPIUtil.$createCartItem(userId, productId)
-        .then( res => dispatch(createCartItem(res)))
+export const ThunkCreateCartItem = (cartItem) => dispatch => (
+    CartItemsAPIUtil.$createCartItem(cartItem)
+        .then( cartItem => dispatch(createCartItem(cartItem)))
 )
 
-// quesition 
-// 
-export const ThunkReceiveItems = userId => dispatch => (
-    CartItemsAPIUtil.$receiveCartItems(userId)
-        .then( res => dispatch(receiveCartItems(res)))
+// export const ThunkReceiveCartItems = () => dispatch => (
+//     CartItemsAPIUtil.$receiveCartItems()
+//         .then( cartItems => dispatch(receiveCartItems(cartItems)))
+// )
+
+export const ThunkDeleteCartItem = (cartItemId) => dispatch => (
+    CartItemsAPIUtil.$deleteCartItem(cartItemId)
+        .then( () => dispatch(deleteCartItem(cartItemId)))
 )

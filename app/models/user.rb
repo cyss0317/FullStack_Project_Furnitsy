@@ -19,6 +19,7 @@ class User < ApplicationRecord
     attr_reader :password
 
     has_one :cart,
+        foreign_key: :user_id,
         class_name: :Cart
 
     

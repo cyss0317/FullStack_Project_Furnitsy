@@ -3,7 +3,9 @@ class Api::UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             login!(@user)
-            @cart = Cart.create(user_id: @user.id)
+            @cart = Cart.create({user_id: @user.id})
+            # @cart = Cart.new({user_id: @user.id})
+            # @cart.save
             render "api/users/show"
 
         else
@@ -15,6 +17,8 @@ class Api::UsersController < ApplicationController
 
     private
     def user_params
+        # checks through this :user key
+        
         params.require(:user).permit(:email, :first_name, :password)
     end
 

@@ -5,7 +5,9 @@ import { $login, $logout } from "./util/session_api_util"
 import { login, logout } from "./actions/session_actions"
 import { $receiveProduct, $receiveProducts } from "./util/product_api_util";
 import { ThunkReceiveProduct, ThunkReceiveProducts } from "./actions/product_actions";
+import { ThunkCreateCartItem, ThunkDeleteCartItem } from "./actions/cart_actions";
 import configureStore from './store/store'
+;
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -29,6 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
     window.login = login;
     window.receiveProduct = ThunkReceiveProduct;
     window.receiveProducts = ThunkReceiveProducts;
+    window.createCartItem = ThunkCreateCartItem;
+    window.deleteCartItem = ThunkDeleteCartItem;
+    // window.createReceiveItems = ThunkReceiveCartItems;
     window.store = store;
 
     window.getState = store.getState;
