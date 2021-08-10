@@ -12,7 +12,12 @@ class CartItem < ApplicationRecord
     validates :cart_id, uniqueness: true, presence: true
 
     belongs_to :cart,
-        class_name: :Cart
-        foreign_id: :cart_id,
+        class_name: :Cart,
+        foreign_id: :cart_id
+
+    belongs_to :product,
+        foreign_id: :product_id,
+        class_name: :Product
+
 
 end

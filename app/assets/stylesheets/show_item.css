@@ -102,15 +102,18 @@ svg{
 
 .product-show-info > *{
     padding-top: 20px;
+    font-size: 18px;
 }
 
 .highlight-item{
     padding: 5px;
     font-size: 18px;
+    line-height: 1.6;
 }
 
 .show-description{
     line-height: 1.6;
+    font-size: 18px;
 }
 
 .buttons{
