@@ -11,12 +11,17 @@ class Api::CartItemsController < ApplicationController
     end
 
     def index
-        @cart_items = CartItem.all
+        @cart_items = CartItem.all.select{|item| current_user.cart.id == item.cart_id }
         render :index
     end
 
     def destroy
-        @cart_item = Cart.find_by(cart_id: current_user.id)
+        @cart_item = Cart.find_by(cart_item_params)
+        if @cart_item.delete
+            render :index
+        else
+            render json: @cart_item.errors.full_messages
+        end
     end
 
     private
