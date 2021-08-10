@@ -1,4 +1,4 @@
-export const createCartItem = (userId, productId)(
+export const $createCartItem = (userId, productId)(
     $.ajax({
         method: "POST",
         url: "/api/cart_items",
@@ -6,14 +6,14 @@ export const createCartItem = (userId, productId)(
     })
 )
 
-export const receiveCartItems = (userId)(
+export const $receiveCartItems = (userId)(
     $.ajax({
         url: '/api/cart_items',
         data: {userId}
     })
 )
 
-export const deleteCartItem = (userId, productId)(
+export const $deleteCartItem = (userId, productId)(
     $.ajax({
         method: "DELETE",
         url: `/api/cart_items/${userId}`
