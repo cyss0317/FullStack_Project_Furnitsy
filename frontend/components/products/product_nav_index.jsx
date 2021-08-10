@@ -29,11 +29,13 @@ class ProductNav extends React.Component{
                         {
                             categories.map((category, index) => {
                                return(
-                               <a className="nav-item">
+
+
+                               <a className="nav-item" href={``}>
                                     {/* take user to show index page for category */}
                                     {/* render other component and pass in coresponding info */}
                                     {category}
-                                    <ProductNavShowList products={categories_selector[index]} />
+                                    {/* <ProductNavShowList products={categories_selector[index]} /> */}
                                 </a>
                             )})
                         }

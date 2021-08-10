@@ -5,8 +5,10 @@ class ProductShow extends React.Component {
         super(props)
 
         this.state = {
-            mainPic: props.photoUrls[0]
+            mainPic: props.photoUrls[0],
             //thinking that product hasn't been fetched yet
+            // index: 0,
+            // index: props.photoUrls[mainPic]
         }
 
         this.clickPictureHandler = this.clickPictureHandler.bind(this)
@@ -23,7 +25,9 @@ class ProductShow extends React.Component {
         // if (this.state.mainPic === undefined) {
         //     this.setState({mainPic: this.props.photoUrls[0]})
         // }
-        this.setState({mainPic: this.props.photoUrls[this.props.photoUrls.indexOf(mainPic) + 1] })
+        this.setState({ mainPic: this.props.photoUrls[this.state.index + 1] })
+        // this.setState({ mainPic: this.state.mainPic === undefined ? this.props.photoUrls[0] : this.props.photoUrls[this.props.photoUrls.indexOf(mainPic) + 1] })
+       
     }
 
     // leftSvgClickhandler(e) {
@@ -32,6 +36,9 @@ class ProductShow extends React.Component {
 
     clickPictureHandler(e){
         this.setState({mainPic: e.currentTarget.alt})
+        // tried this
+        // this.setState({index: this.props.photoUrls[mainPic]})
+
     }
 
     render (){
@@ -42,6 +49,11 @@ class ProductShow extends React.Component {
         if (product === undefined){
             return null;
         }
+
+        // if (this.state.mainPic === undefined){
+        //     this.setState({mainPic: product.photoUrls[0]})
+        // }
+
 
         const arrHighlights = product.highlights.split("!")
 
