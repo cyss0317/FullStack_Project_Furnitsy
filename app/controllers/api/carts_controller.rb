@@ -3,7 +3,7 @@ class Api::CartsController < ApplicationController
     before_action :require_login
 
     def create
-        @cart = Cart.new(cart_params)
+        @cart = Cart.new(user_id)
         if @cart.save
             render :show
         else

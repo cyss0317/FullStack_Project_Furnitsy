@@ -8,7 +8,9 @@
 # require 'open_uri'
 require 'open-uri'
 Product.delete_all
+User.delete_all
 
+User.create({email: "demo_user", password: "password", first_name:"DEMO_USER"})
 
 require_relative './seeds/01_couches.rb'
 require_relative './seeds/02_tables.rb'

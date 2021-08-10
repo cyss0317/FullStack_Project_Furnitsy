@@ -6,16 +6,15 @@ export const $createCartItem = (userId, productId)(
     })
 )
 
-export const $receiveCartItems = (userId)(
+export const $receiveCartItems = (
     $.ajax({
         url: '/api/cart_items',
-        data: {userId}
     })
 )
 
-export const $deleteCartItem = (userId, productId)(
+export const $deleteCartItem = (cartItemId)(
     $.ajax({
         method: "DELETE",
-        url: `/api/cart_items/${userId}`
+        url: `/api/cart_items/${cartItemId}`,
     })
 )

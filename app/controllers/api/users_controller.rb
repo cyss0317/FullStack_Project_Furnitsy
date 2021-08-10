@@ -3,11 +3,12 @@ class Api::UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             login!(@user)
-            @cart = Cart.new(@user.id)
+            @cart = Cart.create(user_id: @user.id)
             render "api/users/show"
 
         else
             render json: @user.errors.full_messages, status: 422
+            # render json: ["cart is the props"]
         end
             
     end

@@ -9,14 +9,14 @@
 #  updated_at :datetime         not null
 #
 class CartItem < ApplicationRecord
-    validates :cart_id, uniqueness: true, presence: true
+    validates :cart_id,  presence: true
 
     belongs_to :cart,
         class_name: :Cart,
-        foreign_id: :cart_id
+        foreign_key: :cart_id
 
     belongs_to :product,
-        foreign_id: :product_id,
+        foreign_key: :product_id,
         class_name: :Product
 
 

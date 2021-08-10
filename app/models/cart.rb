@@ -9,14 +9,14 @@
 #
 class Cart < ApplicationRecord
     validates :user_id, uniqueness: true, presence: true
-
+    
     belongs_to :user,
         class_name: :User,
-        foreign_id: :user_id
+        foreign_key: :user_id
     
     has_many :cart_items,
         class_name: :CartItem,
-        foreign_id: :cart_id
+        foreign_key: :cart_id
 
     has_many :products,
         through: :cart_items,

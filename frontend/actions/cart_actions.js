@@ -26,6 +26,8 @@ export const ThunkCreateCartItem = (userId, productId) => dispatch => (
         .then( res => dispatch(createCartItem(res)))
 )
 
+// quesition 
+// 
 export const ThunkReceiveItems = userId => dispatch => (
     CartItemsAPIUtil.$receiveCartItems(userId)
         .then( res => dispatch(receiveCartItems(res)))
