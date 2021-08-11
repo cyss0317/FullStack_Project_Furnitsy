@@ -80,7 +80,7 @@ class ProductIndex extends React.Component{
                     <div id="what_is_furnitsy_inner">
                         <div id="furnitsy_inner_div">
                             <h2>A community doing good</h2>
-                            <p>Furnitsy is a global online marketplace, where people come together to make, sell, buy, and collect unique items. We’re also a community pushing for positive change for small businesses, people, and the planet. Here are some of the ways we’re making a positive impact, together.</p>
+                            <p>Furnitsy is a furniture store, where my mother in law buys and sells Ashely furnitures. </p>
                         </div>
                         <div id="furnitsy_inner_div">
                             <h2>Sell furnitures to customers</h2>

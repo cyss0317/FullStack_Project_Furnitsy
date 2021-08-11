@@ -142,7 +142,7 @@ class ProductShow extends React.Component {
                 </div>
 
                 <div id="show-page-footer">
-                    <p>Yes!! I can do more than you see here!!</p>
+                    <p id='footer-1st-p'>Yes!! I can do more than you see here!!</p>
                     <form action="mailto:cyss0317@gmail.com" method="POST" encType="text/plain">
                         <input className='submit_to_email' type="submit" value="Contact Yun Sung Choi" />
                     </form>

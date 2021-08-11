@@ -27,6 +27,7 @@ export const login = (user) => dispatch => (
             dispatch(receiveErrors(error.responseJSON)),
         // user.id => (dispatch(receiveCart))
         )
+        .then(user => dispatch(fetchCart(user.id)))
     // cartAPIUtil.$receiveCart(user.id)
     //     .then( cart => dispatch(receiveCart(cart)))
 )
