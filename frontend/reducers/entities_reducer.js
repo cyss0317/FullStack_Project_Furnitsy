@@ -7,8 +7,8 @@ import CartReducer from "./cart_reducer";
 const EntitiesReducer = combineReducers ({
     users: UsersReducer,
     products: ProductsReducer, 
-    // cartItems: CartItemsReducer,
-    // cart: CartReducer
+    cartItems: CartItemsReducer,
+    cart: CartReducer
 })
 
 export default EntitiesReducer;

@@ -3,8 +3,10 @@ class Api::CartItemsController < ApplicationController
 
     before_action :require_login
     def create
-        
+
         @cart_item = CartItem.new(cart_item_params)
+        @cart_item.cart_id = current_user.cart.id
+        # grab the cart id from cuyrrent user
         if @cart_item.save
             render :show
         else
@@ -12,10 +14,10 @@ class Api::CartItemsController < ApplicationController
         end
     end
 
-    # def index
-    #     @cart_items = CartItem.all.select{|item| current_user.cart.id == item.cart_id }
-    #     render :index
-    # end
+    def index
+        @cart_items = CartItem.all.select{|item| current_user.cart.id == item.cart_id }
+        render :index
+    end
 
     def destroy
         @cart_item = CartItem.find_by({id: params[:id]})

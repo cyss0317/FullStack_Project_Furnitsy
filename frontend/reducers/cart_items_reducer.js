@@ -1,4 +1,4 @@
-import { CREATE_CART_ITEM, DELETE_CART_ITEM } from "../actions/cart_items_actions";
+import { CREATE_CART_ITEM, DELETE_CART_ITEM, RECEIVE_CART_ITEMS} from "../actions/cart_items_actions";
 
 const CartItemsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
@@ -6,7 +6,9 @@ const CartItemsReducer = (oldState = {}, action) => {
     switch (action.type) {
         case CREATE_CART_ITEM:
             return Object.assign({}, oldState, { [action.cartItem.id]: action.cartItem })
-        // case RECEIVE_CART_ITEMS:
+        case RECEIVE_CART_ITEMS:
+            // return Object.assign({}, oldState, {action.cartItems})
+            return action.cartItems
         case DELETE_CART_ITEM:
             return Object.assign({}, oldState)
         default:

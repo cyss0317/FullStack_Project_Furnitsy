@@ -9,8 +9,8 @@ import CartReducer from "./cart_reducer";
 const RootReducer = combineReducers({
     entities: EntitiesReducer,
     session: SessionReducer,
-    cartItems: CartItemsReducer,
-    cart: CartReducer,
+    // cartItems: CartItemsReducer,
+    // cart: CartReducer,
     errors: ErrorsReducer,
     ui: UiReducer
 })

@@ -13,6 +13,7 @@ class ProductShow extends React.Component {
 
         this.clickPictureHandler = this.clickPictureHandler.bind(this)
         this.rightSvgClickhandler = this.rightSvgClickhandler.bind(this)
+        this.addToCartHandler = this.addToCartHandler.bind(this)
 
     }
     componentDidMount(){
@@ -38,7 +39,11 @@ class ProductShow extends React.Component {
         this.setState({mainPic: e.currentTarget.alt})
         // tried this
         // this.setState({index: this.props.photoUrls[mainPic]})
+    }
 
+    addToCartHandler(e){
+        e.preventDefault();
+        this.props.createCartItem(this.props.product.id)
     }
 
     render (){
@@ -87,7 +92,7 @@ class ProductShow extends React.Component {
                             </select>
                         </div>
                         <div id="add-to-cart-container">
-                            <button id="add-to-cart"> Add to cart </button>
+                            <button id="add-to-cart" onClick={this.addToCartHandler}> Add to cart </button>
                         </div>
                         <div id="">
                             <div>

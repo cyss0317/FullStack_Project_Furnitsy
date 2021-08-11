@@ -7,6 +7,8 @@ import { $receiveProduct, $receiveProducts } from "./util/product_api_util";
 import { ThunkReceiveProduct, ThunkReceiveProducts } from "./actions/product_actions";
 import { ThunkCreateCartItem, ThunkDeleteCartItem } from "./actions/cart_items_actions";
 import { fetchCart } from "./actions/carts_actions";
+import { ThunkReceiveCartItems } from "./actions/cart_items_actions";
+
 import configureStore from './store/store'
 ;
 
@@ -24,8 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             session: {id: window.currentUser.id} 
         }
-        store = configureStore(preloadedState)
-        fetchCart(window.currentUser.id)(store.dispatch)
+        store = configureStore(preloadedState);
+        fetchCart(window.currentUser.id)(store.dispatch);
+        ThunkReceiveCartItems()(store.dispatch);
         delete window.currentUser;
     } else {
         store = configureStore(); }
