@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             session: {id: window.currentUser.id} 
         }
-        store = configureStore(preloadedState);
+        store = configureStore(preloadedState)
+        fetchCart(window.currentUser.id)(store.dispatch)
         delete window.currentUser;
     } else {
         store = configureStore(); }

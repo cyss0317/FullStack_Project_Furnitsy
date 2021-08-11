@@ -9,7 +9,7 @@ const CartReducer = (oldState = {}, action) => {
         default:
             return oldState;
     }
-    return 
+
 }
 
 export default CartReducer;

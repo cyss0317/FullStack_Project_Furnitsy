@@ -50,7 +50,7 @@ class ProductIndex extends React.Component{
                 </div>
                 <div className='recently-viewed-container'>
                     <div id="recently-words">
-                        <p>Recently viewed <span>&amp;</span> more</p>
+                        <p>What other people are checking out <span>&amp;</span> more</p>
                         {/* <p id="show-more-from">Show more from the <span id="Ashely">Ashely</span> shop</p> */}
                     </div>
                     <ul className="recently-viewed-items">

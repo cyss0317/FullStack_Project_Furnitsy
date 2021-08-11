@@ -85,7 +85,7 @@
     /* height: 400px; */
 }
 
-/* question, not able to apply aline-items center */
+
 .recently-viewed-items{
     display: flex;
     flex-wrap: wrap;

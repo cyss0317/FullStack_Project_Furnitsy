@@ -2,8 +2,8 @@
     background-image: url('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/main_bottom_background.JPG');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 94%;
+    background-size: 100% 100%;
+    width: 100%;
     margin-top: 30px;
     object-fit: cover;
     display: flex;

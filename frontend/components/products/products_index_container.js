@@ -41,6 +41,7 @@ const mSTP = (state) => {
             randomItem10.push(random)}
         }
     }
+  
 
     // let random = function(arr, number){
     //     for (let i = 0; i < number; i++) {
@@ -65,7 +66,7 @@ const mSTP = (state) => {
     // }
 
 
-    // // question 5 
+
     // let randomItem = [];
     // {
     //     // debugger

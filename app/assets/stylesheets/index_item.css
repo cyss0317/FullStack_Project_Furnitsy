@@ -48,7 +48,7 @@ img {
     max-width: 100%;
     max-height: 100%;
 }
-/* question */
+
 element.style {
     display: flex;
     justify-content: center;
@@ -106,8 +106,8 @@ element.style {
     text-overflow: ellipsis;
 } 
 .hot-items-image-thumnail {
-    width: 14vmax;
-    height: 14vmax;
+    width: 12vmax;
+    height: 12vmax;
     border-radius: 50%;
     margin: 10px;
     object-fit: cover;
