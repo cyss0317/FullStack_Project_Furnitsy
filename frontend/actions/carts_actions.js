@@ -3,7 +3,7 @@ export const RECEIVE_CART = "RECEIVE_CART";
 
 
 export const receiveCart = cart => ({
-    typd: RECEIVE_CART,
+    type: RECEIVE_CART,
     cart
 })
 
@@ -11,3 +11,4 @@ export const fetchCart = userId => dispatch =>(
     cartAPIUtil.$receiveCart(userId)
         .then( cart => dispatch(receiveCart(cart)))
 )
+

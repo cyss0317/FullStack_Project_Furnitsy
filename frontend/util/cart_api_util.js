@@ -1,4 +1,6 @@
-export const $receiveCart = (userId) => ({
-    url: `/api/carts/${userId}`
-    
-}) 
+export const $receiveCart = (userId) => (
+    $.ajax({
+        url: `/api/carts/${userId}`
+    })
+
+) 
