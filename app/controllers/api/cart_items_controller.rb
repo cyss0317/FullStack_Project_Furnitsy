@@ -15,7 +15,7 @@ class Api::CartItemsController < ApplicationController
     end
 
     def index
-        @cart_items = CartItem.all.select{|item| current_user.cart.id == item.cart_id }
+        @cart_items = CartItem.all.select{|item|  item.cart_id == current_user.cart.id }
         render :index
     end
 

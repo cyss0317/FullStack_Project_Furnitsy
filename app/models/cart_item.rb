@@ -10,7 +10,8 @@
 #  quantity   :integer
 #
 class CartItem < ApplicationRecord
-    validates :cart_id,  presence: true
+    validates :cart_id, :product_id, :quantity, presence: true
+
 
     belongs_to :cart,
         class_name: :Cart,
