@@ -11,6 +11,11 @@ class Api::CartsController < ApplicationController
         end
     end
 
+    def show
+        @cart = Cart.find_by(user_id: current_user.id)
+        render :show
+    end
+
     # # render the view
     # def edit
     #     render :edit

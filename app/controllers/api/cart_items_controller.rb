@@ -4,7 +4,6 @@ class Api::CartItemsController < ApplicationController
     before_action :require_login
     def create
         
-
         @cart_item = CartItem.new(cart_item_params)
         if @cart_item.save
             render :show
@@ -19,7 +18,7 @@ class Api::CartItemsController < ApplicationController
     # end
 
     def destroy
-        @cart_item = CartItem.find_by(id: params[:cart_item.id])
+        @cart_item = CartItem.find_by({id: params[:id]})
         if @cart_item.delete
             render :show
         else
@@ -29,7 +28,7 @@ class Api::CartItemsController < ApplicationController
 
     private
     def cart_item_params
-        params.require(:cart_item).permit(:cart_id, :product_id)
+        params.require(:cart_item).permit(:id, :cart_id, :product_id, :quantity)
     end
 
 end

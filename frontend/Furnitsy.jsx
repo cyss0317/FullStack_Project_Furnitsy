@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.receiveProducts = ThunkReceiveProducts;
     window.createCartItem = ThunkCreateCartItem;
     window.deleteCartItem = ThunkDeleteCartItem;
-    // window.createReceiveItems = ThunkReceiveCartItems;
     window.store = store;
 
     window.getState = store.getState;

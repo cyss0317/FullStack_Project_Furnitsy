@@ -7,6 +7,7 @@
 #  product_id :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  quantity   :integer
 #
 class CartItem < ApplicationRecord
     validates :cart_id,  presence: true
@@ -18,6 +19,6 @@ class CartItem < ApplicationRecord
     belongs_to :product,
         foreign_key: :product_id,
         class_name: :Product
-
+    
 
 end

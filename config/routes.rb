@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :products, only: [:show, :index]
     resource :session, only: [:create, :destroy]
     resources :cart_items, only: [:create, :destroy]
-    resources :carts, only: [:create]
+    resources :carts, only: [:create, :show]
   end
 
 end
