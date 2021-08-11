@@ -80,12 +80,23 @@
  .session-form-submit:hover {
 	cursor: pointer;
 	box-shadow: 2px 2px 2px rgb(121, 119, 117);
+	transform: scale(1.1);
+	transition: .15s;
  }
+ .session-form-submit:active{
+    transform: scale(1);
+}
 
  .demo-button:hover {
 	cursor: pointer;
+	transform: scale(1.1);
+	transition: 1.5s;
 	box-shadow: 2px 2px 2px rgb(121, 119, 117);
  }
+ .demo-button:active{
+    transform: scale(1);
+}
+
 
 
  .logout-button {
@@ -103,7 +114,13 @@
 
  .logout-button:hover {
 	cursor: pointer;
+	transform: scale(1.1);
+	transition: .15s;
  }
+ .logout-button:active{
+    transform: scale(1);
+}
+
 
  .input-sections {
 
@@ -177,7 +194,13 @@
   .x-closing-button:hover {
     cursor: pointer;
     color: red;
+	transform: scale(1.1);
+	transition: .15s;
   }
+  .x-closing-button:active{
+    transform: scale(1);
+}
+
 
 
 .labels {

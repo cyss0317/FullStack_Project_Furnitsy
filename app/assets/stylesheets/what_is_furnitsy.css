@@ -81,7 +81,12 @@
     cursor: pointer;
     background-color: #f37c40;
     color: #e9dac7;
+    transform: scale(1.1);
+    transition: .15s;
 
     /* border: 1px solid #FAECD5; */
     /* border: 1px solid #eeb161; */
+}
+.submit_to_email:active{
+    transform: scale(1);
 }

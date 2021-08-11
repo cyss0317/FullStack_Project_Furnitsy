@@ -98,4 +98,17 @@
     height: 350px;
     border-radius: 20px;
     object-fit: cover;
+    border: 1px solid #22222240;
+ 
+}
+
+.recently-viewed-items li img:hover{
+    transform: scale(1.1);
+    border: 1px solid #22222260;
+    transition: .15s;
+}
+.recently-viewed-items li img:active{
+    transform: scale(1);
+
+
 }

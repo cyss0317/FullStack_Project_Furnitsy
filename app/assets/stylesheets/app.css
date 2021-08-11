@@ -32,6 +32,15 @@ html,body{
     color: #F1641E;
     transform: rotate(-5deg);
 }
+.header-logo:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .15s;
+}
+.header-logo:active{
+    transform: scale(.9);
+
+}
 
 .header-searchbar{
     width: 65%;
