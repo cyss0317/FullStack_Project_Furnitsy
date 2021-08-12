@@ -60,7 +60,7 @@
     padding-bottom: 14px;
 }
 #cart-show-price{
-    box-shadow: 0 4px 20px rgb(34 34 34 / 15%);
+    box-shadow: 0 4px 20px rgba(34 34 34 0.15);
     border-radius: 18px;
     padding: 20px  12px 20px 12px;
     margin-left: 20px;
@@ -116,7 +116,7 @@ id
     background-color:white ;
     border: none;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgb(34 34 34 / 15%);
+    box-shadow: 0 4px 20px rgba(34 34 34 0.15);
 }
 
 .cart-show-image-thumnails{
