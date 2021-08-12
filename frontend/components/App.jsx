@@ -13,7 +13,6 @@ import CartShowContainer from "./carts/carts_show_container";
 import CartHeaderContainer from "./carts/cart_header_container";
 
 const App = () => {
-
     return(
    <div className="main-div">
        <Modal/>
