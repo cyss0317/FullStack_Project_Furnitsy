@@ -67,8 +67,6 @@
 
 }
 
-id
-
 #cart-item-price{
     margin-left: 20px;
     display: flex;
@@ -102,7 +100,7 @@ id
 #cart-item-description > p{
     padding-bottom: 10px;
     /* min-width: 100px; */
-;
+
 }
 
 #cart-item-quantity > button{
