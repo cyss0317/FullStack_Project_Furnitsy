@@ -58,6 +58,9 @@ class CartShow extends React.Component{
                                 <h2>Subtotal</h2>
                                 <p>${subtotal.toFixed(2)}</p>
                             </div>
+                            {/* <form >
+                                <input id="proceed-to-checkout" type="submit" value="Proceed to checkout" />
+                            </form> */}
                         </div>
                     </div>
                         {/* total price and tax , subtotal, checkout button */}

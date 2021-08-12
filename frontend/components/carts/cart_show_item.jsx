@@ -64,9 +64,7 @@ class CartShowItem extends React.Component{
                         <h1 >Over 20 people have this in their cart</h1>
                         <h2>Sale: 0% off</h2>
                     </div>
-                    <form onSubmit={this.checkOutHandler}>
-                        <input id="proceed-to-checkout" type="submit" value="Proceed to checkout" />
-                    </form>
+
                 </div>
             
             </li>
