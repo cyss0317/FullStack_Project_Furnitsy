@@ -18,6 +18,10 @@
     display: flex;
     justify-content: space-between;
 }
+
+#recently-words p {
+    padding: 5px 36px 10px 36px;
+}
 #show-more-from{
     font-size: 12px;
 }
