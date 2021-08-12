@@ -39,6 +39,25 @@
     font-weight: bold;
     text-decoration: none;
 } */
+.remove-button{
+    border: none;
+    font-weight: bolder;
+    font-size: 13px;
+    background-color: transparent;
+    margin-top: 30px;
+    padding: 4px 8px 4px 8px;
+}
+
+.remove-button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.remove-button:active{
+    transform: scale(0.95);
+    transition: 0.3s;
+}
 
 
 .recently-view-item  link img{

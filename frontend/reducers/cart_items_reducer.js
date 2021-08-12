@@ -2,6 +2,7 @@ import { CREATE_CART_ITEM, DELETE_CART_ITEM, RECEIVE_CART_ITEMS} from "../action
 
 const CartItemsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
+    let nextState = Object.assign({}, oldState)
 
     switch (action.type) {
         case CREATE_CART_ITEM:
@@ -10,7 +11,9 @@ const CartItemsReducer = (oldState = {}, action) => {
             // return Object.assign({}, oldState, {action.cartItems})
             return action.cartItems 
         case DELETE_CART_ITEM:
-            return Object.assign({}, oldState)
+            // return Object.assign({}, oldState)
+            delete nextState[action.cartItemId]
+            return nextState
         default:
             return oldState;
     }

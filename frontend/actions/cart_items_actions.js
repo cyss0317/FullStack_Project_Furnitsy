@@ -19,8 +19,9 @@ export const receiveCartItems = (cartItems) =>  ({
 })
 
 export const deleteCartItem = (cartItemId) => ({
-    type: DELETE_CART_ITEM
-
+    type: DELETE_CART_ITEM,
+    cartItemId,
+    // cartItems
 })
 
 

@@ -6,14 +6,15 @@ class ProductShow extends React.Component {
 
         this.state = {
             mainPic: props.photoUrls[0],
-            quantity: 1
+            quantity: 1,
             //thinking that product hasn't been fetched yet
-            // index: 0,
+            index: 0,
             // index: props.photoUrls[mainPic]
         }
 
         this.clickPictureHandler = this.clickPictureHandler.bind(this)
         this.rightSvgClickhandler = this.rightSvgClickhandler.bind(this)
+        this.leftSvgClickhandler = this.leftSvgClickhandler.bind(this)
         this.addToCartHandler = this.addToCartHandler.bind(this)
         this.onChangeHandler = this.onChangeHandler.bind(this)
 
@@ -28,14 +29,19 @@ class ProductShow extends React.Component {
         // if (this.state.mainPic === undefined) {
         //     this.setState({mainPic: this.props.photoUrls[0]})
         // }
-        this.setState({ mainPic: this.props.photoUrls[this.state.index + 1] })
+
+        // important!!!! need to update both states for both click events
+        this.setState({ index: this.props.photoUrls.indexOf(this.state.mainPic) + 1 > this.props.photoUrls.length + 1 ? 0 : this.props.photoUrls.indexOf(this.state.mainPic) + 1})
+        this.setState({ mainPic: this.props.photoUrls[this.state.index]})
         // this.setState({ mainPic: this.state.mainPic === undefined ? this.props.photoUrls[0] : this.props.photoUrls[this.props.photoUrls.indexOf(mainPic) + 1] })
        
     }
 
-    // leftSvgClickhandler(e) {
-
-    // }
+    leftSvgClickhandler(e) {
+        e.preventDefault();
+        this.setState({ index: this.props.photoUrls.indexOf(this.state.mainPic) - 1 < 0 ? this.props.photoUrls.length - 1: this.props.photoUrls.indexOf(this.state.mainPic) - 1 })
+        this.setState({ mainPic: this.props.photoUrls[this.state.index] })
+    }
 
     onChangeHandler(e){
         this.setState({quantity: e.currentTarget.value})
@@ -43,6 +49,7 @@ class ProductShow extends React.Component {
 
     clickPictureHandler(e){
         this.setState({mainPic: e.currentTarget.alt})
+        this.setState({index: this.props.photoUrls.indexOf(this.state.mainPic)})
         // tried this
         // this.setState({index: this.props.photoUrls[mainPic]})
     }
@@ -138,8 +145,8 @@ class ProductShow extends React.Component {
                     <div className="product-show-picture-container-outter">
                         <div className="product-show-picture-container-inner" >
                             <div className="main-picture-container">
-                                <button className="svg-button" id="left-svg-button" >
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16,21a0.994,0.994,0,0,1-.664-0.253L5.5,12l9.841-8.747a1,1,0,0,1,1.328,1.494L8.5,12l8.159,7.253A1,1,0,0,1,16,21Z"></path></svg>
+                                <button className="svg-button" id="left-svg-button"onClick={this.leftSvgClickhandler} >
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  aria-hidden="true" focusable="false"><path d="M16,21a0.994,0.994,0,0,1-.664-0.253L5.5,12l9.841-8.747a1,1,0,0,1,1.328,1.494L8.5,12l8.159,7.253A1,1,0,0,1,16,21Z"></path></svg>
                                 </button>
                                 <img className="picture-container-main"src={ this.state.mainPic === undefined ? this.props.photoUrls[0] : this.state.mainPic } alt="" />
                                 <button className="svg-button" id="right-svg-button" onClick={this.rightSvgClickhandler}>

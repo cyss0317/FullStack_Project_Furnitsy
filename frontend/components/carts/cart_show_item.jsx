@@ -1,5 +1,4 @@
 import React from "react";
-import { render } from "react-dom";
 import { Link } from "react-router-dom";
 
 
@@ -41,6 +40,9 @@ class CartShowItem extends React.Component{
                         <p>quantities</p>
                         <br />
                         <button>{item.quantity}</button>
+                        <form  onSubmit={this.deleteHandler}>
+                            <input className="remove-button" type="submit" value="Remove" />
+                        </form>
                         {/* <select  value={item.quantity}>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -53,15 +55,10 @@ class CartShowItem extends React.Component{
                             <option value="9">9</option>
                         </select> */}
                     </div>
-                    <div>
-                        <div id="cart-item-price">
-                            <p>${item.product.price.toFixed(2)}</p>
-                            <h1 >Over 20 people have this in their cart</h1>
-                            <h2>Sale: 0% off</h2>
-                        </div>
-                        <form onSubmit={this.deleteHandler}>
-                            <input type="submit" value="Remove" />
-                        </form>
+                    <div id="cart-item-price">
+                        <p>${item.product.price.toFixed(2)}</p>
+                        <h1 >Over 20 people have this in their cart</h1>
+                        <h2>Sale: 0% off</h2>
                     </div>
                 </div>
             
