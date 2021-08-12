@@ -6,6 +6,7 @@ class ProductShow extends React.Component {
 
         this.state = {
             mainPic: props.photoUrls[0],
+            quantity: 1
             //thinking that product hasn't been fetched yet
             // index: 0,
             // index: props.photoUrls[mainPic]
@@ -14,6 +15,7 @@ class ProductShow extends React.Component {
         this.clickPictureHandler = this.clickPictureHandler.bind(this)
         this.rightSvgClickhandler = this.rightSvgClickhandler.bind(this)
         this.addToCartHandler = this.addToCartHandler.bind(this)
+        this.onChangeHandler = this.onChangeHandler.bind(this)
 
     }
     componentDidMount(){
@@ -35,6 +37,10 @@ class ProductShow extends React.Component {
 
     // }
 
+    onChangeHandler(e){
+        this.setState({quantity: e.currentTarget.value})
+    }
+
     clickPictureHandler(e){
         this.setState({mainPic: e.currentTarget.alt})
         // tried this
@@ -43,7 +49,7 @@ class ProductShow extends React.Component {
 
     addToCartHandler(e){
         e.preventDefault();
-        this.props.createCartItem(this.props.product.id)
+        this.props.createCartItem(this.props.product.id, this.state.quantity )
     }
 
     render (){
@@ -55,6 +61,9 @@ class ProductShow extends React.Component {
             return null;
         }
 
+        if (this.state.quantity === undefined){
+            this.setState({quantity: 1 })
+        }
         // if (this.state.mainPic === undefined){
         //     this.setState({mainPic: product.photoUrls[0]})
         // }
@@ -77,23 +86,27 @@ class ProductShow extends React.Component {
                                 <b id="price-in-stock">In stock</b>
                             </div>
                         </div>
-                        <div align="center" id="show-quantity-container">
-                            <p>Quantity</p>
-                            <select name="" id="show-quantity">
-                                <option value="1" selected>1</option>
-                                <option value="1" >2</option>
-                                <option value="1" >3</option>
-                                <option value="1" >4</option>
-                                <option value="1" >5</option>
-                                <option value="1" >6</option>
-                                <option value="1" >7</option>
-                                <option value="1" >8</option>
-                                <option value="1" >9</option>
-                            </select>
-                        </div>
-                        <div id="add-to-cart-container">
-                            <button id="add-to-cart" onClick={this.addToCartHandler}> Add to cart </button>
-                        </div>
+                        <form align="center" id="show-quantity-container" onSubmit={this.addToCartHandler}>
+                            {/* <div align="center" id="show-quantity-container"> */}
+                                <label for="quantity">Quantity</label>
+                                {/* Importatn!!!! need to put defaulValue for select */}
+                                <select name="quantity" id="show-quantity" defaultValue={this.state.quantity}  onChange={this.onChangeHandler}>
+                                    <option value="1"  >1</option>
+                                    <option value="2" >2</option>
+                                    <option value="3" >3</option>
+                                    <option value="4" >4</option>
+                                    <option value="5" >5</option>
+                                    <option value="6" >6</option>
+                                    <option value="7" >7</option>
+                                    <option value="8" >8</option>
+                                    <option value="9" >9</option>
+                                </select>
+                            {/* </div> */}
+                            <div id="add-to-cart-container">
+                                {/* <button id="add-to-cart" onClick={this.addToCartHandler}> Add to cart </button> */}
+                                <input id="add-to-cart" type="submit" value="Add to cart" />
+                            </div>
+                        </form>
                         <div id="">
                             <div>
     

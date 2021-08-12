@@ -7,6 +7,7 @@ import { $receiveProduct, $receiveProducts } from "./util/product_api_util";
 import { ThunkReceiveProduct, ThunkReceiveProducts } from "./actions/product_actions";
 import { ThunkCreateCartItem, ThunkDeleteCartItem } from "./actions/cart_items_actions";
 import { fetchCart } from "./actions/carts_actions";
+
 import { ThunkReceiveCartItems } from "./actions/cart_items_actions";
 
 import configureStore from './store/store'

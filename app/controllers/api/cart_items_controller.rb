@@ -15,8 +15,13 @@ class Api::CartItemsController < ApplicationController
     end
 
     def index
-        @cart_items = CartItem.all.select{|item|  item.cart_id == current_user.cart.id }
-        render :index
+        @cart_items = CartItem.all.select{|item| item.cart_id == current_user.cart.id }
+        if @cart_items
+            @cart_items
+            render :index
+        else
+            @cart_items = {}
+        end
     end
 
     def destroy

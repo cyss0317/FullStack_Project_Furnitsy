@@ -16,14 +16,14 @@ const mSTP =( state, ownProps)=> {
     return ({
         product: product,
         photoUrls: photoUrls,
-        cartId: state.cart.id,
-        cartItems: state.cartItems
+        cartId: state.entities.cart.id,
+        cartItems: state.entities.cartItems
     })
 } 
 
 const mDTP = dispatch => ({
     fetchProduct: productId => dispatch(ThunkReceiveProduct(productId)),
-    createCartItem: cartItemId => dispatch(ThunkCreateCartItem(cartItemId)),
+    createCartItem: (productId, quantity) => dispatch(ThunkCreateCartItem(productId, quantity)),
     deleteCartItem: cartItemId => dispatch(ThunkDeleteCartItem(cartItemId))
 })
 

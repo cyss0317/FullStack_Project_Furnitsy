@@ -8,7 +8,7 @@ const CartItemsReducer = (oldState = {}, action) => {
             return Object.assign({}, oldState, { [action.cartItem.id]: action.cartItem })
         case RECEIVE_CART_ITEMS:
             // return Object.assign({}, oldState, {action.cartItems})
-            return action.cartItems
+            return action.cartItems 
         case DELETE_CART_ITEM:
             return Object.assign({}, oldState)
         default:
