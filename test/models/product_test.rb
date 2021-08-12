@@ -11,6 +11,7 @@
 #  price       :float            not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  highlights  :text
 #
 require 'test_helper'
 

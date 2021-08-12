@@ -11,11 +11,14 @@
 #  price       :float            not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  highlights  :text
 #
 class Product < ApplicationRecord
     validates :name, :description, :category, :color, :price, presence: true
     
     has_many_attached :images
+
+    has_many :cart_items
 
 
 end

@@ -1,3 +1,74 @@
+#show-quantity{
+    
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: 0 1px 6px 0 rgb(34 34 34 / 15%);
+    display: flex;
+
+    font-family: inherit;
+    font-size: 17px;
+    height: 48px;
+    padding-left: 12px;
+    padding-right: 36px;
+    width: 100%;
+    border-radius: 6px;
+    background: #FFFFFF;
+    border-color: rgba(34, 34, 34, 0.15);
+    border-style: solid;
+    border-width: 1px;
+    color: #222222;
+    text-align: center;
+    text-align-last: center;
+
+    text-indent: 0.01px;
+    text-overflow: "";
+    cursor: pointer;
+}
+#show-quantity-container > p{
+    font-size: 11px;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 5px;
+}
+#add-to-cart{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 44px;
+    background-color: black;
+    border-radius: 30px;
+    color: white;
+    font-size: 17px;
+}
+#add-to-cart-container{
+    width: 100%;
+    height: 44px;
+}
+
+#price-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.show-price{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#price-svg{
+    width: 18px;
+    height: 18px;
+}
+#price-in-stock{
+    font-size: 14px;
+    margin-left: 2px;
+}
+
 .product-show-container{
     padding-left: 36px;
     padding-right: 36px;
@@ -6,9 +77,14 @@
     justify-content: space-evenly;
 }
 
+.show-main-container{
+    display: flex;
+    flex-direction: column;
+
+}
+
 .product-show-picture-container-outter{
     padding-top: 20px;
-    width: 50%;
     /* display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -16,6 +92,7 @@
 }
 
 .product-show-picture-container-inner{
+    width: 65vw;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -53,8 +130,51 @@ svg{
     
 }
 
+#show-page-footer{
+
+   background-image: url(https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/show_page_background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    padding: 12px 36px 12px 36px;
+}
+
+#footer-1st-p {
+    margin-top: 50px;
+}
+#show-page-footer :nth-child(3) {
+    margin-top: 100px;
+    color: white;
+    text-decoration-style: dotted;
+    font-size: 14px;
+}
+#show-page-footer form input{
+    /* border: 1px solid #222222; */
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    width: 300px;
+    font-size: 20px;
+    /* margin: 10px 0 36px 0; */
+    padding: 12px 20px 12px 20px;
+    border: 1px solid #22222260;
+
+    color: #222222;
+    background-color: white;
+
+}
+
+
 .picture-container-main{
-    width: 600px;
+    width: 82%;
     height: 420px;
     border-radius: 20px;
 }
@@ -81,10 +201,16 @@ svg{
 
 .picture-container-list-item:hover{
     cursor: pointer;
-    border: 1.5px solid rgb(48, 48, 48);
+    border: 1px solid #22222260;
     border-radius: 18px !important;
+    transform: scale(1.1);
+    transition: .15s;
 
 }
+.picture-container-list-item:active{
+    transform: scale(1);
+}
+
 
 .picture-container-list-item-container{
     border: 1px rgb(153, 153, 153);
@@ -102,15 +228,18 @@ svg{
 
 .product-show-info > *{
     padding-top: 20px;
+    font-size: 18px;
 }
 
 .highlight-item{
     padding: 5px;
     font-size: 18px;
+    line-height: 1.6;
 }
 
 .show-description{
     line-height: 1.6;
+    font-size: 18px;
 }
 
 .buttons{
@@ -129,8 +258,14 @@ svg{
     transition: all 0.1s linear;
     cursor: pointer;
     border-radius: 15px;
+    transform: scale(1.1);
+    transition: .15s;
     border: .2px rgb(179, 179, 179);
 }
+.buttons:active{
+    transform: scale(1);
+}
+
 
 .highlights-button{
     width: 100%;
@@ -147,6 +282,22 @@ svg{
     transition: all 0.1s linear;
     cursor: pointer;
     border-radius: 15px;
+    transition: .15s;
+    transform: scale(1.1);
     border: .2px rgb(179, 179, 179);
     
 }
+.highlights-button:active{
+    transform: scale(1);
+}
+
+#add-to-cart:hover{
+    transform: scale(1.05);
+    transition: .15s;
+    cursor: pointer;
+}
+
+#add-to-cart:active{
+    transform: scale(1)
+}
+

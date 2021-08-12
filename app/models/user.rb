@@ -17,6 +17,11 @@ class User < ApplicationRecord
     validates :session_token, presence: true, uniqueness: true
 
     attr_reader :password
+
+    has_one :cart,
+        foreign_key: :user_id,
+        class_name: :Cart
+
     
     after_initialize :ensure_session_token
     # SPIRE

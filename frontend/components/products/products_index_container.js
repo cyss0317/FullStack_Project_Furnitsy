@@ -29,18 +29,19 @@ const mSTP = (state) => {
         product.category === "Dining Chairs"
     ))
     
-    let randomItem8 = [];
+    let randomItem10 = [];
 
     // important to under stand!! 
     // 
 
     if (products.length !== 0) {
-        while (randomItem8.length < 8) {
+        while (randomItem10.length < 10) {
             let random = products[Math.floor(Math.random() * products.length)]
-            if (!randomItem8.includes(random)){
-            randomItem8.push(random)}
+            if (!randomItem10.includes(random)){
+            randomItem10.push(random)}
         }
     }
+  
 
     // let random = function(arr, number){
     //     for (let i = 0; i < number; i++) {
@@ -51,11 +52,11 @@ const mSTP = (state) => {
 
 
 
-    // random(randomItem8, 8);
+    // random(randomItem10, 8);
     // if (products === undefined){
     //     return null;
     // } else{
-    //     return random(randomItem8, 8);
+    //     return random(randomItem10, 8);
     // }
 
     // let randomItem = [];
@@ -65,7 +66,7 @@ const mSTP = (state) => {
     // }
 
 
-    // // question 5 
+
     // let randomItem = [];
     // {
     //     // debugger
@@ -82,7 +83,7 @@ const mSTP = (state) => {
         products: products,
         couchAndSofa: couchAndSofa,
         outdoor: outdoor,
-        randomItem8: randomItem8,
+        randomItem10: randomItem10,
         diningTable: diningTable,
         coffeeTable: coffeeTable,
         kidsBunkBed: kidsBunkBed,

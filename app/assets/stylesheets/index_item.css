@@ -10,6 +10,17 @@
     /* box-sizing: content-box; */
 }
 
+.hot-items-image-thumnail:hover{
+    transform: scale(1.1);
+    border: 1px solid #22222260;
+    transition: .15s;
+    /* box-shadow: 0 4px 8px #22222202  */
+
+}
+.hot-items-image-thumnail:active{
+    transform: scale(1);
+}
+
 .index-container-logo{
     font-size: 33px;
     font-weight: 100;
@@ -37,7 +48,7 @@ img {
     max-width: 100%;
     max-height: 100%;
 }
-/* question */
+
 element.style {
     display: flex;
     justify-content: center;
@@ -58,43 +69,49 @@ element.style {
 }
  */
 
+
+.products-hot-items a{
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.products-hot-items {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+
+.products-hot-items a span {
+    color: #222222;
+    width: 14vmax;
+
+}
+.products-hot-items a img {
+    flex-grow: 1;
+
+}
+
 .hot-items-image-thumnails{
 
-    width: 14vmax;
-    height: 14vmax;
+    /* width: 14vmax;
+    height: 14vmax; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
     text-overflow: ellipsis;
-}
-
-.products-hot-items {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-}
-
-
-.products-hot-items > span> a{
-    margin-top: -8px;
-    text-decoration: none;
-    color: #222222;
-    font-size: 13px;
-    display: inline-block;
-    width: 14vw;
-    text-align: center;
-    font-weight: bold;
-}
-
+} 
 .hot-items-image-thumnail {
     width: 12vmax;
-    height: 450px;
+    height: 12vmax;
     border-radius: 50%;
-    padding: 10px;
+    margin: 10px;
     object-fit: cover;
+    border: 1px solid #22222260;
 
 }
 

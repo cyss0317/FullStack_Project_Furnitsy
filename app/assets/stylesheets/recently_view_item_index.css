@@ -9,12 +9,18 @@
     padding-right: 15px;
 
 }
+
+
 .recently-viewed-container > p{
     font-size: 19px;
 }
 #recently-words{
     display: flex;
     justify-content: space-between;
+}
+
+#recently-words p {
+    padding: 5px 36px 10px 36px;
 }
 #show-more-from{
     font-size: 12px;
@@ -26,14 +32,55 @@
     font-weight: bold;
     text-decoration: none;
 }
-.recently-view-item > span {
+
+/* .recently-view-item  Link  p {
+    font-size: 15px;
+    color: #258635 !important;
+    font-weight: bold;
+    text-decoration: none;
+} */
+.remove-button{
+    border: none;
+    font-weight: bolder;
+    font-size: 13px;
+    background-color: transparent;
+    margin-top: 30px;
+    padding: 4px 8px 4px 8px;
+}
+
+.remove-button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.remove-button:active{
+    transform: scale(0.95);
+    transition: 0.3s;
+}
+
+
+.recently-view-item  link img{
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+       width: 250px;
+
+    height: 180px;
+}
+
+.recently-view-item a span {
     position: relative;
-    top: 215px;
+
+    top: -46px;
+
+
+
     right: -10px;
     background-color: rgb(245, 245, 245);
     border-radius: 15px;
     border: .6px #258635;
-    color: inherit;
+    color: #258635;
     display: inline-block;
     word-break: break-word;
     line-height: 1;
@@ -44,6 +91,7 @@
     padding-left: 9px;
     padding-right: 9px;
     min-width: 25px;
+
 }
 
 .recently-view-item  link img{
@@ -64,7 +112,7 @@
     /* height: 400px; */
 }
 
-/* question, not able to apply aline-items center */
+
 .recently-viewed-items{
     display: flex;
     flex-wrap: wrap;
@@ -76,4 +124,18 @@
     width: 350px;
     height: 350px;
     border-radius: 20px;
+    object-fit: cover;
+    border: 1px solid #22222240;
+ 
+}
+
+.recently-viewed-items li img:hover{
+    transform: scale(1.1);
+    border: 1px solid #22222260;
+    transition: .15s;
+}
+.recently-viewed-items li img:active{
+    transform: scale(1);
+
+
 }
