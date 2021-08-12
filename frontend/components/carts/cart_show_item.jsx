@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 class CartShowItem extends React.Component{
     constructor(props){
         super(props)
-        this.state = this.props.item;
         this.deleteHandler = this.deleteHandler.bind(this);
     }
 
@@ -13,20 +12,25 @@ class CartShowItem extends React.Component{
         e.preventDefault();
         this.props.deleteCartItem(this.props.item.id);
     }
+    checkOutHandler(e){
+        this.
+    }
+
 
     render(){
-        const { item, totalPrice } = this.props;
+        const { item, totalPrice, products } = this.props;
         let tax = totalPrice * .0825;
         let subtotal = totalPrice + tax;
-     
+        
+
         return (
             <li className={`cart-show-item-container`}>
                 <div className="cart-show-item-container-info">
                     <Link to={`/products/${item.product.id}`} className="cart-show-image-thumnails">
                         <img className="cart-show-image-thumnail"
-                            // src={item.product.photoUrls[0]}
+                            src={item.photoUrls[0]}
                         />
-                        {/*question! how to get rid of text decoration */}
+
                         {/* <a href={`/products/${product.id}`}>{product.name}</a> */}
                         {/* <p className="thumnail-p">{product.name}</p> */}
                     </Link>
@@ -60,6 +64,9 @@ class CartShowItem extends React.Component{
                         <h1 >Over 20 people have this in their cart</h1>
                         <h2>Sale: 0% off</h2>
                     </div>
+                    <form onSubmit={this.checkOutHandler}>
+                        <input id="proceed-to-checkout" type="submit" value="Proceed to checkout" />
+                    </form>
                 </div>
             
             </li>

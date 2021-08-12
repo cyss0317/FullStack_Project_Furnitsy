@@ -69,6 +69,11 @@
 
 #cart-item-price{
     margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height:  150px;
 }
 
 #cart-items-and-total{

@@ -11,9 +11,7 @@ const ProductIndexItem = props => {
                 src={product.photoUrls[0]}
                 />
                 {/* {product.name} */}
-                {/*question! how to get rid of text decoration */}
-                {/* <a href={`/products/${product.id}`}>{product.name}</a> */}
-                {/* <p className="thumnail-p">{product.name}</p> */}
+              
             <span id='thumnail-span'>
                 {product.name}
             </span>

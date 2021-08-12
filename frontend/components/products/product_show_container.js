@@ -12,7 +12,7 @@ const mSTP =( state, ownProps)=> {
     } else {
         photoUrls = product.photoUrls;
     }
-    // question!!!!!!! when to use conditioonal inside container or presentational
+    // solved!!!!!!! when to use conditioonal inside container or presentational
     return ({
         product: product,
         photoUrls: photoUrls,

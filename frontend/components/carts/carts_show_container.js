@@ -6,8 +6,13 @@ import { ThunkDeleteCartItem, ThunkReceiveCartItems } from "../../actions/cart_i
 export const mSTP = (state) => {
 
     const allItems = Object.values(state.entities.cartItems)
+
+
     let numberOfProducts = 0;
     allItems.forEach((item) => numberOfProducts += item.quantity )
+
+    const products = Object.values(state.entities.products)
+
 
     let allProductsNameArray =[];
     allItems.forEach((item)=> {
