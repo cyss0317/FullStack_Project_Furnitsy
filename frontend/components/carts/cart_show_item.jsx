@@ -12,10 +12,10 @@ class CartShowItem extends React.Component{
         e.preventDefault();
         this.props.deleteCartItem(this.props.item.id);
     }
-    checkOutHandler(e){
-        this.
-    }
-
+    // checkOutHandler(e){
+    //     this.
+    // }
+    // question for checkout button
 
     render(){
         const { item, totalPrice, products } = this.props;
