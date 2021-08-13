@@ -30,7 +30,7 @@ class CartShow extends React.Component{
                 </div>
 
                 <div id="cart-items-and-total">
-                    <ul>
+                    <ul id="ul">
                         {
                             allItems.map((item) => (
                                 <CartShowItem deleteCartItem={this.props.deleteCartItem} totalPrice={totalPrice} item={item} key={item.id}/>

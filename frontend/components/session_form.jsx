@@ -22,7 +22,7 @@ class SessionForm extends React.Component {
 
     demoHandler(e){
         e.preventDefault();
-        const user = Object.assign({}, {id: 4, email: "demo_user", password: "password"})
+        const user = Object.assign({}, { email: "demo_user", password: "password"})
         // this.setState({email:user.email})
         // this.setState({ password:user.password})
         this.props.login(user).then(this.props.closeModal);
