@@ -4,6 +4,7 @@ export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 import * as cartAPIUtil from "../util/cart_api_util";
 import { fetchCart, receiveCart } from "./carts_actions";
+import { ThunkReceiveCartItems } from "./cart_items_actions";
 
 //wrtie action creators
 export const receiveCurrentUser = (currentUser) => ({
@@ -28,6 +29,7 @@ export const login = (user) => dispatch => (
         // user.id => (dispatch(receiveCart))
         )
         .then(user => dispatch(fetchCart(user.id)))
+        .then(user => dispatch(ThunkReceiveCartItems(user.cart.cart_items)))
     // cartAPIUtil.$receiveCart(user.id)
     //     .then( cart => dispatch(receiveCart(cart)))
 )
