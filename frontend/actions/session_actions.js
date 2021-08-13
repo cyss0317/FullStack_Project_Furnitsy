@@ -6,6 +6,7 @@ import * as cartAPIUtil from "../util/cart_api_util";
 import { fetchCart, receiveCart } from "./carts_actions";
 import { ThunkReceiveCartItems } from "./cart_items_actions";
 
+
 //wrtie action creators
 export const receiveCurrentUser = (currentUser) => ({
     type: RECEIVE_CURRENT_USER,
@@ -29,7 +30,7 @@ export const login = (user) => dispatch => (
         // user.id => (dispatch(receiveCart))
         )
         .then(user => dispatch(fetchCart(user.id)))
-        .then(user => dispatch(ThunkReceiveCartItems(user.cart.cart_items)))
+        .then(user => dispatch(ThunkReceiveCartItems()))
     // cartAPIUtil.$receiveCart(user.id)
     //     .then( cart => dispatch(receiveCart(cart)))
 )
@@ -37,9 +38,8 @@ export const login = (user) => dispatch => (
 export const logout = () => dispatch => (
     SessionApiUtil.$logout()
         .then(() => dispatch(logoutCurrentUser()),
-    error => (
-        dispatch(receiveErrors(error.responseJSON))
-    ))
+    error => (dispatch(receiveErrors(error.responseJSON))))
+        .then(() => dispatch(ThunkReceiveCartItems()))
 )
 
 export const signup = (user) => dispatch => {
