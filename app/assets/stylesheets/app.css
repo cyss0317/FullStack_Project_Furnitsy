@@ -83,7 +83,7 @@ html,body{
     background-color: rgb(243, 243, 243);
 }
 /* get rid of outline when you click on input */
-input:focus {outline:none;}
+/* input:focus {outline:none;} */
 
 .greeting-component{
     width: 10%;
