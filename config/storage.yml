@@ -14,14 +14,14 @@ local:
 #   region: US East (Ohio) us-east-2
 #   bucket: furnitsy-furniture-images
   
-  # aws:
-  # access_key_id: "AKIAXI2HJMCNMXQ374VB"
-  # secret_access_key: "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"
-  # region: "us-east-1"
-  # dev:
-  #   bucket: "furnitsy-furniture-images-dev"
-  # prod:
-  #   bucket: "furnitsy-furniture-images-pro"
+#   aws:
+#   access_key_id: "AKIAXI2HJMCNMXQ374VB"
+#   secret_access_key: "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"
+#   region: "us-east-1"
+#   dev:
+#     bucket: "furnitsy-furniture-images-dev"
+#   prod:
+#     bucket: "furnitsy-furniture-images-pro"
 
 amazon_dev:
   service: S3

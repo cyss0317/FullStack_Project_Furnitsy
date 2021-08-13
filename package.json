@@ -1,5 +1,5 @@
 {
-  "name": "Furnitsy",
+  "name": "furnitsy",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.14.8",
