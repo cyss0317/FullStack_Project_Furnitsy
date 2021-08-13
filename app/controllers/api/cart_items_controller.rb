@@ -19,8 +19,8 @@ class Api::CartItemsController < ApplicationController
         if @cart_items
             @cart_items
             render :index
-        else
-            @cart_items = {}
+        elsif !current_user
+            redirect_to api_session_url
         end
     end
 
