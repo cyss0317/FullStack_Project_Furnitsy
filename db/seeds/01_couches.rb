@@ -60,21 +60,30 @@ p2.images.attach(io:p2_6, filename: 'images/abinger_sofa/83904-38-BACK-SW-P1-KO.
 p2_7 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/83904-38-ANGLE-SW-P1-KO.webp')
 p2.images.attach(io:p2_7, filename: 'images/abinger_sofa/83904-38-ANGLE-SW-P1-KO.webp')
 
-
-
-
-
-p4 = Product.create({name: "Gaddis Flip Flop Sofa", description: "Love furniture with a mid-century modern twist? Then you’re sure to flip for the gorgeous Gaddis flip flop sofa in gray. This brilliantly styled sofa-futon is the ultimate choice if you’re short on space but long for form and function. Tailored touches including tapered wood-tone legs and tufted box cushions exude an upscale mood reflecting your fine taste.",
-highlights:"
-Attached back and seat cushions!
+p4 = Product.create({ name: "Gaddis Flip Flop Sofa", description: "Love furniture with a mid-century modern twist? Then you’re sure to flip for the gorgeous Gaddis flip flop sofa in gray. This brilliantly styled sofa-futon is the ultimate choice if you’re short on space but long for form and function. Tailored touches including tapered wood-tone legs and tufted box cushions exude an upscale mood reflecting your fine taste.",
+highlights:"Attached back and seat cushions!
 High-resiliency foam cushions wrapped in thick poly fiber!
 Polyester upholstery!
 Tufted details!
 2 USB ports; power cord included; UL Listed!
 Exposed wood-tone legs!
 Estimated Assembly Time: 30 Minutes!
-Fabric Details: Polyester (100)%!
+Fabric Details: Polyester 100()!
 Weight 111 lbs. (50.35 kgs.)", category: "Couch and Sofa", measurement: 'Width: 78.00",Depth: 32.00",Height: 32.00"', color: "Gray", price: 599.00})
+
+
+
+# p4 = Product.create({name: "Gaddis Flip Flop Sofa", description: "Love furniture with a mid-century modern twist? Then you’re sure to flip for the gorgeous Gaddis flip flop sofa in gray. This brilliantly styled sofa-futon is the ultimate choice if you’re short on space but long for form and function. Tailored touches including tapered wood-tone legs and tufted box cushions exude an upscale mood reflecting your fine taste.",
+# highlights:"
+# Attached back and seat cushions!
+# High-resiliency foam cushions wrapped in thick poly fiber!
+# Polyester upholstery!
+# Tufted details!
+# 2 USB ports; power cord included; UL Listed!
+# Exposed wood-tone legs!
+# Estimated Assembly Time: 30 Minutes!
+# Fabric Details: Polyester (100)%!
+# Weight 111 lbs. (50.35 kgs.)", category: "Couch and Sofa", measurement: 'Width: 78.00",Depth: 32.00",Height: 32.00"', color: "Gray", price: 599.00})
 file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/gaddis_sofa/main_68206-65-UP-10X8-CROP.png')
 p4.images.attach(io:file1, filename: 'images/gaddis_sofa/main_68206-65-UP-10X8-CROP.png')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/gaddis_sofa/68206-SWATCH-BODY-A-500.webp')
@@ -108,7 +117,7 @@ Polyester upholstery!
 Exposed feet with faux wood finish!
 Platform foundation system resists sagging 3x better than spring system after 20,000 testing cycles by providing more even support!
 Smooth platform foundation maintains tight, wrinkle-free look without dips or sags that can occur over time with sinuous spring foundations!
-Fabric Details Body: Polyester (100)%!
+Fabric Details Body: Polyester (100)!
 Weight 103 lbs. (46.72 kgs.)",category: "Couch and Sofa", measurement: 'Width: 82.00",Depth: 40.00",Height: 36.00"', color: "Graphite", price: 749.00 })
 file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/lyman_sofa/main_93303-38-SET-10X8-CROP.png')
 p3.images.attach(io:file1, filename: 'images/lyman_sofa/main_93303-38-SET-10X8-CROP.png')
