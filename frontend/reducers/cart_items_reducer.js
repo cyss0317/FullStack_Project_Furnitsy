@@ -1,4 +1,5 @@
 import { CREATE_CART_ITEM, DELETE_CART_ITEM, RECEIVE_CART_ITEMS} from "../actions/cart_items_actions";
+import { OPEN_MODAL } from "../actions/modal_actions";
 
 const CartItemsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
@@ -14,6 +15,8 @@ const CartItemsReducer = (oldState = {}, action) => {
             // return Object.assign({}, oldState)
             delete nextState[action.cartItemId]
             return nextState
+        // case OPEN_MODAL:
+
         default:
             return oldState;
     }

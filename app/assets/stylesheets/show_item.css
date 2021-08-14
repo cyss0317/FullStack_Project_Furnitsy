@@ -26,7 +26,7 @@
     text-overflow: "";
     cursor: pointer;
 }
-#show-quantity-container > p{
+#show-quantity-container > label{
     font-size: 11px;
     display: flex;
     justify-content: flex-start;

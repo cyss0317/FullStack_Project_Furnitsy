@@ -5,6 +5,7 @@ class ProductShow extends React.Component {
         super(props)
 
         this.state = {
+            errors: this.props.errors,
             mainPic: props.photoUrls[0],
             quantity: 1,
             //thinking that product hasn't been fetched yet
@@ -17,8 +18,11 @@ class ProductShow extends React.Component {
         this.leftSvgClickhandler = this.leftSvgClickhandler.bind(this)
         this.addToCartHandler = this.addToCartHandler.bind(this)
         this.onChangeHandler = this.onChangeHandler.bind(this)
-
+        
+  
     }
+
+
     componentDidMount(){
         this.props.fetchProduct(this.props.match.params.productId);
     }
@@ -56,7 +60,13 @@ class ProductShow extends React.Component {
 
     addToCartHandler(e){
         e.preventDefault();
-        this.props.createCartItem(this.props.product.id, this.state.quantity )
+        // this.props.currentUser ? this.props.createCartItem(this.props.product.id, this.state.quantity) : this.props.openModal("Login")
+        if( this.props.currentUser){
+            this.props.createCartItem(this.props.product.id, this.state.quantity) 
+        } else{
+            this.setState({errors: "you need to login first"})
+            this.props.openModal("Login")
+        }
     }
 
     render (){
@@ -95,7 +105,7 @@ class ProductShow extends React.Component {
                         </div>
                         <form align="center" id="show-quantity-container" onSubmit={this.addToCartHandler}>
                             {/* <div align="center" id="show-quantity-container"> */}
-                                <label for="quantity">Quantity</label>
+                                <label >Quantity</label>
                                 {/* Importatn!!!! need to put defaulValue for select */}
                                 <select name="quantity" id="show-quantity" defaultValue={this.state.quantity}  onChange={this.onChangeHandler}>
                                     <option value="1"  >1</option>

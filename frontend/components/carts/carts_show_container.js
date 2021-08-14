@@ -5,13 +5,15 @@ import { ThunkDeleteCartItem, ThunkReceiveCartItems } from "../../actions/cart_i
 
 export const mSTP = (state) => {
 
-    const allItems = Object.values(state.entities.cartItems)
+
+    const allItems = state.entities.cartItems === undefined ? {} : Object.values(state.entities.cartItems)
 
 
     let numberOfProducts = 0;
     allItems.forEach((item) => numberOfProducts += item.quantity )
 
     const products = Object.values(state.entities.products)
+
 
 
     let allProductsNameArray =[];
@@ -29,7 +31,8 @@ export const mSTP = (state) => {
         allItems: allItems,
         cartItems: state.entities.cartItems,
         numberOfProducts: numberOfProducts,
-        totalPrice: totalPrice
+        totalPrice: totalPrice,
+        currentUser: state.entities.users[state.session.id]
 
     })
 }
