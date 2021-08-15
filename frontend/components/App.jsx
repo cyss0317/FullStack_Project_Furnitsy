@@ -11,6 +11,7 @@ import ProductShowContainer from "./products/product_show_container";
 import ProductNav from "./products/product_nav_index";
 import CartShowContainer from "./carts/carts_show_container";
 import CartHeaderContainer from "./carts/cart_header_container";
+import ProductNavContainer from "./products/product_nav_container";
 
 const App = () => {
     return(
@@ -24,9 +25,8 @@ const App = () => {
                     <GreetingContainer className="greeting-component"/>
                     <CartHeaderContainer />
 
-
                 </div>
-
+                <ProductNavContainer/>
                 {/* <ProductNav className="product-nav"/> */}
             </header>
        </div>
