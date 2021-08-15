@@ -27,7 +27,7 @@ const App = () => {
 
                 </div>
                 <ProductNavContainer/>
-                {/* <ProductNav className="product-nav"/> */}
+
             </header>
        </div>
             {/* <ProductIndexContainer/> */}

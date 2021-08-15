@@ -34,9 +34,9 @@ class ProductNav extends React.Component{
                         {/* { */
                             categories.map((category, index) => {
                                return(
-                                <Switch>
+                                // <Switch>
                                        <Route exact path={`/${category}`} >  <ProductNavCategoryIndex products={categories_selector[index]} /> </Route>
-                                </Switch>
+                                // </Switch>
                             //         {/* take user to show index page for category */}
                             //         {/* render other component and pass in coresponding info */}
                             )})
