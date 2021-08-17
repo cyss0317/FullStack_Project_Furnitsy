@@ -21,7 +21,7 @@ User can login, sign up and logout securely. A demo login is available for demon
 
 ## Products
 
-![Category](demo/asoap2.gif)
+![Category]()
 
 
 Products are grouped by category for better user experience. 
@@ -31,7 +31,7 @@ Users are able to view the product index or a single product. Also, look up item
 
 ## Cart
 
-![IndexShow](demo/asoap3.gif)
+![IndexShow](
 
 A cart belongs to a user and items that are added to the cart have cart-item id that belongs to a cart. Logged in users can add, update or delete items in cart. Total number of items in the cart renders on top of the cart image. Cart calculates the total price for users.
 

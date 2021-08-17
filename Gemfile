@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
-# gem "aws-sdk-s3"
+gem "aws-sdk-s3"
 # gem 'aws-sdk', '~> 2'
 gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-gem 'aws-sdk-s3', require: false
+# gem 'aws-sdk-s3', require: false
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

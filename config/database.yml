@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: Sunny_development
+  database: Furnitsy_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: Sunny_test
+  database: Furnitsy_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,4 +82,4 @@ production:
   <<: *default
   database: Sunny_production
   username: Sunny
-  password: <%= ENV['SUNNY_DATABASE_PASSWORD'] %>
+  password: <%= ENV['FURNITSY_DATABASE_PASSWORD'] %>

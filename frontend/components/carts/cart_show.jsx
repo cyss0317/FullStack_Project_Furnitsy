@@ -26,7 +26,7 @@ class CartShow extends React.Component{
         return (
             <div>
                 {
-                currentUser ? <p>hello</p> :
+                // currentUser ? <p>hello</p> :
 
                     <div className="cart-show-container">
                         <div id="items-in-your-cart">

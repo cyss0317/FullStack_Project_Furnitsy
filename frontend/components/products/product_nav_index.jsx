@@ -30,17 +30,21 @@ class ProductNav extends React.Component{
             <div className="nav-static">
                 <nav className="nav-container">
                     <div>
-
+                        <Switch>
                         {/* { */
-                            categories.map((category, index) => {
+                            categories_selector.map((category, index) => {
                                return(
                                 // <Switch>
-                                       <Route exact path={`/${category}`} >  <ProductNavCategoryIndex products={categories_selector[index]} /> </Route>
-                                // </Switch>
+                                // <p>{`${category}`}</p>
+                                    // <Link to={`/${category}`}>{category}</Link>
+                                   <Route exact path={`/${category}`}  > {categories[index]} <ProductNavCategoryIndex products={category} />  </Route>
+                                        // <ProductNavCategoryIndex products={categories_selector[index]} />
+                                // </S  witch>
                             //         {/* take user to show index page for category */}
                             //         {/* render other component and pass in coresponding info */}
                             )})
                         }
+                        </Switch>
                     </div>
                 </nav>
             </div>

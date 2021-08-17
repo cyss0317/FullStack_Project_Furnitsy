@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # require 'open_uri'
 require 'open-uri'
+require 'csv'
 
 Product.delete_all
 User.delete_all
@@ -23,10 +24,11 @@ require_relative './seeds/04_chairs.rb'
 
 # category: "Couch and Sofa"
 # category: "Console Table"
-# category: "Outdoor Dining Sets"
-# category: "Dining Table"
-# category: "Coffee Table"
-# category: "Kids Bunk Bed"
-# category: "Accent Chairs"
-# category: "Dining Chairs"
-# category: "Outdoor"
+# category: "Outdoor 
+# Dining Sets"
+# # category: "Dining Table"
+# # category: "Coffee Table"
+# # category: "Kids Bunk Bed"
+# # category: "Accent Chairs"
+# # category: "Dining Chairs"
+# # category: "Outdoor"

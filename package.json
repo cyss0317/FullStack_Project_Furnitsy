@@ -34,13 +34,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cyss0317/FullStack_Project_Sunny.git"
+    "url": "git+https://github.com/cyss0317/FullStack_Project_Furnitsy.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cyss0317/FullStack_Project_Sunny/issues"
+    "url": "https://github.com/cyss0317/FullStack_Project_Furnitsy/issues"
   },
-  "homepage": "https://github.com/cyss0317/FullStack_Project_Sunny#readme"
+  "homepage": "https://github.com/cyss0317/FullStack_Project_Furnitsy#readme"
 }

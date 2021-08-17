@@ -26,7 +26,8 @@ const App = () => {
                     <CartHeaderContainer />
 
                 </div>
-                <ProductNavContainer/>
+                
+                {/* <ProductNavContainer/> */}
 
             </header>
        </div>
