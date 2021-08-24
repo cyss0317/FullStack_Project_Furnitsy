@@ -15,8 +15,8 @@ class Api::CartsController < ApplicationController
         @cart = Cart.find_by(user_id: current_user.id)
         if @cart
             render :show
-        else
-            flash[:errors] = ["You need to login first"]
+        # else
+        #     flash[:errors] = ["You need to login first"]
         end
     end
 

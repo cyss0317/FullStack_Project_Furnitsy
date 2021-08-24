@@ -71,11 +71,7 @@
 
 .recently-view-item a span {
     position: relative;
-
     top: -46px;
-
-
-
     right: -10px;
     background-color: rgb(245, 245, 245);
     border-radius: 15px;
@@ -98,8 +94,7 @@
     display: block;
     margin-top: auto;
     margin-bottom: auto;
-       width: 250px;
-
+    width: 250px;
     height: 180px;
 }
 

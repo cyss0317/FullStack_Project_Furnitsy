@@ -3,9 +3,9 @@ class Api::UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             login!(@user)
-            @cart = Cart.create(user_id: @user.id)
-            # @cart = Cart.new({user_id: @user.id})
-            # @cart.save
+            # @cart = Cart.create({user_id: @user.id})
+            @cart = Cart.new(user_id: @user.id)
+            @cart.save
             render "api/users/show"
 
         else
