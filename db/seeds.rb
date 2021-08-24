@@ -6,15 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # require 'open_uri'
-require 'open-uri'
-require 'csv'
+# require 'open-uri'
+# require 'csv'
 
-Product.delete_all
-User.delete_all
-Cart.delete_all
-CartItem.delete_all
+# Product.delete_all
+# User.delete_all
+# Cart.delete_all
+# CartItem.delete_all
 
-User.create({email: "demo_user", password: "password", first_name:"DEMO_USER"})
+# User.create({email: "demo_user", password: "password", first_name:"DEMO_USER"})
 
 # require_relative './seeds/01_couches.rb'
 # require_relative './seeds/02_tables.rb'
