@@ -108,7 +108,6 @@ Assembly required!
 Assembly of fire pit table provided with in-home delivery; connection to propane tank or connector hose not provided!
 Estimated Assembly Time: 120 Minutes!
 Weight250 lbs. (113.4 kgs.)', category: "Outdoor", measurement: 'Width: 45.00",Depth: 45.00",Height: 25.50"', color: "Antique White", price: 3149.00  })
-# Product.create({name: "", description: "", category: "", measurement: '', color: "", price:  })
 file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/preston_table_set/main_P460-772-821(4)-FIRE.webp')
 p5.images.attach(io:file1, filename: 'images/preston_table_set/main_P460-772-821(4)-FIRE.webp')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/preston_table_set/P460-772-821(4)-SW-P1-KO.webp')
@@ -126,9 +125,10 @@ p5.images.attach(io:file7, filename: 'images/preston_table_set/P460-821-HEAD-ON-
 file8 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/preston_table_set/P460-821-SIDE-SW-P1-KO.webp')
 p5.images.attach(io:file8, filename: 'images/preston_table_set/P460-821-SIDE-SW-P1-KO.webp')
 
+# Product.create({name: "", description: "", category: "", measurement: '', color: "", price:  })
 
 p6 = Product.create({name: "Beachcroft Outdoor Dining Table and 4 Chairs and Bench", description: 'Sporting an easy-on-the-eyes look inspired by driftwood, the Beachcroft 6-piece dining set elevates the art of indoor-outdoor living. Beautiful and durable enough for indoor and outdoor use, the brilliantly styled dining chairs and bench entice with plush, removable cushions wrapped in high-performing Nuvella® fabric that are a breeze to keep clean. Sporting an easy-on-the-eyes look inspired by driftwood, the dining table charms with X-leg farmhouse styling and wows with a thick porcelain tabletop that’s a natural complement.',
-highlights:'
+    highlights:'
 Includes dining table, bench, 2 arm chairs and 2 dining chairs!
 All-weather resin wicker handwoven over powdercoated rust-resistant aluminum frame!
 Cushions covered in high performing Nuvella® fabric!

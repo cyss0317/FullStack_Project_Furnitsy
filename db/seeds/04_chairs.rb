@@ -129,6 +129,11 @@ file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/image
 p5.images.attach(io:file1, filename: 'images/dinara_chair/main_A3000200-10X8-CROP.webp')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/dinara_chair/A3000200-SW-P1-KO.webp')
 p5.images.attach(io:file2, filename: 'images/dinara_chair/A3000200-SW-P1-KO.webp')
+
+
+
+
+
 # file3 = open('')
 # p5.images.attach(io:file3, filename: '')
 # file4 = open('')
