@@ -5,10 +5,7 @@ export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 import * as cartAPIUtil from "../util/cart_api_util";
 import { fetchCart, receiveCart } from "./carts_actions";
 import { ThunkReceiveCartItems } from "./cart_items_actions";
-<<<<<<< HEAD
-=======
 import { Redirect } from "react-router-dom";
->>>>>>> testing1
 
 
 //wrtie action creators
