@@ -29,6 +29,7 @@ export const mSTP = (state) => {
     
     return({
         allItems: allItems,
+        noCurrentUser: state.session.id,
         cartItems: state.entities.cartItems,
         numberOfProducts: numberOfProducts,
         totalPrice: totalPrice,

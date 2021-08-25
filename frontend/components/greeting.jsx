@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 const Greeting = ({currentUser, logout, openModal}) => {
     
+
+
     const ifLoggedIn = () => (
 
         <div className="welcome-message-and-logout-button">

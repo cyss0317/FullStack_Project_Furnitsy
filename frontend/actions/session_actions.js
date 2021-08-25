@@ -5,6 +5,7 @@ export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 import * as cartAPIUtil from "../util/cart_api_util";
 import { fetchCart, receiveCart } from "./carts_actions";
 import { ThunkReceiveCartItems } from "./cart_items_actions";
+import { Redirect } from "react-router-dom";
 
 
 //wrtie action creators
@@ -40,6 +41,8 @@ export const logout = () => dispatch => (
         .then(() => dispatch(logoutCurrentUser()),
     error => (dispatch(receiveErrors(error.responseJSON))))
         .then(() => dispatch(ThunkReceiveCartItems()))
+        // .then( <Redirect to="/"/>)
+
 )
 
 export const signup = (user) => dispatch => {
