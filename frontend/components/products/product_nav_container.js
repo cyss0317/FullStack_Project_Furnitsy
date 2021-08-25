@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-// import ProductNav from "./product_nav_index"
+import ProductNav from "./product_nav_index"
 import { ThunkReceiveProducts } from "../../actions/product_actions";
 
 

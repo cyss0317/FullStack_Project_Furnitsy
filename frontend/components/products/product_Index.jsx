@@ -14,7 +14,7 @@ class ProductIndex extends React.Component{
 
     render(){
 
-        const { products, couchAndSofa, randomItem8, coffeeTable,  recentlyViews, outdoor, diningTable, diningChairs, kidsBunkBed, accentChairs} = this.props;
+        const { products, couchAndSofa, randomItem10, coffeeTable,  recentlyViews, outdoor, diningTable, diningChairs, kidsBunkBed, accentChairs} = this.props;
 
         // const randomItem = [];
 
@@ -50,12 +50,12 @@ class ProductIndex extends React.Component{
                 </div>
                 <div className='recently-viewed-container'>
                     <div id="recently-words">
-                        <p>Recently viewed <span>&amp;</span> more</p>
+                        <p>What other people are checking out <span>&amp;</span> more</p>
                         {/* <p id="show-more-from">Show more from the <span id="Ashely">Ashely</span> shop</p> */}
                     </div>
                     <ul className="recently-viewed-items">
                         {
-                                randomItem8.map(product => (
+                                randomItem10.map(product => (
                                     <RecentlyViewItemIndex
                                         product={product}
                                         key={product.id}
@@ -80,7 +80,7 @@ class ProductIndex extends React.Component{
                     <div id="what_is_furnitsy_inner">
                         <div id="furnitsy_inner_div">
                             <h2>A community doing good</h2>
-                            <p>Furnitsy is a global online marketplace, where people come together to make, sell, buy, and collect unique items. We’re also a community pushing for positive change for small businesses, people, and the planet. Here are some of the ways we’re making a positive impact, together.</p>
+                            <p>Furnitsy is a furniture store, where my mother in law buys and sells Ashely furnitures. </p>
                         </div>
                         <div id="furnitsy_inner_div">
                             <h2>Sell furnitures to customers</h2>

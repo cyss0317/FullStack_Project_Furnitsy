@@ -8,16 +8,16 @@ const RecentlyViewItemIndex = props => {
 
     return (
         <li className={`recently-view-item`}>
-                <span>
-                    <a href={`/products/${product.id}`} >
+                {/* <span>
+                    <a href={`#/products/${product.id}`} >
                         {`${product.price}.00( 0% off)`}
                     </a>
-                </span>
+                </span> */}
             <Link to={`/products/${product.id}`} className="recently-view-image">
                 <img 
                     src={product.photoUrls[0]}
                 />
-                
+                <span>{`${product.price}.00( 0% off)`}</span>
             </Link>
         </li>
     )
