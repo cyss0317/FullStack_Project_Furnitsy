@@ -51,6 +51,7 @@ class SessionForm extends React.Component {
         )
     }
 
+
     render() {
 
         return (
@@ -95,6 +96,8 @@ class SessionForm extends React.Component {
                         <div className="session-form-buttons">
                             <button className="session-form-submit" >{this.props.formType}</button>
                             <button className="demo-button" onClick={this.demoHandler}>Demo-User</button>
+                            {/* <button className="demo-button" onClick={this.props.otherForm}>Sign up</button> */}
+                            {this.props.otherForm}
                         </div>
                     </form>
 

@@ -15,7 +15,7 @@ const mDTP = (dispatch) => {
     login: user => dispatch(login(user)),
     action: user => dispatch(signup(user)),
     otherForm: (
-        <button onClick={() => dispatch(openModal("Login"))}>
+        <button className="session-form-submit" onClick={() => dispatch(openModal("Login"))}>
             Login
         </button>
     ),

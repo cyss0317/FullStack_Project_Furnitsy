@@ -72,7 +72,7 @@ class ProductIndex extends React.Component{
                         </div>
 
                 </div> */}
-
+{/* 
                 <div className="what_is_furnitsy">
                     <div>
                         <h1>What is Furnitsy?</h1>
@@ -88,18 +88,19 @@ class ProductIndex extends React.Component{
                         </div>
                         <div id="furnitsy_inner_div">
                             {/* ignores text align prop */}
-                            <h2>Peace of mind</h2>
+                            {/* <h2>Peace of mind</h2>
                             <p>Your privacy is the highest priority of our dedicated team. And if you ever need assistance, we are always ready to step in for support.</p>
                         </div>
-                    </div>
-                    <div id="contact-me">
+                    </div> */}
+                    {/* <div> */}
+                    {/* <div id="contact-me">
                         <h3>If you want to hire me, contact me here!</h3>
                         {/* <button onClick="document.location= 'mailto:cyss0317@gmail.com'">Contact Yun Choi</button> */}
-                        <form action="mailto:cyss0317@gmail.com" method="POST" encType="text/plain">
+                        {/* <form action="mailto:cyss0317@gmail.com" method="POST" encType="text/plain">
                             <input className='submit_to_email'type="submit"  value="Contact Yun Sung Choi" />
                         </form>
-                    </div>
-                </div>
+                    </div> 
+                </div>  */}
                 
 
             </div>

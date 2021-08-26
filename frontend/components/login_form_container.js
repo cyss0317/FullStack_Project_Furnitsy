@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 import React from "react";
 import SessionForm from "./session_form";
-import {login} from "../actions/session_actions"
+import {login, signup} from "../actions/session_actions"
 import {openModal, closeModal} from "../actions/modal_actions";
 
 const mSTP = (state, ownProps) => ({    
@@ -12,8 +12,10 @@ const mSTP = (state, ownProps) => ({
 const mDTP = (dispatch) => {
     return {
     action: user => dispatch(login(user)),
+    signup: user => dispatch(signup(user)),
     otherForm: (
-        <button onClick={() => dispatch(openModal('Sign up'))}>
+        //login modal question
+        <button className="session-form-submit" onClick={() => dispatch(openModal('Sign Up'))}>
             Sign Up
         </button>
     ),

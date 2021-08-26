@@ -20,16 +20,41 @@ class ProductNav extends React.Component{
         const categories_selector = [couchAndSofa, diningTable, coffeeTable, kidsBunkBed, accentChairs, diningChairs, outdoor];
         const categories = ["Couch and Sofa",
             "Dining Table",
-            "Coffee Table",
             "Kids Bunk Bed",
             "Accent Chairs",
             "Dining Chairs",
-            "Outdoor"];
+            "Outdoor"]
             // debugger
         return(
             <div className="nav-static">
                 <nav className="nav-container">
+                    {
+                        // categories_selector.map((category, index) => {
+                        //     return(
+                        //         <a href={`/${JSON.stringify(category)}`}>
+                        //         {category}
+                        //     </a>                       
+                        //     )
+                        // })
+                        categories.map((category, index) => {
+                            return(
+                            <div>
+                                <a href={`/${category}`}>
+                                    {category}
+                                </a>                       
+                                <div>
+                                    <ProductNavCategoryIndex category={categories_selector[index]}/>
+                                </div>
+                            </div>
+                            )
+                        })
+                    }    
+                
+                </nav>
+
                     <div>
+                        
+
                         <Switch>
                         {/* { */
                             categories_selector.map((category, index) => {
@@ -37,8 +62,11 @@ class ProductNav extends React.Component{
                                 // <Switch>
                                 // <p>{`${category}`}</p>
                                     // <Link to={`/${category}`}>{category}</Link>
-                                   <Route exact path={`/${category}`}  > {categories[index]} <ProductNavCategoryIndex products={category} />  </Route>
+                                    // <p>{category}</p>
+                                   <Route exact path={`/products/:${category}`} component={ProductNavCategoryIndex} /> 
+                                    // <a href=""></a>
                                         // <ProductNavCategoryIndex products={categories_selector[index]} />
+                                        //  <Route path="/products/:productId" component={ProductShowContainer}/>
                                 // </S  witch>
                             //         {/* take user to show index page for category */}
                             //         {/* render other component and pass in coresponding info */}
@@ -46,7 +74,6 @@ class ProductNav extends React.Component{
                         }
                         </Switch>
                     </div>
-                </nav>
             </div>
         )
     }
