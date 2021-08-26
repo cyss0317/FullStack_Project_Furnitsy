@@ -4,7 +4,7 @@ import SessionForm from "./session_form";
 import LoginFormContainer from "./login_form_container";
 import SignupFormContainer from "./signup_form_container";
 import { Route, Switch, Link } from "react-router";
-import { AuthRoute } from "../util/route_util";
+import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import Modal from "./modal";
 import ProductIndexContainer from "./products/products_index_container";
 import ProductShowContainer from "./products/product_show_container";

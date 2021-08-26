@@ -26,19 +26,18 @@ class CartShowItem extends React.Component{
         return (
             <li className={`cart-show-item-container`}>
                 <div className="cart-show-item-container-info">
-                    <Link to={`/products/${item.product.id}`} className="cart-show-image-thumnails">
-                        <img className="cart-show-image-thumnail"
-                            src={item.photoUrls[0]}
-                        />
-
-                        {/* <a href={`/products/${product.id}`}>{product.name}</a> */}
-                        {/* <p className="thumnail-p">{product.name}</p> */}
-                    </Link>
-                    <div id="cart-item-description">
-                        <p>{item.product.category}</p>
-                        <p>{item.product.name}</p>
-                        <p>{item.product.color}</p>
-                        <p>{item.product.measurement}</p>
+                    <div id="hello">
+                        <Link to={`/products/${item.product.id}`} className="cart-show-image-thumnails">
+                            <img className="cart-show-image-thumnail"
+                                src={item.photoUrls[0]}/>
+                            {/* <a href={`/products/${product.id}`}>{product.name}</a> */}
+                            {/* <p className="thumnail-p">{product.name}</p> */}
+                        </Link>
+                        <Link to={`/products/${item.product.id}`} id="cart-item-description">
+                                <p>{item.product.category}</p>
+                                <p>{item.product.name}</p>
+                                <p>{item.product.color}</p>
+                        </Link>
                     </div>
                     <div id="cart-item-quantity">
                         <p>quantities</p>
