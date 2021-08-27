@@ -42,7 +42,7 @@ class ProductNavIndex extends React.Component{
                 categories_selector[index].map((product) => {
 
                     return(
-                        <ProductIndexItem
+                        <ProductNavShowList
                             product={product}/>
                     )
                 })
