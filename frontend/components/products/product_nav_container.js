@@ -1,9 +1,9 @@
 import { connect } from "react-redux";
-import ProductNav from "./product_nav_index"
+import ProductNavIndex from "./product_nav_index"
 import { ThunkReceiveProducts } from "../../actions/product_actions";
 
 
-const mSTP = (state) => {
+const mSTP = (state, ownProps) => {
 
     const products = Object.values(state.entities.products)
 
@@ -40,7 +40,9 @@ const mSTP = (state) => {
         coffeeTable: coffeeTable,
         kidsBunkBed: kidsBunkBed,
         accentChairs: accentChairs,
-        diningChairs: diningChairs
+        diningChairs: diningChairs,
+        categoryName: ownProps.match.params.category
+
     })
 }
 
@@ -48,7 +50,7 @@ const mDTP = dispatch => ({
     fetchProducts: () => dispatch(ThunkReceiveProducts())
 })
 
-export default connect(mSTP, mDTP)(ProductNav)
+export default connect(mSTP, mDTP)(ProductNavIndex)
 
 // export default connect(mSTP, mDTP)(ProductIndex)
 

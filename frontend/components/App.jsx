@@ -13,7 +13,8 @@ import CartShowContainer from "./carts/carts_show_container";
 import CartHeaderContainer from "./carts/cart_header_container";
 import SearchBar from "./search_bar/search_bar";
 import ProductNavContainer from "./products/product_nav_container";
-import ProductNavCategoryIndex from "./products/product_nav_category_index";
+
+import CategoryNavBar from "./products/Category_nav_bar";
 
 const App = () => {
     const { search } = window.location
@@ -51,14 +52,14 @@ const App = () => {
 
                 </div>
                 
-                <ProductNavContainer/>
+                <CategoryNavBar/>
 
             </header>
        </div>
             {/* <ProductIndexContainer/> */}
         <Switch>
             <Route path="/products/:productId" component={ProductShowContainer}/>
-            <Route path="/products/:category" component={ProductNavCategoryIndex} />
+            <Route path="/category/:category" component={ProductNavContainer} />
             <Route path="/products" component={ProductIndexContainer} />
             <Route path="/cart_items" component={CartShowContainer}/>
             <Route path="/" component={ProductIndexContainer}/>
