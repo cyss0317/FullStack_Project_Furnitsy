@@ -2,8 +2,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProductNavCategoryIndex = props => {
+const ProductNavCategoryIndex = (props, params) => {
     // const products = props.products;
+    console.log(props)
     const category = props.category;
     return (
         <ul>

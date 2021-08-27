@@ -29,31 +29,33 @@ class ProductNav extends React.Component{
         return(
             <div className="nav-static">
                 <div>
-                    
-
-                    <Switch>
+                    {/* <Switch> */}
                     {/* { */
+                        {
                         categories_selector.map((category, index) => {
-                            console.log("category")
                             return(
                             // <Switch>
                             // <p>{`${category}`}</p>
                                 // <Link to={`/${category}`}>{category}</Link>
                                 // <p>{category}</p>
-                                <Route exact path={`/products/${categories[index]}`} render={(props) => (
+                                <div>
+                                    <Link to={`/products/${categories[index]}`} />
+                                    {/* //render={(props) =>  */}
+  
                                     <ProductNavCategoryIndex
-                                    {...props}
-                                    category={category}
-                                /> )} /> 
+                                        {...props}
+                                        category={category}/>
+                                </div>
                                 // <a href=""></a>
                                     // <ProductNavCategoryIndex products={categories_selector[index]} />
                                     //  <Route path="/products/:productId" component={ProductShowContainer}/>
                             // </S  witch>
                         //         {/* take user to show index page for category */}
                         //         {/* render other component and pass in coresponding info */}
-                        )})
-                    }
-                    </Switch>
+                            )
+                        })
+                        }
+                    {/* </Switch> */}
                 </div>
 
 
