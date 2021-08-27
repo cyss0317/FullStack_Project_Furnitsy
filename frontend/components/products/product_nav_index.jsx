@@ -28,35 +28,19 @@ class ProductNav extends React.Component{
             // debugger
         return(
             <div className="nav-static">
-                <div>
-                    {/* <Switch> */}
-                    {/* { */
+                {/* <div>
                         {
                         categories_selector.map((category, index) => {
                             return(
-                            // <Switch>
-                            // <p>{`${category}`}</p>
-                                // <Link to={`/${category}`}>{category}</Link>
-                                // <p>{category}</p>
                                 <div>
-                                    <Link to={`/products/${categories[index]}`} />
-                                    {/* //render={(props) =>  */}
-  
                                     <ProductNavCategoryIndex
-                                        {...props}
                                         category={category}/>
                                 </div>
-                                // <a href=""></a>
-                                    // <ProductNavCategoryIndex products={categories_selector[index]} />
-                                    //  <Route path="/products/:productId" component={ProductShowContainer}/>
-                            // </S  witch>
-                        //         {/* take user to show index page for category */}
-                        //         {/* render other component and pass in coresponding info */}
                             )
                         })
                         }
-                    {/* </Switch> */}
-                </div>
+
+                </div> */}
 
 
                 <nav className="nav-container">
@@ -69,11 +53,12 @@ class ProductNav extends React.Component{
                         //     )
                         // })
                         categories.map((category, index) => {
+
                             return(
                             <div>
-                                <a href={`/products/${category}`}>
+                                <Link to={`/products/${category}`}>
                                     {category}
-                                </a>                       
+                                </Link>                       
                                 {/* <div>
                                     <ProductNavCategoryIndex category={categories_selector[index]}/>
                                 </div> */}
@@ -81,7 +66,6 @@ class ProductNav extends React.Component{
                             )
                         })
                     }    
-                
                 </nav>
 
             </div>

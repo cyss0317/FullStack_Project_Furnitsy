@@ -58,10 +58,10 @@ const App = () => {
             {/* <ProductIndexContainer/> */}
         <Switch>
             <Route path="/products/:productId" component={ProductShowContainer}/>
+            <Route path="/products/:category" component={ProductNavCategoryIndex} />
             <Route path="/products" component={ProductIndexContainer} />
             <Route path="/cart_items" component={CartShowContainer}/>
             <Route path="/" component={ProductIndexContainer}/>
-            <Route path="/products/:category" component={ProductNavCategoryIndex} />
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer}/>
         </Switch>
@@ -92,7 +92,7 @@ const App = () => {
                         <h3>If you want to hire me, contact me here!</h3>
                         {/* <button onClick="document.location= 'mailto:cyss0317@gmail.com'">Contact Yun Choi</button> */}
                         <a id="linked-in" href="https://www.linkedin.com/in/yun-sung-choi-936142214/" ><img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/LI-Logo.png" alt="" width="160" height="50" /></a>
-                        <a id="github" href="https://github.com/cyss0317?tab=repositories" ><img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/Octocat.png" alt="" width="100" height="80" /></a>
+                        <a id="github" href="https://github.com/cyss0317" ><img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/Octocat.png" alt="" width="100" height="80" /></a>
                         <form action="mailto:cyss0317@gmail.com" method="POST" encType="text/plain">
                             <input className='submit_to_email' type="submit" value="Contact Yun Sung Choi" />
                         </form>
