@@ -5,16 +5,18 @@ const ProductIndexItem = props => {
     const { product } = props; 
     
     return(
-        <li className={`products-hot-items`}>
-            <Link to={`/products/${product.id}`} className="hot-items-image-thumnails">
-                <img className="hot-items-image-thumnail" 
-                src={product.photoUrls[0]}
+        <li id={`recently-view-item`}>
+            {/* <span>
+                    <a href={`#/products/${product.id}`} >
+                        {`${product.price}.00( 0% off)`}
+                    </a>
+                </span> */}
+            <Link to={`/products/${product.id}`} className="recently-view-image">
+                <img
+                    src={product.photoUrls[0]}
                 />
-                {/* {product.name} */}
-              
-            <span id='thumnail-span'>
-                {product.name}
-            </span>
+                <span>{product.name}</span>
+                <span>{`${product.price}.00( 0% off)`}</span>
             </Link>
         </li>
     )

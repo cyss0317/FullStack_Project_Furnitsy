@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CategoryNavBar = (props, params) => {
     // const products = props.products;
-    const categories = ["Couchand Sofa",
+    const categories = ["Couch and Sofa",
         "Dining Table",
         "Kids Bunk Bed",
         "Accent Chairs",

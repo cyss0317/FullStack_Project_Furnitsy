@@ -1,20 +1,28 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 const ProductNavShowList = (props) => {
-    const {products} = props;
-    debugger
+    const {product} = props;
+
+   
     return(
-        <li> 
+        <ul> 
             {
-            products.map((product) => (
-                <div>
-                    {product.photoUrls[0]}
-                    {product.name}
-                </div>    
-            ))
+                <li className={`products-hot-items`}>
+                    <Link to={`/products/${product.id}`} className="hot-items-image-thumnails">
+                        <img className="hot-items-image-thumnail"
+                            src={product.photoUrls[0]}
+                        />
+                        {/* {product.name} */}
+
+                        <span id='thumnail-span'>
+                            {product.name}
+                        </span>
+                    </Link>
+                </li>
             }
-        </li> 
+        </ul> 
 
     )
 
