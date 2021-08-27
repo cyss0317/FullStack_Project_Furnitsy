@@ -14,6 +14,13 @@ class Api::ProductsController < ApplicationController
         end
     end
 
+    def show_search_result
+        res = []
+        params[:words].each do |word|
+            result.concat(Product.find_by_sql["SELECT * FROM products WHERE name LIKE ? "])
+        end
+    end
+
     private
     def product_params
         params.require(:product).permit(:id, :name, :color, :category, :price, images: [])
