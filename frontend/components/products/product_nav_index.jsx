@@ -37,18 +37,19 @@ class ProductNavIndex extends React.Component{
             return null;
         }
         return(
-            <ul className="nav-static">
-                {
-                categories_selector[index].map((product) => {
-
-                    return(
-                        <ProductNavShowList
-                            product={product}/>
-                    )
-                })
-                }
-
-            </ul>
+            <div>
+                
+                <ul className="nav-static">
+                    {
+                    categories_selector[index].map((product) => {
+                        return(
+                            <ProductNavShowList
+                                product={product}/>
+                        )
+                    })
+                    }
+                </ul>
+            </div>
         )
     }
 }
