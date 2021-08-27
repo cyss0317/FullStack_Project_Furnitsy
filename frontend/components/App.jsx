@@ -43,13 +43,14 @@ const App = () => {
                                 <li key={product.key}>{product.name}</li>
                             ))}
                         </ul> */}
+
                     </div>
                     <GreetingContainer className="greeting-component"/>
                     <CartHeaderContainer />
 
                 </div>
                 
-                {/* <ProductNavContainer/> */}
+                <ProductNavContainer/>
 
             </header>
        </div>

@@ -3,6 +3,7 @@ import ProductNavShowList from "./product_nav_show_list";
 import {Switch, Route} from "react-router";
 import { Link } from "react-router-dom";
 import ProductNavCategoryIndex from "./product_nav_category_index";
+import ProductShowContainer from "./product_show_container";
 
 class ProductNav extends React.Component{
     constructor(props){
@@ -18,7 +19,7 @@ class ProductNav extends React.Component{
 
         const {  couchAndSofa, outdoor, diningChairs, diningTable, coffeeTable, kidsBunkBed, accentChairs} = this.props;
         const categories_selector = [couchAndSofa, diningTable, coffeeTable, kidsBunkBed, accentChairs, diningChairs, outdoor];
-        const categories = ["Couch and Sofa",
+        const categories = ["Couchand Sofa",
             "Dining Table",
             "Kids Bunk Bed",
             "Accent Chairs",
@@ -27,6 +28,35 @@ class ProductNav extends React.Component{
             // debugger
         return(
             <div className="nav-static">
+                <div>
+                    
+
+                    <Switch>
+                    {/* { */
+                        categories_selector.map((category, index) => {
+                            console.log("category")
+                            return(
+                            // <Switch>
+                            // <p>{`${category}`}</p>
+                                // <Link to={`/${category}`}>{category}</Link>
+                                // <p>{category}</p>
+                                <Route exact path={`/products/${categories[index]}`} render={(props) => (
+                                    <ProductNavCategoryIndex
+                                    {...props}
+                                    category={category}
+                                /> )} /> 
+                                // <a href=""></a>
+                                    // <ProductNavCategoryIndex products={categories_selector[index]} />
+                                    //  <Route path="/products/:productId" component={ProductShowContainer}/>
+                            // </S  witch>
+                        //         {/* take user to show index page for category */}
+                        //         {/* render other component and pass in coresponding info */}
+                        )})
+                    }
+                    </Switch>
+                </div>
+
+
                 <nav className="nav-container">
                     {
                         // categories_selector.map((category, index) => {
@@ -39,12 +69,12 @@ class ProductNav extends React.Component{
                         categories.map((category, index) => {
                             return(
                             <div>
-                                <a href={`/${category}`}>
+                                <a href={`/products/${category}`}>
                                     {category}
                                 </a>                       
-                                <div>
+                                {/* <div>
                                     <ProductNavCategoryIndex category={categories_selector[index]}/>
-                                </div>
+                                </div> */}
                             </div>
                             )
                         })
@@ -52,28 +82,6 @@ class ProductNav extends React.Component{
                 
                 </nav>
 
-                    <div>
-                        
-
-                        <Switch>
-                        {/* { */
-                            categories_selector.map((category, index) => {
-                               return(
-                                // <Switch>
-                                // <p>{`${category}`}</p>
-                                    // <Link to={`/${category}`}>{category}</Link>
-                                    // <p>{category}</p>
-                                   <Route exact path={`/products/:${category}`} component={ProductNavCategoryIndex} /> 
-                                    // <a href=""></a>
-                                        // <ProductNavCategoryIndex products={categories_selector[index]} />
-                                        //  <Route path="/products/:productId" component={ProductShowContainer}/>
-                                // </S  witch>
-                            //         {/* take user to show index page for category */}
-                            //         {/* render other component and pass in coresponding info */}
-                            )})
-                        }
-                        </Switch>
-                    </div>
             </div>
         )
     }
