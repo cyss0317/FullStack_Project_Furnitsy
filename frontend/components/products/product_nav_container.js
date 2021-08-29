@@ -10,7 +10,7 @@ const mSTP = (state, ownProps) => {
     let couchAndSofa = products.filter((product) => (
         product.category === "Couch and Sofa"
     ))
-    let outdoor = products.filter((product) => (
+    let outdoorFurniture = products.filter((product) => (
         product.category === "Outdoor Furniture"
     ))
     let diningTable = products.filter((product) => (
@@ -34,7 +34,7 @@ const mSTP = (state, ownProps) => {
         //I completely forgot to change object into a form of an array
         products: products,
         couchAndSofa: couchAndSofa,
-        outdoor: outdoor,
+        outdoorFurniture: outdoorFurniture,
         // // randomitem: randomItem
         diningTable: diningTable,
         coffeeTable: coffeeTable,

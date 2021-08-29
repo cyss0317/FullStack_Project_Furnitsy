@@ -107,7 +107,7 @@ Convertible to natural gas!
 Assembly required!
 Assembly of fire pit table provided with in-home delivery; connection to propane tank or connector hose not provided!
 Estimated Assembly Time: 120 Minutes!
-Weight250 lbs. (113.4 kgs.)', category: "Outdoor", measurement: 'Width: 45.00",Depth: 45.00",Height: 25.50"', color: "Antique White", price: 3149.00  })
+Weight250 lbs. (113.4 kgs.)', category: "Outdoor Furniture", measurement: 'Width: 45.00",Depth: 45.00",Height: 25.50"', color: "Antique White", price: 3149.00  })
 # Product.create({name: "", description: "", category: "", measurement: '', color: "", price:  })
 file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/preston_table_set/main_P460-772-821(4)-FIRE.webp')
 p5.images.attach(io:file1, filename: 'images/preston_table_set/main_P460-772-821(4)-FIRE.webp')
@@ -139,7 +139,7 @@ Table can accommodate up to 6-8 people!
 Clean fabric with mild soap and water, let air dry; for stubborn stains, use a solution of 1 cup bleach to 1 gallon water!
 Assembly required!
 Estimated Assembly Time: 120 Minutes!
-Weight 328 lbs. (148.78 kgs.)', category: "Outdoor", measurement: 'Width: 42.38",Depth: 84.38",Height: 29.50""', color: "Beige", price: 3849.00  })
+Weight 328 lbs. (148.78 kgs.)', category: "Outdoor Furniture", measurement: 'Width: 42.38",Depth: 84.38",Height: 29.50""', color: "Beige", price: 3849.00  })
 file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/benchcroft-outdoor/main-P791-625-601(2)-601A(2)-600.webp')
 p6.images.attach(io:file1, filename: 'images/benchcroft-outdoor/main-P791-625-601(2)-601A(2)-600.webp')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/benchcroft-outdoor/P791-SWATCH-BODY-500.jpeg')
