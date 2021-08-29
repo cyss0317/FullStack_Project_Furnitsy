@@ -37,7 +37,7 @@ Mattresses available, sold separately!
 Assembly required!
 Excluded from promotional discounts and coupons!
 Estimated Assembly Time: 90 Minutes!
-Weight 103 lbs. (46.72 kgs.)", category: "Kids Bunk Beds", measurement: 'Width: 40.75",Depth: 75.00",Height: 61.63"', color: "Black/Gray", price: 479.00 })
+Weight 103 lbs. (46.72 kgs.)", category: "Beds", measurement: 'Width: 40.75",Depth: 75.00",Height: 61.63"', color: "Black/Gray", price: 479.00 })
 file1 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/bunk_bed/main_B106-59-MOOD-B.png')
 p2.images.attach(io:file1, filename: 'images/bunk_bed/main_B106-59-MOOD-B.png')
 file2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/bunk_bed/B106-59-SW-KO.webp')

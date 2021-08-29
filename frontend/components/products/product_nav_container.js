@@ -11,7 +11,7 @@ const mSTP = (state, ownProps) => {
         product.category === "Couch and Sofa"
     ))
     let outdoor = products.filter((product) => (
-        product.category === "Outdoor"
+        product.category === "Outdoor Furniture"
     ))
     let diningTable = products.filter((product) => (
         product.category === "Dining Table"
@@ -19,8 +19,8 @@ const mSTP = (state, ownProps) => {
     let coffeeTable = products.filter((product) => (
         product.category === "Coffee Table"
     ))
-    let kidsBunkBed = products.filter((product) => (
-        product.category === "Kids Bunk Bed"
+    let beds = products.filter((product) => (
+        product.category === "Beds"
     ))
     let accentChairs = products.filter((product) => (
         product.category === "Accent Chairs"
@@ -38,7 +38,7 @@ const mSTP = (state, ownProps) => {
         // // randomitem: randomItem
         diningTable: diningTable,
         coffeeTable: coffeeTable,
-        kidsBunkBed: kidsBunkBed,
+        beds: beds,
         accentChairs: accentChairs,
         diningChairs: diningChairs,
         categoryName: ownProps.match.params.category

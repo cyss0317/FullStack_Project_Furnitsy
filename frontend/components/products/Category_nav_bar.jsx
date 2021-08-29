@@ -6,17 +6,15 @@ const CategoryNavBar = (props, params) => {
     // const products = props.products;
     const categories = ["Couch and Sofa",
         "Dining Table",
-        "Kids Bunk Bed",
+        "Beds",
         "Accent Chairs",
         "Dining Chairs",
-        "Outdoor"]
+        "Outdoor Furniture"]
 
     function changeBackground(){
-        
+
     }
-
     return ( 
-
         <nav className="nav-container">
             {
                 categories.map((category) => {

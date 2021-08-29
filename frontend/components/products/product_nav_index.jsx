@@ -18,8 +18,8 @@ class ProductNavIndex extends React.Component{
 
     render (){
 
-        const {  categoryName, couchAndSofa, outdoor, diningChairs, diningTable, coffeeTable, kidsBunkBed, accentChairs} = this.props;
-        const categories_selector = [couchAndSofa, diningTable, coffeeTable, kidsBunkBed, accentChairs, diningChairs, outdoor];
+        const {  categoryName, couchAndSofa, outdoor, diningChairs, diningTable, coffeeTable, beds, accentChairs} = this.props;
+        const categories_selector = [couchAndSofa, diningTable, coffeeTable, beds, accentChairs, diningChairs, outdoor];
         let currentCategory = categoryName.split(" ").map((word, index) => {
             return(
             index === 0 ? word.toLowerCase() : word[0].toUpperCase()+word.slice(1)
@@ -38,7 +38,7 @@ class ProductNavIndex extends React.Component{
         }
         return(
             <div>
-                
+
                 <ul className="nav-static">
                     {
                     categories_selector[index].map((product) => {
