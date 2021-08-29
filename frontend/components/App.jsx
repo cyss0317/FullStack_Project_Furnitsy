@@ -11,9 +11,25 @@ import ProductShowContainer from "./products/product_show_container";
 import ProductNav from "./products/product_nav_index";
 import CartShowContainer from "./carts/carts_show_container";
 import CartHeaderContainer from "./carts/cart_header_container";
+import SearchBar from "./search_bar/search_bar";
 import ProductNavContainer from "./products/product_nav_container";
 
+import CategoryNavBar from "./products/Category_nav_bar";
+
 const App = () => {
+    const { search } = window.location
+    const query = new URLSearchParams(search).get("s");
+    // const filterProducts = (products, query)=>{
+    //     if (!query){
+    //         return products;
+    //     }
+    //     return products.filter((product) => {
+    //         const productName = product.name.toLowerCase();
+    //         return productName.includes(query);
+    //     })
+    // }
+    // const filteredPosts = filterPosts()
+
     return(
    <div className="main-div">
        <Modal/>
@@ -21,19 +37,29 @@ const App = () => {
             <header className="header">
                 <div className="logo-searchbar-sign">
                     <a className="header-logo" href="/" >Furnitsy</a>
-                    <input type="text" className="header-searchbar"/>
+                    <input type="text"  className="header-searchbar"/>
+                    <div>
+                        {/* <SearchBar placeholder="Enter a Product"/> */}
+                        {/* <ul>
+                            {filterProducts.map(product => (
+                                <li key={product.key}>{product.name}</li>
+                            ))}
+                        </ul> */}
+
+                    </div>
                     <GreetingContainer className="greeting-component"/>
                     <CartHeaderContainer />
 
                 </div>
                 
-                {/* <ProductNavContainer/> */}
+                <CategoryNavBar/>
 
             </header>
        </div>
             {/* <ProductIndexContainer/> */}
         <Switch>
             <Route path="/products/:productId" component={ProductShowContainer}/>
+            <Route path="/category/:category" component={ProductNavContainer} />
             <Route path="/products" component={ProductIndexContainer} />
             <Route path="/cart_items" component={CartShowContainer}/>
             <Route path="/" component={ProductIndexContainer}/>
@@ -67,7 +93,7 @@ const App = () => {
                         <h3>If you want to hire me, contact me here!</h3>
                         {/* <button onClick="document.location= 'mailto:cyss0317@gmail.com'">Contact Yun Choi</button> */}
                         <a id="linked-in" href="https://www.linkedin.com/in/yun-sung-choi-936142214/" ><img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/LI-Logo.png" alt="" width="160" height="50" /></a>
-                        <a id="github" href="https://github.com/cyss0317?tab=repositories" ><img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/Octocat.png" alt="" width="100" height="80" /></a>
+                        <a id="github" href="https://github.com/cyss0317" ><img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/Octocat.png" alt="" width="100" height="80" /></a>
                         <form action="mailto:cyss0317@gmail.com" method="POST" encType="text/plain">
                             <input className='submit_to_email' type="submit" value="Contact Yun Sung Choi" />
                         </form>

@@ -2,9 +2,11 @@ import React from "react";
 import ProductNavShowList from "./product_nav_show_list";
 import {Switch, Route} from "react-router";
 import { Link } from "react-router-dom";
-import ProductNavCategoryIndex from "./product_nav_category_index";
+import ProductIndexItem from "./product_index_item";
+import RecentlyViewItemIndex from "./recently_view_item_index";
 
-class ProductNav extends React.Component{
+
+class ProductNavIndex extends React.Component{
     constructor(props){
         super(props)
     }
@@ -16,68 +18,41 @@ class ProductNav extends React.Component{
 
     render (){
 
-        const {  couchAndSofa, outdoor, diningChairs, diningTable, coffeeTable, kidsBunkBed, accentChairs} = this.props;
-        const categories_selector = [couchAndSofa, diningTable, coffeeTable, kidsBunkBed, accentChairs, diningChairs, outdoor];
-        const categories = ["Couch and Sofa",
-            "Dining Table",
-            "Kids Bunk Bed",
-            "Accent Chairs",
-            "Dining Chairs",
-            "Outdoor"]
-            // debugger
+        const {  categoryName, couchAndSofa, outdoor, diningChairs, diningTable, coffeeTable, beds, accentChairs} = this.props;
+        const categories_selector = [couchAndSofa, diningTable, coffeeTable, beds, accentChairs, diningChairs, outdoor];
+        let currentCategory = categoryName.split(" ").map((word, index) => {
+            return(
+            index === 0 ? word.toLowerCase() : word[0].toUpperCase()+word.slice(1)
+            )
+        }).join("")
+        let index = categories_selector.indexOf(eval(currentCategory))
+        // console.log("couch",couchAndSofa)
+        console.log(currentCategory)
+        console.log("selector",categories_selector)
+        console.log("selector[0]", categories_selector[index])
+
+        // console.log([categories_selector.match(window["couchAndSofa"])] )
+
+        if (categories_selector[index] === undefined){
+            return null;
+        }
         return(
-            <div className="nav-static">
-                <nav className="nav-container">
+            <div>
+
+                <ul className="nav-static">
                     {
-                        // categories_selector.map((category, index) => {
-                        //     return(
-                        //         <a href={`/${JSON.stringify(category)}`}>
-                        //         {category}
-                        //     </a>                       
-                        //     )
-                        // })
-                        categories.map((category, index) => {
-                            return(
-                            <div>
-                                <a href={`/${category}`}>
-                                    {category}
-                                </a>                       
-                                <div>
-                                    <ProductNavCategoryIndex category={categories_selector[index]}/>
-                                </div>
-                            </div>
-                            )
-                        })
-                    }    
-                
-                </nav>
-
-                    <div>
-                        
-
-                        <Switch>
-                        {/* { */
-                            categories_selector.map((category, index) => {
-                               return(
-                                // <Switch>
-                                // <p>{`${category}`}</p>
-                                    // <Link to={`/${category}`}>{category}</Link>
-                                    // <p>{category}</p>
-                                   <Route exact path={`/products/:${category}`} component={ProductNavCategoryIndex} /> 
-                                    // <a href=""></a>
-                                        // <ProductNavCategoryIndex products={categories_selector[index]} />
-                                        //  <Route path="/products/:productId" component={ProductShowContainer}/>
-                                // </S  witch>
-                            //         {/* take user to show index page for category */}
-                            //         {/* render other component and pass in coresponding info */}
-                            )})
-                        }
-                        </Switch>
-                    </div>
+                    categories_selector[index].map((product) => {
+                        return(
+                            <ProductNavShowList
+                                product={product}/>
+                        )
+                    })
+                    }
+                </ul>
             </div>
         )
     }
 }
 
 
-export default ProductNav;
+export default ProductNavIndex;

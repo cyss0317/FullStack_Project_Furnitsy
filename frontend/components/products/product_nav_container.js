@@ -1,9 +1,9 @@
 import { connect } from "react-redux";
-import ProductNav from "./product_nav_index"
+import ProductNavIndex from "./product_nav_index"
 import { ThunkReceiveProducts } from "../../actions/product_actions";
 
 
-const mSTP = (state) => {
+const mSTP = (state, ownProps) => {
 
     const products = Object.values(state.entities.products)
 
@@ -11,7 +11,7 @@ const mSTP = (state) => {
         product.category === "Couch and Sofa"
     ))
     let outdoor = products.filter((product) => (
-        product.category === "Outdoor"
+        product.category === "Outdoor Furniture"
     ))
     let diningTable = products.filter((product) => (
         product.category === "Dining Table"
@@ -19,8 +19,8 @@ const mSTP = (state) => {
     let coffeeTable = products.filter((product) => (
         product.category === "Coffee Table"
     ))
-    let kidsBunkBed = products.filter((product) => (
-        product.category === "Kids Bunk Bed"
+    let beds = products.filter((product) => (
+        product.category === "Beds"
     ))
     let accentChairs = products.filter((product) => (
         product.category === "Accent Chairs"
@@ -38,9 +38,11 @@ const mSTP = (state) => {
         // // randomitem: randomItem
         diningTable: diningTable,
         coffeeTable: coffeeTable,
-        kidsBunkBed: kidsBunkBed,
+        beds: beds,
         accentChairs: accentChairs,
-        diningChairs: diningChairs
+        diningChairs: diningChairs,
+        categoryName: ownProps.match.params.category
+
     })
 }
 
@@ -48,7 +50,7 @@ const mDTP = dispatch => ({
     fetchProducts: () => dispatch(ThunkReceiveProducts())
 })
 
-export default connect(mSTP, mDTP)(ProductNav)
+export default connect(mSTP, mDTP)(ProductNavIndex)
 
 // export default connect(mSTP, mDTP)(ProductIndex)
 
