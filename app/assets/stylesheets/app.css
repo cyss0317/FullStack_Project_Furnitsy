@@ -73,6 +73,9 @@ html,body{
     transform: scale(.9);
 
 }
+textarea:focus, input:focus{
+    outline: none;
+}
 
 .header-searchbar{
     width: 65%;
