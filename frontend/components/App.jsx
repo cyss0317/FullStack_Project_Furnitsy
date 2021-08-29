@@ -37,9 +37,9 @@ const App = () => {
             <header className="header">
                 <div className="logo-searchbar-sign">
                     <a className="header-logo" href="/" >Furnitsy</a>
-                    {/* <input type="text" className="header-searchbar"/> */}
+                    <input type="text"  className="header-searchbar"/>
                     <div>
-                        <SearchBar placeholder="Enter a Product"/>
+                        {/* <SearchBar placeholder="Enter a Product"/> */}
                         {/* <ul>
                             {filterProducts.map(product => (
                                 <li key={product.key}>{product.name}</li>
