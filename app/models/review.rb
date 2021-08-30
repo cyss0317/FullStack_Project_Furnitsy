@@ -13,14 +13,14 @@
 #
 class Review < ApplicationRecord
     validates :user_id, :product_id, :comment, :rating, presence: true
-    validates :rating, minimum: 1
+
 
     belongs_to :user,
-        foreign_id: :user_id,
+        foreign_key: :user_id,
         class_name: :User
 
     belongs_to :product,
-        foreign_id: :product_id,
+        foreign_key: :product_id,
         class_name: :Product
 
     
