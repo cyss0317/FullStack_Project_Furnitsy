@@ -8,26 +8,22 @@ class Api::ReviewsController < ApplicationController
     def create
         @review =  Review.new(review_params)
         if @review.save
-            render :index
+            render :show
         else
             render json: @review.errors.full_messages, status: 422
         end
     end
 
     def index 
-        @reviews = Review.all.select(product_id: params[:product_id])
-        if @reviews
-            redner :index
-        else
-            render json: @reviews.errors.full_messages, status: 422
-        end
+        @reviews = Review.all
+        render :index
 
     end 
 
-    def delete
+    def destroy
         @review = Review.find_by(user_id: current_user.id)
         if @review
-            @reveiw.delete
+            @review.delete
         else
             render json: @review.errors.full_messages, status: 404
         end
@@ -35,17 +31,17 @@ class Api::ReviewsController < ApplicationController
 
     def update
         # @review = Review.find_by(user_id: current_user.id)
-        @review = current_user.reviews.find_by(id: params[:id])
+        @review = Review.find_by(id: params[:id])
         if @review && @review.update(review_params)
             render :show
         else
-            render json: @review.errors.full_messages, status: 422
+            render json: @review.errors.full_messages, status: 400
         end
     end
 
     private
     def review_params
-        params.require(:review).permit(:user_id, :product_id, :comment, :rating, :helpful)
+        params.require(:review).permit(:id, :user_id, :product_id, :comment, :rating, :helpful)
     end
 
 end
