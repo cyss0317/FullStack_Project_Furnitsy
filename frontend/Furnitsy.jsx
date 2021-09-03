@@ -7,6 +7,7 @@ import { $receiveProduct, $receiveProducts } from "./util/product_api_util";
 import { ThunkReceiveProduct, ThunkReceiveProducts } from "./actions/product_actions";
 import { ThunkCreateCartItem, ThunkDeleteCartItem } from "./actions/cart_items_actions";
 import { fetchCart } from "./actions/carts_actions";
+import { $receiveAllReviews, $createReview, $receiveReview, $editReview } from "./util/review_api_util";
 
 import { ThunkReceiveCartItems } from "./actions/cart_items_actions";
 
@@ -32,14 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
         ThunkReceiveCartItems()(store.dispatch);
         delete window.currentUser;
     } else {
-        store = configureStore(); }
+        store = configureStore(); 
+    }
     //testing
-    window.login = login;
-    window.receiveProduct = ThunkReceiveProduct;
-    window.receiveProducts = ThunkReceiveProducts;
-    window.createCartItem = ThunkCreateCartItem;
-    window.deleteCartItem = ThunkDeleteCartItem;
-    window.fetchCart = fetchCart;
+
+    window.receiveAllReivews = $receiveAllReviews;
+    window.receiveReivew = $receiveReview;
+    window.createReivew = $createReview;
+    window.editReivew = $editReview;
     window.store = store;
 
     window.getState = store.getState;

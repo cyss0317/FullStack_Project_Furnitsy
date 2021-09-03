@@ -2,17 +2,27 @@ class Api::ReviewsController < ApplicationController
     before_action :require_login
 
     def show
-        @review = Review.find_by(product_id: )
+        @review = Review.find_by(user_id: currentUser.id)
     end
 
     def create
         @review =  Review.new(review_params)
         if @review.save
-            render :show
+            render :index
         else
             render json: @review.errors.full_messages, status: 422
         end
     end
+
+    def index 
+        @reviews = Review.all.select(product_id: params[:product_id])
+        if @reviews
+            redner :index
+        else
+            render json: @reviews.errors.full_messages, status: 422
+        end
+
+    end 
 
     def delete
         @review = Review.find_by(user_id: current_user.id)
