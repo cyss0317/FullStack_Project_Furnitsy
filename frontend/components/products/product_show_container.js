@@ -2,6 +2,7 @@ import { connect } from "react-redux"
 import ProductShow from "./product_show"
 import { ThunkReceiveProduct } from "../../actions/product_actions"
 import { ThunkCreateCartItem, ThunkDeleteCartItem } from "../../actions/cart_items_actions"
+import { ThunkFetchReview, ThunkFetchAllReviews, ThunkDeleteReview, ThunkCreateReview, ThunkUpdateReview } from "../../actions/review_actions";
 import { openModal } from "../../actions/modal_actions";
 
 const mSTP =( state, ownProps)=> {
@@ -28,7 +29,12 @@ const mDTP = dispatch => ({
     fetchProduct: productId => dispatch(ThunkReceiveProduct(productId)),
     createCartItem: (productId, quantity) => dispatch(ThunkCreateCartItem(productId, quantity)),
     deleteCartItem: cartItemId => dispatch(ThunkDeleteCartItem(cartItemId)),
-    openModal: (modal) => dispatch(openModal(modal))
+    openModal: (modal) => dispatch(openModal(modal)),
+    fetchReview: reviewId => ThunkFetchReview(reviewId),
+    fetchAllReviews: () => ThunkFetchAllReviews(),
+    deleteReview: reviewId => ThunkDeleteReview(reviewId),
+    createReview: review => ThunkCreateReview(review),
+    updateReview: review => ThunkUpdateReview(review),
 })
 
 
