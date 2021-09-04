@@ -25,6 +25,7 @@ class ProductShow extends React.Component {
 
     componentDidMount(){
         this.props.fetchProduct(this.props.match.params.productId);
+        this.props.fetchAllReviews();
     }
 
     rightSvgClickhandler(e){
@@ -43,7 +44,7 @@ class ProductShow extends React.Component {
 
     leftSvgClickhandler(e) {
         this.setState({ index: this.props.photoUrls.indexOf(this.state.mainPic) - 1 < 0 ? this.props.photoUrls.length - 1: this.props.photoUrls.indexOf(this.state.mainPic) - 1 })
-            .then( res => this.setState({ mainPic: this.props.photoUrls[this.state.index] }))
+        this.setState({ mainPic: this.props.photoUrls[this.state.index] })
 
     }
 
@@ -89,7 +90,7 @@ class ProductShow extends React.Component {
         const arrHighlights = product.highlights.split("!")
 
         return(
-            <section className="show-main-container" >
+            <section key={this.props.key} className="show-main-container" >
                 <div className="product-show-container">
                     <div className="product-show-info">
                         <p className="show-category">{product.category} </p>

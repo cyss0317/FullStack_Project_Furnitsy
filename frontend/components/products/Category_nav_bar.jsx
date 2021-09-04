@@ -17,11 +17,11 @@ const CategoryNavBar = (props, params) => {
     return ( 
         <nav className="nav-container">
             {
-                categories.map((category) => {
+                categories.map((category, index) => {
 
                     return (
-                        <div>
-                            <Link id="nav-bar-tag" onClick={changeBackground}to={`/category/${category}`}>
+                        <div key={index} >
+                            <Link id="nav-bar-tag"  onClick={changeBackground}to={`/category/${category}`}>
                                 {category}
                             </Link>
                         </div>
