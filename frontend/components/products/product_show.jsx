@@ -26,6 +26,7 @@ class ProductShow extends React.Component {
     componentDidMount(){
         this.props.fetchProduct(this.props.match.params.productId);
         this.props.fetchAllReviews();
+
     }
 
     rightSvgClickhandler(e){
@@ -74,13 +75,15 @@ class ProductShow extends React.Component {
 
         //answered
         //why returning null wouldn't stop the lifecycle, 
-        const { product, productReviews, currentUser } = this.props;
+        const { product, reviews, currentUser } = this.props;
         if (product === undefined ){
             return null;
         }
-        if ( productReviews === undefined){
-            return null;
-        }
+
+        const productReviews = reviews.filter((review) => review.product_id === product.id)
+        // if ( productReviews === undefined){
+        //     return null;
+        // }
 
 
         // const productReviews = this.props.reviews.filter((review) => review.productId === currentUser.id) 
@@ -94,6 +97,7 @@ class ProductShow extends React.Component {
 
 
         const arrHighlights = product.highlights.split("!")
+        console.log("reviews", productReviews)
 
         return(
             <section key={this.props.key} className="show-main-container" >
@@ -181,17 +185,22 @@ class ProductShow extends React.Component {
                                 }
                             </ul>
                         </div>
-                    </div>
-                    <ul>
-                        {
-                            productReviews.map((review, index) => (
-                                <li key={index}>
-                                    {review}
-                                </li>
-                            ))
-                        }
-                    </ul>
-                                
+                 
+                        <ul>
+                            {
+                                productReviews.map((review, index) => (
+
+                                    <li key={index}>
+                                        <h3>Name : {review.user.first_name}, {review.created_at}</h3>
+                                        <h2></h2>
+                                        <p>Rating : {review.rating}</p>
+                                        <p>Comment : {review.comment}</p>
+                                        <p>Helpful : {review.helpful}</p>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </div>           
                 </div>
 
                 <div id="show-page-footer">
