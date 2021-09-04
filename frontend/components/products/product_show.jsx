@@ -74,10 +74,16 @@ class ProductShow extends React.Component {
 
         //answered
         //why returning null wouldn't stop the lifecycle, 
-        const { product } = this.props;
-        if (product === undefined){
+        const { product, productReviews, currentUser } = this.props;
+        if (product === undefined ){
             return null;
         }
+        if ( productReviews === undefined){
+            return null;
+        }
+
+
+        // const productReviews = this.props.reviews.filter((review) => review.productId === currentUser.id) 
 
         if (this.state.quantity === undefined){
             this.setState({quantity: 1 })
@@ -143,8 +149,8 @@ class ProductShow extends React.Component {
                         <ul>
                             <button className="highlights-button">Highlights </button>
                             {
-                                arrHighlights.map((highlight) => (
-                                <li className="highlight-item">
+                                arrHighlights.map((highlight, index) => (
+                                <li key={index} className="highlight-item">
                                     &#9745;  {highlight}
                                 </li>
                                 ))
@@ -154,6 +160,7 @@ class ProductShow extends React.Component {
                     </div>
                     
                     <div className="product-show-picture-container-outter">
+                        
                         <div className="product-show-picture-container-inner" >
                             <div className="main-picture-container">
                                 <button className="svg-button" id="left-svg-button"onClick={this.leftSvgClickhandler} >
@@ -165,8 +172,8 @@ class ProductShow extends React.Component {
                                 </button>
                             </div>
                             <ul className="picture-container-list">
-                                {product.photoUrls.map((photo) => (
-                                <li className="picture-container-list-item-container">
+                                {product.photoUrls.map((photo, index) => (
+                                <li key={index} className="picture-container-list-item-container">
                                     {/* important! */}
                                     <img className="picture-container-list-item" src={photo} alt={photo} onClick={this.clickPictureHandler}  />
                                 </li>
@@ -175,6 +182,16 @@ class ProductShow extends React.Component {
                             </ul>
                         </div>
                     </div>
+                    <ul>
+                        {
+                            productReviews.map((review, index) => (
+                                <li key={index}>
+                                    {review}
+                                </li>
+                            ))
+                        }
+                    </ul>
+                                
                 </div>
 
                 <div id="show-page-footer">

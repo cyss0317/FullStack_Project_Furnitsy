@@ -10,7 +10,7 @@ const ReviewReducer = (oldState = {}, action) =>{
             return Object.assign({}, oldState, { [action.review.id]: action.review })
         case RECEIVE_ALL_REVIEWS:
             // return Object.assign({}, oldState, {action.reviews})
-            let reviews = action.reviews
+            let reviews = Object.values(action.reviews)
             let newState = {}
             reviews.forEach((review) => {
                 newState[review.id] = review

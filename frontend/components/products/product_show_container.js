@@ -8,14 +8,18 @@ import { openModal } from "../../actions/modal_actions";
 const mSTP =( state, ownProps)=> {
     const product = state.entities.products[ownProps.match.params.productId];
     const productId = ownProps.match.params.productId;
+    const reviews = state.entities.reviews
+
+    const productReviews = reviews.filter((review) => review.productId === currentUser.id)
+    // reviews
     // const productReviews = state.entities.reviews.filter((review) => (review.productId === productId))
     // const currentUserReview = productReviews.filter((review) => review.userId === state.session.id)
-    let productReviews;
-    if( productReviews === undefined){
-        productReviews = [];
-    } else{
-        productreviews = state.entities.reviews.filter((review) => (review.productId === productId))
-    }
+    // let productReviews;
+    // if( productReviews === undefined){
+    //     productReviews = [];
+    // } else{
+    //     productReviews = state.entities.reviews.filter((review) => (review.productId === productId))
+    // }
     let photoUrls ;
     if( product === undefined ){
         photoUrls = [];
@@ -31,6 +35,7 @@ const mSTP =( state, ownProps)=> {
         cartItems: state.entities.cartItems,
         currentUser: state.entities.users[state.session.id],
         errors: state.errors,
+        // reviews: state.entities.reviews,
         productReviews: productReviews,
 
     })
@@ -41,11 +46,11 @@ const mDTP = dispatch => ({
     createCartItem: (productId, quantity) => dispatch(ThunkCreateCartItem(productId, quantity)),
     deleteCartItem: cartItemId => dispatch(ThunkDeleteCartItem(cartItemId)),
     openModal: (modal) => dispatch(openModal(modal)),
-    fetchReview: reviewId => ThunkFetchReview(reviewId),
-    fetchAllReviews: () => ThunkFetchAllReviews(),
-    deleteReview: reviewId => ThunkDeleteReview(reviewId),
-    createReview: review => ThunkCreateReview(review),
-    updateReview: review => ThunkUpdateReview(review),
+    fetchReview: reviewId => dispatch(ThunkFetchReview(reviewId)),
+    fetchAllReviews: () => dispatch(ThunkFetchAllReviews()),
+    deleteReview: reviewId => dispatch(ThunkDeleteReview(reviewId)),
+    createReview: review => dispatch(ThunkCreateReview(review)),
+    updateReview: review => dispatch(ThunkUpdateReview(review)),
 })
 
 
