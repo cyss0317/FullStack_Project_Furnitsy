@@ -23,6 +23,7 @@ const ReviewReducer = (oldState = {}, action) =>{
             return nextState
         case EDIT_REVIEW:
             nextState[action.review.id] = action.review
+            return nextState
         default:
             return oldState;
     }

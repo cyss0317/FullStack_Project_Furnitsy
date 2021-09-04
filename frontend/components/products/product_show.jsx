@@ -42,9 +42,9 @@ class ProductShow extends React.Component {
     }
 
     leftSvgClickhandler(e) {
-        e.preventDefault();
         this.setState({ index: this.props.photoUrls.indexOf(this.state.mainPic) - 1 < 0 ? this.props.photoUrls.length - 1: this.props.photoUrls.indexOf(this.state.mainPic) - 1 })
-        this.setState({ mainPic: this.props.photoUrls[this.state.index] })
+            .then( res => this.setState({ mainPic: this.props.photoUrls[this.state.index] }))
+
     }
 
     onChangeHandler(e){

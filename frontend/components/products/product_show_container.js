@@ -7,7 +7,9 @@ import { openModal } from "../../actions/modal_actions";
 
 const mSTP =( state, ownProps)=> {
     const product = state.entities.products[ownProps.match.params.productId];
-
+    const productId = ownProps.match.params.productId;
+    const productReviews = state.entities.reviews.filter((review) => (review.productId === productId))
+    const currentUserReview = productReviews.filter((review) => review.userId === state.session.id)
     let photoUrls ;
     if( product === undefined ){
         photoUrls = [];
@@ -16,12 +18,15 @@ const mSTP =( state, ownProps)=> {
     }
     // solved!!!!!!! when to use conditioonal inside container or presentational
     return ({
+        reviewErrors: state.errors.review,
         product: product,
         photoUrls: photoUrls,
         cartId: state.entities.cart.id,
         cartItems: state.entities.cartItems,
         currentUser: state.entities.users[state.session.id],
-        errors: state.errors
+        errors: state.errors,
+        productReviews: productReviews,
+        currentUserReview: currentUserReview
     })
 } 
 
