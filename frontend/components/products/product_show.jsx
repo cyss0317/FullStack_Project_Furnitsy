@@ -1,4 +1,5 @@
 import React from "react";
+import ReviewIndex from "../reviews/reviews_index";
 
 class ProductShow extends React.Component {
     constructor(props){
@@ -25,8 +26,8 @@ class ProductShow extends React.Component {
         this.leftSvgClickhandler = this.leftSvgClickhandler.bind(this)
         this.addToCartHandler = this.addToCartHandler.bind(this)
         this.onChangeHandler = this.onChangeHandler.bind(this)
-        this.createReview = this.createReview.bind(this)
-        this.newReviewRating = this.newReviewRating.bind(this)
+        // this.createReview = this.createReview.bind(this)
+        // this.newReviewRating = this.newReviewRating.bind(this)
         
 
   
@@ -71,15 +72,15 @@ class ProductShow extends React.Component {
         this.setState({quantity: e.currentTarget.value})
     }
 
-    onChangeForCreateReview(newReview, field, e){
-        debugger
-        newReview[field] = e.currentTarget.value
-    }
+    // onChangeForCreateReview(newReview, field, e){
+    //     debugger
+    //     newReview[field] = e.currentTarget.value
+    // }
 
-    newReviewRating(newReview,e){
-        debugger
-        newReview.rating = e.currentTarget.value
-    }
+    // newReviewRating(newReview,e){
+    //     debugger
+    //     newReview.rating = e.currentTarget.value
+    // }
 
 
     clickPictureHandler(e){
@@ -109,13 +110,13 @@ class ProductShow extends React.Component {
             return null;
         }
 
-        let newReview = {
-            user_id: currentUser.id,
-            product_id: product.id,
-            comment: "",
-            rating: "",
-            helpful: 0
-        }
+        // let newReview = {
+        //     user_id: currentUser.id,
+        //     product_id: product.id,
+        //     comment: "",
+        //     rating: "",
+        //     helpful: 0
+        // }
         const productReviews = reviews.filter((review) => review.product_id === product.id)
         let totalRating = 0;
         productReviews.forEach((review) => totalRating += review.rating )
@@ -215,15 +216,19 @@ class ProductShow extends React.Component {
                                 }
                             </ul>
                         </div>
-                        <div id="reviews-main-container">
+                        <div>
+                            <ReviewIndex product={product} reviews={reviews} currentUser={currentUser} fetchAllReviews={this.props.fetchAllReviews}
+                                createReview={this.props.createReview} deleteReview={this.props.deleteReview} updateReview={this.props.updateReview} fetchReview={this.props.fetchReview}
+                            />
+                        </div>
+                        {/* <div id="reviews-main-container">
                             <div id="create-review">
                                 <h1>{productReviews.length} reveiws {avgRating}</h1>
                                 <h3>{product.name}</h3>
                                 <form onSubmit={ () => this.createReview(newReview)} id="create-review-form">
 
-                                        {/* <div className="rating" value={newReview.rating} onChange={(e) => this.onChangeForCreateReview(newReview, "rating", e)}> */}
+
                                         <div className="rating" value={newReview.rating}>
-                                        {/* <input type="radio" id="star1" name="rating" value="1" onChange={(e) => this.onChangeForCreateReview(newReview, "rating", e)} /> */}
                                         <input type="radio" id="star2" name="rating" onClick={this.newReviewRating} value="1" />
                                             <label htmlFor="star1" title="text">1 star</label>
                                             <input type="radio" id="star2" name="rating" onClick={this.newReviewRating} value="2"/>
@@ -253,9 +258,8 @@ class ProductShow extends React.Component {
                                     ))
                                 }
                             </ul>
+                        </div> */}
 
-
-                        </div>
                     </div>           
                 </div>
 
