@@ -80,11 +80,6 @@ class ProductShow extends React.Component {
             return null;
         }
 
-        const productReviews = reviews.filter((review) => review.product_id === product.id)
-        // if ( productReviews === undefined){
-        //     return null;
-        // }
-
 
         // const productReviews = this.props.reviews.filter((review) => review.productId === currentUser.id) 
 
@@ -97,8 +92,8 @@ class ProductShow extends React.Component {
 
 
         const arrHighlights = product.highlights.split("!")
-        console.log("reviews", productReviews)
 
+        debugger    
         return(
             <section key={this.props.key} className="show-main-container" >
                 <div className="product-show-container">
@@ -188,7 +183,7 @@ class ProductShow extends React.Component {
                  
                         <ul>
                             {
-                                productReviews.map((review, index) => (
+                                product.reviews.map((review, index) => (
 
                                     <li key={index}>
                                         <h3>Name : {review.user.first_name}, {review.created_at}</h3>
