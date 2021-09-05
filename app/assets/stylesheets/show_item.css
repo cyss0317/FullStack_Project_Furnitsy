@@ -375,7 +375,7 @@ svg{
 #create-review-form-input{
     height: 220px;
     margin: 0px 10px 0px 10px;
-        -webkit-appearance: none;
+    -webkit-appearance: none;
     -ms-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -383,7 +383,7 @@ svg{
     font-family: inherit;
     font-size: 15px;
     padding-left: 12px;
-    padding-right: 36px;
+    padding-right: 12px;
     border-radius: 6px;
     background: #FFFFFF;
     border-color: rgba(34, 34, 34, 0.15);
@@ -391,9 +391,8 @@ svg{
     border-width: 1px;
     color: #222222;
     text-indent: 0.01px;
-    cursor: pointer;
 }
 
-.reviews{
-    margin: 5px 10px 5px 10px;
+#reviews{
+    margin-bottom: 10px;
 }
