@@ -102,7 +102,7 @@
 .svg-button{
 
     border-radius: 50%;
-    border: 0.5px rgb(205, 203, 203);
+    border: none;
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -112,14 +112,43 @@
 
 svg{
     color: #7b7a7a;
+
     width: 34px;
     height: 34px;
 }
 
-.svg-button:hover {
+svg:hover{
+      background-color: rgba(237, 231, 231, 0.351) ;
+      border-radius: 50%;
+}
+
+#right-svg-button{
+    position: relative;
+    right: 33px
+}
+#right-svg-button:hover{
+    cursor: pointer;
+    /* background-color: rgba(222, 222, 222, 0.351) ; */
+}
+
+#left-svg-button{
+    position: relative;
+    left: 16px;
+    z-index: 2;
+}
+
+#left-svg-button:hover{ 
+    cursor: pointer;
+    /* background-color: rgba(222, 222, 222, 0.351) ; */
+}
+
+
+
+/* .svg-button:hover {
     cursor: pointer;
     background-color: rgba(222, 222, 222, 0.351) ;
-}
+
+} */
 
 
 .main-picture-container{
@@ -177,10 +206,12 @@ svg{
     width: 500px;
     height: 420px;
     border-radius: 20px;
+    position: relative;
+    left: -17px;
 }
 
 .picture-container-list {
-    width: 150px;
+    width: 200px;
     height: 420px;
     overflow: auto;
     /* overflow-y: hidden; */
@@ -191,7 +222,7 @@ svg{
 }
 .picture-container-list-item{
     width: 95%;
-    height: 60px;
+    height: 80%;
     border: 5px rgb(139, 129, 129);
     border-radius: 18px !important;
     padding: 2px;
@@ -415,8 +446,13 @@ svg{
     margin-top: 20px;
     display: flex;
     justify-content: flex-start;
-    border-bottom: 2px solid #22222220;
+}
+
+#create-review p{
     margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #22222220;
+
 }
 
 #create-review-reviews h1{

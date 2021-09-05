@@ -77,6 +77,7 @@ class ReviewIndex extends React.Component{
                         <h1>  {productReviews.length} reviews</h1>
                         <h2>{this.convertRatingsToStars(avgRating)}</h2>
                     </div>
+                    <p>Buyers are raving! Multiple people gave 5-star reviews to this product.</p>
                     <form onSubmit={this.createReview} id="create-review-form">
 
                         <div className="rating" >
