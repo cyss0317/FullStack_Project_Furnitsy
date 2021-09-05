@@ -12,13 +12,23 @@ class ProductShow extends React.Component {
             index: 0,
             // index: props.photoUrls[mainPic]
         }
+        // newReview = {
+        //     user_id: this.props.currentUser.id,
+        //     product_id: this.props.product.id,
+        //     comment: "",
+        //     rating: "",
+        //     helpful: 0
+        // }
 
         this.clickPictureHandler = this.clickPictureHandler.bind(this)
         this.rightSvgClickhandler = this.rightSvgClickhandler.bind(this)
         this.leftSvgClickhandler = this.leftSvgClickhandler.bind(this)
         this.addToCartHandler = this.addToCartHandler.bind(this)
         this.onChangeHandler = this.onChangeHandler.bind(this)
+        this.createReview = this.createReview.bind(this)
+        this.newReviewRating = this.newReviewRating.bind(this)
         
+
   
     }
 
@@ -27,6 +37,11 @@ class ProductShow extends React.Component {
         this.props.fetchProduct(this.props.match.params.productId);
         this.props.fetchAllReviews();
 
+    }
+
+    createReview(newReview){
+        debugger
+        this.props.createReview(newReview)
     }
 
     rightSvgClickhandler(e){
@@ -47,11 +62,25 @@ class ProductShow extends React.Component {
         this.setState({ index: this.props.photoUrls.indexOf(this.state.mainPic) - 1 < 0 ? this.props.photoUrls.length - 1: this.props.photoUrls.indexOf(this.state.mainPic) - 1 })
         this.setState({ mainPic: this.props.photoUrls[this.state.index] })
 
+
     }
+    
 
     onChangeHandler(e){
+        // return e => this.setState({[field]: e.currentTarget.value})
         this.setState({quantity: e.currentTarget.value})
     }
+
+    onChangeForCreateReview(newReview, field, e){
+        debugger
+        newReview[field] = e.currentTarget.value
+    }
+
+    newReviewRating(newReview,e){
+        debugger
+        newReview.rating = e.currentTarget.value
+    }
+
 
     clickPictureHandler(e){
         this.setState({mainPic: e.currentTarget.alt})
@@ -80,6 +109,13 @@ class ProductShow extends React.Component {
             return null;
         }
 
+        let newReview = {
+            user_id: currentUser.id,
+            product_id: product.id,
+            comment: "",
+            rating: "",
+            helpful: 0
+        }
         const productReviews = reviews.filter((review) => review.product_id === product.id)
         let totalRating = 0;
         productReviews.forEach((review) => totalRating += review.rating )
@@ -88,9 +124,7 @@ class ProductShow extends React.Component {
         if (this.state.quantity === undefined){
             this.setState({quantity: 1 })
         }
-        // if (this.state.mainPic === undefined){
-        //     this.setState({mainPic: product.photoUrls[0]})
-        // }
+
 
 
         const arrHighlights = product.highlights.split("!")
@@ -185,21 +219,23 @@ class ProductShow extends React.Component {
                             <div id="create-review">
                                 <h1>{productReviews.length} reveiws {avgRating}</h1>
                                 <h3>{product.name}</h3>
-                                <form id="create-review-form">
+                                <form onSubmit={ () => this.createReview(newReview)} id="create-review-form">
 
-                                        <body class="rating">
-                                            <input type="radio" id="star1" name="rating" value="1" />
-                                            <label for="star1" title="text">1 star</label>
-                                            <input type="radio" id="star2" name="rating" value="2" />
-                                            <label for="star2" title="text">2 stars</label>
+                                        {/* <div className="rating" value={newReview.rating} onChange={(e) => this.onChangeForCreateReview(newReview, "rating", e)}> */}
+                                        <div className="rating" value={newReview.rating}>
+                                        {/* <input type="radio" id="star1" name="rating" value="1" onChange={(e) => this.onChangeForCreateReview(newReview, "rating", e)} /> */}
+                                        <input type="radio" id="star2" name="rating" onClick={this.newReviewRating} value="1" />
+                                            <label htmlFor="star1" title="text">1 star</label>
+                                            <input type="radio" id="star2" name="rating" onClick={this.newReviewRating} value="2"/>
+                                            <label htmlFor="star2" title="text">2 stars</label>
                                             <input type="radio" id="star3" name="rating" value="3" />
-                                            <label for="star3" title="text">3 stars</label>
+                                            <label htmlFor="star3" title="text">3 stars</label>
                                             <input type="radio" id="star4" name="rating" value="4" />
-                                            <label for="star4" title="text">4 stars</label>
+                                            <label htmlFor="star4" title="text">4 stars</label>
                                             <input type="radio" id="star5" name="rating" value="5" />
-                                            <label for="star5" title="text">5 stars</label>
-                                        </body>
-                                        <input id="create-review-form-input" type="text" />
+                                            <label htmlFor="star5" title="text">5 stars</label>
+                                        </div>
+                                        <input id="create-review-form-input" type="text" onChange={(e) => this.onChangeForCreateReview(newReview, "comment", e)}  value={newReview.comment}/>
                                         <input type="submit" />
 
                                 </form>
