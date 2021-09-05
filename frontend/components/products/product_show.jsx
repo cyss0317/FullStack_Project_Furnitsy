@@ -1,3 +1,4 @@
+import ReviewIndex from "../reviews/reviews_index"
 import React from "react";
 
 class ProductShow extends React.Component {
@@ -75,7 +76,7 @@ class ProductShow extends React.Component {
 
         //answered
         //why returning null wouldn't stop the lifecycle, 
-        const { product, reviews, currentUser } = this.props;
+        const { product, reviews, currentUser, deleteReview, createReview, updateReview} = this.props;
         if (product === undefined ){
             return null;
         }
@@ -184,20 +185,41 @@ class ProductShow extends React.Component {
                         </div>
                         <div id="reviews-main-container">
                             <h1>{productReviews.length} reveiws {avgRating}</h1>
+                            <form >
+
+                                    <div class="rate">
+                                        <input type="radio" id="star1" name="rate" value="1" />
+                                        <label for="star1" title="text">1 star</label>
+                                        <input type="radio" id="star2" name="rate" value="2" />
+                                        <label for="star2" title="text">2 stars</label>
+                                        <input type="radio" id="star3" name="rate" value="3" />
+                                        <label for="star3" title="text">3 stars</label>
+                                        <input type="radio" id="star4" name="rate" value="4" />
+                                        <label for="star4" title="text">4 stars</label>
+                                        <input type="radio" id="star5" name="rate" value="5" />
+                                        <label for="star5" title="text">5 stars</label>
+                                    </div>
+                                    <input type="text" value={} />
+
+                            </form>
                             <ul>
                                 {
                                     productReviews.map((review, index) => (
 
                                         <li key={index}>
-                                            <h3>Name : {review.user.first_name}, {review.created_at}</h3>
-                                            <h2></h2>
-                                            <p>Rating : {review.rating}</p>
-                                            <p>Comment : {review.comment}</p>
-                                            <p>Helpful : {review.helpful}</p>
+                                            {
+                                                <h3>Name : {review.user.first_name}, {review.created_at}</h3>
+                                                <h2></h2>
+                                                <p>Rating : {review.rating}</p>
+                                                <p>Comment : {review.comment}</p>
+                                                <p>Helpful : {review.helpful}</p>
+                                            }
+
                                         </li>
                                     ))
                                 }
                             </ul>
+
 
                         </div>
                     </div>           
