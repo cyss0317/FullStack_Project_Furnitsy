@@ -37,6 +37,23 @@ class ReviewIndex extends React.Component{
         this.setState[field] = e.currentTarget.value
     }
 
+    convertRatingsToStars(rating){
+        return(
+            <div className="totalRating" >
+                {/* <input type="radio" id="star1" readOnly checked="true" name="rating" value="5" /> */}
+                <label htmlFor="star1" style={{ color: rating >= 5 ? "#ffc700" : "#ccc"}} title="text">5 stars</label>
+                {/* <input type="radio" id="star2" readOnly name="rating" value="4" /> */}
+                <label htmlFor="star2" style={{ color: rating >= 4 ? "#ffc700" : "#ccc"}} title="text">4 stars</label>
+                {/* <input type="radio" id="star3" readOnly name="rating" value="3" /> */}
+                <label htmlFor="star3" style={{ color: rating >= 3 ? "#ffc700"  : "#ccc"}} title="text">3 stars</label>
+                {/* <input type="radio" id="star4" readOnly name="rating" value="2" /> */}
+                <label htmlFor="star4" style={{ color: rating >= 2 ? "#ffc700"  : "#ccc"}} title="text">2 stars</label>
+                {/* <input type="radio" id="star5" readOnly name="rating" value="1" /> */}
+                <label htmlFor="star5" style={{ color: rating >= 1 ? "#ffc700"  : "#ccc"}} title="text">1 stars</label>
+            </div>
+        )
+    }
+
     // this.stateRating(this.state, e) {
     //     debugger
     //     this.state.rating = e.currentTarget.value
@@ -50,13 +67,16 @@ class ReviewIndex extends React.Component{
         const productReviews = reviews.filter((review) => review.product_id === product.id)
         let totalRating = 0;
         productReviews.forEach((review) => totalRating += review.rating)
-        let avgRating = Number.parseFloat(totalRating / (productReviews.length)).toFixed(1)
+        let avgRating = Math.round(totalRating / (productReviews.length))
 
         return (
 
             <div id="reviews-main-container">
                 <div id="create-review">
-                    <h1>{productReviews.length} reveiws {avgRating}</h1>
+                    <div id="create-review-reviews">
+                        <h1>  {productReviews.length} reviews</h1>
+                        <h2>{this.convertRatingsToStars(avgRating)}</h2>
+                    </div>
                     <form onSubmit={this.createReview} id="create-review-form">
 
                         <div className="rating" >
@@ -90,11 +110,12 @@ class ReviewIndex extends React.Component{
                     {
                         productReviews.map((review, index) => (
                             <li id="reviews" key={index}>
-                                <form onSubmit={this.updateHandler}></form>
-                                <h3>Name : {review.user.first_name}, {review.created_at}</h3>
-                                <h2></h2>
-                                <p>Rating : {review.rating}</p>
-                                <p>Comment : {review.comment}</p>
+                                <section>
+                                    <h3>{review.user.first_name}</h3>
+                                    <h4>{review.created_at.split("T")[0]}</h4>
+                                </section>
+                                {this.convertRatingsToStars(review.rating)}
+                                <p>{review.comment}</p>
                                 {/* <p onClick={this.props.updateHandler} >{review.helpful.length === 0 ? Helpful? : Helpful review.helpful }</p> */}
                             </li>
                         ))

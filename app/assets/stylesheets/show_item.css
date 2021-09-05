@@ -409,3 +409,74 @@ svg{
 #reviews *{
     margin-top: 3px;
 }
+
+#create-review-reviews {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start ;
+}
+
+#create-review-reviews h1{
+
+    font-size: 25px;
+    position: relative;
+    top: -1px;
+
+}
+
+#create-review-reviews h2{
+    margin-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+.totalRating {
+
+    height: 46px;
+}
+.totalRating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.totalRating:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    font-size:25px;
+    color:#ccc;
+}
+.totalRating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+
+.totalRating > input:checked ~ label {
+    color: #ffc700;    
+}
+
+
+/* .totalRating{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse
+} */
+
+#reviews section {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 26px;
+    font-size: 12px;
+}
+
+#reviews section h4 {
+    margin-left: 10px;
+}
