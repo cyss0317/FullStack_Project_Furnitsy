@@ -1,7 +1,7 @@
 
 class Api::CartItemsController < ApplicationController
 
-    before_action :require_login
+    before_action :require_login, only: [:destroy]
     def create
 
         @cart_item = CartItem.new(cart_item_params)
@@ -15,7 +15,7 @@ class Api::CartItemsController < ApplicationController
     end
 
     def index
-        @cart_items = CartItem.all.select{|item| item.cart_id == current_user.cart.id }
+        @cart_items = CartItem.all
         if @cart_items
             @cart_items
             render :index

@@ -18,7 +18,7 @@ const CartHeader = ({numberOfProducts, currentUser, logout, openModal}) =>{
     const ifLoggedOut = () => (
         <div id="counts-main-div">
             <div id="counts-container">
-                <p className="cart-header-counts">{isNaN(numberOfProducts) ? 0 : numberOfProducts}</p>
+                <p className="cart-header-counts">{!currentUser ? 0 : numberOfProducts}</p>
             </div>
             <a title="Image from freeiconspng.com" onClick={() => openModal("Login")}>
                 <img className="cart-image" src="https://www.freeiconspng.com/uploads/shopping-cart-icon-2.png" width="350" alt="Vectors Download Shopping Cart Free Icon" />

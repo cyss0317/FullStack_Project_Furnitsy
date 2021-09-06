@@ -1,12 +1,9 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Greeting = (props) => {
-    const {currentUser, logout, openModal } = props
-    // const logoutAndRedirect = logout => (
-    //     logout()
-    //     props.history.push("/")
-    // )
+const Greeting = ({currentUser, logout, openModal}) => {
+    
+
 
     const ifLoggedIn = () => (
 
@@ -33,4 +30,4 @@ const Greeting = (props) => {
 }
 
 
-export default withRouter(Greeting);
+export default Greeting;

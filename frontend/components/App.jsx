@@ -61,7 +61,7 @@ const App = () => {
             <Route path="/products/:productId" component={ProductShowContainer}/>
             <Route path="/category/:category" component={ProductNavContainer} />
             <Route path="/products" component={ProductIndexContainer} />
-            <Route path="/cart_items" component={CartShowContainer}/>
+            <ProtectedRoute path="/cart_items" component={CartShowContainer}/>
             <Route path="/" component={ProductIndexContainer}/>
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer}/>

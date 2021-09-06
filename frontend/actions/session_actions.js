@@ -41,7 +41,7 @@ export const logout = () => dispatch => (
         .then(() => dispatch(logoutCurrentUser()),
     error => (dispatch(receiveErrors(error.responseJSON))))
         .then(() => dispatch(ThunkReceiveCartItems()))
-        .then( <Redirect to="/" />)
+        // .then( <Redirect to="/" />)
 
 )
 
