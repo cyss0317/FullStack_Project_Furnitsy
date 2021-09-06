@@ -75,12 +75,12 @@ class ReviewIndex extends React.Component{
         // let userReviewForThisProduct ;
         // debugger
         // userReviewForThisProduct = currentUser.reviews.filter((review)=> review.product_id === this.props.productId)
+        debugger
         let userReview ;
         userReview =  userReviewForThisProduct.length === 0 ? null : reviews[userReviewForThisProduct[0].id];
         // productReviews = reviewsArray.filter((review) => review.product_id === this.props.productId)
         let totalRating = 0;
         productReviews.forEach((review) => totalRating += review.rating)
-        debugger
         let avgRating = Math.round(totalRating / (productReviews.length))
 
 
@@ -116,7 +116,7 @@ class ReviewIndex extends React.Component{
                     </div>
                     <p>Buyers are raving! Multiple people gave 5-star reviews to this product.</p>
                     {
-                        userReview !== undefined ?
+                        userReview  ?
                             <div id="reviews" >
                                 <h2>Your review for this product</h2>
                                 <section>
