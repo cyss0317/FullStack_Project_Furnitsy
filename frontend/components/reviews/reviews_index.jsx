@@ -63,22 +63,49 @@ class ReviewIndex extends React.Component{
     // }
 
     render(){
-        const { product, reviews, currentUserId, currentUser } = this.props;
+        const { product, reviews, currentUserId, currentUser, reviewsArray, productReviews, userReviewForThisProduct } = this.props;
         if (product === undefined){
             return null;
         }
 
-        debugger
+
         if (currentUser === undefined) return null;
         // if (reviews === undefined) return null;
-        const reviewsArray = Object.values(reviews);
-        let userReviewForThisProduct ;
-        userReviewForThisProduct = currentUser.reviews.filter((review)=> review.product_id === this.props.productId)
-        const userReview = reviews[userReviewForThisProduct[0].id];
-        const productReviews = reviewsArray.filter((review) => review.product_id === this.props.productId)
+        // const reviewsArray = Object.values(reviews);
+        // let userReviewForThisProduct ;
+        // debugger
+        // userReviewForThisProduct = currentUser.reviews.filter((review)=> review.product_id === this.props.productId)
+        let userReview ;
+        userReview =  userReviewForThisProduct.length === 0 ? null : reviews[userReviewForThisProduct[0].id];
+        // productReviews = reviewsArray.filter((review) => review.product_id === this.props.productId)
         let totalRating = 0;
         productReviews.forEach((review) => totalRating += review.rating)
+        debugger
         let avgRating = Math.round(totalRating / (productReviews.length))
+
+
+
+        // if (currentUser === undefined) return null;
+        // // if (reviews === undefined) return null;
+        // const reviewsArray = Object.values(reviews);
+        // let userReviewForThisProduct;
+        // console.log("currentUser", currentUser.reviews)
+        // userReviewForThisProduct = currentUser.reviews.filter((review) => review.product_id === this.props.productId) === [] ?
+        //     [] : currentUser.reviews.filter((review) => review.product_id === this.props.productId)
+        // let userReview;
+        // debugger
+        // console.log("1", userReviewForThisProduct)
+        // if (userReviewForThisProduct[0] === undefined) {
+        //     userReview = []
+        // } else {
+        //     console.log("2", userReviewForThisProduct[0])
+        //     userReview = reviews[userReviewForThisProduct[0].id];
+        // }
+        // let productReviews;
+        // productReviews = reviewsArray === undefined ? [] : reviewsArray.filter((review) => review.product_id === this.props.productId)
+        // let totalRating = 0;
+        // productReviews.forEach((review) => totalRating += review.rating)
+        // let avgRating = Math.round(totalRating / (productReviews.length))
         return (
 
             <div id="reviews-main-container">
@@ -89,7 +116,7 @@ class ReviewIndex extends React.Component{
                     </div>
                     <p>Buyers are raving! Multiple people gave 5-star reviews to this product.</p>
                     {
-                        reviews[userReviewForThisProduct[0].id] !== undefined ?
+                        userReview !== undefined ?
                             <div id="reviews" >
                                 <h2>Your review for this product</h2>
                                 <section>

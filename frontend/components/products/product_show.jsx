@@ -105,7 +105,9 @@ class ProductShow extends React.Component {
 
         //answered
         //why returning null wouldn't stop the lifecycle, 
-        const { product, reviews, currentUser, currentUserId, fetchProduct, fetchReview,fetchAllReviews, deleteReview, createReview, productId, updateReview } = this.props;
+        const { product, reviews, currentUser, currentUserId, fetchProduct, fetchReview,fetchAllReviews,
+             deleteReview, createReview, productId, updateReview , reviewsArray, productReviews,
+            userReviewForThisProduct} = this.props;
         if (product === undefined ){
             return null;
         }
@@ -117,11 +119,11 @@ class ProductShow extends React.Component {
         //     rating: "",
         //     helpful: 0
         // }
-        const reviewsArray = Object.values(reviews)
-        const productReviews = reviewsArray.filter((review) => review.product_id === product.id)
-        let totalRating = 0;
-        productReviews.forEach((review) => totalRating += review.rating )
-        let avgRating = Number.parseFloat(totalRating/(productReviews.length)).toFixed(1)
+        // const reviewsArray = Object.values(reviews)
+        // const productReviews = reviewsArray.filter((review) => review.product_id === product.id)
+        // let totalRating = 0;
+        // productReviews.forEach((review) => totalRating += review.rating )
+        // let avgRating = Number.parseFloat(totalRating/(productReviews.length)).toFixed(1)
 
         if (this.state.quantity === undefined){
             this.setState({quantity: 1 })
@@ -220,7 +222,7 @@ class ProductShow extends React.Component {
                         <div>
                             <ReviewIndex product={product} reviews={reviews} currentUser={currentUser} fetchAllReviews={fetchAllReviews} fetchProduct={fetchProduct}
                                 createReview={createReview} deleteReview={deleteReview} updateReview={updateReview} fetchReview={fetchReview} productId={productId}
-                                currentUserId={currentUserId}
+                                currentUserId={currentUserId} reviewsArray={reviewsArray} productReviews={productReviews} userReviewForThisProduct={userReviewForThisProduct}
                             />
                         </div>
                         {/* <div id="reviews-main-container">

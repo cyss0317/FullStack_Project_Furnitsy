@@ -8,6 +8,11 @@ import { openModal } from "../../actions/modal_actions";
 const mSTP =( state, ownProps)=> {
     const product = state.entities.products[ownProps.match.params.productId];
     const productId = ownProps.match.params.productId;
+    const reviews = state.entities.reviews;
+    const reviewsArray = Object.values(state.entities.reviews)
+    const userReviewForThisProduct = state.entities.users[state.session.id].reviews.filter((review) => review.product_id === productId)
+    const productReviews = reviewsArray.filter((review) => review.product_id === productId)
+    // const userReview = reviews[userReviewForThisProduct[0].id]
     // const reviews = Object.values(state.entities.reviews)
 
     // const productReviews = reviews.filter((review) => review.product_Id === productId)
@@ -37,7 +42,12 @@ const mSTP =( state, ownProps)=> {
         errors: state.errors,
         reviews: state.entities.reviews,
         productId: productId,
-        currentUserId: state.session.id
+        currentUserId: state.session.id,
+        reviews: reviews,
+        reviewsArray: reviewsArray,
+        productReviews: productReviews,
+        userReviewForThisProduct: userReviewForThisProduct,
+
 
     })
 } 
