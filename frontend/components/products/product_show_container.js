@@ -10,7 +10,7 @@ const mSTP =( state, ownProps)=> {
     const productId = parseInt(ownProps.match.params.productId);
     const reviews = state.entities.reviews;
     const reviewsArray = Object.values(state.entities.reviews)
-    const userReviewForThisProduct = state.entities.users[state.session.id].reviews.filter((review) => review.product_id === productId)
+    // const userReviewForThisProduct = state.entities.users[state.session.id].reviews.filter((review) => review.product_id === productId)
     const productReviews = reviewsArray.filter((review) => review.product_id === productId)
     // const userReview = reviews[userReviewForThisProduct[0].id]
     // const reviews = Object.values(state.entities.reviews)
@@ -46,7 +46,7 @@ const mSTP =( state, ownProps)=> {
         reviews: reviews,
         reviewsArray: reviewsArray,
         productReviews: productReviews,
-        userReviewForThisProduct: userReviewForThisProduct,
+        // userReviewForThisProduct: state.entities.users[state.session.id].reviews.filter((review) => review.product_id === productId),
 
 
     })

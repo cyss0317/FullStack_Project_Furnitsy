@@ -106,7 +106,7 @@ class ProductShow extends React.Component {
         //why returning null wouldn't stop the lifecycle, 
         const { product, reviews, currentUser, currentUserId, fetchProduct, fetchReview,fetchAllReviews,
              deleteReview, createReview, productId, updateReview , reviewsArray, productReviews,
-            userReviewForThisProduct} = this.props;
+            } = this.props;
         if (product === undefined ){
             return null;
         }
@@ -221,7 +221,7 @@ class ProductShow extends React.Component {
                         <div>
                             <ReviewIndex product={product} reviews={reviews} currentUser={currentUser} fetchAllReviews={fetchAllReviews} fetchProduct={fetchProduct}
                                 createReview={createReview} deleteReview={deleteReview} updateReview={updateReview} fetchReview={fetchReview} productId={productId}
-                                currentUserId={currentUserId} reviewsArray={reviewsArray} productReviews={productReviews} userReviewForThisProduct={userReviewForThisProduct}
+                                currentUserId={currentUserId} reviewsArray={reviewsArray} productReviews={productReviews} 
                             />
                         </div>
                         {/* <div id="reviews-main-container">
