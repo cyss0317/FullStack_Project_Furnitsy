@@ -41,7 +41,6 @@ class ProductShow extends React.Component {
     }
 
     createReview(newReview){
-        debugger
         this.props.createReview(newReview)
     }
 

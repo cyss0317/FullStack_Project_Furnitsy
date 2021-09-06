@@ -370,6 +370,12 @@ svg:hover{
     color: white;
     font-size: 17px;
 }
+#review-submit:hover{
+    cursor: pointer;
+}
+/* #review-submit:active{
+    pointer-events: none;
+} */
 
 .rating > input:checked ~ label {
     color: #ffc700;    

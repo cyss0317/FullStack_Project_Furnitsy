@@ -21,8 +21,11 @@ class ReviewIndex extends React.Component{
     }
 
     createReview(){
-
+        var x = document.getElementById("review-submit")
         this.props.createReview(this.state)
+        .then(this.props.fetchAllReviews())
+        .then(alert("successfully created"))
+        .then(x.disabled = true )
     }
 
     onChangeHandler( e){
@@ -63,22 +66,23 @@ class ReviewIndex extends React.Component{
     // }
 
     render(){
-        const { product, reviews, currentUserId, currentUser, reviewsArray, productReviews, userReviewForThisProduct } = this.props;
+        const { product, reviews, currentUserId, currentUser, reviewsArray, productId  } = this.props;
         if (product === undefined){
             return null;
         }
 
 
         if (currentUser === undefined) return null;
-        // if (reviews === undefined) return null;
+        if (reviews === undefined) return null;
         // const reviewsArray = Object.values(reviews);
-        // let userReviewForThisProduct ;
+        let userReviewForThisProduct ;
         // debugger
-        // userReviewForThisProduct = currentUser.reviews.filter((review)=> review.product_id === this.props.productId)
-        debugger
+        userReviewForThisProduct = currentUser.reviews.filter((review)=> review.product_id === productId)
+        // debugger
         let userReview ;
         userReview =  userReviewForThisProduct.length === 0 ? null : reviews[userReviewForThisProduct[0].id];
-        // productReviews = reviewsArray.filter((review) => review.product_id === this.props.productId)
+
+        let productReviews = reviewsArray.filter((review) => review.product_id === productId)
         let totalRating = 0;
         productReviews.forEach((review) => totalRating += review.rating)
         let avgRating = Math.round(totalRating / (productReviews.length))
