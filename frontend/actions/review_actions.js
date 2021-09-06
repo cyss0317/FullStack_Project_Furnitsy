@@ -23,7 +23,8 @@ export const createReview = review => ({
 })
 
 export const deleteReview = reviewId => ({
-    type: DELETE_REVIEW
+    type: DELETE_REVIEW,
+    reviewId
 })
 
 export const updateReview = review => ({
@@ -32,7 +33,7 @@ export const updateReview = review => ({
 })
 
 export const receiveReviewErrors = errors => ({
-    type: RECIEVE_REVIEW_ERRORS,
+    type: RECEIVE_REVIEW_ERRORS,
     errors
 })
 

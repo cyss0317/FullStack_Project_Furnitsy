@@ -357,6 +357,8 @@ svg:hover{
     content: '★ ';
 }
 #review-submit{
+    position: relative;
+    left: 259px;
     margin-top: 20px;
     display: flex;
     align-items: center;
@@ -393,6 +395,7 @@ svg:hover{
 #reviews-main-container{
     display: flex;
     flex-direction: column;
+    padding-right: 20px;
 }
 
 #create-review{
@@ -415,6 +418,7 @@ svg:hover{
 }
 
 #create-review-form-input{
+    padding-top: 10px;
     height: 200px;
     -webkit-appearance: none;
     -ms-appearance: none;
@@ -467,8 +471,22 @@ svg:hover{
     margin-left: 15px;
 }
 
+#reviews h2{
+    font-size: 20px;
+}
 
-
+#delete-review{
+    outline: none;
+    border: none;
+    background-color: white;
+    margin-left: 20px;
+    margin-top: 0;
+    padding: 0%;
+}
+#delete-review:hover{
+    cursor: pointer;
+    background-color: #22222220;
+}
 
 
 
@@ -483,6 +501,7 @@ svg:hover{
 .totalRating:not(:checked) > input {
     position:absolute;
     top:-9999px;
+
 }
 .totalRating:not(:checked) > label {
     float:right;
@@ -491,14 +510,16 @@ svg:hover{
     white-space:nowrap;
     font-size:25px;
     color:#ccc;
+    pointer-events: none;
 }
 .totalRating:not(:checked) > label:before {
     content: '★ ';
 }
 
-
-.totalRating > input:checked ~ label {
-    color: #ffc700;    
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 

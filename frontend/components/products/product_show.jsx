@@ -105,7 +105,7 @@ class ProductShow extends React.Component {
 
         //answered
         //why returning null wouldn't stop the lifecycle, 
-        const { product, reviews, currentUser } = this.props;
+        const { product, reviews, currentUser, currentUserId, fetchProduct, fetchReview,fetchAllReviews, deleteReview, createReview, productId, updateReview } = this.props;
         if (product === undefined ){
             return null;
         }
@@ -117,7 +117,8 @@ class ProductShow extends React.Component {
         //     rating: "",
         //     helpful: 0
         // }
-        const productReviews = reviews.filter((review) => review.product_id === product.id)
+        const reviewsArray = Object.values(reviews)
+        const productReviews = reviewsArray.filter((review) => review.product_id === product.id)
         let totalRating = 0;
         productReviews.forEach((review) => totalRating += review.rating )
         let avgRating = Number.parseFloat(totalRating/(productReviews.length)).toFixed(1)
@@ -129,7 +130,7 @@ class ProductShow extends React.Component {
 
 
         const arrHighlights = product.highlights.split("!")
-        console.log("reviews", productReviews)
+
         return(
             <section key={this.props.key} className="show-main-container" >
                 <div className="product-show-container">
@@ -217,8 +218,9 @@ class ProductShow extends React.Component {
                             </ul>
                         </div>
                         <div>
-                            <ReviewIndex product={product} reviews={reviews} currentUser={currentUser} fetchAllReviews={this.props.fetchAllReviews}
-                                createReview={this.props.createReview} deleteReview={this.props.deleteReview} updateReview={this.props.updateReview} fetchReview={this.props.fetchReview}
+                            <ReviewIndex product={product} reviews={reviews} currentUser={currentUser} fetchAllReviews={fetchAllReviews} fetchProduct={fetchProduct}
+                                createReview={createReview} deleteReview={deleteReview} updateReview={updateReview} fetchReview={fetchReview} productId={productId}
+                                currentUserId={currentUserId}
                             />
                         </div>
                         {/* <div id="reviews-main-container">

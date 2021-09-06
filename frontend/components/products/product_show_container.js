@@ -8,7 +8,7 @@ import { openModal } from "../../actions/modal_actions";
 const mSTP =( state, ownProps)=> {
     const product = state.entities.products[ownProps.match.params.productId];
     const productId = ownProps.match.params.productId;
-    const reviews = Object.values(state.entities.reviews)
+    // const reviews = Object.values(state.entities.reviews)
 
     // const productReviews = reviews.filter((review) => review.product_Id === productId)
     // reviews
@@ -35,8 +35,9 @@ const mSTP =( state, ownProps)=> {
         cartItems: state.entities.cartItems,
         currentUser: state.entities.users[state.session.id],
         errors: state.errors,
-        reviews: reviews,
-
+        reviews: state.entities.reviews,
+        productId: productId,
+        currentUserId: state.session.id
 
     })
 } 
