@@ -44,6 +44,7 @@ const mSTP =( state, ownProps)=> {
         productId: productId,
         currentUserId: state.session.id,
         reviews: reviews,
+        sessionId: state.session.id,
         reviewsArray: reviewsArray,
         productReviews: productReviews,
         // userReviewForThisProduct: state.entities.users[state.session.id].reviews.filter((review) => review.product_id === productId),

@@ -24,7 +24,7 @@ class ReviewIndex extends React.Component{
         var x = document.getElementById("review-submit")
         this.props.createReview(this.state)
         .then(this.props.fetchAllReviews())
-        .then(alert("successfully created"))
+        // .then(alert("successfully created"))
         .then(x.disabled = true )
     }
 
@@ -66,7 +66,7 @@ class ReviewIndex extends React.Component{
     // }
 
     render(){
-        const { product, reviews, currentUserId, currentUser, reviewsArray, productId  } = this.props;
+        const { product, reviews, currentUserId, currentUser, reviewsArray, productId, sessionId  } = this.props;
         if (product === undefined){
             return null;
         }
@@ -86,6 +86,7 @@ class ReviewIndex extends React.Component{
         let totalRating = 0;
         productReviews.forEach((review) => totalRating += review.rating)
         let avgRating = Math.round(totalRating / (productReviews.length))
+        // debugger
 
 
 
@@ -110,9 +111,16 @@ class ReviewIndex extends React.Component{
         // let totalRating = 0;
         // productReviews.forEach((review) => totalRating += review.rating)
         // let avgRating = Math.round(totalRating / (productReviews.length))
-        return (
+        // if(!currentUser){
+        //     return (
 
+        //     )
+        // }
+        debugger
+        return (
+                
             <div id="reviews-main-container">
+                <p>109471204715072907091701970729501725752091720597</p>
                 <div id="create-review">
                     <div id="create-review-reviews">
                         <h1>  {productReviews.length} reviews</h1>
@@ -185,7 +193,7 @@ class ReviewIndex extends React.Component{
                             //     {/* <p onClick={this.props.updateHandler} >{review.helpful.length === 0 ? Helpful? : Helpful review.helpful }</p> */}
                             // </li>
                                 ""
-                            )} else if (currentUserId === null) {
+                            )} else if (!currentUser || sessionId === null) {
                                 return(
                                 <li id="reviews" key={index}>
                                     <section>

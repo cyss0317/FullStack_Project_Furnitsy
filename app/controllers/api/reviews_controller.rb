@@ -25,7 +25,7 @@ class Api::ReviewsController < ApplicationController
         @review = Review.find_by(user_id: current_user.id)
         if @review
             @review.delete
-            # render :index
+
         else
             render json: @review.errors.full_messages, status: 404
         end
