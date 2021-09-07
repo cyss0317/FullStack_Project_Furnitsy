@@ -9,27 +9,14 @@ class ProductShow extends React.Component {
             errors: this.props.errors,
             mainPic: props.photoUrls[0],
             quantity: 1,
-            //thinking that product hasn't been fetched yet
             index: 0,
-            // index: props.photoUrls[mainPic]
         }
-        // newReview = {
-        //     user_id: this.props.currentUser.id,
-        //     product_id: this.props.product.id,
-        //     comment: "",
-        //     rating: "",
-        //     helpful: 0
-        // }
 
         this.clickPictureHandler = this.clickPictureHandler.bind(this)
         this.rightSvgClickhandler = this.rightSvgClickhandler.bind(this)
         this.leftSvgClickhandler = this.leftSvgClickhandler.bind(this)
         this.addToCartHandler = this.addToCartHandler.bind(this)
         this.onChangeHandler = this.onChangeHandler.bind(this)
-        // this.createReview = this.createReview.bind(this)
-        // this.newReviewRating = this.newReviewRating.bind(this)
-        
-
   
     }
 

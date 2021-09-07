@@ -10,6 +10,7 @@ class CartShow extends React.Component{
 
     componentDidMount(){
         this.props.receiveCartItems();
+        this.props.receiveAllProducts();
     }
 
     
@@ -26,18 +27,19 @@ class CartShow extends React.Component{
 
 
 
-        if (!cartItems) {
-            return (
-                <img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/Spinner-3.gif" alt="" />
-            )
-    
-        } else if( numberOfProducts === 0) {
+        if (numberOfProducts === 0) {
             return (
                 <div>
                     <h1>There is nothing in your cart</h1>
                     <Link to="/">Continue shopping?</Link>
                 </div>
-            )
+                )
+                // 
+            // }
+            //  else if( this.props === undefined) {
+            //     return (
+            //     <img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/Spinner-3.gif" alt="" />
+            // )
         } else if (allItems.length > 0) {
             return (
                 <div>
@@ -54,7 +56,9 @@ class CartShow extends React.Component{
                                 <ul id="ul">
                                     {
                                         allItems.map((item) => (
-                                            <CartShowItem deleteCartItem={this.props.deleteCartItem} totalPrice={totalPrice} item={item} key={item.id} />
+                                            <CartShowItem deleteCartItem={this.props.deleteCartItem} receiveAllProducts={this.props.receiveAllProducts} 
+                                            receiveCartItems={this.props.receiveCartItems}
+                                            allProducts={this.props.allProducts} totalPrice={totalPrice} item={item} key={item.id} />
                                         ))
                                     }
                                 </ul>

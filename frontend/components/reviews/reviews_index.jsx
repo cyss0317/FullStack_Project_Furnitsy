@@ -184,21 +184,6 @@ class ReviewIndex extends React.Component{
                         productReviews.map((review, index) => {
                             if (review.user_id === currentUserId){
                             return(
-                            // <li id="reviews" key={index}>
-                            //     <section>
-                            //         {
-                            //             review.user.first_name.length === 0 ?
-                            //             <h3>Anonymous</h3>
-                            //             :
-                            //             <h3>{review.user.first_name}</h3>
-                            //         }
-                            //         <h4>{review.created_at.split("T")[0]}</h4>
-                            //         <button value={review.id} onClick={this.deleteHandler}>Delete</button>
-                            //     </section>
-                            //     {this.convertRatingsToStars(review.rating)}
-                            //     <p>{review.comment}</p>
-                            //     {/* <p onClick={this.props.updateHandler} >{review.helpful.length === 0 ? Helpful? : Helpful review.helpful }</p> */}
-                            // </li>
                                 ""
                             )} else if (!currentUser || sessionId === null) {
                                 return(

@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 import CartShow from "./cart_show";
 import { ThunkDeleteCartItem, ThunkReceiveCartItems } from "../../actions/cart_items_actions";
-
+import { ThunkReceiveProducts } from "../../actions/product_actions";
 
 export const mSTP = (state) => {
 
@@ -33,14 +33,16 @@ export const mSTP = (state) => {
         cartItems: state.entities.cartItems,
         numberOfProducts: numberOfProducts,
         totalPrice: totalPrice,
-        currentUser: state.entities.users[state.session.id]
+        currentUser: state.entities.users[state.session.id],
+        allProducts: state.entities.products
 
     })
 }
 
 export const mDTP = dispatch => ({  
     deleteCartItem: cartItemId => dispatch(ThunkDeleteCartItem(cartItemId)),
-    receiveCartItems: () => dispatch(ThunkReceiveCartItems())
+    receiveCartItems: () => dispatch(ThunkReceiveCartItems()),
+    receiveAllProducts: () => dispatch(ThunkReceiveProducts())
 })
 
 export default connect(mSTP, mDTP)(CartShow)

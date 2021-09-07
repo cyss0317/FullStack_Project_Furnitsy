@@ -8,6 +8,11 @@ class CartShowItem extends React.Component{
         this.deleteHandler = this.deleteHandler.bind(this);
     }
 
+    componentDidMount(){
+        // this.props.receiveAllProducts()
+    }
+
+
     deleteHandler(e){
         e.preventDefault();
         this.props.deleteCartItem(this.props.item.id);
@@ -18,13 +23,15 @@ class CartShowItem extends React.Component{
     // question for checkout button
 
     render(){
-        const { item, totalPrice, products } = this.props;
+        const { item, totalPrice, allProducts } = this.props;
         let tax = totalPrice * .0825;
         let subtotal = totalPrice + tax;
-        
-
+        allProducts.length === 0 ? null : allProducts[item.id] ;
+        // if (allProducts === undefined) return null;
+        // debugger
+        console.log("allproducts", allProducts)
         return (
-            <li className={`cart-show-item-container`}>
+            <li  className={`cart-show-item-container`}>
                 <div className="cart-show-item-container-info">
                     <div id="hello">
                         <Link to={`/products/${item.product.id}`} className="cart-show-image-thumnails">
@@ -60,6 +67,7 @@ class CartShowItem extends React.Component{
                     </div>
                     <div id="cart-item-price">
                         <p>${item.product.price.toFixed(2)}</p>
+                        {/* <h1 >Over {allProducts === undefined ? 0 : allProducts.cart_items.length} people have this in their cart</h1> */}
                         <h1 >Over 20 people have this in their cart</h1>
                         <h2>Sale: 0% off</h2>
                     </div>
