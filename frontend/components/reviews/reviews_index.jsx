@@ -72,15 +72,21 @@ class ReviewIndex extends React.Component{
         }
 
 
-        if (currentUser === undefined) return null;
+        // currentUser === undefined ?  null :  
         if (reviews === undefined) return null;
         // const reviewsArray = Object.values(reviews);
         let userReviewForThisProduct ;
-        // debugger
-        userReviewForThisProduct = currentUser.reviews.filter((review)=> review.product_id === productId)
-        // debugger
         let userReview ;
-        userReview =  userReviewForThisProduct.length === 0 ? null : reviews[userReviewForThisProduct[0].id];
+        // debugger
+        if ( currentUser === undefined) {
+            
+        } else {
+            console.log(currentUser)
+            userReviewForThisProduct = currentUser.reviews.filter((review) => review.product_id === productId)
+            userReview =  userReviewForThisProduct.length === 0 ? null : reviews[userReviewForThisProduct[0].id];
+        }
+        // userReviewForThisProduct = currentUser === null ? [] : currentUser.reviews.filter((review)=> review.product_id === productId)
+        // debugger
 
         let productReviews = reviewsArray.filter((review) => review.product_id === productId)
         let totalRating = 0;
@@ -183,9 +189,10 @@ class ReviewIndex extends React.Component{
                     {
                         productReviews.map((review, index) => {
                             if (review.user_id === currentUserId){
-                            return(
-                                ""
-                            )} else if (!currentUser || sessionId === null) {
+                                return(
+                                    ""
+                            )} 
+                            else if (currentUser || sessionId === null) {
                                 return(
                                 <li id="reviews" key={index}>
                                     <section>

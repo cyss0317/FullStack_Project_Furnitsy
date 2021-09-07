@@ -206,6 +206,7 @@ class ProductShow extends React.Component {
                             </ul>
                         </div>
                         <div>
+                            <h1>qokghoahoashgsdoahgsai</h1>
                             <ReviewIndex product={product} reviews={reviews} currentUser={currentUser} fetchAllReviews={fetchAllReviews} fetchProduct={fetchProduct}
                                 createReview={createReview} deleteReview={deleteReview} updateReview={updateReview} fetchReview={fetchReview} productId={productId}
                                 currentUserId={currentUserId} reviewsArray={reviewsArray} sessionId={sessionId} productReviews={productReviews} 
