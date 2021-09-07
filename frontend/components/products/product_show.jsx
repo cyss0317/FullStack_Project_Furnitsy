@@ -219,63 +219,24 @@ class ProductShow extends React.Component {
                             </ul>
                         </div>
                         <div>
-                            <h1>helloeee10421042981098240128404821</h1>
                             <ReviewIndex product={product} reviews={reviews} currentUser={currentUser} fetchAllReviews={fetchAllReviews} fetchProduct={fetchProduct}
                                 createReview={createReview} deleteReview={deleteReview} updateReview={updateReview} fetchReview={fetchReview} productId={productId}
-                                currentUserId={currentUserId} reviewsArray={reviewsArray} sessionId={sessionId}productReviews={productReviews} 
+                                currentUserId={currentUserId} reviewsArray={reviewsArray} sessionId={sessionId} productReviews={productReviews} 
                             />
-                            <h1>213490u12490812jaopsdig0aua0sdgu0asu</h1>
                         </div>
-                        {/* <div id="reviews-main-container">
-                            <div id="create-review">
-                                <h1>{productReviews.length} reveiws {avgRating}</h1>
-                                <h3>{product.name}</h3>
-                                <form onSubmit={ () => this.createReview(newReview)} id="create-review-form">
-
-
-                                        <div className="rating" value={newReview.rating}>
-                                        <input type="radio" id="star2" name="rating" onClick={this.newReviewRating} value="1" />
-                                            <label htmlFor="star1" title="text">1 star</label>
-                                            <input type="radio" id="star2" name="rating" onClick={this.newReviewRating} value="2"/>
-                                            <label htmlFor="star2" title="text">2 stars</label>
-                                            <input type="radio" id="star3" name="rating" value="3" />
-                                            <label htmlFor="star3" title="text">3 stars</label>
-                                            <input type="radio" id="star4" name="rating" value="4" />
-                                            <label htmlFor="star4" title="text">4 stars</label>
-                                            <input type="radio" id="star5" name="rating" value="5" />
-                                            <label htmlFor="star5" title="text">5 stars</label>
-                                        </div>
-                                        <input id="create-review-form-input" type="text" onChange={(e) => this.onChangeForCreateReview(newReview, "comment", e)}  value={newReview.comment}/>
-                                        <input type="submit" />
-
-                                </form>
-                            </div>
-                            <ul>
-                                {
-                                    productReviews.map((review, index) => (
-                                        <li id="reviews"key={index}>
-                                            <h3>Name : {review.user.first_name}, {review.created_at}</h3>
-                                            <h2></h2>
-                                            <p>Rating : {review.rating}</p>
-                                            <p>Comment : {review.comment}</p>
-                                            <p>Helpful : {review.helpful}</p>
-                                        </li>
-                                    ))
-                                }
-                            </ul>
-                        </div> */}
+             
 
                     </div>           
                 </div>
 
-                <div id="show-page-footer">
+                {/* <div id="show-page-footer">
                     <p id='footer-1st-p'>Yes!! I can do more than you see here!!</p>
                     <form action="mailto:cyss0317@gmail.com" method="POST" encType="text/plain">
                         <input className='submit_to_email' type="submit" value="Contact Yun Sung Choi" />
                     </form>
                     <p>Furnitsy is created by Yun Sung Choi 100%.</p>
 
-                </div>
+                </div> */}
 
             </section>
         )

@@ -116,11 +116,18 @@ class ReviewIndex extends React.Component{
 
         //     )
         // }
-        debugger
+
+        // if(sessionId === null){
+        //     return(
+        //         <p>hello</p>
+        //     )
+        // } else{
+        //     <p>mmememem</p>
+        // }
         return (
                 
             <div id="reviews-main-container">
-                <p>109471204715072907091701970729501725752091720597</p>
+
                 <div id="create-review">
                     <div id="create-review-reviews">
                         <h1>  {productReviews.length} reviews</h1>
@@ -139,7 +146,7 @@ class ReviewIndex extends React.Component{
                                             <h3>{userReview.user.first_name}</h3>
                                     }
                                     <h4>{userReview.created_at.split("T")[0]}</h4>
-                                    <button id="delete-review"value={userReview.id} onClick={this.deleteHandler}>Delete</button>
+                                    <button id="delete-review" value={userReview.id} onClick={this.deleteHandler} >Delete</button>
                                     {/* <button>Edit</button> */}
                                 </section>
                                 {this.convertRatingsToStars(userReview.rating)}
@@ -147,7 +154,7 @@ class ReviewIndex extends React.Component{
                                 {/* <input type="text" value={userReview.comment}></input> */}
                                 {/* <p onClick={this.props.updateHandler} >{review.helpful.length === 0 ? Helpful? : Helpful review.helpful }</p> */}
                             </div>
-                            :
+                            : 
                             <div>
                                 <h1>Add a written review</h1>
                                 <form onSubmit={this.createReview} id="create-review-form">
