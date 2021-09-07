@@ -263,7 +263,7 @@ class ReviewIndex extends React.Component{
                                             }
                                             <h4>{review.created_at.split("T")[0]}</h4>
                                         </section>
-                                        {this.convertRatingsToStars(review.rating)}
+                                        {/* {this.convertRatingsToStars(review.rating)} */}
                                         <p>{review.comment}</p>
                                         {/* <p onClick={this.props.updateHandler} >{review.helpful.length === 0 ? Helpful? : Helpful review.helpful }</p> */}
                                     </li>

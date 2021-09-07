@@ -31,7 +31,8 @@ class Api::ReviewsController < ApplicationController
     def destroy
         @review = Review.find_by(user_id: current_user.id)
         if @review
-            Review.delete(@review)
+            # Review.delete(@review)
+            @review.destroy
 
         else
             render json: @review.errors.full_messages, status: 404

@@ -7,7 +7,7 @@ const ProductNavShowList = (props) => {
 
    
     return(
-                <li id={`recently-view-item`}>
+                <li key={product.id} id={`recently-view-item`}>
                     {/* <span>
                     <a href={`#/products/${product.id}`} >
                         {`${product.price}.00( 0% off)`}

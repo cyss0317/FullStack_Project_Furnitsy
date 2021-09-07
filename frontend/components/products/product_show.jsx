@@ -54,19 +54,8 @@ class ProductShow extends React.Component {
     
 
     onChangeHandler(e){
-        // return e => this.setState({[field]: e.currentTarget.value})
         this.setState({quantity: e.currentTarget.value})
     }
-
-    // onChangeForCreateReview(newReview, field, e){
-    //     debugger
-    //     newReview[field] = e.currentTarget.value
-    // }
-
-    // newReviewRating(newReview,e){
-    //     debugger
-    //     newReview.rating = e.currentTarget.value
-    // }
 
 
     clickPictureHandler(e){
