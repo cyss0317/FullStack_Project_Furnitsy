@@ -48,6 +48,7 @@ class ReviewIndex extends React.Component{
         
     }
 
+
     convertRatingsToStars(rating){
         return(
             <div className="totalRating" >
@@ -56,6 +57,24 @@ class ReviewIndex extends React.Component{
                 <label htmlFor="star3"  style={{ color: rating >= 3 ? "#ffc700"  : "#ccc"}} title="text">3 stars</label>
                 <label htmlFor="star4"  style={{ color: rating >= 2 ? "#ffc700"  : "#ccc"}} title="text">2 stars</label>
                 <label htmlFor="star5"  style={{ color: rating >= 1 ? "#ffc700"  : "#ccc"}} title="text">1 stars</label>
+            </div>
+        )
+    }
+    renderErrors(errors) {
+        // const errors = this.props.errors;
+        return (
+            <div className="errors-container">
+                <ul className="errors">
+                    {
+                        errors.map((error) => {
+                            return (
+                                <li className="error" >
+                                    - {error}
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
             </div>
         )
     }
@@ -81,12 +100,12 @@ class ReviewIndex extends React.Component{
         if ( currentUser === undefined) {
             
         } else {
+            //important!!
             console.log(currentUser)
             userReviewForThisProduct = currentUser.reviews.filter((review) => review.product_id === productId)
             userReview =  userReviewForThisProduct.length === 0 ? null : reviews[userReviewForThisProduct[0].id];
         }
-        // userReviewForThisProduct = currentUser === null ? [] : currentUser.reviews.filter((review)=> review.product_id === productId)
-        // debugger
+
 
         let productReviews = reviewsArray.filter((review) => review.product_id === productId)
         let totalRating = 0;
@@ -160,13 +179,12 @@ class ReviewIndex extends React.Component{
                                 {/* <input type="text" value={userReview.comment}></input> */}
                                 {/* <p onClick={this.props.updateHandler} >{review.helpful.length === 0 ? Helpful? : Helpful review.helpful }</p> */}
                             </div>
-                            : 
+                            : currentUser ?
                             <div>
                                 <h1>Add a written review</h1>
                                 <form onSubmit={this.createReview} id="create-review-form">
 
                                     <div className="rating" >
-                                    
                                         <input type="radio" id="star5" name="rating" onClick={e => this.onClickHandler(e)} value="5" />
                                         <label htmlFor="star5" title="text">5 stars</label>
                                         <input type="radio" id="star4" name="rating" onClick={e => this.onClickHandler(e)} value="4" />
@@ -179,8 +197,13 @@ class ReviewIndex extends React.Component{
                                         <label htmlFor="star1" title="text">1 stars</label>
                                     </div>
                                     <textarea id="create-review-form-input" type="text" onChange={(e) => this.onChangeHandler(e)} value={this.state.comment} />
+                                    {() => this.renderErrors(this.props.errors.review)}
                                     <input id="review-submit" type="submit" />
                                 </form>
+                            </div>
+                            : 
+                            <div>
+                                    <p>Please <button id="review-login"style={{ border: "none"  }} onClick={() => this.props.openModal("Login")}>Login</button> to write a review</p>
                             </div>
                     }
 

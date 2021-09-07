@@ -373,6 +373,18 @@ svg:hover{
 #review-submit:hover{
     cursor: pointer;
 }
+#review-login{
+    padding: 5px 8px 5px 8px;
+}
+#review-login:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+#review-login:active{
+    transform: scale(0.9);
+    transition: 0.1s;
+}
 /* #review-submit:active{
     pointer-events: none;
 } */

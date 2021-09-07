@@ -16,7 +16,13 @@ class Api::ReviewsController < ApplicationController
     end
 
     def index 
-        @reviews = Review.all.select{|review| review.user_id == current_user.id}
+        # if current_user
+        #     @reviews = Review.all.select{|review| review.user_id == current_user.id}
+        # else
+
+            @reviews = Review.all
+        # end
+
         # @reviews = Review.all
         render :index
 
@@ -25,7 +31,7 @@ class Api::ReviewsController < ApplicationController
     def destroy
         @review = Review.find_by(user_id: current_user.id)
         if @review
-            @review.delete
+            Review.delete(@review)
 
         else
             render json: @review.errors.full_messages, status: 404
