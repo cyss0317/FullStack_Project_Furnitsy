@@ -16,7 +16,8 @@ class Api::ReviewsController < ApplicationController
     end
 
     def index 
-        @reviews = Review.all
+        @reviews = Review.all.select{|review| review.user_id == current_user.id}
+        # @reviews = Review.all
         render :index
 
     end 

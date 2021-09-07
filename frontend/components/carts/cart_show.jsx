@@ -26,7 +26,7 @@ class CartShow extends React.Component{
 
 
 
-        if (allItems.length === 0) {
+        if (!cartItems) {
             return (
                 <img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/Spinner-3.gif" alt="" />
             )
