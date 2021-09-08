@@ -13,7 +13,7 @@ import CartShowContainer from "./carts/carts_show_container";
 import CartHeaderContainer from "./carts/cart_header_container";
 import SearchBar from "./search_bar/search_bar";
 import ProductNavContainer from "./products/product_nav_container";
-
+import { useEffect, useState } from "react";
 import CategoryNavBar from "./products/Category_nav_bar";
 
 const App = () => {
@@ -29,7 +29,8 @@ const App = () => {
     //     })
     // }
     // const filteredPosts = filterPosts()
-
+    console.log("state", useState)
+    console.log("effect", useEffect)
     return(
    <div className="main-div">
        <Modal/>
@@ -61,7 +62,7 @@ const App = () => {
             <Route path="/products/:productId" component={ProductShowContainer}/>
             <Route path="/category/:category" component={ProductNavContainer} />
             <Route path="/products" component={ProductIndexContainer} />
-            <Route path="/cart_items" component={CartShowContainer}/>
+            <ProtectedRoute path="/cart_items" component={CartShowContainer}/>
             <Route path="/" component={ProductIndexContainer}/>
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer}/>

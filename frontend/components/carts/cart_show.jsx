@@ -10,6 +10,7 @@ class CartShow extends React.Component{
 
     componentDidMount(){
         this.props.receiveCartItems();
+        this.props.receiveAllProducts();
     }
 
     
@@ -23,11 +24,27 @@ class CartShow extends React.Component{
             return null;
         }
 
-        if( allItems.length > 0 ){
+
+
+
+        if (numberOfProducts === 0) {
+            return (
+                <div>
+                    <h1>There is nothing in your cart</h1>
+                    <Link to="/">Continue shopping?</Link>
+                </div>
+                )
+                // 
+            // }
+            //  else if( this.props === undefined) {
+            //     return (
+            //     <img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/Spinner-3.gif" alt="" />
+            // )
+        } else if (allItems.length > 0) {
             return (
                 <div>
                     {
-                    // currentUser ? <p>hello</p> :
+                        // currentUser ? <p>hello</p> :
 
                         <div className="cart-show-container">
                             <div id="items-in-your-cart">
@@ -39,12 +56,14 @@ class CartShow extends React.Component{
                                 <ul id="ul">
                                     {
                                         allItems.map((item) => (
-                                            <CartShowItem deleteCartItem={this.props.deleteCartItem} totalPrice={totalPrice} item={item} key={item.id}/>
+                                            <CartShowItem deleteCartItem={this.props.deleteCartItem} receiveAllProducts={this.props.receiveAllProducts} 
+                                            receiveCartItems={this.props.receiveCartItems}
+                                            allProducts={this.props.allProducts} totalPrice={totalPrice} item={item} key={item.id} />
                                         ))
                                     }
                                 </ul>
-                                    {/* images and name category quantity price */}
-                                    
+                                {/* images and name category quantity price */}
+
 
                                 <div id="cart-show-price">
                                     <div id="cart-show-price-div">
@@ -69,24 +88,14 @@ class CartShow extends React.Component{
                                         </form> */}
                                     </div>
                                 </div>
-                                    {/* total price and tax , subtotal, checkout button */}
+                                {/* total price and tax , subtotal, checkout button */}
 
                             </div>
                         </div>
                     }
 
                 </div>
-            )
-        } else if( allItems.length === 0 ) {
-            return(
-                <div>
-                    <h1>There is nothing in your cart</h1>
-                    <Link to="/">Continue shopping?</Link>
-                </div>
-            )
-        } else if( noCurrentUser) {
-            return (
-                <ProductIndexContainer />
+                
             )
         }
         // else if ( !currentUser) {

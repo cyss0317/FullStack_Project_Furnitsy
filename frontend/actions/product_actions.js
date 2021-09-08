@@ -17,7 +17,7 @@ export const receiveProducts = (products) => ({
 })
 
 
-//thunk actions
+//thunk actions 
 
 export const ThunkReceiveProduct = productId => dispatch =>(
     ProductAPIUtil.$receiveProduct(productId)

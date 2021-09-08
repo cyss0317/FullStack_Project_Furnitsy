@@ -44,7 +44,7 @@ class ProductNavIndex extends React.Component{
                     categories_selector[index].map((product) => {
                         return(
                             <ProductNavShowList
-                                product={product}/>
+                                key={product.id} product={product}/>
                         )
                     })
                     }

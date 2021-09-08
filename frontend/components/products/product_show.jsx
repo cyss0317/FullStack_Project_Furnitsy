@@ -1,4 +1,5 @@
 import React from "react";
+import ReviewIndex from "../reviews/reviews_index";
 
 class ProductShow extends React.Component {
     constructor(props){
@@ -8,9 +9,7 @@ class ProductShow extends React.Component {
             errors: this.props.errors,
             mainPic: props.photoUrls[0],
             quantity: 1,
-            //thinking that product hasn't been fetched yet
             index: 0,
-            // index: props.photoUrls[mainPic]
         }
 
         this.clickPictureHandler = this.clickPictureHandler.bind(this)
@@ -18,13 +17,26 @@ class ProductShow extends React.Component {
         this.leftSvgClickhandler = this.leftSvgClickhandler.bind(this)
         this.addToCartHandler = this.addToCartHandler.bind(this)
         this.onChangeHandler = this.onChangeHandler.bind(this)
-        
   
     }
 
 
     componentDidMount(){
         this.props.fetchProduct(this.props.match.params.productId);
+        this.props.fetchAllReviews();
+        
+    }
+    
+    createReview(newReview){
+        this.props.createReview(newReview)
+        //important
+        if (window.localStorage) {
+            if (!localStorage.getItem("firstLoad")) {
+                localStorage["firstLoad"] = true;
+                window.location.reload();
+            }
+            else localStorage.removeItem("firstLoad");
+        }
     }
 
     rightSvgClickhandler(e){
@@ -42,25 +54,26 @@ class ProductShow extends React.Component {
     }
 
     leftSvgClickhandler(e) {
-        e.preventDefault();
         this.setState({ index: this.props.photoUrls.indexOf(this.state.mainPic) - 1 < 0 ? this.props.photoUrls.length - 1: this.props.photoUrls.indexOf(this.state.mainPic) - 1 })
         this.setState({ mainPic: this.props.photoUrls[this.state.index] })
+
+
     }
+    
 
     onChangeHandler(e){
         this.setState({quantity: e.currentTarget.value})
     }
 
+
     clickPictureHandler(e){
         this.setState({mainPic: e.currentTarget.alt})
         this.setState({index: this.props.photoUrls.indexOf(this.state.mainPic)})
-        // tried this
-        // this.setState({index: this.props.photoUrls[mainPic]})
+
     }
 
     addToCartHandler(e){
         e.preventDefault();
-        // this.props.currentUser ? this.props.createCartItem(this.props.product.id, this.state.quantity) : this.props.openModal("Login")
         if( this.props.currentUser){
             this.props.createCartItem(this.props.product.id, this.state.quantity) 
         } else{
@@ -73,23 +86,36 @@ class ProductShow extends React.Component {
 
         //answered
         //why returning null wouldn't stop the lifecycle, 
-        const { product } = this.props;
-        if (product === undefined){
+        const { product, reviews, currentUser, currentUserId, fetchProduct, fetchReview,fetchAllReviews,
+             deleteReview, createReview, productId, updateReview , sessionId, errors, reviewsArray, openModal, productReviews,
+            } = this.props;
+        if (product === undefined ){
             return null;
         }
+
+        // let newReview = {
+        //     user_id: currentUser.id,
+        //     product_id: product.id,
+        //     comment: "",
+        //     rating: "",
+        //     helpful: 0
+        // }
+        // const reviewsArray = Object.values(reviews)
+        // const productReviews = reviewsArray.filter((review) => review.product_id === product.id)
+        // let totalRating = 0;
+        // productReviews.forEach((review) => totalRating += review.rating )
+        // let avgRating = Number.parseFloat(totalRating/(productReviews.length)).toFixed(1)
 
         if (this.state.quantity === undefined){
             this.setState({quantity: 1 })
         }
-        // if (this.state.mainPic === undefined){
-        //     this.setState({mainPic: product.photoUrls[0]})
-        // }
+
 
 
         const arrHighlights = product.highlights.split("!")
 
         return(
-            <section className="show-main-container" >
+            <section key={this.props.key} className="show-main-container" >
                 <div className="product-show-container">
                     <div className="product-show-info">
                         <p className="show-category">{product.category} </p>
@@ -108,7 +134,7 @@ class ProductShow extends React.Component {
                                 <label >Quantity</label>
                                 {/* Importatn!!!! need to put defaulValue for select */}
                                 <select name="quantity" id="show-quantity" defaultValue={this.state.quantity}  onChange={this.onChangeHandler}>
-                                    <option value="1"  >1</option>
+                                    <option value="1" >1</option>
                                     <option value="2" >2</option>
                                     <option value="3" >3</option>
                                     <option value="4" >4</option>
@@ -142,8 +168,8 @@ class ProductShow extends React.Component {
                         <ul>
                             <button className="highlights-button">Highlights </button>
                             {
-                                arrHighlights.map((highlight) => (
-                                <li className="highlight-item">
+                                arrHighlights.map((highlight, index) => (
+                                <li key={index} className="highlight-item">
                                     &#9745;  {highlight}
                                 </li>
                                 ))
@@ -153,19 +179,20 @@ class ProductShow extends React.Component {
                     </div>
                     
                     <div className="product-show-picture-container-outter">
+                        
                         <div className="product-show-picture-container-inner" >
                             <div className="main-picture-container">
                                 <button className="svg-button" id="left-svg-button"onClick={this.leftSvgClickhandler} >
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  aria-hidden="true" focusable="false"><path d="M16,21a0.994,0.994,0,0,1-.664-0.253L5.5,12l9.841-8.747a1,1,0,0,1,1.328,1.494L8.5,12l8.159,7.253A1,1,0,0,1,16,21Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="left-svg-button" viewBox="0 0 24 24"  aria-hidden="true" focusable="false"><path d="M16,21a0.994,0.994,0,0,1-.664-0.253L5.5,12l9.841-8.747a1,1,0,0,1,1.328,1.494L8.5,12l8.159,7.253A1,1,0,0,1,16,21Z"></path></svg>
                                 </button>
                                 <img className="picture-container-main"src={ this.state.mainPic === undefined ? this.props.photoUrls[0] : this.state.mainPic } alt="" />
                                 <button className="svg-button" id="right-svg-button" onClick={this.rightSvgClickhandler}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8,21a1,1,0,0,1-.664-1.747L15.5,12,7.336,4.747A1,1,0,0,1,8.664,3.253L18.5,12,8.664,20.747A0.994,0.994,0,0,1,8,21Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"  id="right-svg-button" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8,21a1,1,0,0,1-.664-1.747L15.5,12,7.336,4.747A1,1,0,0,1,8.664,3.253L18.5,12,8.664,20.747A0.994,0.994,0,0,1,8,21Z"></path></svg>
                                 </button>
                             </div>
                             <ul className="picture-container-list">
-                                {product.photoUrls.map((photo) => (
-                                <li className="picture-container-list-item-container">
+                                {product.photoUrls.map((photo, index) => (
+                                <li key={index} className="picture-container-list-item-container">
                                     {/* important! */}
                                     <img className="picture-container-list-item" src={photo} alt={photo} onClick={this.clickPictureHandler}  />
                                 </li>
@@ -173,17 +200,25 @@ class ProductShow extends React.Component {
                                 }
                             </ul>
                         </div>
-                    </div>
+                        <div>
+                            <ReviewIndex product={product} reviews={reviews} currentUser={currentUser} fetchAllReviews={fetchAllReviews} fetchProduct={fetchProduct}
+                                createReview={createReview} deleteReview={deleteReview} updateReview={updateReview} fetchReview={fetchReview} productId={productId}
+                                currentUserId={currentUserId} errors={errors} reviewsArray={reviewsArray} sessionId={sessionId} openModal={openModal} productReviews={productReviews} 
+                            />
+                        </div>
+             
+
+                    </div>           
                 </div>
 
-                <div id="show-page-footer">
+                {/* <div id="show-page-footer">
                     <p id='footer-1st-p'>Yes!! I can do more than you see here!!</p>
                     <form action="mailto:cyss0317@gmail.com" method="POST" encType="text/plain">
                         <input className='submit_to_email' type="submit" value="Contact Yun Sung Choi" />
                     </form>
                     <p>Furnitsy is created by Yun Sung Choi 100%.</p>
 
-                </div>
+                </div> */}
 
             </section>
         )
