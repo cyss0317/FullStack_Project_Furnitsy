@@ -69,13 +69,11 @@ class ProductShow extends React.Component {
     clickPictureHandler(e){
         this.setState({mainPic: e.currentTarget.alt})
         this.setState({index: this.props.photoUrls.indexOf(this.state.mainPic)})
-        // tried this
-        // this.setState({index: this.props.photoUrls[mainPic]})
+
     }
 
     addToCartHandler(e){
         e.preventDefault();
-        // this.props.currentUser ? this.props.createCartItem(this.props.product.id, this.state.quantity) : this.props.openModal("Login")
         if( this.props.currentUser){
             this.props.createCartItem(this.props.product.id, this.state.quantity) 
         } else{
@@ -136,7 +134,7 @@ class ProductShow extends React.Component {
                                 <label >Quantity</label>
                                 {/* Importatn!!!! need to put defaulValue for select */}
                                 <select name="quantity" id="show-quantity" defaultValue={this.state.quantity}  onChange={this.onChangeHandler}>
-                                    <option value="1"  >1</option>
+                                    <option value="1" >1</option>
                                     <option value="2" >2</option>
                                     <option value="3" >3</option>
                                     <option value="4" >4</option>

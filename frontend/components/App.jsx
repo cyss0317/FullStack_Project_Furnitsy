@@ -13,7 +13,7 @@ import CartShowContainer from "./carts/carts_show_container";
 import CartHeaderContainer from "./carts/cart_header_container";
 import SearchBar from "./search_bar/search_bar";
 import ProductNavContainer from "./products/product_nav_container";
-
+import { useEffect, useState } from "react";
 import CategoryNavBar from "./products/Category_nav_bar";
 
 const App = () => {
@@ -29,7 +29,8 @@ const App = () => {
     //     })
     // }
     // const filteredPosts = filterPosts()
-
+    console.log("state", useState)
+    console.log("effect", useEffect)
     return(
    <div className="main-div">
        <Modal/>
