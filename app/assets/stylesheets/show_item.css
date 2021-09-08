@@ -358,7 +358,7 @@ svg:hover{
 }
 #review-submit{
     position: relative;
-    left: 259px;
+    left: 50%;
     margin-top: 20px;
     display: flex;
     align-items: center;
