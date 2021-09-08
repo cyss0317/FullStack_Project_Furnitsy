@@ -24,11 +24,19 @@ class ProductShow extends React.Component {
     componentDidMount(){
         this.props.fetchProduct(this.props.match.params.productId);
         this.props.fetchAllReviews();
-
+        
     }
-
+    
     createReview(newReview){
         this.props.createReview(newReview)
+        //important
+        if (window.localStorage) {
+            if (!localStorage.getItem("firstLoad")) {
+                localStorage["firstLoad"] = true;
+                window.location.reload();
+            }
+            else localStorage.removeItem("firstLoad");
+        }
     }
 
     rightSvgClickhandler(e){

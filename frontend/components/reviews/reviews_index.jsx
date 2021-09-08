@@ -197,7 +197,7 @@ class ReviewIndex extends React.Component{
                                         <label htmlFor="star1" title="text">1 stars</label>
                                     </div>
                                     <textarea id="create-review-form-input" type="text" onChange={(e) => this.onChangeHandler(e)} value={this.state.comment} />
-                                    {() => this.renderErrors(this.props.errors.review)}
+                                    {/* {() => this.renderErrors(this.props.errors.review)} */}
                                     <input id="review-submit" type="submit" />
                                 </form>
                             </div>
@@ -263,7 +263,7 @@ class ReviewIndex extends React.Component{
                                             }
                                             <h4>{review.created_at.split("T")[0]}</h4>
                                         </section>
-                                        {/* {this.convertRatingsToStars(review.rating)} */}
+                                        {this.convertRatingsToStars(review.rating)}
                                         <p>{review.comment}</p>
                                         {/* <p onClick={this.props.updateHandler} >{review.helpful.length === 0 ? Helpful? : Helpful review.helpful }</p> */}
                                     </li>
