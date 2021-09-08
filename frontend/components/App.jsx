@@ -15,22 +15,34 @@ import SearchBar from "./search_bar/search_bar";
 import ProductNavContainer from "./products/product_nav_container";
 import { useEffect, useState } from "react";
 import CategoryNavBar from "./products/Category_nav_bar";
+import { ThunkReceiveProducts } from "../actions/product_actions";
+// import axios from "axios";
 
+const filterProducts = (products, query)=>{
+    if (!query){
+        return products;
+    }
+    return products.filter((product) => {
+        const productName = product.name.toLowerCase();
+        return productName.includes(query);
+    })
+}
 const App = () => {
+    // const products = 
     const { search } = window.location
     const query = new URLSearchParams(search).get("s");
-    // const filterProducts = (products, query)=>{
-    //     if (!query){
-    //         return products;
-    //     }
-    //     return products.filter((product) => {
-    //         const productName = product.name.toLowerCase();
-    //         return productName.includes(query);
-    //     })
-    // }
+    const products = store.dispatch(ThunkReceiveProducts())
+    const filteredProducts = filterProducts(products, query)
+
+    // console.log(window.location)
+    // console.log("axios", axios('/api/products'))
+    console.log(useState());
+    console.log("sotre",products)
+    console.log(query)
+    console.log("filterproducts",filterProducts(products, query))
+    console.log(typeof(filteredProducts))
     // const filteredPosts = filterPosts()
-    console.log("state", useState)
-    console.log("effect", useEffect)
+    debugger
     return(
    <div className="main-div">
        <Modal/>
@@ -38,14 +50,17 @@ const App = () => {
             <header className="header">
                 <div className="logo-searchbar-sign">
                     <a className="header-logo" href="/" >Furnitsy</a>
-                    <input type="text"  className="header-searchbar"/>
+                    {/* <input type="text"  className="header-searchbar"/> */}
                     <div>
-                        {/* <SearchBar placeholder="Enter a Product"/> */}
-                        {/* <ul>
-                            {filterProducts.map(product => (
+                        <SearchBar placeholder="Enter a Product"/>
+                        <ul>
+                            {
+                            filteredProducts === undefined ? <p>""</p>  
+                            : 
+                            filteredProducts.map(product => (
                                 <li key={product.key}>{product.name}</li>
                             ))}
-                        </ul> */}
+                        </ul>
 
                     </div>
                     <GreetingContainer className="greeting-component"/>
@@ -57,7 +72,7 @@ const App = () => {
 
             </header>
        </div>
-            {/* <ProductIndexContainer/> */}
+            <ProductIndexContainer/>
         <Switch>
             <Route path="/products/:productId" component={ProductShowContainer}/>
             <Route path="/category/:category" component={ProductNavContainer} />
@@ -74,7 +89,7 @@ const App = () => {
                     <div>
                         <h1>What is Furnitsy?</h1>
                     </div>
-                    <div id="what_is_furnitsy_inner">
+                    // <div id="what_is_furnitsy_inner">
                         <div id="furnitsy_inner_div">
                             <h2>A community doing good</h2>
                             <p>Furnitsy is a furniture store, where my mother in law buys and sells Ashely furnitures. </p>
@@ -84,7 +99,7 @@ const App = () => {
                             <p>We sell Ashely furnitures on our website. Whatever you can find on this website, you can also find it on actual Ashley furnitures.</p>
                         </div>
                         <div id="furnitsy_inner_div">
-                            {/* ignores text align prop */}
+                            ignores text align prop 
                             <h2>Peace of mind</h2>
                             <p>Your privacy is the highest priority of our dedicated team. And if you ever need assistance, we are always ready to step in for support.</p>
                         </div>

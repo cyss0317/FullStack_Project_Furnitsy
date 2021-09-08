@@ -8,13 +8,25 @@ const SearchBar = ({placeholder, data}) => {
 
     // </form>
     return (
-        <div className="search">
-            <div className="searchInputs">
-                <input type="text" placeholder={placeholder}/>
-                <div className="serchIcon"></div>
-            </div>
-            <div className="dataResult"></div>
-        </div>
+        // <form action="/" method="get" className="search">
+        //     <div className="searchInputs">
+        //         <input type="text" placeholder={placeholder}/>
+        //         <div className="serchIcon"></div>
+        //     </div>
+        //     <div className="dataResult"></div>
+        // </form>
+        <form action="/" method="get">
+            <label htmlFor="header-search">
+                <span className="visually-hidden">Search products</span>
+            </label>
+            <input
+                type="text"
+                id="header-search"
+                placeholder="Search blog posts"
+                name="s"
+            />
+            <button type="submit">Search</button>
+        </form>
     )   
 }
 
