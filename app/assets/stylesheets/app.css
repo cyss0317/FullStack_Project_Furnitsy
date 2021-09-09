@@ -56,9 +56,18 @@ html,body{
     align-items: center;
 
 }
+#search-bar-submit{
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+#search-bar-form{
+    width: 50%;
+}
 
 .header-logo{
-    width: 11%;
+
     font-family: 'Love Ya Like A Sister', cursive;
     font-size: 40px;
     color: #F1641E;
@@ -78,7 +87,7 @@ textarea:focus, input:focus{
 }
 
 .header-searchbar{
-    width: 65%;
+    width: 83%;
     height: 43px;
     border: 2.2px solid black;
     border-radius: 100px;

@@ -40,7 +40,7 @@ const App = () => {
     function hadleKeyword(e){
         e.preventDefault();
         history.push({pathname: `/search/${keyword}`, state: keyword})
-        document.querySelector("#header-search").value = ""
+        document.querySelector(".header-searchbar").value = ""
     }
 // class App extends React.Component {
     // constructor(props){
@@ -84,21 +84,21 @@ const App = () => {
                 <div className="logo-searchbar-sign">
                     <a className="header-logo" href="/" >Furnitsy</a>
                     {/* <input type="text"  className="header-searchbar"/> */}
-                    <div>
+                    {/* <div> */}
                         {/* <SearchBar query={query}/> */}
                         {/* <search_bar_conatiner query={query} /> */}
-                            <form onSubmit={hadleKeyword}>
-                                <label htmlFor="header-search">
+                            <form id="search-bar-form"onSubmit={hadleKeyword}>
+                                {/* <label htmlFor="header-search">
                                     <span className="visually-hidden">Search products</span>
-                                </label>
+                                </label> */}
                                 <input
                                     type="text"
-                                    id="header-search"
+                                    className="header-searchbar"
                                     placeholder="Search blog posts"
                                     name="s"
                                     onChange={(e) => SetKeyword(e.currentTarget.value) }
                                 />
-                                <button type="submit">Search</button>
+                            <button id="search-bar-submit" type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18ZM10,4a6,6,0,1,0,6,6A6.007,6.007,0,0,0,10,4Z"></path><path d="M21,22a1,1,0,0,1-.707-0.293l-4-4a1,1,0,0,1,1.414-1.414l4,4A1,1,0,0,1,21,22Z"></path></svg></button>
                             </form>
                         {/* <ul>
                             {
@@ -109,7 +109,7 @@ const App = () => {
                                     ))}
                                 </ul> */}
 
-                    </div>
+                    {/* </div> */}
                     <GreetingContainer className="greeting-component"/>
                     <CartHeaderContainer />
 
@@ -137,7 +137,7 @@ const App = () => {
                     <div>
                         <h1>What is Furnitsy?</h1>
                     </div>
-                    // <div id="what_is_furnitsy_inner">
+                     <div id="what_is_furnitsy_inner">
                         <div id="furnitsy_inner_div">
                             <h2>A community doing good</h2>
                             <p>Furnitsy is a furniture store, where my mother in law buys and sells Ashely furnitures. </p>

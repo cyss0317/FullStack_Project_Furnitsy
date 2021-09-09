@@ -12,7 +12,6 @@ class ProductNavIndex extends React.Component{
     }
 
     componentDidMount(){
-        // question !! fetchproducts is not a function
         this.props.fetchProducts();
     }
 

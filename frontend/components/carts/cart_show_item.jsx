@@ -20,7 +20,7 @@ class CartShowItem extends React.Component{
     // checkOutHandler(e){
     //     this.
     // }
-    // question for checkout button
+    // question 3 for checkout button, do i need it
 
     render(){
         const { item, totalPrice, allProducts } = this.props;

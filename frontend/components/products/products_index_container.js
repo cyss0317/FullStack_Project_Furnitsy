@@ -33,6 +33,7 @@ const mSTP = (state, window) => {
 
     // important to under stand!! 
     // 
+    //question 4 why does it refresh
 
     if (products.length !== 0) {
         while (randomItem10.length < 10) {

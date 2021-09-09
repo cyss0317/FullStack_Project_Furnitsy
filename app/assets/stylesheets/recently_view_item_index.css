@@ -136,6 +136,11 @@
     margin-bottom: 20px;
 }
 
+.nav-container div a:hover{
+    text-decoration: underline;
+
+
+}
 .nav-static{
     display: flex;
     flex-wrap: wrap;

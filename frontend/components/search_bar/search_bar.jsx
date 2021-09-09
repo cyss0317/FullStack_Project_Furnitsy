@@ -5,31 +5,49 @@ import {Link} from "react-router-dom"
 class SearchBar extends React.Component {
     constructor(props){
         super(props)
+        this.state ={
+            color: "",
+            bed: "",
+            table: "",
+            outdoor: "",
+            couch: "",
+            filteredByState:[]
+        }
     }
 
     componentDidMount(){
         // debugger
         this.props.receiveProducts()
     }
-// class SearchBar = ({placeholder, data}) => {
-    // <form action="/" method="GET">
 
-    //     <input type="text" className="header-searchbar" placeholder="Search Products" name="s"/>
-    //     <button type="submit">Search</button>
+    filterByState(field, e){
+        let filteredProducts = [];
+        this.setState({[field]: e.currentTarget.value})
+        debugger
+        filteredProducts.forEach((product) => {
+            if (product.color === this.state.field && !this.props.filteredByState.includes(product)){
+                this.props.filteredByState.push(product)
+            }
+        })
+    }
 
-    // </form>
     render(){
         const {products, keyword} = this.props;
         // const keyword = new URLSearchParams(window.location).get("s")
         if (products === undefined) return null;
         let keywords = keyword.split(" ")
         let filteredProducts = [];
+        let productsByColor = [];
+        let productsByBed = [];
+        let productsByCouch = [];
+        let productsBySofa = [];
+        let productsByOutdoor = [];
+        let productsByTable = [];
+        
         products.forEach((product) => {
-
             keywords.forEach((word) => {
                 let byName = product.name.toLowerCase().includes(word.toLowerCase())
                 let byColor = product.color.toLowerCase().includes(word.toLowerCase())
-
                 if(byName && !filteredProducts.includes(byName)){
                     filteredProducts.push(product)
                 } else if (byColor && !filteredProducts.includes(byColor)){
@@ -37,32 +55,54 @@ class SearchBar extends React.Component {
                 } else {
                     ""
                 }
-                
             })
             return filteredProducts;
         })
         // debugger
         
         return (
-        filteredProducts.length > 0 ?
-        <section>
-            <div>
-                <label htmlFor="">by Color
-                <input type="radio" /></label>
-            </div>
-            <div>
-                <div className="nav-static">
-                    {
-                        filteredProducts.map((product) => {
-                        return(
-                            <ProductNavShowList product={product} />
-                        )
-                        })
-                    }
-                </div>
-            </div>
-        </section>
-                :
+            filteredProducts.length > 0 ?
+                <section>
+                    <div>
+                        <label htmlFor="">by Gray
+                        <input type="radio" value="gray" onClick={(e) => this.filterByState("color", e)}/></label>
+                    </div>
+                    <div>
+                        <div className="nav-static">
+                            {
+                                filteredProducts.map((product) => {
+                                return(
+                                    <ProductNavShowList product={product} />
+                                )
+                                })
+                            }
+                        </div>
+                    </div>
+                </section>
+            : this.props.filteredByState ?
+                    <section>
+                        <div>
+                            <form onSubmit={this.submitHandler}>
+                            <label htmlFor="">by Gray
+                                <input type="radio" value={this.state.color} onClick={(e) => this.filterByState("color", e)} /></label>
+                                <input type="submit" />
+                            </form>
+                        </div>
+                        <div>
+                            <div className="nav-static">
+                                {
+                                    this.props.filteredByState.map((product) => {
+                                        return (
+                                            <ProductNavShowList product={product} />
+                                        )
+                                    })
+                                }
+                            </div>
+                        </div>
+                    </section>
+                
+
+            :
                 <div>
                     <Link to="/">There are no products matching your search keywords</Link>
                 </div>
