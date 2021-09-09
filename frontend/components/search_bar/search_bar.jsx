@@ -1,4 +1,5 @@
 import React from "react";
+import ProductNavShowList from "../products/product_nav_show_list";
 
 class SearchBar extends React.Component {
     constructor(props){
@@ -19,32 +20,30 @@ class SearchBar extends React.Component {
     render(){
         const {products, keyword} = this.props;
         // const keyword = new URLSearchParams(window.location).get("s")
-        // let keywords = keyword.split(" ")
+        if (products === undefined) return null;
+        let keywords = keyword.split(" ")
+        let filteredProducts = products.filter((product) => {
+            // keywords.forEach((word) => {
+                return product.name.toLowerCase().includes(keyword.toLowerCase())
+        //     })
+        })
         debugger
-        // let filteredProducts = products.filter((product) => {
-        //     product
-        // })
+
         return (
 
             <div>
-                <form action="/" method="get">
-                    <label htmlFor="header-search">
-                        <span className="visually-hidden">Search products</span>
-                    </label>
-                    <input
-                        type="text"
-                        id="header-search"
-                        placeholder="Search blog posts"
-                        name="s"
-                    />
-                    <button type="submit">Search</button>
-                </form>
+              
                 <div>
-                    {/* {
-                        products.map((product) => {
-                            <p>{product.name}</p>
+                    {
+                        filteredProducts.map((product) => {
+                           return(
+                               <ProductNavShowList product={product} />
+
+                           )
                         })
-                    } */}
+                    }
+
+                    hellooooooo
                 </div>
 
             </div>

@@ -18,18 +18,30 @@ import CategoryNavBar from "./products/Category_nav_bar";
 import { ThunkReceiveProducts } from "../actions/product_actions";
 import SearchBarContainer from "./search_bar/search_bar_conatiner";
 import search_bar_conatiner from "./search_bar/search_bar_conatiner";
+import { withRouter } from "react-router-dom";
+import {useHistory} from "react-router-dom";
+
+
 // import axios from "axios";
 
-const filterProducts = (products, query)=>{
-    if (!query){
-        return products;
-    }
-    return products.filter((product) => {
-        const productName = product.name.toLowerCase();
-        return productName.includes(query);
-    })
-}
+// const filterProducts = (products, query)=>{
+//     if (!query){
+//         return products;
+//     }
+//     return products.filter((product) => {
+//         const productName = product.name.toLowerCase();
+//         return productName.includes(query);
+//     })
+// }
 const App = () => {
+    const history= useHistory();
+    const [keyword, SetKeyword] = useState(()=> '');
+
+    function hadleKeyword(e){
+        e.preventDefault();
+        history.push({pathname: `/search/${keyword}`, state: keyword})
+        document.querySelector("#header-search").value = ""
+    }
 // class App extends React.Component {
     // constructor(props){
     //     super(props)
@@ -75,7 +87,7 @@ const App = () => {
                     <div>
                         {/* <SearchBar query={query}/> */}
                         {/* <search_bar_conatiner query={query} /> */}
-                            <form action={`/`} method="get">
+                            <form onSubmit={hadleKeyword}>
                                 <label htmlFor="header-search">
                                     <span className="visually-hidden">Search products</span>
                                 </label>
@@ -84,6 +96,7 @@ const App = () => {
                                     id="header-search"
                                     placeholder="Search blog posts"
                                     name="s"
+                                    onChange={(e) => SetKeyword(e.currentTarget.value) }
                                 />
                                 <button type="submit">Search</button>
                             </form>
@@ -108,7 +121,7 @@ const App = () => {
        </div>
             {/* <ProductIndexContainer/> */}
         <Switch>
-            <Route path="/?s=:keyword" component={SearchBarContainer} />
+            <Route path="/search/:keyword" component={SearchBarContainer} />
             <Route path="/products/:productId" component={ProductShowContainer}/>
             <Route path="/category/:category" component={ProductNavContainer} />
             <Route path="/products" component={ProductIndexContainer} />
@@ -157,4 +170,4 @@ const App = () => {
 }
 // };
 
-export default App;
+export default withRouter(App);
