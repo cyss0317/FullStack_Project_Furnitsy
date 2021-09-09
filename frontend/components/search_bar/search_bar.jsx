@@ -63,10 +63,10 @@ class SearchBar extends React.Component {
         return (
             filteredProducts.length > 0 ?
                 <section>
-                    <div>
+                    {/* <div>
                         <label htmlFor="">by Gray
                         <input type="radio" value="gray" onClick={(e) => this.filterByState("color", e)}/></label>
-                    </div>
+                    </div> */}
                     <div>
                         <div className="nav-static">
                             {
