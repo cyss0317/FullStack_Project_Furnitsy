@@ -90,8 +90,6 @@ const mSTP = (state, window) => {
         kidsBunkBed: kidsBunkBed,
         accentChairs: accentChairs,
         diningChairs: diningChairs,
-        keyword: new URLSearchParams(window.location).get("s")
-        // recentlyViews: recentlyViews
 
     })
 }
@@ -101,11 +99,3 @@ const mDTP = dispatch => ({
 })
 
 export default connect(mSTP, mDTP)(ProductIndex)
-
-// export default connect(mSTP, mDTP)(ProductIndex)
-
-// ProductIndex(presentational)
-//     product_index_container
-//     product_index_item_container
-// ProductShow(presentational)
-//     product_show_container

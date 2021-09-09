@@ -94,7 +94,7 @@ const App = () => {
                                 <input
                                     type="text"
                                     className="header-searchbar"
-                                    placeholder="Search blog posts"
+                                    placeholder="Search"
                                     name="s"
                                     onChange={(e) => SetKeyword(e.currentTarget.value) }
                                 />
