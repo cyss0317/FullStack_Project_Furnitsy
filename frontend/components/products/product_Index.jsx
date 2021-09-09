@@ -11,6 +11,7 @@ class ProductIndex extends React.Component{
 
     componentDidMount(){
         this.props.fetchProducts();
+        // debugger
     }
 
     render(){

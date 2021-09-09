@@ -3,7 +3,7 @@ import ProductIndex from "./product_Index"
 import { ThunkReceiveProducts } from "../../actions/product_actions"; 
 
 
-const mSTP = (state) => {
+const mSTP = (state, window) => {
 
     const products = Object.values(state.entities.products)
 
@@ -89,6 +89,7 @@ const mSTP = (state) => {
         kidsBunkBed: kidsBunkBed,
         accentChairs: accentChairs,
         diningChairs: diningChairs,
+        keyword: new URLSearchParams(window.location).get("s")
         // recentlyViews: recentlyViews
 
     })

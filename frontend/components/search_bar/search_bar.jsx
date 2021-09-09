@@ -6,7 +6,7 @@ class SearchBar extends React.Component {
     }
 
     componentDidMount(){
-        debugger
+        // debugger
         this.props.receiveProducts()
     }
 // class SearchBar = ({placeholder, data}) => {
@@ -17,15 +17,36 @@ class SearchBar extends React.Component {
 
     // </form>
     render(){
-        const {products} = this.props;
+        const {products, keyword} = this.props;
+        // const keyword = new URLSearchParams(window.location).get("s")
+        // let keywords = keyword.split(" ")
+        debugger
+        // let filteredProducts = products.filter((product) => {
+        //     product
+        // })
         return (
 
             <div>
-                {
-                    products.map((product) => {
-                        <p>{product.name}</p>
-                    })
-                }
+                <form action="/" method="get">
+                    <label htmlFor="header-search">
+                        <span className="visually-hidden">Search products</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="header-search"
+                        placeholder="Search blog posts"
+                        name="s"
+                    />
+                    <button type="submit">Search</button>
+                </form>
+                <div>
+                    {/* {
+                        products.map((product) => {
+                            <p>{product.name}</p>
+                        })
+                    } */}
+                </div>
+
             </div>
             // <form action="/" method="get" className="search">
             //     <div className="searchInputs">

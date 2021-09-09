@@ -17,6 +17,7 @@ import { useEffect, useState } from "react";
 import CategoryNavBar from "./products/Category_nav_bar";
 import { ThunkReceiveProducts } from "../actions/product_actions";
 import SearchBarContainer from "./search_bar/search_bar_conatiner";
+import search_bar_conatiner from "./search_bar/search_bar_conatiner";
 // import axios from "axios";
 
 const filterProducts = (products, query)=>{
@@ -29,21 +30,40 @@ const filterProducts = (products, query)=>{
     })
 }
 const App = () => {
-    // const products = 
-    const { search } = window.location
-    const query = new URLSearchParams(search).get("s");
-    // const products = store.dispatch(ThunkReceiveProducts())
+// class App extends React.Component {
+    // constructor(props){
+    //     super(props)
+    // }
+
+    //  componentWillMount(){
+    //     store.dispatch(ThunkReceiveProducts())
+
+    // }
+
+    // const { search } = window.location
+
+    // const query = new URLSearchParams(search).get("s");
+    // store.dispatch(ThunkReceiveProducts())
+    // const products = store.getState()
     // const filteredProducts = filterProducts(products, query)
 
     // console.log(window.location)
     // console.log("axios", axios('/api/products'))
     // console.log(useState());
     // console.log("sotre",products)
-    console.log(query)
+    // console.log(query)
+    // console.log(products)
     // console.log("filterproducts",filterProducts(products, query))
-    console.log(typeof(filteredProducts))
+    // console.log(typeof(filteredProducts))
     // const filteredPosts = filterPosts()
-
+// render(){
+//     const { search } = window.location
+//     const products = store.getState()
+//     const query = new URLSearchParams(search).get("s");
+//         console.log("sotre",products)
+//     console.log(query)
+//     console.log(products)
+    // debugger
     return(
    <div className="main-div">
        <Modal/>
@@ -53,8 +73,9 @@ const App = () => {
                     <a className="header-logo" href="/" >Furnitsy</a>
                     {/* <input type="text"  className="header-searchbar"/> */}
                     <div>
-                        {/* <SearchBar/> */}
-                            <form action="/" method="get">
+                        {/* <SearchBar query={query}/> */}
+                        {/* <search_bar_conatiner query={query} /> */}
+                            <form action={`/`} method="get">
                                 <label htmlFor="header-search">
                                     <span className="visually-hidden">Search products</span>
                                 </label>
@@ -87,7 +108,7 @@ const App = () => {
        </div>
             {/* <ProductIndexContainer/> */}
         <Switch>
-            <Route path="/products/:keyword" component={SearchBarContainer} />
+            <Route path="/?s=:keyword" component={SearchBarContainer} />
             <Route path="/products/:productId" component={ProductShowContainer}/>
             <Route path="/category/:category" component={ProductNavContainer} />
             <Route path="/products" component={ProductIndexContainer} />
@@ -133,6 +154,7 @@ const App = () => {
         </footer>
     </div>
     )   
-};
+}
+// };
 
 export default App;
