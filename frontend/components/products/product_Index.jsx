@@ -1,6 +1,7 @@
 import React from "react";
 import ProductIndexItem from "./product_index_item"
 import RecentlyViewItemIndex from "./recently_view_item_index";
+import { withRouter } from "react-router";
 
 
 class ProductIndex extends React.Component{
@@ -55,6 +56,7 @@ class ProductIndex extends React.Component{
                     </div>
                     <ul className="recently-viewed-items">
                         {
+                            //it re-renders when modal is turned on or off
                                 randomItem10.map(product => (
                                     <RecentlyViewItemIndex
                                         product={product}
@@ -109,4 +111,4 @@ class ProductIndex extends React.Component{
 }
 
 
-export default ProductIndex;
+export default withRouter(ProductIndex);

@@ -38,7 +38,7 @@ class ProductShow extends React.Component {
             else localStorage.removeItem("firstLoad");
         }
     }
-
+//question 1. need to double click to invoke this
     rightSvgClickhandler(e){
         e.preventDefault();
         // this.setState({mainPic: this.props.photoUrls[3] })
