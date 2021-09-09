@@ -3,7 +3,7 @@ import ProductIndex from "./product_Index"
 import { ThunkReceiveProducts } from "../../actions/product_actions"; 
 
 
-const mSTP = (state) => {
+const mSTP = (state, window) => {
 
     const products = Object.values(state.entities.products)
 
@@ -33,6 +33,7 @@ const mSTP = (state) => {
 
     // important to under stand!! 
     // 
+    //question 4 why does it refresh
 
     if (products.length !== 0) {
         while (randomItem10.length < 10) {
@@ -89,7 +90,6 @@ const mSTP = (state) => {
         kidsBunkBed: kidsBunkBed,
         accentChairs: accentChairs,
         diningChairs: diningChairs,
-        // recentlyViews: recentlyViews
 
     })
 }
@@ -99,11 +99,3 @@ const mDTP = dispatch => ({
 })
 
 export default connect(mSTP, mDTP)(ProductIndex)
-
-// export default connect(mSTP, mDTP)(ProductIndex)
-
-// ProductIndex(presentational)
-//     product_index_container
-//     product_index_item_container
-// ProductShow(presentational)
-//     product_show_container

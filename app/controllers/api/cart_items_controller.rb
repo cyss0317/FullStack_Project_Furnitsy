@@ -15,7 +15,11 @@ class Api::CartItemsController < ApplicationController
     end
 
     def index
-        @cart_items = CartItem.all.select {|cart_item| cart_item.cart_id == current_user.cart.id}
+        if !current_user
+            @cart_items = {}
+        else    
+            @cart_items = CartItem.all.select {|cart_item| cart_item.cart_id == current_user.cart.id}
+        end
 
         if @cart_items
             @cart_items

@@ -75,13 +75,14 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-evenly;
+    /* flex-wrap: wrap-reverse; */
 }
-
 .show-main-container{
     display: flex;
     flex-direction: column;
 
 }
+
 
 .product-show-picture-container-outter{
     padding-top: 20px;
@@ -247,13 +248,14 @@ svg:hover{
     border: 1px rgb(153, 153, 153);
 }
 
-
+@media screen and (max-device-width:640px), screen and (max-width:640px) {
 .product-show-info{
     width: 30%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     padding-top: 20px;
+}
 }
 
 

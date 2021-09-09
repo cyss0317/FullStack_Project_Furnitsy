@@ -68,6 +68,7 @@
  .welcome-message-and-logout-button{
      display: flex;
      flex-direction: column;
+	 /* margin-left: 30px; */
  } 
 
 
