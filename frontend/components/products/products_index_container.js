@@ -29,13 +29,14 @@ const mSTP = (state, window) => {
         product.category === "Dining Chairs"
     ))
     
-    let randomItem10 = [];
+    const randomItem10 = [];
 
     // important to under stand!! 
     // 
     //question 4 why does it refresh
 
     if (products.length !== 0) {
+        
         while (randomItem10.length < 10) {
             let random = products[Math.floor(Math.random() * products.length)]
             if (!randomItem10.includes(random)){

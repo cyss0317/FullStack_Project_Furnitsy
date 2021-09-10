@@ -42,7 +42,7 @@ const App = () => {
         history.push({pathname: `/search/${keyword}`, state: keyword})
         document.querySelector(".header-searchbar").value = ""
     }
-    console.log(history);
+    // console.log(history);
 // class App extends React.Component {
     // constructor(props){
     //     super(props)
