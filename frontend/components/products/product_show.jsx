@@ -26,7 +26,7 @@ class ProductShow extends React.Component {
         this.props.fetchAllReviews();
         
     }
-    
+    //sometimes it doesn't display the created review right away
     createReview(newReview){
         this.props.createReview(newReview)
         //important
