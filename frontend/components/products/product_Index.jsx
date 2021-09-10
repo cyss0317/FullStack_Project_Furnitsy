@@ -18,20 +18,6 @@ class ProductIndex extends React.Component{
 
         const { products, couchAndSofa, randomItem10, coffeeTable,  recentlyViews, outdoor, diningTable, diningChairs, kidsBunkBed, accentChairs} = this.props;
 
-        // const randomItem = [];
-
-        // {
-
-            // for (let i = 0; i < 6; i++) {
-            //     return randomItem.push(products[Math.floor(Math.random() * products.length)]);
-            // }
-        // }
-        // if (randomItem === undefined){
-        //     return null;
-        // }
-
-
-        // debugger
         return (
 
             <div className="index-main-container">
@@ -53,7 +39,6 @@ class ProductIndex extends React.Component{
                 <div className='recently-viewed-container'>
                     <div id="recently-words">
                         <p>What other people are checking out <span>&amp;</span> more</p>
-                        {/* <p id="show-more-from">Show more from the <span id="Ashely">Ashely</span> shop</p> */}
                     </div>
                     <ul className="recently-viewed-items">
                         {
@@ -68,13 +53,6 @@ class ProductIndex extends React.Component{
                     </ul>
                 </div>
 
-                {/* <div className="picks-for-you">
-                        <p>Our picks for you</p>
-                        <div>
-
-                        </div>
-
-                </div> */}
 {/* 
                 <div className="what_is_furnitsy">
                     <div>
