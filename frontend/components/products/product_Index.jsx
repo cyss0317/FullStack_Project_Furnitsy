@@ -58,12 +58,12 @@ class ProductIndex extends React.Component{
                     <ul className="recently-viewed-items">
                         {
                             //it re-renders when modal is turned on or off
-                                randomItem10.map(product => (
-                                    <RecentlyViewItemIndex
-                                        product={product}
-                                        key={product.id}
-                                    />
-                                ))
+                            randomItem10.map(product => (
+                                <RecentlyViewItemIndex
+                                    product={product}
+                                    key={product.id}
+                                />
+                            ))
                         }
                     </ul>
                 </div>
