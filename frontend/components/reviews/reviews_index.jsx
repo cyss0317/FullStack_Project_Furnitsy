@@ -113,6 +113,9 @@ class ReviewIndex extends React.Component{
             //important!!
             userReviewForThisProduct = currentUser.reviews.filter((review) => review.product_id === productId)
             userReview =  userReviewForThisProduct.length === 0 ? null : reviews[userReviewForThisProduct[0].id];
+            console.log("userReviewFor",userReviewForThisProduct)
+            console.log("review", reviews)
+            console.log("userReview",userReview)
         }
 
 
