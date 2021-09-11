@@ -48,24 +48,18 @@ class ProductShow extends React.Component {
 //question 1. need to double click to invoke this
     rightSvgClickhandler(e){
         e.preventDefault();
-        // this.setState({mainPic: this.props.photoUrls[3] })
-        // if (this.state.mainPic === undefined) {
-        //     this.setState({mainPic: this.props.photoUrls[0]})
-        // }
         let newIndex =  this.props.photoUrls.indexOf(this.state.mainPic) + 1 > this.props.photoUrls.length + 1 ? 0 : this.props.photoUrls.indexOf(this.state.mainPic) + 1 
         this.setState({ index: newIndex})
-        // important!!!! need to update both states for both click events
-        // debugger
         this.setState({ mainPic: this.props.photoUrls[newIndex]})
         // this.setState({ mainPic: this.state.mainPic === undefined ? this.props.photoUrls[0] : this.props.photoUrls[this.props.photoUrls.indexOf(mainPic) + 1] })
        
     }
 
     leftSvgClickhandler(e) {
-        this.setState({ index: this.props.photoUrls.indexOf(this.state.mainPic) - 1 < 0 ? this.props.photoUrls.length - 1: this.props.photoUrls.indexOf(this.state.mainPic) - 1 })
-        this.setState({ mainPic: this.props.photoUrls[this.state.index] })
-
-
+        e.preventDefault();
+        let newIndex = this.props.photoUrls.indexOf(this.state.mainPic) - 1 < 0 ? this.props.photoUrls.length - 1 : this.props.photoUrls.indexOf(this.state.mainPic) - 1
+        this.setState({ index: newIndex })
+        this.setState({ mainPic: this.props.photoUrls[newIndex] })
     }
     
 
@@ -191,11 +185,11 @@ class ProductShow extends React.Component {
                         <div className="product-show-picture-container-inner" >
                             <div className="main-picture-container">
                                 <button className="svg-button" id="left-svg-button"onClick={this.leftSvgClickhandler} >
-                                    <svg xmlns="http://www.w3.org/2000/svg" id="left-svg-button" viewBox="0 0 24 24"  aria-hidden="true" focusable="false"><path d="M16,21a0.994,0.994,0,0,1-.664-0.253L5.5,12l9.841-8.747a1,1,0,0,1,1.328,1.494L8.5,12l8.159,7.253A1,1,0,0,1,16,21Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"  aria-hidden="true" focusable="false"><path d="M16,21a0.994,0.994,0,0,1-.664-0.253L5.5,12l9.841-8.747a1,1,0,0,1,1.328,1.494L8.5,12l8.159,7.253A1,1,0,0,1,16,21Z"></path></svg>
                                 </button>
                                 <img className="picture-container-main"src={ this.state.mainPic === undefined ? this.props.photoUrls[0] : this.state.mainPic } alt="" />
                                 <button className="svg-button" id="right-svg-button" onClick={this.rightSvgClickhandler}>
-                                    <svg xmlns="http://www.w3.org/2000/svg"  id="right-svg-button" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8,21a1,1,0,0,1-.664-1.747L15.5,12,7.336,4.747A1,1,0,0,1,8.664,3.253L18.5,12,8.664,20.747A0.994,0.994,0,0,1,8,21Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8,21a1,1,0,0,1-.664-1.747L15.5,12,7.336,4.747A1,1,0,0,1,8.664,3.253L18.5,12,8.664,20.747A0.994,0.994,0,0,1,8,21Z"></path></svg>
                                 </button>
                             </div>
                             <ul className="picture-container-list">
