@@ -23,7 +23,7 @@ class ReviewIndex extends React.Component{
     createReview(){
         var x = document.getElementById("review-submit")
         this.props.createReview(this.state)
-        .then(this.props.fetchAllReviews())
+        // .then(this.props.fetchAllReviews())
         // .then(alert("successfully created"))
         .then(x.disabled = true )
     }

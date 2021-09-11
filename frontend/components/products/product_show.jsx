@@ -23,7 +23,7 @@ class ProductShow extends React.Component {
 
     componentDidMount(){
         this.props.fetchProduct(this.props.match.params.productId);
-        this.props.fetchAllReviews();
+        // this.props.fetchAllReviews();
         
     }
 
