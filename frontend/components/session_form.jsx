@@ -74,7 +74,7 @@ class SessionForm extends React.Component {
                         <ul className="input-sections">
                             <li className="form-row">
                                 <label className="labels" >Email address    
-                                    <input id="session-forms" className="session-forms-email" type="text" placeholder="Enter Email" value={this.state.email} onChange={this.changeHandler("email")} />
+                                    <input id="session-forms" className="session-forms-email" type="email" placeholder="Enter Email" value={this.state.email} onChange={this.changeHandler("email")} />
                                 </label>
                             </li>
                             <li className="form-row">
