@@ -29,7 +29,7 @@ class CartShowItem extends React.Component{
         allProducts.length === 0 ? null : allProducts[item.id] ;
         // if (allProducts === undefined) return null;
         // debugger
-        console.log("allproducts", allProducts)
+        // console.log("allproducts", allProducts)
         return (
             <li  className={`cart-show-item-container`}>
                 <div className="cart-show-item-container-info">

@@ -48,9 +48,9 @@ class SearchBar extends React.Component {
             keywords.forEach((word) => {
                 let byName = product.name.toLowerCase().includes(word.toLowerCase())
                 let byColor = product.color.toLowerCase().includes(word.toLowerCase())
-                if(byName && !filteredProducts.includes(byName)){
+                if(byName && byName !== byColor && !filteredProducts.includes(product) ){
                     filteredProducts.push(product)
-                } else if (byColor && !filteredProducts.includes(byColor)){
+                } else if (byColor && byColor !== byName && !filteredProducts.includes(product)){
                     filteredProducts.push(product)
                 } else {
                     ""

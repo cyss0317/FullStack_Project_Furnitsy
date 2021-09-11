@@ -29,62 +29,30 @@ const mSTP = (state, window) => {
         product.category === "Dining Chairs"
     ))
     
-    let randomItem10 = [];
-
+    
     // important to under stand!! 
     // 
     //question 4 why does it refresh
-
-    if (products.length !== 0) {
-        while (randomItem10.length < 10) {
-            let random = products[Math.floor(Math.random() * products.length)]
-            if (!randomItem10.includes(random)){
-            randomItem10.push(random)}
-        }
-    }
-  
-
-    // let random = function(arr, number){
-    //     for (let i = 0; i < number; i++) {
-    //         arr.push(products[Math.floor(Math.random() * products.length)]);
-    //     }
-    //     return arr;
-    // }
-
-
-
-    // random(randomItem10, 8);
-    // if (products === undefined){
-    //     return null;
-    // } else{
-    //     return random(randomItem10, 8);
-    // }
-
-    // let randomItem = [];
-    // for (let i = 0; i < 8; i++) {
-    //     randomItem.push(products[Math.floor(Math.random() * products.length)]);
-
-    // }
-
-
-
-    // let randomItem = [];
-    // {
-    //     // debugger
-    //     for (let i = 0; i < 6; i++) {
-    //         randomItem.push(products[Math.floor(Math.random() * products.length)]);
-    //     }
-    // }
     
+    // const randomItem10 = [];
+    // if (products.length !== 0) {
+        
+    //     while (randomItem10.length < 10) {
+    //         let random = products[Math.floor(Math.random() * products.length)]
+    //         if (!randomItem10.includes(random)){
+    //         randomItem10.push(random)}
+    //     }
+    // }
+ 
 
 
     return ({
         //IMPORTANT 
         //I completely forgot to change object into a form of an array
-        products: products,
+        products: state.entities.products,
         couchAndSofa: couchAndSofa,
         outdoor: outdoor,
-        randomItem10: randomItem10,
+        // randomItem10: randomItem10,
         diningTable: diningTable,
         coffeeTable: coffeeTable,
         kidsBunkBed: kidsBunkBed,

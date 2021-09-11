@@ -42,6 +42,7 @@ const App = () => {
         history.push({pathname: `/search/${keyword}`, state: keyword})
         document.querySelector(".header-searchbar").value = ""
     }
+    // console.log(history);
 // class App extends React.Component {
     // constructor(props){
     //     super(props)
@@ -147,7 +148,6 @@ const App = () => {
                             <p>We sell Ashely furnitures on our website. Whatever you can find on this website, you can also find it on actual Ashley furnitures.</p>
                         </div>
                         <div id="furnitsy_inner_div">
-                            ignores text align prop 
                             <h2>Peace of mind</h2>
                             <p>Your privacy is the highest priority of our dedicated team. And if you ever need assistance, we are always ready to step in for support.</p>
                         </div>

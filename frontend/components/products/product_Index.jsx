@@ -7,31 +7,41 @@ import { withRouter } from "react-router";
 class ProductIndex extends React.Component{
     constructor(props){
         super(props)
+
+        // const  randomItem10 = []
+        
     }
 
     componentDidMount(){
-        this.props.fetchProducts();
+        // const randomItem10 = [];
+        this.props.fetchProducts()
+            // .then((products) =>  
+            //     {
+            //         let productsArr = Object.values(products)
+            //         while (randomItem10.length < 10) {
+            //             let random = productsArr[Math.floor(Math.random() * productsArr.length)]
+            //             if (!randomItem10.includes(random)){
+            //             randomItem10.push(random)}
+            //         }
+            //     }
+            // )
         // debugger
     }
 
     render(){
 
-        const { products, couchAndSofa, randomItem10, coffeeTable,  recentlyViews, outdoor, diningTable, diningChairs, kidsBunkBed, accentChairs} = this.props;
+        const { products, couchAndSofa, coffeeTable,  recentlyViews, outdoor, diningTable, diningChairs, kidsBunkBed, accentChairs} = this.props;
+        const randomItem10 = [];
+        let productsArr = Object.values(products)
+        if (productsArr.length !== 0 ){
+            while (randomItem10.length < 10) {
+                let random = productsArr[Math.floor(Math.random() * productsArr.length)]
+                if (!randomItem10.includes(random)) {
+                    randomItem10.push(random)
+                }
+            }    
+        }
 
-        // const randomItem = [];
-
-        // {
-
-            // for (let i = 0; i < 6; i++) {
-            //     return randomItem.push(products[Math.floor(Math.random() * products.length)]);
-            // }
-        // }
-        // if (randomItem === undefined){
-        //     return null;
-        // }
-
-
-        // debugger
         return (
 
             <div className="index-main-container">
@@ -53,28 +63,20 @@ class ProductIndex extends React.Component{
                 <div className='recently-viewed-container'>
                     <div id="recently-words">
                         <p>What other people are checking out <span>&amp;</span> more</p>
-                        {/* <p id="show-more-from">Show more from the <span id="Ashely">Ashely</span> shop</p> */}
                     </div>
                     <ul className="recently-viewed-items">
                         {
                             //it re-renders when modal is turned on or off
-                                randomItem10.map(product => (
-                                    <RecentlyViewItemIndex
-                                        product={product}
-                                        key={product.id}
-                                    />
-                                ))
+                            randomItem10.map(product => (
+                                <RecentlyViewItemIndex
+                                    product={product}
+                                    key={product.id}
+                                />
+                            ))
                         }
                     </ul>
                 </div>
 
-                {/* <div className="picks-for-you">
-                        <p>Our picks for you</p>
-                        <div>
-
-                        </div>
-
-                </div> */}
 {/* 
                 <div className="what_is_furnitsy">
                     <div>
@@ -110,6 +112,7 @@ class ProductIndex extends React.Component{
         )
     }
 }
+
 
 
 export default withRouter(ProductIndex);
