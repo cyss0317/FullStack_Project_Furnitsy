@@ -7,16 +7,28 @@ import { withRouter } from "react-router";
 class ProductIndex extends React.Component{
     constructor(props){
         super(props)
+        this.state = {
+            randomItem10 : []
+        }
     }
 
     componentDidMount(){
-        this.props.fetchProducts();
+        this.props.fetchProducts()
+            .then(products =>  
+                {while (this.state.randomItem10.length < 10) {
+                let random = products[Math.floor(Math.random() * products.length)]
+                if (!this.state.randomItem10.includes(random)) {
+                    this.state.randomItem10.push(random)
+                }
+            }
+            }
+            )
         // debugger
     }
 
     render(){
 
-        const { products, couchAndSofa, randomItem10, coffeeTable,  recentlyViews, outdoor, diningTable, diningChairs, kidsBunkBed, accentChairs} = this.props;
+        const { products, couchAndSofa, coffeeTable,  recentlyViews, outdoor, diningTable, diningChairs, kidsBunkBed, accentChairs} = this.props;
 
         return (
 
@@ -43,7 +55,7 @@ class ProductIndex extends React.Component{
                     <ul className="recently-viewed-items">
                         {
                             //it re-renders when modal is turned on or off
-                            randomItem10.map(product => (
+                            this.state.randomItem10.map(product => (
                                 <RecentlyViewItemIndex
                                     product={product}
                                     key={product.id}

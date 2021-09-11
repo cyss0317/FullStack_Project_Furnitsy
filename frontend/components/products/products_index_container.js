@@ -29,12 +29,12 @@ const mSTP = (state, window) => {
         product.category === "Dining Chairs"
     ))
     
-    const randomItem10 = [];
-
+    
     // important to under stand!! 
     // 
     //question 4 why does it refresh
-
+    
+    const randomItem10 = [];
     if (products.length !== 0) {
         
         while (randomItem10.length < 10) {
