@@ -1,9 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Login GIF:
+![](https://github.com/cyss0317/FullStack_Project_Furnitsy/blob/main/GIF/Login.gif?raw=true)
 
 * Ruby version
 
