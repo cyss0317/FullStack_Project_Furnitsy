@@ -17,13 +17,20 @@ class ReviewIndex extends React.Component{
     }
     componentDidMount() {
         this.props.fetchAllReviews()
-        this.props.fetchProduct(this.props.productId)
+        // this.props.fetchProduct(this.props.productId)
+    }
+    componentDidUpdate(preProps){
+
+        if( preProps.reviews.length !== this.props.reviews.length){
+            this.props.fetchAllReviews()
+        }
     }
 
     createReview(){
         var x = document.getElementById("review-submit")
         this.props.createReview(this.state)
-        // .then(this.props.fetchAllReviews())
+            .then(res => this.setState({comment: "", rating: 1, helpful:0}))
+            .then(() => this.props.fetchAllReviews())
         // .then(alert("successfully created"))
         .then(x.disabled = true )
     }
@@ -101,7 +108,6 @@ class ReviewIndex extends React.Component{
             
         } else {
             //important!!
-            console.log(currentUser)
             userReviewForThisProduct = currentUser.reviews.filter((review) => review.product_id === productId)
             userReview =  userReviewForThisProduct.length === 0 ? null : reviews[userReviewForThisProduct[0].id];
         }

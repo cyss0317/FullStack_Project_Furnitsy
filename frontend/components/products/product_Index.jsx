@@ -32,7 +32,6 @@ class ProductIndex extends React.Component{
 
         const { products, couchAndSofa, coffeeTable,  recentlyViews, outdoor, diningTable, diningChairs, kidsBunkBed, accentChairs} = this.props;
         const randomItem10 = [];
-        console.log(products)
         let productsArr = Object.values(products)
         if (productsArr.length !== 0 ){
             while (randomItem10.length < 10) {

@@ -25,12 +25,6 @@ class ProductNavIndex extends React.Component{
             )
         }).join("")
         let index = categories_selector.indexOf(eval(currentCategory))
-        // console.log("couch",couchAndSofa)
-        console.log(currentCategory)
-        console.log("selector",categories_selector)
-        console.log("selector[0]", categories_selector[index])
-
-        // console.log([categories_selector.match(window["couchAndSofa"])] )
 
         if (categories_selector[index] === undefined){
             return null;

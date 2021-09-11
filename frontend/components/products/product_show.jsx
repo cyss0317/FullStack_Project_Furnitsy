@@ -28,23 +28,14 @@ class ProductShow extends React.Component {
     }
 
     componentDidUpdate(preProps){
+        console.log("preProps", preProps)
         if(preProps.photoUrls.length !== this.props.photoUrls.length){
             this.setState({mainPic:  this.props.photoUrls[0]})
         }
     }
 
     //sometimes it doesn't display the created review right away
-    createReview(newReview){
-        this.props.createReview(newReview)
-        //important
-        if (window.localStorage) {
-            if (!localStorage.getItem("firstLoad")) {
-                localStorage["firstLoad"] = true;
-                window.location.reload();
-            }
-            else localStorage.removeItem("firstLoad");
-        }
-    }
+
 //question 1. need to double click to invoke this
     rightSvgClickhandler(e){
         e.preventDefault();
