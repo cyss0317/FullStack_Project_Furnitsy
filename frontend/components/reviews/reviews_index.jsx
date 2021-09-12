@@ -95,7 +95,7 @@ class ReviewIndex extends React.Component{
     // }
 
     render(){
-        const { product, reviews, currentUserId, currentUser, reviewsArray, productId, sessionId  } = this.props;
+        const { product, errors, reviews, currentUserId, currentUser, reviewsArray, productId, sessionId  } = this.props;
         if (product === undefined){
             return null;
         }
@@ -200,7 +200,13 @@ class ReviewIndex extends React.Component{
                                         <input type="radio" id="star1" name="rating" onClick={e => this.onClickHandler(e)} value="1" />
                                         <label htmlFor="star1" title="text">1 stars</label>
                                     </div>
-                                    <textarea id="create-review-form-input" type="text" onChange={(e) => this.onChangeHandler(e)} value={this.state.comment} />
+                                    {
+                                        Object.values(this.props.errors.review.responseJSON).length !== 0 ?
+                                        this.renderErrors(Object.values(this.props.errors.review.responseJSON))
+                                        :
+                                        ""
+                                    }
+                                    <textarea id="create-review-form-input" type="text" minLength="numeric" onChange={(e) => this.onChangeHandler(e)} value={this.state.comment} />
                                     {/* {() => this.renderErrors(this.props.errors.review)} */}
                                     <input id="review-submit" type="submit" />
                                 </form>
