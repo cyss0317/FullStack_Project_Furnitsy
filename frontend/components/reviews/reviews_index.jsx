@@ -100,22 +100,14 @@ class ReviewIndex extends React.Component{
             return null;
         }
 
-
-        // currentUser === undefined ?  null :  
         if (reviews === undefined) return null;
-        // const reviewsArray = Object.values(reviews);
         let userReviewForThisProduct ;
         let userReview ;
-        // debugger
         if ( currentUser === undefined) {
             
         } else {
-            //important!!
             userReviewForThisProduct = currentUser.reviews.filter((review) => review.product_id === productId)
             userReview =  userReviewForThisProduct.length === 0 ? null : reviews[userReviewForThisProduct[0].id];
-            console.log("userReviewFor",userReviewForThisProduct)
-            console.log("review", reviews)
-            console.log("userReview",userReview)
         }
 
 
