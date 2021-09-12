@@ -20,22 +20,22 @@ class ReviewIndex extends React.Component{
         // this.props.fetchProduct(this.props.productId)
     }
     componentDidUpdate(preProps){
-        
-        // if( preProps.productReviews.length !== this.props.productReviews.length){
+        if( preProps.reviews !== this.props.reviews){
             // this.props.fetchAllReviews()
-            // this.setState({})
-        // }
+            // userReview = reviews[userReviewForThisProduct[0].id]
+            this.forceUpdate()
+        }
 
     }
 
-    createReview(){
+    createReview(e){
+        e.preventDefault();
         var x = document.getElementById("review-submit")
         this.props.createReview(this.state)
             .then(res => this.setState({comment: "", rating: 1, helpful:0}))
             // .then(() => this.props.fetchAllReviews())
         // .then(alert("successfully created"))
         .then(x.disabled = true )
-        .then(this.forceUpdate())
     }
 
     onChangeHandler( e){
