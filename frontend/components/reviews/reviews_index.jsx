@@ -73,19 +73,22 @@ class ReviewIndex extends React.Component{
     renderErrors(errors) {
         // const errors = this.props.errors;
         return (
-            <div className="errors-container">
-                <ul className="errors">
-                    {
-                        errors.map((error) => {
-                            return (
-                                <li className="error" >
-                                    - {error}
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
-            </div>
+            errors.length !== 0 ?
+                <div className="errors-container">
+                    <ul className="errors">
+                        {
+                            errors.map((error) => {
+                                return (
+                                    <li className="error" >
+                                        - {error}
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+                </div>
+            :
+            ""
         )
     }
 
@@ -96,6 +99,7 @@ class ReviewIndex extends React.Component{
 
     render(){
         const { product, errors, reviews, currentUserId, currentUser, reviewsArray, productId, sessionId  } = this.props;
+        console.log(errors)
         if (product === undefined){
             return null;
         }
@@ -201,13 +205,13 @@ class ReviewIndex extends React.Component{
                                         <label htmlFor="star1" title="text">1 stars</label>
                                     </div>
                                     {
-                                        Object.values(this.props.errors.review.responseJSON).length !== 0 ?
-                                        this.renderErrors(Object.values(this.props.errors.review.responseJSON))
+                                        errors.length !== 0 ?
+                                        this.renderErrors(Object.value(errors.responseJSON))
                                         :
-                                        ""
+                                        ''
                                     }
-                                    <textarea id="create-review-form-input" type="text" minLength="numeric" onChange={(e) => this.onChangeHandler(e)} value={this.state.comment} />
-                                    {/* {() => this.renderErrors(this.props.errors.review)} */}
+                                    <textarea id="create-review-form-input" type="text"  onChange={(e) => this.onChangeHandler(e)} value={this.state.comment} />
+                                    {/* {this.renderErrors(errors)} */}
                                     <input id="review-submit" type="submit" />
                                 </form>
                             </div>

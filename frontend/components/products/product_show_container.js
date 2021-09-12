@@ -38,7 +38,7 @@ const mSTP =( state, ownProps)=> {
         cartId: state.entities.cart.id,
         cartItems: state.entities.cartItems,
         currentUser: state.entities.users[state.session.id],
-        errors: state.errors,
+        errors: state.errors.review,
         reviews: state.entities.reviews,
         productId: productId,
         currentUserId: state.session.id,
