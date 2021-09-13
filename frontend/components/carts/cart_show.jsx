@@ -34,18 +34,11 @@ class CartShow extends React.Component{
                     <Link to="/">Continue shopping?</Link>
                 </div>
                 )
-                // 
-            // }
-            //  else if( this.props === undefined) {
-            //     return (
-            //     <img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/Spinner-3.gif" alt="" />
-            // )
+
         } else if (allItems.length > 0) {
             return (
                 <div>
                     {
-                        // currentUser ? <p>hello</p> :
-
                         <div className="cart-show-container">
                             <div id="items-in-your-cart">
                                 <h1 >{numberOfProducts} items in your cart</h1>
@@ -83,12 +76,9 @@ class CartShow extends React.Component{
                                             <h2>Subtotal</h2>
                                             <p>${subtotal.toFixed(2)}</p>
                                         </div>
-                                        {/* <form >
-                                            <input id="proceed-to-checkout" type="submit" value="Proceed to checkout" />
-                                        </form> */}
                                     </div>
                                 </div>
-                                {/* total price and tax , subtotal, checkout button */}
+
 
                             </div>
                         </div>
@@ -98,11 +88,7 @@ class CartShow extends React.Component{
                 
             )
         }
-        // else if ( !currentUser) {
-        //     return(
-        //         <Redirect to="/"></Redirect> 
-        //     )
-        // }
+
     }
 }
 

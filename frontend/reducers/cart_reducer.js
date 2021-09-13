@@ -5,7 +5,6 @@ const CartReducer = (oldState = {}, action) => {
     
     switch (action.type) {
         case RECEIVE_CART:
-            // return Object.assign({}, oldState, {[action.cart.id]: action.cart})
             return action.cart
         default:
             return oldState;

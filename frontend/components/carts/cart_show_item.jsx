@@ -17,19 +17,14 @@ class CartShowItem extends React.Component{
         e.preventDefault();
         this.props.deleteCartItem(this.props.item.id);
     }
-    // checkOutHandler(e){
-    //     this.
-    // }
-    // question 3 for checkout button, do i need it
+
 
     render(){
         const { item, totalPrice, allProducts } = this.props;
         let tax = totalPrice * .0825;
         let subtotal = totalPrice + tax;
         allProducts.length === 0 ? null : allProducts[item.id] ;
-        // if (allProducts === undefined) return null;
-        // debugger
-        // console.log("allproducts", allProducts)
+
         return (
             <li  className={`cart-show-item-container`}>
                 <div className="cart-show-item-container-info">
@@ -37,8 +32,6 @@ class CartShowItem extends React.Component{
                         <Link to={`/products/${item.product.id}`} className="cart-show-image-thumnails">
                             <img className="cart-show-image-thumnail"
                                 src={item.photoUrls[0]}/>
-                            {/* <a href={`/products/${product.id}`}>{product.name}</a> */}
-                            {/* <p className="thumnail-p">{product.name}</p> */}
                         </Link>
                         <Link to={`/products/${item.product.id}`} id="cart-item-description">
                                 <p>{item.product.category}</p>
@@ -53,21 +46,10 @@ class CartShowItem extends React.Component{
                         <form  onSubmit={this.deleteHandler}>
                             <input className="remove-button" type="submit" value="Remove" />
                         </form>
-                        {/* <select  value={item.quantity}>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                        </select> */}
+        
                     </div>
                     <div id="cart-item-price">
                         <p>${item.product.price.toFixed(2)}</p>
-                        {/* <h1 >Over {allProducts === undefined ? 0 : allProducts.cart_items.length} people have this in their cart</h1> */}
                         <h1 >Over 20 people have this in their cart</h1>
                         <h2>Sale: 0% off</h2>
                     </div>

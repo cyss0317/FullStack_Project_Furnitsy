@@ -21,18 +21,6 @@ import search_bar_conatiner from "./search_bar/search_bar_conatiner";
 import { withRouter } from "react-router-dom";
 import {useHistory} from "react-router-dom";
 
-
-// import axios from "axios";
-
-// const filterProducts = (products, query)=>{
-//     if (!query){
-//         return products;
-//     }
-//     return products.filter((product) => {
-//         const productName = product.name.toLowerCase();
-//         return productName.includes(query);
-//     })
-// }
 const App = () => {
     const history= useHistory();
     const [keyword, SetKeyword] = useState(()=> '');
@@ -42,41 +30,7 @@ const App = () => {
         history.push({pathname: `/search/${keyword}`, state: keyword})
         document.querySelector(".header-searchbar").value = ""
     }
-    // console.log(history);
-// class App extends React.Component {
-    // constructor(props){
-    //     super(props)
-    // }
 
-    //  componentWillMount(){
-    //     store.dispatch(ThunkReceiveProducts())
-
-    // }
-
-    // const { search } = window.location
-
-    // const query = new URLSearchParams(search).get("s");
-    // store.dispatch(ThunkReceiveProducts())
-    // const products = store.getState()
-    // const filteredProducts = filterProducts(products, query)
-
-    // console.log(window.location)
-    // console.log("axios", axios('/api/products'))
-    // console.log(useState());
-    // console.log("sotre",products)
-    // console.log(query)
-    // console.log(products)
-    // console.log("filterproducts",filterProducts(products, query))
-    // console.log(typeof(filteredProducts))
-    // const filteredPosts = filterPosts()
-// render(){
-//     const { search } = window.location
-//     const products = store.getState()
-//     const query = new URLSearchParams(search).get("s");
-//         console.log("sotre",products)
-//     console.log(query)
-//     console.log(products)
-    // debugger
     return(
    <div className="main-div">
        <Modal/>
@@ -84,33 +38,16 @@ const App = () => {
             <header className="header">
                 <div className="logo-searchbar-sign">
                     <a className="header-logo" href="/" >Furnitsy</a>
-                    {/* <input type="text"  className="header-searchbar"/> */}
-                    {/* <div> */}
-                        {/* <SearchBar query={query}/> */}
-                        {/* <search_bar_conatiner query={query} /> */}
-                            <form id="search-bar-form"onSubmit={hadleKeyword}>
-                                {/* <label htmlFor="header-search">
-                                    <span className="visually-hidden">Search products</span>
-                                </label> */}
-                                <input
-                                    type="text"
-                                    className="header-searchbar"
-                                    placeholder="Search"
-                                    name="s"
-                                    onChange={(e) => SetKeyword(e.currentTarget.value) }
-                                />
-                            <button id="search-bar-submit" type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18ZM10,4a6,6,0,1,0,6,6A6.007,6.007,0,0,0,10,4Z"></path><path d="M21,22a1,1,0,0,1-.707-0.293l-4-4a1,1,0,0,1,1.414-1.414l4,4A1,1,0,0,1,21,22Z"></path></svg></button>
-                            </form>
-                        {/* <ul>
-                            {
-                                filteredProducts === undefined ? <p>""</p>  
-                                : 
-                                filteredProducts.map(product => (
-                                    <li key={product.key}>{product.name}</li>
-                                    ))}
-                                </ul> */}
-
-                    {/* </div> */}
+                        <form id="search-bar-form"onSubmit={hadleKeyword}>
+                            <input
+                                type="text"
+                                className="header-searchbar"
+                                placeholder="Search"
+                                name="s"
+                                onChange={(e) => SetKeyword(e.currentTarget.value) }
+                            />
+                        <button id="search-bar-submit" type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18ZM10,4a6,6,0,1,0,6,6A6.007,6.007,0,0,0,10,4Z"></path><path d="M21,22a1,1,0,0,1-.707-0.293l-4-4a1,1,0,0,1,1.414-1.414l4,4A1,1,0,0,1,21,22Z"></path></svg></button>
+                        </form>
                     <GreetingContainer className="greeting-component"/>
                     <CartHeaderContainer />
 
@@ -120,7 +57,6 @@ const App = () => {
 
             </header>
        </div>
-            {/* <ProductIndexContainer/> */}
         <Switch>
             <Route path="/search/:keyword" component={SearchBarContainer} />
             <Route path="/products/:productId" component={ProductShowContainer}/>
@@ -153,11 +89,9 @@ const App = () => {
                         </div>
                     </div>
                     <div>
-                        {/* <div id="contact-me">
-                        <h3>If you want to hire me, contact me here!</h3>
-                        {/* <button onClick="document.location= 'mailto:cyss0317@gmail.com'">Contact Yun Choi</button> */}
-                        <a id="linked-in" href="https://www.linkedin.com/in/yun-sung-choi-936142214/" ><img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/LI-Logo.png" alt="" width="160" height="50" /></a>
-                        <a id="github" href="https://github.com/cyss0317" ><img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/Octocat.png" alt="" width="100" height="80" /></a>
+
+                        <a id="linked-in" href="https://www.linkedin.com/in/yun-sung-choi-936142214/" target="_blank" ><img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/LI-Logo.png" alt="" width="160" height="50" /></a>
+                        <a id="github" href="https://github.com/cyss0317" target="_blank" ><img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/Octocat.png" alt="" width="100" height="80" /></a>
                         <form action="mailto:cyss0317@gmail.com" method="POST" encType="text/plain">
                             <input className='submit_to_email' type="submit" value="Contact Yun Sung Choi" />
                         </form>

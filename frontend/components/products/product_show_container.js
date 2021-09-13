@@ -9,28 +9,16 @@ const mSTP =( state, ownProps)=> {
     const product = state.entities.products[ownProps.match.params.productId];
     const productId = parseInt(ownProps.match.params.productId);
     const reviewsArray = Object.values(state.entities.reviews)
-    // const userReviewForThisProduct = state.entities.users[state.session.id].reviews.filter((review) => review.product_id === productId)
     const productReviews = reviewsArray.filter((review) => review.product_id === productId)
-    // const userReview = reviews[userReviewForThisProduct[0].id]
+
     const reviews = Object.values(state.entities.reviews)
 
-    // const productReviews = reviews.filter((review) => review.product_Id === productId)
-    // reviews
-    // const productReviews = state.entities.reviews.filter((review) => (review.productId === productId))
-    // const currentUserReview = productReviews.filter((review) => review.userId === state.session.id)
-    // let productReviews;
-    // if( productReviews === undefined){
-    //     productReviews = [];
-    // } else{
-    //     productReviews = state.entities.reviews.filter((review) => (review.productId === productId))
-    // }
     let photoUrls ;
     if( product === undefined ){
         photoUrls = [];
     } else {
         photoUrls = product.photoUrls;
     }
-    // solved!!!!!!! when to use conditioonal inside container or presentational
     return ({
         reviewErrors: state.errors.review,
         product: product,
@@ -45,7 +33,6 @@ const mSTP =( state, ownProps)=> {
         sessionId: state.session.id,
         reviewsArray: reviewsArray,
         productReviews: productReviews,
-        // userReviewForThisProduct: state.entities.users[state.session.id].reviews.filter((review) => review.product_id === productId),
 
 
     })

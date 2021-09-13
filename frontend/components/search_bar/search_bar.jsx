@@ -16,14 +16,12 @@ class SearchBar extends React.Component {
     }
 
     componentDidMount(){
-        // debugger
         this.props.receiveProducts()
     }
 
     filterByState(field, e){
         let filteredProducts = [];
         this.setState({[field]: e.currentTarget.value})
-        debugger
         filteredProducts.forEach((product) => {
             if (product.color === this.state.field && !this.props.filteredByState.includes(product)){
                 this.props.filteredByState.push(product)
@@ -33,7 +31,6 @@ class SearchBar extends React.Component {
 
     render(){
         const {products, keyword} = this.props;
-        // const keyword = new URLSearchParams(window.location).get("s")
         if (products === undefined) return null;
         let keywords = keyword.split(" ")
         let filteredProducts = [];
@@ -58,15 +55,10 @@ class SearchBar extends React.Component {
             })
             return filteredProducts;
         })
-        // debugger
         
         return (
             filteredProducts.length > 0 ?
                 <section>
-                    {/* <div>
-                        <label htmlFor="">by Gray
-                        <input type="radio" value="gray" onClick={(e) => this.filterByState("color", e)}/></label>
-                    </div> */}
                     <div>
                         <div className="nav-static">
                             {
@@ -107,29 +99,6 @@ class SearchBar extends React.Component {
                     <Link to="/">There are no products matching your search keywords</Link>
                 </div>
 
-
-                
-                // <form action="/" method="get" className="search">
-                //     <div className="searchInputs">
-                //         <input type="text" placeholder={placeholder}/>
-                //         <div className="serchIcon"></div>
-                //     </div>
-                //     <div className="dataResult"></div>
-                // </form>
-
-
-                // <form action="/" method="get">
-                //     <label htmlFor="header-search">
-                //         <span className="visually-hidden">Search products</span>
-                //     </label>
-                //     <input
-                //         type="text"
-                //         id="header-search"
-                //         placeholder="Search blog posts"
-                //         name="s"
-                //     />
-                //     <button type="submit">Search</button>
-                // </form>
             )   
 
     }

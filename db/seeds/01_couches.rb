@@ -60,16 +60,7 @@ p2.images.attach(io:p2_6, filename: 'images/abinger_sofa/83904-38-BACK-SW-P1-KO.
 p2_7 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/abinger_sofa/83904-38-ANGLE-SW-P1-KO.webp')
 p2.images.attach(io:p2_7, filename: 'images/abinger_sofa/83904-38-ANGLE-SW-P1-KO.webp')
 
-# c2.client.copyImage(params, function (err, data) {
-#   if (err) {
-#     console.log("Got error:", err.message);
-#     console.log("Request:");
-#     console.log(this.request.httpRequest);
-#     console.log("Response:");
-#     console.log(this.httpResponse);
-#   }
-#   // ...
-# });
+
 
 
 

@@ -5,7 +5,6 @@ const ModalReducer= (oldState = null, action) => {
     let nextState = Object.assign({}, oldState)
     switch (action.type) {
         case OPEN_MODAL:
-            // return nextState[action.modal];
             return action.modal
         case CLOSE_MODAL:
             return null;

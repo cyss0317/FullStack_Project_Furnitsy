@@ -32,12 +32,9 @@ const mSTP = (state, window) => {
 
 
     return ({
-        //IMPORTANT 
-        //I completely forgot to change object into a form of an array
         products: state.entities.products,
         couchAndSofa: couchAndSofa,
         outdoor: outdoor,
-        // randomItem10: randomItem10,
         diningTable: diningTable,
         coffeeTable: coffeeTable,
         kidsBunkBed: kidsBunkBed,

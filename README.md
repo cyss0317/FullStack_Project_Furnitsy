@@ -30,7 +30,6 @@ Users can sign up and sign in by checking its credentials and used Modal to give
 
 ```javascript
     componentDidUpdate(preProps){
-        console.log("preProps", preProps)
         if(preProps.photoUrls.length !== this.props.photoUrls.length){
             this.setState({mainPic:  this.props.photoUrls[0]})
         }

@@ -1,7 +1,5 @@
 import {RECEIVE_PRODUCTS, RECEIVE_PRODUCT} from "../actions/product_actions";
 
-//nest the product in side the entitits
-//takes care of the action.type, returns a corresponding value
 
 const ProductsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);

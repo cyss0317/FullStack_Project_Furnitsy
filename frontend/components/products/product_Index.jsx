@@ -13,43 +13,25 @@ class ProductIndex extends React.Component{
     }
 
     componentDidMount(){
-        // const randomItem10 = [];
         this.props.fetchProducts()
             .then((products) =>  
                 {
-                    // debugger
                     let productsArr = Object.values(products.products);
-                    console.log("products", productsArr)
-                    // debugger
-                    // console.log("productObject", Object.values(products))
                     let temp = [];
                     while (temp.length < 10) {
                         let random = productsArr[Math.floor(Math.random() * productsArr.length)]
                         if (!temp.includes(random)){
                             temp.push(random)
-                            console.log(temp)
                         }
                     }
                     this.setState({randomItem10: temp})
                 }
             )
-        // debugger
     }
 
     render(){
 
         const { products, couchAndSofa, coffeeTable,  recentlyViews, outdoor, diningTable, diningChairs, kidsBunkBed, accentChairs} = this.props;
-        // const randomItem10 = [];
-        // let productsArr = Object.values(products)
-        // if (productsArr.length !== 0 ){
-        //     while (randomItem10.length < 10) {
-        //         let random = productsArr[Math.floor(Math.random() * productsArr.length)]
-        //         if (!randomItem10.includes(random)) {
-        //             randomItem10.push(random)
-        //         }
-        //     }    
-        // }
-        console.log(this.state.randomItem10)
         return (
 
             <div className="index-main-container">
@@ -74,7 +56,6 @@ class ProductIndex extends React.Component{
                     </div>
                     <ul className="recently-viewed-items">
                         {
-                            //it re-renders when modal is turned on or off
                             this.state.randomItem10.map(product => (
                                 <RecentlyViewItemIndex
                                     product={product}
@@ -84,37 +65,6 @@ class ProductIndex extends React.Component{
                         }
                     </ul>
                 </div>
-
-{/* 
-                <div className="what_is_furnitsy">
-                    <div>
-                        <h1>What is Furnitsy?</h1>
-                    </div>
-                    <div id="what_is_furnitsy_inner">
-                        <div id="furnitsy_inner_div">
-                            <h2>A community doing good</h2>
-                            <p>Furnitsy is a furniture store, where my mother in law buys and sells Ashely furnitures. </p>
-                        </div>
-                        <div id="furnitsy_inner_div">
-                            <h2>Sell furnitures to customers</h2>
-                            <p>We sell Ashely furnitures on our website. Whatever you can find on this website, you can also find it on actual Ashley furnitures.</p>
-                        </div>
-                        <div id="furnitsy_inner_div">
-                            {/* ignores text align prop */}
-                            {/* <h2>Peace of mind</h2>
-                            <p>Your privacy is the highest priority of our dedicated team. And if you ever need assistance, we are always ready to step in for support.</p>
-                        </div>
-                    </div> */}
-                    {/* <div> */}
-                    {/* <div id="contact-me">
-                        <h3>If you want to hire me, contact me here!</h3>
-                        {/* <button onClick="document.location= 'mailto:cyss0317@gmail.com'">Contact Yun Choi</button> */}
-                        {/* <form action="mailto:cyss0317@gmail.com" method="POST" encType="text/plain">
-                            <input className='submit_to_email'type="submit"  value="Contact Yun Sung Choi" />
-                        </form>
-                    </div> 
-                </div>  */}
-                
 
             </div>
         )

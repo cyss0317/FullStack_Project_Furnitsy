@@ -5,10 +5,8 @@ const SessionErrorsReducer = (oldState = [], action) => {
     Object.freeze(oldState);
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            // return Object.assign({}, oldState, {[errors]: []})
             return [];
         case RECEIVE_SESSION_ERRORS:
-            // return Object.assign({}, oldState, {[errors]: action.errors} )
             return action.errors;
         case CLOSE_MODAL:
             return [];

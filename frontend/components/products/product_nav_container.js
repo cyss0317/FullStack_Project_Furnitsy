@@ -30,12 +30,9 @@ const mSTP = (state, ownProps) => {
     ))
 
     return ({
-        //IMPORTANT 
-        //I completely forgot to change object into a form of an array
         products: products,
         couchAndSofa: couchAndSofa,
         outdoorFurniture: outdoorFurniture,
-        // // randomitem: randomItem
         diningTable: diningTable,
         coffeeTable: coffeeTable,
         beds: beds,
@@ -51,11 +48,3 @@ const mDTP = dispatch => ({
 })
 
 export default connect(mSTP, mDTP)(ProductNavIndex)
-
-// export default connect(mSTP, mDTP)(ProductIndex)
-
-// ProductIndex(presentational)
-//     product_index_container
-//     product_index_item_container
-// ProductShow(presentational)
-//     product_show_container

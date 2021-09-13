@@ -17,12 +17,10 @@ class ReviewIndex extends React.Component{
     }
     componentDidMount() {
         this.props.fetchAllReviews()
-        // this.props.fetchProduct(this.props.productId)
     }
     componentDidUpdate(preProps){
         if( preProps.reviews !== this.props.reviews){
-            // this.props.fetchAllReviews()
-            // userReview = reviews[userReviewForThisProduct[0].id]
+
             this.forceUpdate()
         }
 
@@ -33,9 +31,6 @@ class ReviewIndex extends React.Component{
         var x = document.getElementById("review-submit")
         this.props.createReview(this.state)
             .then(res => this.setState({comment: "", rating: 1, helpful:0}))
-            // .then(() => this.props.fetchAllReviews())
-        // .then(alert("successfully created"))
-        // .then(x.disabled = true )
     }
 
     onChangeHandler( e){
@@ -71,11 +66,7 @@ class ReviewIndex extends React.Component{
         )
     }
     renderErrors(errors) {
-        // const errors = this.props.errors;
-        console.log("errors", errors)
         let errorsArr = Object.values(errors)
-        console.log("errorsArr", errorsArr)
-        console.log("errors type", typeof(errorsArr))
         return (
             errors.length !== 0 ?
                 <div className="errors-container">
@@ -88,10 +79,7 @@ class ReviewIndex extends React.Component{
                                     </li>
                                 )
                             })
-                            // <li>
 
-                            //     {errors}
-                            // </li>
                         }
                     </ul>
                 </div>
@@ -99,11 +87,6 @@ class ReviewIndex extends React.Component{
             ""
         )
     }
-
-    // this.stateRating(this.state, e) {
-    //     debugger
-    //     this.state.rating = e.currentTarget.value
-    // }
 
     render(){
         const { product, errors, reviews, currentUserId, currentUser, reviewsArray, productId, sessionId  } = this.props;
@@ -118,59 +101,18 @@ class ReviewIndex extends React.Component{
         if ( currentUser === undefined) {
             
         } else {
-            // userReviewForThisProduct = currentUser.reviews.filter((review) => review.product_id === productId)
             userReviewForThisProduct = reviewsArray.filter((review) => review.user_id === currentUserId)
-            console.log(userReviewForThisProduct)
             userReview =  userReviewForThisProduct.length === 0 ? null : reviews[userReviewForThisProduct[0].id];
         }
 
-        // debugger
         let productReviews = reviewsArray.filter((review) => review.product_id === productId)
         let totalRating = 0;
         productReviews.forEach((review) => totalRating += review.rating)
         let avgRating = Math.round(totalRating / (productReviews.length))
-        // debugger
 
-
-
-        // if (currentUser === undefined) return null;
-        // // if (reviews === undefined) return null;
-        // const reviewsArray = Object.values(reviews);
-        // let userReviewForThisProduct;
-        // console.log("currentUser", currentUser.reviews)
-        // userReviewForThisProduct = currentUser.reviews.filter((review) => review.product_id === this.props.productId) === [] ?
-        //     [] : currentUser.reviews.filter((review) => review.product_id === this.props.productId)
-        // let userReview;
-        // debugger
-        // console.log("1", userReviewForThisProduct)
-        // if (userReviewForThisProduct[0] === undefined) {
-        //     userReview = []
-        // } else {
-        //     console.log("2", userReviewForThisProduct[0])
-        //     userReview = reviews[userReviewForThisProduct[0].id];
-        // }
-        // let productReviews;
-        // productReviews = reviewsArray === undefined ? [] : reviewsArray.filter((review) => review.product_id === this.props.productId)
-        // let totalRating = 0;
-        // productReviews.forEach((review) => totalRating += review.rating)
-        // let avgRating = Math.round(totalRating / (productReviews.length))
-        // if(!currentUser){
-        //     return (
-
-        //     )
-        // }
-
-        // if(sessionId === null){
-        //     return(
-        //         <p>hello</p>
-        //     )
-        // } else{
-        //     <p>mmememem</p>
-        // }
         return (
                 
             <div id="reviews-main-container">
-
                 <div id="create-review">
                     <div id="create-review-reviews">
                         <h1>  {productReviews.length} reviews</h1>
@@ -190,12 +132,9 @@ class ReviewIndex extends React.Component{
                                     }
                                     <h4>{userReview.created_at.split("T")[0]}</h4>
                                     <button id="delete-review" value={userReview.id} onClick={this.deleteHandler} >Delete</button>
-                                    {/* <button>Edit</button> */}
                                 </section>
                                 {this.convertRatingsToStars(userReview.rating)}
                                 <p >{userReview.comment}</p>
-                                {/* <input type="text" value={userReview.comment}></input> */}
-                                {/* <p onClick={this.props.updateHandler} >{review.helpful.length === 0 ? Helpful? : Helpful review.helpful }</p> */}
                             </div>
                             : currentUser ?
                             <div>
@@ -221,7 +160,6 @@ class ReviewIndex extends React.Component{
                                         ''
                                     }
                                     <textarea id="create-review-form-input" type="text"  onChange={(e) => this.onChangeHandler(e)} value={this.state.comment} />
-                                    {/* {this.renderErrors(errors)} */}
                                     <input id="review-submit" type="submit" />
                                 </form>
                             </div>
@@ -253,28 +191,10 @@ class ReviewIndex extends React.Component{
                                     </section>
                                     {this.convertRatingsToStars(review.rating)}
                                     <p>{review.comment}</p>
-                                    {/* <p onClick={this.props.updateHandler} >{review.helpful.length === 0 ? Helpful? : Helpful review.helpful }</p> */}
                                 </li>
                                 )
                             }  
-                            // else if (review.id === userReviewForThisProduct.id) {
-                            //     <li id="reviews" key={index}>
-                            //         <section>
-                            //             {
-                            //                 review.user.first_name.length === 0 ?
-                            //                     <h3>Anonymous</h3>
-                            //                     :
-                            //                     <h3>{review.user.first_name}</h3>
-                            //             }
-                            //             <h4>{review.created_at.split("T")[0]}</h4>
-                            //             <button value={review.id} onClick={this.deleteHandler}>Delete</button>
-                            //         </section>
-                            //         {this.convertRatingsToStars(review.rating)}
-                            //         <p>{review.comment}</p>
-                            //         {/* <p onClick={this.props.updateHandler} >{review.helpful.length === 0 ? Helpful? : Helpful review.helpful }</p> */}
-                            //     </li>
-
-                            // } 
+           
                             else {
                                 return (
                                     <li id="reviews" key={index}>
@@ -289,7 +209,6 @@ class ReviewIndex extends React.Component{
                                         </section>
                                         {this.convertRatingsToStars(review.rating)}
                                         <p>{review.comment}</p>
-                                        {/* <p onClick={this.props.updateHandler} >{review.helpful.length === 0 ? Helpful? : Helpful review.helpful }</p> */}
                                     </li>
                                 )
                             } 

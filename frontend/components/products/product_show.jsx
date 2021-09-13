@@ -23,26 +23,19 @@ class ProductShow extends React.Component {
 
     componentDidMount(){
         this.props.fetchProduct(this.props.match.params.productId);
-        // this.props.fetchAllReviews();
         
     }
 
     componentDidUpdate(preProps){
-        console.log("preProps", preProps)
         if(preProps.photoUrls.length !== this.props.photoUrls.length){
             this.setState({mainPic:  this.props.photoUrls[0]})
         }
     }
-
-    //sometimes it doesn't display the created review right away
-
-//question 1. need to double click to invoke this
     rightSvgClickhandler(e){
         e.preventDefault();
         let newIndex =  this.props.photoUrls.indexOf(this.state.mainPic) + 1 > this.props.photoUrls.length + 1 ? 0 : this.props.photoUrls.indexOf(this.state.mainPic) + 1 
         this.setState({ index: newIndex})
         this.setState({ mainPic: this.props.photoUrls[newIndex]})
-        // this.setState({ mainPic: this.state.mainPic === undefined ? this.props.photoUrls[0] : this.props.photoUrls[this.props.photoUrls.indexOf(mainPic) + 1] })
        
     }
 
@@ -77,8 +70,6 @@ class ProductShow extends React.Component {
 
     render (){
 
-        //answered
-        //why returning null wouldn't stop the lifecycle, 
         const { product, reviews, currentUser, currentUserId, fetchProduct, fetchReview,fetchAllReviews,
              deleteReview, createReview, productId, updateReview , sessionId, errors, reviewsArray, openModal, productReviews,
             } = this.props;
@@ -86,24 +77,9 @@ class ProductShow extends React.Component {
             return null;
         }
 
-        // let newReview = {
-        //     user_id: currentUser.id,
-        //     product_id: product.id,
-        //     comment: "",
-        //     rating: "",
-        //     helpful: 0
-        // }
-        // const reviewsArray = Object.values(reviews)
-        // const productReviews = reviewsArray.filter((review) => review.product_id === product.id)
-        // let totalRating = 0;
-        // productReviews.forEach((review) => totalRating += review.rating )
-        // let avgRating = Number.parseFloat(totalRating/(productReviews.length)).toFixed(1)
-
         if (this.state.quantity === undefined){
             this.setState({quantity: 1 })
         }
-
-
 
         const arrHighlights = product.highlights.split("!")
 
@@ -123,23 +99,19 @@ class ProductShow extends React.Component {
                             </div>
                         </div>
                         <form align="center" id="show-quantity-container" onSubmit={this.addToCartHandler}>
-                            {/* <div align="center" id="show-quantity-container"> */}
-                                <label >Quantity</label>
-                                {/* Importatn!!!! need to put defaulValue for select */}
-                                <select name="quantity" id="show-quantity" defaultValue={this.state.quantity}  onChange={this.onChangeHandler}>
-                                    <option value="1" >1</option>
-                                    <option value="2" >2</option>
-                                    <option value="3" >3</option>
-                                    <option value="4" >4</option>
-                                    <option value="5" >5</option>
-                                    <option value="6" >6</option>
-                                    <option value="7" >7</option>
-                                    <option value="8" >8</option>
-                                    <option value="9" >9</option>
-                                </select>
-                            {/* </div> */}
+                            <label >Quantity</label>
+                            <select name="quantity" id="show-quantity" defaultValue={this.state.quantity}  onChange={this.onChangeHandler}>
+                                <option value="1" >1</option>
+                                <option value="2" >2</option>
+                                <option value="3" >3</option>
+                                <option value="4" >4</option>
+                                <option value="5" >5</option>
+                                <option value="6" >6</option>
+                                <option value="7" >7</option>
+                                <option value="8" >8</option>
+                                <option value="9" >9</option>
+                            </select>
                             <div id="add-to-cart-container">
-                                {/* <button id="add-to-cart" onClick={this.addToCartHandler}> Add to cart </button> */}
                                 <input id="add-to-cart" type="submit" value="Add to cart" />
                             </div>
                         </form>
