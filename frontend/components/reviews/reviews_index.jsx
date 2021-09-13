@@ -7,7 +7,7 @@ class ReviewIndex extends React.Component{
             user_id: this.props.currentUserId,
             product_id: this.props.productId,
             comment: "",
-            rating: 1,
+            rating: 0,
             helpful: 0
         }
 
@@ -35,7 +35,7 @@ class ReviewIndex extends React.Component{
             .then(res => this.setState({comment: "", rating: 1, helpful:0}))
             // .then(() => this.props.fetchAllReviews())
         // .then(alert("successfully created"))
-        .then(x.disabled = true )
+        // .then(x.disabled = true )
     }
 
     onChangeHandler( e){
@@ -72,22 +72,26 @@ class ReviewIndex extends React.Component{
     }
     renderErrors(errors) {
         // const errors = this.props.errors;
+        console.log("errors", errors)
+        let errorsArr = Object.values(errors)
+        console.log("errorsArr", errorsArr)
+        console.log("errors type", typeof(errorsArr))
         return (
             errors.length !== 0 ?
                 <div className="errors-container">
                     <ul className="errors">
                         {
-                            // errors.map((error) => {
-                            //     return (
-                            //         <li className="error" >
-                            //             - {error}
-                            //         </li>
-                            //     )
-                            // })
-                            <li>
+                            errors.map((error) => {
+                                return (
+                                    <li className="error" >
+                                        - {error}
+                                    </li>
+                                )
+                            })
+                            // <li>
 
-                                {errors.responseJSON}
-                            </li>
+                            //     {errors}
+                            // </li>
                         }
                     </ul>
                 </div>
@@ -103,7 +107,7 @@ class ReviewIndex extends React.Component{
 
     render(){
         const { product, errors, reviews, currentUserId, currentUser, reviewsArray, productId, sessionId  } = this.props;
-        console.log(errors)
+
         if (product === undefined){
             return null;
         }

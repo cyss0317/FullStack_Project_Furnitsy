@@ -12,7 +12,8 @@
 #  updated_at :datetime         not null
 #
 class Review < ApplicationRecord
-    validates :user_id, :product_id, :comment, :rating, presence: true
+    validates :user_id, :product_id, :comment, presence: true
+    validates :rating, presence: true, numericality: {greater_than: 0}
 
 
     belongs_to :user,
