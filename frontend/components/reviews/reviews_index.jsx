@@ -114,11 +114,13 @@ class ReviewIndex extends React.Component{
         if ( currentUser === undefined) {
             
         } else {
-            userReviewForThisProduct = currentUser.reviews.filter((review) => review.product_id === productId)
+            // userReviewForThisProduct = currentUser.reviews.filter((review) => review.product_id === productId)
+            userReviewForThisProduct = reviewsArray.filter((review) => review.user_id === currentUserId)
+            console.log(userReviewForThisProduct)
             userReview =  userReviewForThisProduct.length === 0 ? null : reviews[userReviewForThisProduct[0].id];
         }
 
-
+        // debugger
         let productReviews = reviewsArray.filter((review) => review.product_id === productId)
         let totalRating = 0;
         productReviews.forEach((review) => totalRating += review.rating)
@@ -210,7 +212,7 @@ class ReviewIndex extends React.Component{
                                     </div>
                                     {
                                         errors.length !== 0 ?
-                                        this.renderErrors(errors.responseJSON[0])
+                                        this.renderErrors(errors.review)
                                         :
                                         ''
                                     }
