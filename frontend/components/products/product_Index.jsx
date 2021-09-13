@@ -7,41 +7,44 @@ import { withRouter } from "react-router";
 class ProductIndex extends React.Component{
     constructor(props){
         super(props)
-
-        // const  randomItem10 = []
-        
+        this.state = {
+            randomItem10: []
+        }
     }
 
     componentDidMount(){
         // const randomItem10 = [];
         this.props.fetchProducts()
-            // .then((products) =>  
-            //     {
-            //         let productsArr = Object.values(products)
-            //         while (randomItem10.length < 10) {
-            //             let random = productsArr[Math.floor(Math.random() * productsArr.length)]
-            //             if (!randomItem10.includes(random)){
-            //             randomItem10.push(random)}
-            //         }
-            //     }
-            // )
+            .then((products) =>  
+                {
+                    let productsArr = Object.values(products)
+                    let temp = []
+                    while (this.state.randomItem10.length < 10) {
+                        let random = productsArr[Math.floor(Math.random() * productsArr.length)]
+                        if (!temp.includes(random)){
+                            temp.push(random)
+                        }
+                    }
+                    this.setState({randomItem10: this.state.randomItem10.concat(temp)})
+                }
+            )
         // debugger
     }
 
     render(){
 
         const { products, couchAndSofa, coffeeTable,  recentlyViews, outdoor, diningTable, diningChairs, kidsBunkBed, accentChairs} = this.props;
-        const randomItem10 = [];
-        let productsArr = Object.values(products)
-        if (productsArr.length !== 0 ){
-            while (randomItem10.length < 10) {
-                let random = productsArr[Math.floor(Math.random() * productsArr.length)]
-                if (!randomItem10.includes(random)) {
-                    randomItem10.push(random)
-                }
-            }    
-        }
-
+        // const randomItem10 = [];
+        // let productsArr = Object.values(products)
+        // if (productsArr.length !== 0 ){
+        //     while (randomItem10.length < 10) {
+        //         let random = productsArr[Math.floor(Math.random() * productsArr.length)]
+        //         if (!randomItem10.includes(random)) {
+        //             randomItem10.push(random)
+        //         }
+        //     }    
+        // }
+        console.log(this.state.randomItem10)
         return (
 
             <div className="index-main-container">
@@ -67,7 +70,7 @@ class ProductIndex extends React.Component{
                     <ul className="recently-viewed-items">
                         {
                             //it re-renders when modal is turned on or off
-                            randomItem10.map(product => (
+                            this.state.randomItem10.map(product => (
                                 <RecentlyViewItemIndex
                                     product={product}
                                     key={product.id}
