@@ -29,21 +29,6 @@ const mSTP = (state, window) => {
         product.category === "Dining Chairs"
     ))
     
-    
-    // important to under stand!! 
-    // 
-    //question 4 why does it refresh
-    
-    // const randomItem10 = [];
-    // if (products.length !== 0) {
-        
-    //     while (randomItem10.length < 10) {
-    //         let random = products[Math.floor(Math.random() * products.length)]
-    //         if (!randomItem10.includes(random)){
-    //         randomItem10.push(random)}
-    //     }
-    // }
- 
 
 
     return ({

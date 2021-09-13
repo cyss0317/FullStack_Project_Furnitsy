@@ -17,15 +17,20 @@ class ProductIndex extends React.Component{
         this.props.fetchProducts()
             .then((products) =>  
                 {
-                    let productsArr = Object.values(products)
-                    let temp = []
-                    while (this.state.randomItem10.length < 10) {
+                    // debugger
+                    let productsArr = Object.values(products.products);
+                    console.log("products", productsArr)
+                    // debugger
+                    // console.log("productObject", Object.values(products))
+                    let temp = [];
+                    while (temp.length < 10) {
                         let random = productsArr[Math.floor(Math.random() * productsArr.length)]
                         if (!temp.includes(random)){
                             temp.push(random)
+                            console.log(temp)
                         }
                     }
-                    this.setState({randomItem10: this.state.randomItem10.concat(temp)})
+                    this.setState({randomItem10: temp})
                 }
             )
         // debugger
