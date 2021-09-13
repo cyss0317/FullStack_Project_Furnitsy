@@ -29,6 +29,17 @@ class Api::CartItemsController < ApplicationController
         end
     end
 
+    def update
+        @cart_item = CartItem.find_by(id: params[:id])
+        if @cart_item && @cart_item.update(cart_item_params)
+            render :show
+        else
+            render json: @cart_item.errors.full_messages, status: 400
+        end
+        
+    end
+    
+
     def destroy
         @cart_item = CartItem.find_by(id: params[:id])
         if @cart_item.delete

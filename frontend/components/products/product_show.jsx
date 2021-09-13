@@ -6,7 +6,7 @@ class ProductShow extends React.Component {
         super(props)
 
         this.state = {
-            errors: this.props.errors,
+            // errors: this.props.errors,
             mainPic: props.photoUrls[0],
             quantity: 1,
             index: 0,

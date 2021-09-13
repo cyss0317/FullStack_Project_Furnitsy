@@ -1,4 +1,4 @@
-import { CREATE_CART_ITEM, DELETE_CART_ITEM, RECEIVE_CART_ITEMS} from "../actions/cart_items_actions";
+import { CREATE_CART_ITEM, DELETE_CART_ITEM, RECEIVE_CART_ITEMS, UPDATE_CART_ITEM} from "../actions/cart_items_actions";
 import { OPEN_MODAL } from "../actions/modal_actions";
 
 const CartItemsReducer = (oldState = {}, action) => {
@@ -13,7 +13,9 @@ const CartItemsReducer = (oldState = {}, action) => {
         case DELETE_CART_ITEM:
             delete nextState[action.cartItemId]
             return nextState
-
+        case UPDATE_CART_ITEM:
+            nextState[cartItem.id]= cartItem
+            return nextState
         default:
             return oldState;
     }

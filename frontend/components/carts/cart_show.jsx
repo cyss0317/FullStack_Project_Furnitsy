@@ -15,7 +15,7 @@ class CartShow extends React.Component{
 
     
     render(){
-        const { cartItems, numberOfProducts, allItems, totalPrice, noCurrentUser, currentUser } = this.props;
+        const { cartItems, numberOfProducts, allItems, updateCartItem, totalPrice, noCurrentUser, currentUser, allProducts, receiveAllProducts, deleteCartItem, receiveCartItems } = this.props;
 
         let tax = totalPrice * .0825;
         let subtotal = totalPrice + tax;
@@ -49,9 +49,9 @@ class CartShow extends React.Component{
                                 <ul id="ul">
                                     {
                                         allItems.map((item) => (
-                                            <CartShowItem deleteCartItem={this.props.deleteCartItem} receiveAllProducts={this.props.receiveAllProducts} 
-                                            receiveCartItems={this.props.receiveCartItems}
-                                            allProducts={this.props.allProducts} totalPrice={totalPrice} item={item} key={item.id} />
+                                            <CartShowItem deleteCartItem={deleteCartItem} receiveAllProducts={receiveAllProducts} 
+                                            receiveCartItems={receiveCartItems} updateCartItem={updateCartItem}
+                                            allProducts={allProducts} totalPrice={totalPrice} item={item} key={item.id} />
                                         ))
                                     }
                                 </ul>
