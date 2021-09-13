@@ -77,13 +77,17 @@ class ReviewIndex extends React.Component{
                 <div className="errors-container">
                     <ul className="errors">
                         {
-                            errors.map((error) => {
-                                return (
-                                    <li className="error" >
-                                        - {error}
-                                    </li>
-                                )
-                            })
+                            // errors.map((error) => {
+                            //     return (
+                            //         <li className="error" >
+                            //             - {error}
+                            //         </li>
+                            //     )
+                            // })
+                            <li>
+
+                                {errors.responseJSON}
+                            </li>
                         }
                     </ul>
                 </div>
@@ -206,7 +210,7 @@ class ReviewIndex extends React.Component{
                                     </div>
                                     {
                                         errors.length !== 0 ?
-                                        this.renderErrors(Object.value(errors.responseJSON))
+                                        this.renderErrors(errors.responseJSON[0])
                                         :
                                         ''
                                     }
