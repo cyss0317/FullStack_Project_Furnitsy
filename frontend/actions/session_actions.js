@@ -52,7 +52,7 @@ export const signup = (user) => dispatch => {
             .then(res => dispatch(receiveCurrentUser(res)),
         error => (
             dispatch(receiveErrors(error.responseJSON))
-        ))
+        )) 
             .then(user => dispatch(fetchCart(user.id)))
     )
 }
