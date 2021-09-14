@@ -23,8 +23,15 @@
     transform: scale(.9);
     transition: .05s;
 }
-#update-cartItem{
-    /* display: none; */
+#update-cartItem:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.1s;
+}
+#update-cartItem:active{
+
+    transform: scale(1.05);
+    transition: .1s;
 }
 
 #ul{
