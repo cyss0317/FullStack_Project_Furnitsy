@@ -17,13 +17,8 @@ class CartShowItem extends React.Component{
         this.onChangeHandler = this.onChangeHandler.bind(this)
     }
 
-    componentDidMount(){
-        // this.props.receiveAllProducts()
-    }
-
 
     onChangeHandler(e) {
-        // debugger
         let updateButton = document.getElementById("update-cartItem")
         this.setState({ quantity: parseInt(e.currentTarget.value) })
         updateButton.style.display = "block"
@@ -32,7 +27,6 @@ class CartShowItem extends React.Component{
 
     updateCartItem(e){
         e.preventDefault;
-        // debugger
         this.props.updateCartItem(this.state)
     }
 
@@ -47,8 +41,6 @@ class CartShowItem extends React.Component{
         let tax = totalPrice * .0825;
         let subtotal = totalPrice + tax;
         allProducts.length === 0 ? null : allProducts[item.id] ;
-        // debugger
-        // debugger
         return (
             <li  className={`cart-show-item-container`}>
                 <div className="cart-show-item-container-info">

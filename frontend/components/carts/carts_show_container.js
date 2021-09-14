@@ -20,7 +20,6 @@ export const mSTP = (state) => {
 
     // let allProductsNameArray =[];
     // allItems.forEach((item)=> {
-    //     debugger
     //     if (!allProductsNameArray.includes(item.product.name)){
     //         item.product.name
     //     }}

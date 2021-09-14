@@ -17,7 +17,6 @@ class CartShow extends React.Component{
     render(){
         // const { cartItems, numberOfProducts, allItems, updateCartItem, totalPrice, noCurrentUser, currentUser, allProducts, receiveAllProducts, deleteCartItem, receiveCartItems } = this.props;
         const { cartItems, items, updateCartItem, noCurrentUser, currentUser, allProducts, receiveAllProducts, deleteCartItem, receiveCartItems } = this.props;
-        // debugger
         let allItems = Object.values(items).length !== 0 ? Object.values(items) : []
         
         
