@@ -1,5 +1,4 @@
 import * as CartItemsAPIUtil from "../util/cart_items_api_util"
-import {connect} from "react-redux";
 export const CREATE_CART_ITEM = "CREATE_CART_ITEM";
 export const RECEIVE_CART_ITEMS = "RECEIVE_CART_ITEMS";
 export const DELETE_CART_ITEM = "DELETE_CART_ITEM";
@@ -28,7 +27,7 @@ export const deleteCartItem = (cartItemId) => ({
 
 export const editCartItem = (cartItem) => ({
     type: UPDATE_CART_ITEM,
-    cartItem
+    cartItem: cartItem
 })
 
 
@@ -38,8 +37,6 @@ export const ThunkCreateCartItem = (productId, quantity) => dispatch => (
         )
 )
 
-
-
 export const ThunkReceiveCartItems = () => dispatch => (
     CartItemsAPIUtil.$receiveCartItems()
         .then( cartItems => dispatch(receiveCartItems(cartItems)))
@@ -48,7 +45,7 @@ export const ThunkReceiveCartItems = () => dispatch => (
 
 export const ThunkUpdateCartItem = (cartItem) => dispatch => (
     CartItemsAPIUtil.$updateCartItem(cartItem)
-        .then(cartItems => dispatch(receiveCartItems(cartItems)))
+        .then(cartItem => dispatch(editCartItem(cartItem)))
 )
 
 export const ThunkDeleteCartItem = (cartItemId) => dispatch => (

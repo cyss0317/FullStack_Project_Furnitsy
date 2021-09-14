@@ -3,7 +3,13 @@ import {Route} from "react-router";
 import {ProductIndexContainer} from "../products/products_index_container";
 import {Link} from "react-router-dom"
 
-const CartHeader = ({numberOfProducts, currentUser, logout, openModal}) =>{
+const CartHeader = ({ items, currentUser, logout, openModal}) =>{
+
+    const allItems = Object.values(items)
+    let numberOfProducts = 0;
+    allItems.forEach((item) => numberOfProducts += item.quantity)
+
+
     const ifLoggedIn = () => (
 
             <div id="counts-main-div">

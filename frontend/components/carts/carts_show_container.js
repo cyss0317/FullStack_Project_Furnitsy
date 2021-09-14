@@ -6,33 +6,36 @@ import { ThunkReceiveProducts } from "../../actions/product_actions";
 export const mSTP = (state) => {
 
 
-    const allItems = state.entities.cartItems === undefined ? {} : Object.values(state.entities.cartItems)
+    // const allItems = state.entities.cartItems === undefined ? {} : Object.values(state.entities.cartItems)
+    
+    // const allItems = state.entities.cartItems.length !== 0 ? Object.values(state.entities.cartItems) : {}
 
 
-    let numberOfProducts = 0;
-    allItems.forEach((item) => numberOfProducts += item.quantity )
+    // let numberOfProducts = 0;
+    // allItems.forEach((item) => numberOfProducts += item.quantity )
 
-    const products = Object.values(state.entities.products)
+    // const products = Object.values(state.entities.products)
 
 
 
-    let allProductsNameArray =[];
-    allItems.forEach((item)=> {
-        if (!allProductsNameArray.includes(item.product.name)){
-            item.product.name
-        }}
-    )
+    // let allProductsNameArray =[];
+    // allItems.forEach((item)=> {
+    //     debugger
+    //     if (!allProductsNameArray.includes(item.product.name)){
+    //         item.product.name
+    //     }}
+    // )
 
-    let totalPrice = 0;
-    allItems.forEach((item) => totalPrice += item.product.price)
-    // combine same items into one div
+    // let totalPrice = 0;
+    // allItems.forEach((item) => totalPrice += item.product.price)
     
     return({
-        allItems: allItems,
+        // allItems: allItems,
+        items: state.entities.cartItems,
         noCurrentUser: state.session.id,
         cartItems: state.entities.cartItems,
-        numberOfProducts: numberOfProducts,
-        totalPrice: totalPrice,
+        // numberOfProducts: numberOfProducts,
+        // totalPrice: totalPrice,
         currentUser: state.entities.users[state.session.id],
         allProducts: state.entities.products,
         // cart: state.entities.cart

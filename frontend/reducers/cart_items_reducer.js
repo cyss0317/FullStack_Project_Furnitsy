@@ -4,7 +4,7 @@ import { OPEN_MODAL } from "../actions/modal_actions";
 const CartItemsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
     let nextState = Object.assign({}, oldState)
-
+    // debugger
     switch (action.type) {
         case CREATE_CART_ITEM:
             return Object.assign({}, oldState, { [action.cartItem.id]: action.cartItem })
@@ -14,7 +14,8 @@ const CartItemsReducer = (oldState = {}, action) => {
             delete nextState[action.cartItemId]
             return nextState
         case UPDATE_CART_ITEM:
-            nextState[cartItem.id]= cartItem
+            // console.log(cartItem)
+            nextState[action.cartItem.id] = action.cartItem
             return nextState
         default:
             return oldState;

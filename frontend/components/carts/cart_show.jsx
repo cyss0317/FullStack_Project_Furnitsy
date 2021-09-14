@@ -15,14 +15,33 @@ class CartShow extends React.Component{
 
     
     render(){
-        const { cartItems, numberOfProducts, allItems, updateCartItem, totalPrice, noCurrentUser, currentUser, allProducts, receiveAllProducts, deleteCartItem, receiveCartItems } = this.props;
-
-        let tax = totalPrice * .0825;
-        let subtotal = totalPrice + tax;
-
+        // const { cartItems, numberOfProducts, allItems, updateCartItem, totalPrice, noCurrentUser, currentUser, allProducts, receiveAllProducts, deleteCartItem, receiveCartItems } = this.props;
+        const { cartItems, items, updateCartItem, noCurrentUser, currentUser, allProducts, receiveAllProducts, deleteCartItem, receiveCartItems } = this.props;
+        // debugger
+        let allItems = Object.values(items).length !== 0 ? Object.values(items) : []
+        
+        
+        let numberOfProducts = 0;
+        allItems.forEach((item) => numberOfProducts += item.quantity)
+        
+        // const products = Object.values(state.entities.products)
+        
+        let allProductsNameArray = [];
+        allItems.forEach((item) => {
+            if (!allProductsNameArray.includes(item.product.name)) {
+                item.product.name
+            }
+        }
+        )
+        
+        let totalPrice = 0;
+        allItems.forEach((item) => totalPrice += (item.product.price * item.quantity))
         if (cartItems === undefined){
             return null;
         }
+
+        let tax = totalPrice * .0825;
+        let subtotal = totalPrice + tax;
 
 
 

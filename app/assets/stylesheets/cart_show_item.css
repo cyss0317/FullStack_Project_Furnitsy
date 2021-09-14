@@ -141,17 +141,17 @@
 }
 
 #cart-item-quantity > button{
-    height: 48px;
-    width: 20%;
+    /* height: 48px; */
+    /* width: 20%; */
     min-width: 80px;
-    padding: 0px 36px 0px 12px;
-    font-size: 18px;
-    color: black;
-    outline: none;
-    background-color:white ;
+    /* padding: 0px 36px 0px 12px; */
+    font-size: 13px;
+    /* color: black; */
+    /* outline: none; */
+    background-color: white;
     border: none;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
+    /* box-shadow: 0 4px 20px rgb(34 34 34 / 15%); */
 }
 
 .cart-show-image-thumnails{

@@ -7,7 +7,7 @@ class CartShowItem extends React.Component{
         super(props)
         this.deleteHandler = this.deleteHandler.bind(this);
         this.state = {
-
+            id: this.props.item.id,
             cart_id: this.props.item.cart_id,
             product_id: this.props.item.product_id,
             quantity: this.props.item.quantity
@@ -23,7 +23,7 @@ class CartShowItem extends React.Component{
 
 
     onChangeHandler(e) {
-        debugger
+        // debugger
         let updateButton = document.getElementById("update-cartItem")
         this.setState({ quantity: parseInt(e.currentTarget.value) })
         updateButton.style.display = "block"
@@ -33,7 +33,7 @@ class CartShowItem extends React.Component{
     updateCartItem(e){
         e.preventDefault;
         // debugger
-        return e => this.props.updateCartItem(this.state)
+        this.props.updateCartItem(this.state)
     }
 
     deleteHandler(e){
@@ -47,6 +47,7 @@ class CartShowItem extends React.Component{
         let tax = totalPrice * .0825;
         let subtotal = totalPrice + tax;
         allProducts.length === 0 ? null : allProducts[item.id] ;
+        // debugger
         // debugger
         return (
             <li  className={`cart-show-item-container`}>
