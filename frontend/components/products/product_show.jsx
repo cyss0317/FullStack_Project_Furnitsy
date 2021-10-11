@@ -33,7 +33,9 @@ class ProductShow extends React.Component {
     }
     rightSvgClickhandler(e){
         e.preventDefault();
-        let newIndex =  this.props.photoUrls.indexOf(this.state.mainPic) + 1 > this.props.photoUrls.length + 1 ? 0 : this.props.photoUrls.indexOf(this.state.mainPic) + 1 
+        let newIndex =  this.props.photoUrls.indexOf(this.state.mainPic) + 1 > this.props.photoUrls.length + 1 ? 0 
+        :
+         this.props.photoUrls.indexOf(this.state.mainPic) + 1 
         this.setState({ index: newIndex})
         this.setState({ mainPic: this.props.photoUrls[newIndex]})
        
