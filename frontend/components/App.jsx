@@ -19,89 +19,132 @@ import { ThunkReceiveProducts } from "../actions/product_actions";
 import SearchBarContainer from "./search_bar/search_bar_conatiner";
 import search_bar_conatiner from "./search_bar/search_bar_conatiner";
 import { withRouter } from "react-router-dom";
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const App = () => {
-    const history= useHistory();
-    const [keyword, SetKeyword] = useState(()=> '');
+  const history = useHistory();
+  const [keyword, SetKeyword] = useState(() => "");
 
-    function hadleKeyword(e){
-        e.preventDefault();
-        history.push({pathname: `/search/${keyword}`, state: keyword})
-        document.querySelector(".header-searchbar").value = ""
-    }
+  function hadleKeyword(e) {
+    e.preventDefault();
+    history.push({ pathname: `/search/${keyword}`, state: keyword });
+    document.querySelector(".header-searchbar").value = "";
+  }
 
-    return(
-   <div className="main-div">
-       <Modal/>
-       <div className="header-container">
-            <header className="header">
-                <div className="logo-searchbar-sign">
-                    <a className="header-logo" href="/" >Furnitsy</a>
-                        <form id="search-bar-form"onSubmit={hadleKeyword}>
-                            <input
-                                type="text"
-                                className="header-searchbar"
-                                placeholder="Search"
-                                name="s"
-                                onChange={(e) => SetKeyword(e.currentTarget.value) }
-                            />
-                        <button id="search-bar-submit" type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18ZM10,4a6,6,0,1,0,6,6A6.007,6.007,0,0,0,10,4Z"></path><path d="M21,22a1,1,0,0,1-.707-0.293l-4-4a1,1,0,0,1,1.414-1.414l4,4A1,1,0,0,1,21,22Z"></path></svg></button>
-                        </form>
-                    <GreetingContainer className="greeting-component"/>
-                    <CartHeaderContainer />
+  return (
+    <div className="main-div">
+      <Modal />
+      <div className="header-container">
+        <header className="header">
+          <div className="logo-searchbar-sign">
+            <a className="header-logo" href="/">
+              Furnitsy
+            </a>
+            <form id="search-bar-form" onSubmit={hadleKeyword}>
+              <input
+                type="text"
+                className="header-searchbar"
+                placeholder="Search"
+                name="s"
+                onChange={(e) => SetKeyword(e.currentTarget.value)}
+              />
+              <button id="search-bar-submit" type="submit">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18ZM10,4a6,6,0,1,0,6,6A6.007,6.007,0,0,0,10,4Z"></path>
+                  <path d="M21,22a1,1,0,0,1-.707-0.293l-4-4a1,1,0,0,1,1.414-1.414l4,4A1,1,0,0,1,21,22Z"></path>
+                </svg>
+              </button>
+            </form>
+            <GreetingContainer className="greeting-component" />
+            <CartHeaderContainer />
+          </div>
 
-                </div>
-                
-                <CategoryNavBar/>
-
-            </header>
-       </div>
-        <Switch>
-            <Route path="/search/:keyword" component={SearchBarContainer} />
-            <Route path="/products/:productId" component={ProductShowContainer}/>
-            <Route path="/category/:category" component={ProductNavContainer} />
-            <Route path="/products" component={ProductIndexContainer} />
-            <ProtectedRoute path="/cart_items" component={CartShowContainer}/>
-            <Route path="/" component={ProductIndexContainer}/>
-            <AuthRoute path="/login" component={LoginFormContainer} />
-            <AuthRoute path="/signup" component={SignupFormContainer}/>
-        </Switch>
-        <footer>
-
-
-                <div className="what_is_furnitsy">
-                    <div>
-                        <h1>What is Furnitsy?</h1>
-                    </div>
-                     <div id="what_is_furnitsy_inner">
-                        <div id="furnitsy_inner_div">
-                            <h2>A community doing good</h2>
-                            <p>Furnitsy is a furniture store, where my mother in law buys and sells Ashely furnitures. </p>
-                        </div>
-                        <div id="furnitsy_inner_div">
-                            <h2>Sell furnitures to customers</h2>
-                            <p>We sell Ashely furnitures on our website. Whatever you can find on this website, you can also find it on actual Ashley furnitures.</p>
-                        </div>
-                        <div id="furnitsy_inner_div">
-                            <h2>Peace of mind</h2>
-                            <p>Your privacy is the highest priority of our dedicated team. And if you ever need assistance, we are always ready to step in for support.</p>
-                        </div>
-                    </div>
-                    <div>
-
-                        <a id="linked-in" href="https://www.linkedin.com/in/yun-sung-choi-936142214/" target="_blank" ><img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/LI-Logo.png" alt="" width="160" height="50" /></a>
-                        <a id="github" href="https://github.com/cyss0317" target="_blank" ><img src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/Octocat.png" alt="" width="100" height="80" /></a>
-                        <form action="mailto:cyss0317@gmail.com" method="POST" encType="text/plain">
-                            <input className='submit_to_email' type="submit" value="Contact Yun Sung Choi" />
-                        </form>
-                    </div>
-                </div>
-        
-        </footer>
+          <CategoryNavBar />
+        </header>
+      </div>
+      <Switch>
+        <Route path="/search/:keyword" component={SearchBarContainer} />
+        <Route path="/products/:productId" component={ProductShowContainer} />
+        <Route path="/category/:category" component={ProductNavContainer} />
+        <Route path="/products" component={ProductIndexContainer} />
+        <ProtectedRoute path="/cart_items" component={CartShowContainer} />
+        <Route path="/" component={ProductIndexContainer} />
+        <AuthRoute path="/login" component={LoginFormContainer} />
+        <AuthRoute path="/signup" component={SignupFormContainer} />
+      </Switch>
+      <footer>
+        <div className="what_is_furnitsy">
+          <div>
+            <h1>What is Furnitsy?</h1>
+          </div>
+          <div id="what_is_furnitsy_inner">
+            <div id="furnitsy_inner_div">
+              <h2>A community doing good</h2>
+              <p>
+                Furnitsy is a furniture store, where my mother in law buys and
+                sells Ashely furnitures.{" "}
+              </p>
+            </div>
+            <div id="furnitsy_inner_div">
+              <h2>Sell furnitures to customers</h2>
+              <p>
+                We sell Ashely furnitures on our website. Whatever you can find
+                on this website, you can also find it on actual Ashley
+                furnitures.
+              </p>
+            </div>
+            <div id="furnitsy_inner_div">
+              <h2>Peace of mind</h2>
+              <p>
+                Your privacy is the highest priority of our dedicated team. And
+                if you ever need assistance, we are always ready to step in for
+                support.
+              </p>
+            </div>
+          </div>
+          <div>
+            <a
+              id="linked-in"
+              href="https://www.linkedin.com/in/yun-sung-choi-936142214/"
+              target="_blank"
+            >
+              <img
+                src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/LI-Logo.png"
+                alt=""
+                width="160"
+                height="50"
+              />
+            </a>
+            <a id="github" href="https://github.com/cyss0317" target="_blank">
+              <img
+                src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/Octocat.png"
+                alt=""
+                width="100"
+                height="80"
+              />
+            </a>
+            <form
+              action="mailto:cyss0317@gmail.com"
+              method="POST"
+              encType="text/plain"
+            >
+              <input
+                className="submit_to_email"
+                type="submit"
+                value="Contact Yun Sung Choi"
+              />
+            </form>
+          </div>
+        </div>
+      </footer>
     </div>
-    )   
-}
+  );
+};
 // };
 
 export default withRouter(App);

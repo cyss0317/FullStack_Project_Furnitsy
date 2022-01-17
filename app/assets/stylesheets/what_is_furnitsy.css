@@ -1,92 +1,90 @@
-.what_is_furnitsy{
-    background-image: url('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/main_bottom_background.JPG');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    margin-top: 30px;
-    object-fit: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;    
-    padding: 12px 36px 12px 36px;
+.what_is_furnitsy {
+  background-image: url("https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/main_bottom_background.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  margin-top: 30px;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 36px 12px 36px;
 }
 
-#what_is_furnitsy_inner{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 40px;
-    align-items: flex-start;
-    
+#what_is_furnitsy_inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 40px;
+  align-items: flex-start;
 }
-#furnitsy_inner_div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+#furnitsy_inner_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 
-    width: 26%;
-    text-align: center;
-
+  width: 26%;
+  text-align: center;
 }
 
-#furnitsy_inner_div p{
-    padding-top: 13px;
+#furnitsy_inner_div p {
+  padding-top: 13px;
 }
 
-.what_is_furnitsy h1{
-    font-size: 38px;
-    padding-top: 20px;
+.what_is_furnitsy h1 {
+  font-size: 38px;
+  padding-top: 20px;
 }
 
-.what_is_furnitsy h2{
-    font-size: 25px;
+.what_is_furnitsy h2 {
+  font-size: 25px;
 }
-.what_is_furnitsy p{
-    font-size: 17px;
+.what_is_furnitsy p {
+  font-size: 17px;
 }
 
 #contact-me {
-    padding-top: 30px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-#contact-me h3{
-    font-size: 30px;
-    font-weight: bolder;
-    padding-bottom: 13px ;
+#contact-me h3 {
+  font-size: 30px;
+  font-weight: bolder;
+  padding-bottom: 13px;
 }
 
-.submit_to_email{
-    /* border: 1px solid #222222; */
-    outline: none;
-    border: none;
-    border-radius: 15px;
-    font-size: 20px;
-    /* margin: 10px 0 36px 0; */
-    padding-top: 6px;
-    padding-bottom:6px;
-    padding-left: 9px;
-    padding-right: 9px;
-    margin-bottom: 36px;
-    margin-top: 10px;
-    color: #222222;
-    background-color: #eeb161;
+.submit_to_email {
+  /* border: 1px solid #222222; */
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  font-size: 20px;
+  /* margin: 10px 0 36px 0; */
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 9px;
+  padding-right: 9px;
+  margin-bottom: 36px;
+  margin-top: 10px;
+  color: #222222;
+  background-color: #eeb161;
 }
 
-.submit_to_email:hover{
-    cursor: pointer;
-    background-color: #f37c40;
-    color: #e9dac7;
-    transform: scale(1.1);
-    transition: .15s;
+.submit_to_email:hover {
+  cursor: pointer;
+  background-color: #f37c40;
+  color: #e9dac7;
+  transform: scale(1.1);
+  transition: 0.15s;
 
-    /* border: 1px solid #FAECD5; */
-    /* border: 1px solid #eeb161; */
+  /* border: 1px solid #FAECD5; */
+  /* border: 1px solid #eeb161; */
 }
-.submit_to_email:active{
-    transform: scale(1);
+.submit_to_email:active {
+  transform: scale(1);
 }

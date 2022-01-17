@@ -1,109 +1,106 @@
-html,body{
-    width: 100%;
-    height: 100%;
-    overflow: auto;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
-.cart-image{
-    width: 26px;
-    height: 26px;
+.cart-image {
+  width: 26px;
+  height: 26px;
 }
-#counts-main-div{
-    position: relative;
-    top: -9px;
-    right: -7px;
+#counts-main-div {
+  position: relative;
+  top: -9px;
+  right: -7px;
 }
-#counts-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 10px;
-    right: -16px;
-    border: 3px solid white;
-    border-radius: 50%;
-}
-
-.cart-header-counts{
-    background-color: #FAA077;
-    border-radius: 100%;
-    width: 22px;
-    height: 22px;
-    font-size: 13px;
-    z-index: 20;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+#counts-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 10px;
+  right: -16px;
+  border: 3px solid white;
+  border-radius: 50%;
 }
 
-#root{
-    width: inherit;
-    height: inherit;
+.cart-header-counts {
+  background-color: #faa077;
+  border-radius: 100%;
+  width: 22px;
+  height: 22px;
+  font-size: 13px;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.main-div{
-    width: inherit;
-    height: inherit;
+#root {
+  width: inherit;
+  height: inherit;
 }
 
-.logo-searchbar-sign{
-    display: flex;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 36px;
-    padding-right: 36px;
-    justify-content: space-evenly;
-    align-items: center;
-
-}
-#search-bar-submit{
-    outline: none;
-    border: none;
-    background-color: transparent;
-    position: relative;
-    left: -10%;
-}
-#search-bar-submit svg{
-
-    
+.main-div {
+  width: inherit;
+  height: inherit;
 }
 
-#search-bar-form{
-    width: 60%;
-    display: flex;
+.logo-searchbar-sign {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 36px;
+  padding-right: 36px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#search-bar-submit {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  left: -10%;
+}
+#search-bar-submit svg {
 }
 
-.header-logo{
-
-    font-family: 'Love Ya Like A Sister', cursive;
-    font-size: 40px;
-    color: #F1641E;
-    transform: rotate(-5deg);
-}
-.header-logo:hover{
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: .15s;
-}
-.header-logo:active{
-    transform: scale(.9);
-
-}
-textarea:focus, input:focus{
-    outline: none;
+#search-bar-form {
+  width: 60%;
+  display: flex;
 }
 
-.header-searchbar{
-    width: 100%;
-    height: 43px;
-    border: 2.2px solid black;
-    border-radius: 100px;
-    padding-left: 15px;
-    background-color: rgb(243, 243, 243);
+.header-logo {
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: 40px;
+  color: #f1641e;
+  transform: rotate(-5deg);
+}
+.header-logo:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.15s;
+}
+.header-logo:active {
+  transform: scale(0.9);
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.header-searchbar {
+  width: 100%;
+  height: 43px;
+  border: 2.2px solid black;
+  border-radius: 100px;
+  padding-left: 15px;
+  background-color: rgb(243, 243, 243);
 }
 /* get rid of outline when you click on input */
 /* input:focus {outline:none;} */
 
-.greeting-component{
-    width: 10%;
+.greeting-component {
+  width: 10%;
 }
