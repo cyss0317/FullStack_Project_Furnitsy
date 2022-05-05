@@ -63,7 +63,7 @@ IMPORTANT!!!
     Please open your "Rosetta Terminal" and cd into the main root and run "rails db:setup"
 7. Inside the main root folder, run "rails s" => This will start the rails server
 8. Inside the main root folder, run "npm run start" => This will run the React
-9. You should be 
+9. You should be GOOD to go! Please enjoy!
 
 
 when it throws an error about the log file
