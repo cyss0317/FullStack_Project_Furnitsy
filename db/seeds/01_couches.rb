@@ -19,9 +19,7 @@ p1_2 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images
 p1_3 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/13405-38-SW-P1-KO.webp')
 p1_4 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/13405-38-35.webp')
 p1_5 = open('https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/belcampo+sofa/13405-38-35-T046-ALT.webp')
-
-p1.images.attach(io:p1_0, filename: 'images/belcampo sofa/main_13405-38-SET.webp')
-p1.images.attach(io:p1_1, filename: 'images/belcampo sofa/1340538-10x8-CROP.png')
+p1.images.attach(io:p1_0, filename: 'images/belcampo sofa/main_13405-38-SET.webp') p1.images.attach(io:p1_1, filename: 'images/belcampo sofa/1340538-10x8-CROP.png')
 p1.images.attach(io:p1_2, filename: 'images/belcampo sofa/13405-MOOD-A.webp')
 p1.images.attach(io:p1_3, filename: 'images/belcampo sofa/13405-38-SW-P1-KO.webp')
 p1.images.attach(io:p1_4, filename: 'images/belcampo sofa/13405-38-35.webp')

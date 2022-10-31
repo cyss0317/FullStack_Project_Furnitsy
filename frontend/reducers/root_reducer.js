@@ -7,10 +7,10 @@ import CartItemsReducer from "./cart_items_reducer";
 import CartReducer from "./cart_reducer";
 
 const RootReducer = combineReducers({
-    entities: EntitiesReducer,
-    session: SessionReducer,
-    errors: ErrorsReducer,
-    ui: UiReducer
-})
+  entities: EntitiesReducer,
+  session: SessionReducer,
+  errors: ErrorsReducer,
+  ui: UiReducer,
+});
 
 export default RootReducer;
