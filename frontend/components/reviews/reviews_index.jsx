@@ -15,6 +15,7 @@ class ReviewIndex extends React.Component {
     this.onClickHandler = this.onClickHandler.bind(this);
     this.deleteHandler = this.deleteHandler.bind(this);
   }
+  
   componentDidMount() {
     this.props.fetchAllReviews();
   }
