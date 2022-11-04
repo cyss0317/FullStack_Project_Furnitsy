@@ -110,3 +110,7 @@ input:focus {
 .greeting-component {
   width: 10%;
 }
+
+.show-main-container {
+  margin: 0 4rem 0 4rem;
+}

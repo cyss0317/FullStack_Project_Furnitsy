@@ -122,9 +122,11 @@ class ProductShow extends React.Component {
       </div>
     );
     return (
-      <div className="product-show-picture-container-inner">
-        {imageList()}
-        {mainImage()}
+      <div>
+        <div className="product-show-picture-container-inner">
+          {imageList()}
+          {mainImage()}
+        </div>
       </div>
     );
   }
@@ -215,10 +217,8 @@ class ProductShow extends React.Component {
     return (
       <section key={this.props.key} className="show-main-container">
         <div className="product-show-container">
-          <div className="product-show-picture-container-outter">
-            {this.productImages()}
-            <ReviewIndex {...this.props} />
-          </div>
+          {this.productImages()}
+          <ReviewIndex {...this.props} />
           {this.productInfo()}
         </div>
       </section>
