@@ -118,9 +118,9 @@ svg:hover {
 }
 
 #right-svg-button {
-  position: relative;
-  /* right: 23%; */
-  left: -8vw;
+  position: absolute;
+  right: 9%;
+  top: 47%;
 }
 #right-svg-button:hover {
   cursor: pointer;
@@ -128,9 +128,10 @@ svg:hover {
 }
 
 #left-svg-button {
-  position: relative;
-  left: 4%;
+  position: absolute;
+  left: -5%;
   z-index: 2;
+  top: 47%;
 }
 
 #left-svg-button:hover {
@@ -145,10 +146,7 @@ svg:hover {
 } */
 
 .main-picture-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
 }
 
 #show-page-footer {

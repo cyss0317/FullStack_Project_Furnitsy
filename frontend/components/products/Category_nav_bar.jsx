@@ -15,19 +15,16 @@ const CategoryNavBar = (props, params) => {
   function changeBackground() {}
   return (
     <nav className="nav-container">
-      {categories.map((category, index) => {
-        return (
-          <div key={index}>
-            <Link
-              id="nav-bar-tag"
-              onClick={changeBackground}
-              to={`/category/${category}`}
-            >
-              {category}
-            </Link>
-          </div>
-        );
-      })}
+      {categories.map((category, index) => (
+          <Link
+            key={index}
+            id="nav-bar-tag"
+            onClick={changeBackground}
+            to={`/category/${category}`}
+          >
+            {category}
+          </Link>
+      ))}
     </nav>
   );
 };

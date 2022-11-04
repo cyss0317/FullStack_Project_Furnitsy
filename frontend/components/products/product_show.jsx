@@ -1,5 +1,7 @@
 import React from "react";
 import ReviewIndex from "../reviews/reviews_index";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 class ProductShow extends React.Component {
   constructor(props) {
@@ -182,14 +184,10 @@ class ProductShow extends React.Component {
                   id="left-svg-button"
                   onClick={this.leftSvgClickhandler}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <path d="M16,21a0.994,0.994,0,0,1-.664-0.253L5.5,12l9.841-8.747a1,1,0,0,1,1.328,1.494L8.5,12l8.159,7.253A1,1,0,0,1,16,21Z"></path>
-                  </svg>
+                  <ArrowBackIosNewIcon
+                    fontSize="large"
+                    style={{ color: "#22222280" }}
+                  />
                 </button>
                 <img
                   className="picture-container-main"
@@ -205,14 +203,10 @@ class ProductShow extends React.Component {
                   id="right-svg-button"
                   onClick={this.rightSvgClickhandler}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <path d="M8,21a1,1,0,0,1-.664-1.747L15.5,12,7.336,4.747A1,1,0,0,1,8.664,3.253L18.5,12,8.664,20.747A0.994,0.994,0,0,1,8,21Z"></path>
-                  </svg>
+                  <ArrowForwardIosIcon
+                    fontSize="large"
+                    style={{ color: "#22222280" }}
+                  />
                 </button>
               </div>
               <ul className="picture-container-list">
