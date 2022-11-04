@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -25,9 +25,7 @@ class SessionForm extends React.Component {
       {},
       { email: "demo_user", password: "password" }
     );
-    // this.setState({email:user.email})
-    // this.setState({ password:user.password})
-    this.props.login(user).then(this.props.closeModal);
+    this.props.closeModal();
   }
 
   changeHandler(field) {
