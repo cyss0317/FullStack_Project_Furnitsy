@@ -67,6 +67,11 @@
   margin-left: 2px;
 }
 
+.main-picture-container {
+  display: block;
+  object-fit: contain;
+  margin: auto;
+}
 
 @media only screen and (max-width: 450px) {
   /* .product-show-container {
@@ -78,10 +83,21 @@
   }
 }
 
+@media only screen and (max-width: 850px) {
+  /* .product-show-container {
+    flex-direction: column;
+  } */
+  .product-show-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .product-show-container {
   display: grid;
-  grid-template-columns: 60% 1fr;
-  grid-template-rows: 35% 1fr;
+  grid-template-columns: 51vh 1fr;
+  grid-template-rows: 380px 1fr;
+  column-gap: 2rem;
 }
 
 .product-show-container > div:nth-child(1) {
@@ -97,10 +113,9 @@
   grid-column: 2;
 }
 .product-show-picture-container-inner {
-  width: 56vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: clamp(200px, 100%, 500px);
+  display: grid;
+  grid-template: 1fr / 20% 1fr;
 }
 
 .svg-button {
@@ -152,10 +167,6 @@ svg:hover {
 
 } */
 
-.main-picture-container {
-  position: relative;
-}
-
 #show-page-footer {
   background-image: url(https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/show_page_background.jpg);
   background-position: center;
@@ -197,15 +208,14 @@ svg:hover {
 }
 
 .picture-container-main {
-  width: clamp(200px, 500px, 600px);
-  border-radius: 20px;
+  border-radius: 1px;
+  margin: 0 auto 0 auto;
 }
 
 .picture-container-list {
-  width: 200px;
-  height: 420px;
+  height: 20rem;
+  margin-right: 1rem;
   overflow: auto;
-  /* overflow-y: hidden; */
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -215,8 +225,9 @@ svg:hover {
   width: 95%;
   height: 80%;
   border: 5px rgb(139, 129, 129);
-  border-radius: 18px !important;
-  padding: 2px;
+  border-radius: 8px !important;
+  padding: -1px;
+  /* margin: 7px; */
   /* overflow: hidden !important; */
 }
 
@@ -396,7 +407,6 @@ svg:hover {
 #reviews-main-container {
   display: flex;
   flex-direction: column;
-  padding-right: 20px;
 }
 
 #create-review {
