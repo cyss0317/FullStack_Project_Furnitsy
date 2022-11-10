@@ -12,6 +12,7 @@ class Api::CartsController < ApplicationController
     end
 
     def show
+        # return unless current_user
         @cart = Cart.find_by(user_id: current_user.id)
         if @cart
             render :show
@@ -22,7 +23,7 @@ class Api::CartsController < ApplicationController
 
 
     private
-    def cart_params 
+    def cart_params
         params.require(:cart).permit(:user_id)
     end
 
