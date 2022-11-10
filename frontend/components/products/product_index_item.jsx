@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useCSS } from "../../CSS/hooks";
 
 const ProductIndexItem = (props) => {
   const { product } = props;
+
+  const { removeEnlargeEffect, applyEnlargeEffect } = useCSS();
 
   return (
     <li className={`products-hot-items`}>
@@ -10,9 +13,12 @@ const ProductIndexItem = (props) => {
         to={`/products/${product.id}`}
         className="hot-items-image-thumnails"
       >
-        <img className="hot-items-image-thumnail" src={product.photoUrls[0]} />
-        {/* {product.name} */}
-
+        <img
+          className="hot-items-image-thumnail"
+          onMouseEnter={(e) => applyEnlargeEffect(e)}
+          onMouseLeave={(e) => removeEnlargeEffect(e)}
+          src={product.photoUrls[0]}
+        />
         <span id="thumnail-span">{product.name}</span>
       </Link>
     </li>

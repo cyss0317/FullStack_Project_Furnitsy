@@ -125,6 +125,8 @@
   text-decoration: none;
   color: black;
   line-height: 1.2;
+  font-size: 1.2rem;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;/* font-weight: 2rem; */
 }
 
 .nav-container {
@@ -132,14 +134,13 @@
 }
 
 .nav-container > a:hover {
-  text-decoration: underline;
-  text-underline-position: below;
-  z-index: 99;
-  text-decoration-color: #22222260;
-  transform: scale(1.1);
-  transition: 0.4sec
-  /* border-bottom: 2px solid #22222260; */
-  /* padding-bottom: 0.5rem; */
+    /* text-decoration-color: #22222260; */
+    box-shadow: #22222280 -2px 14px 13px -10px;
+    transform: scale(1.1);
+    transition: 0.4sec;
+    font-weight: bold;
+    /* border-bottom: 2px solid #22222260; */
+    /* padding-bottom: 0.5rem; */
 }
 .nav-static {
   display: flex;
@@ -205,11 +206,17 @@
   border: 1px solid #22222240;
 }
 
-.recently-viewed-items li img:hover {
+.hover-enlarge {
   transform: scale(1.1);
   border: 1px solid #22222260;
   transition: 0.15s;
 }
+
+/* .recently-viewed-items li img:hover, .recently-viewed-items li span:hover{
+  transform: scale(1.1);
+  border: 1px solid #22222260;
+  transition: 0.15s;
+} */
 .recently-viewed-items li img:active {
   transform: scale(1);
 }

@@ -21,7 +21,7 @@ const App = () => {
     <>
       <Modal />
       <Header />
-      <section className="main">
+      <section className="main-section">
         <Switch>
           <Route path="/search/:keyword" component={SearchBarContainer} />
           <Route path="/products/:productId" component={ProductShowContainer} />
