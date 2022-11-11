@@ -1,10 +1,6 @@
 import React from "react";
 import ProductNavShowList from "./product_nav_show_list";
-import { Switch, Route } from "react-router";
-import { Link } from "react-router-dom";
-import ProductIndexItem from "./product_index_item";
-import RecentlyViewItemIndex from "./recently_view_item_index";
-
+import { useCSS } from "../../CSS/hooks";
 class ProductNavIndex extends React.Component {
   constructor(props) {
     super(props);

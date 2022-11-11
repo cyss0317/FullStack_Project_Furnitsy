@@ -102,7 +102,7 @@
   .product-show-container {
     display: grid;
     grid-template-columns: 51vh 1fr;
-    grid-template-rows: 380px 1fr;
+    grid-template-rows: repeat(auto-fill, 380px);
     column-gap: 2rem;
   }
 
@@ -111,11 +111,11 @@
     grid-column: 1;
   }
   .product-show-container > div:nth-child(2) {
-    grid-row: 2;
+    grid-row: 0 / 1;
     grid-column: 1;
   }
   .product-show-container > div:nth-child(3) {
-    grid-row: 0 / 2;
+    grid-row: 1 / 3;
     grid-column: 2;
   }
 }
@@ -275,10 +275,52 @@ svg:hover {
   line-height: 1.6;
 }
 
+.text-align-center {
+  text-align: center;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.margin-top-1 {
+  margin-top: 1rem;
+}
+.margin-top-05 {
+  margin-top: 0.5rem;
+}
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
 .show-description {
   line-height: 1.6;
   font-size: 18px;
+  border: 1rem;
 }
+
+.description {
+  width: 100%;
+  /* background-color: #22222220; */
+  border-radius: 2rem;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  border-bottom: 4px solid #22222220;
+}
+
 
 .buttons {
   width: 100%;
@@ -374,6 +416,7 @@ svg:hover {
 }
 #review-login {
   padding: 5px 8px 5px 8px;
+  border-radius: 2rem;
 }
 #review-login:hover {
   cursor: pointer;

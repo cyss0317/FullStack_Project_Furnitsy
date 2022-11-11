@@ -1,21 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useCSS } from "../../CSS/hooks";
 
 const ProductNavShowList = (props) => {
   const { product } = props;
-
+  const { removeEnlargeEffect, applyEnlargeEffect } = useCSS();
   return (
     <li key={product.id} id={`recently-view-item`}>
-      {/* <span>
-                    <a href={`#/products/${product.id}`} >
-                        {`${product.price}.00( 0% off)`}
-                    </a>
-                </span> */}
       <Link to={`/products/${product.id}`} className="recently-view-image">
-        <img src={product.photoUrls[0]} />
-
-        <span>{product.name}</span>
-        <span>{`$${product.price}.00( 0% off)`}</span>
+        <img
+          src={product.photoUrls[0]}
+          onMouseEnter={(e) => applyEnlargeEffect(e)}
+          onMouseLeave={(e) => removeEnlargeEffect(e)}
+        />
+        <span className="text-align-center margin-top-05">{`${product.name} ($${product.price}.00) `}</span>
       </Link>
     </li>
   );

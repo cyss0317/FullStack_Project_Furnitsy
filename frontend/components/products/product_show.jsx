@@ -188,12 +188,12 @@ class ProductShow extends React.Component {
           <div></div>
         </div>
 
-        <p className="show-description">
-          <button className="buttons">Description :</button>{" "}
-          {product.description}{" "}
-        </p>
+        <section className="show-description button">
+          <h2 className="description flex-center-center">Description :</h2>
+          <p> {product.description} </p>
+        </section>
         <ul>
-          <button className="highlights-button">Highlights </button>
+          <h2 className="description flex-center-center">Highlights :</h2>
           {arrHighlights.map((highlight, index) => (
             <li key={index} className="highlight-item">
               &#9745; {highlight}
