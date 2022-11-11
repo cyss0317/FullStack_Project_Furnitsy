@@ -1,7 +1,7 @@
 import React from "react";
 import LoginFormContainer from "./login_form_container";
 import SignupFormContainer from "./signup_form_container";
-import Footer from "./Footer";
+  import Footer from "./Footer";
 import Header from "./Header";
 import { Route, Switch, Link } from "react-router";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";

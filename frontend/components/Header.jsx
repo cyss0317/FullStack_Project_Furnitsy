@@ -11,6 +11,8 @@ const Header = () => {
 
   function hadleKeyword(e) {
     e.preventDefault();
+    if ( keyword.length ) return;
+    
     history.push({ pathname: `/search/${keyword.current}`, state: keyword });
     document.querySelector(".header-searchbar").value = "";
   }

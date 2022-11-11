@@ -18,6 +18,7 @@ const CategoryNavBar = (props, params) => {
       {categories.map((category, index) => (
           <Link
             key={index}
+            className="shadow-bottom"
             id="nav-bar-tag"
             onClick={changeBackground}
             to={`/category/${category}`}

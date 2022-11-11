@@ -124,9 +124,9 @@
 .nav-container > a {
   text-decoration: none;
   color: black;
+  border-radius: 1rem;
   line-height: 1.2;
   font-size: 1.2rem;
-  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;/* font-weight: 2rem; */
 }
 
 .nav-container {
@@ -208,7 +208,7 @@
 
 .hover-enlarge {
   transform: scale(1.1);
-  border: 1px solid #22222260;
+  /* border: 1px solid #22222260; */
   transition: 0.15s;
 }
 
