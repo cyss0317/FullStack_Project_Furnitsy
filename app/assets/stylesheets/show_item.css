@@ -427,9 +427,6 @@ svg:hover {
   transform: scale(0.9);
   transition: 0.1s;
 }
-/* #review-submit:active{
-    pointer-events: none;
-} */
 
 .rating > input:checked ~ label {
   color: #ffc700;
@@ -462,9 +459,6 @@ svg:hover {
   flex-direction: column;
 }
 
-/* #reviews-main-container ul * {
-    margin: 2px 10px 2px 10px;
-} */
 
 #create-review > h1,
 #create-review > h3 {
@@ -571,11 +565,6 @@ ul {
   padding: 0;
 }
 
-/* .totalRating{
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row-reverse
-} */
 
 #reviews section {
   display: flex;

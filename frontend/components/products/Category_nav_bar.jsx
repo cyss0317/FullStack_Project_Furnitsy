@@ -16,15 +16,15 @@ const CategoryNavBar = (props, params) => {
   return (
     <nav className="nav-container">
       {categories.map((category, index) => (
-          <Link
-            key={index}
-            className="shadow-bottom"
-            id="nav-bar-tag"
-            onClick={changeBackground}
-            to={`/category/${category}`}
-          >
-            {category}
-          </Link>
+        <Link
+          key={index}
+          className="shadow-bottom"
+          id="nav-bar-tag"
+          onClick={changeBackground}
+          to={`/category/${category}`}
+        >
+          {category}
+        </Link>
       ))}
     </nav>
   );
