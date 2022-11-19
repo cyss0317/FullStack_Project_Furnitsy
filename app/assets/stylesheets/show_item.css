@@ -452,6 +452,7 @@ svg:hover {
 #reviews-main-container {
   display: flex;
   flex-direction: column;
+  
 }
 
 #create-review {
