@@ -17,6 +17,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 const App = () => {
   //  TODO: Refactor the search feature to send the search param to the backend and filter the items
+  
   return (
     <>
       <Modal />
