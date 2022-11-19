@@ -35,7 +35,7 @@ gem 'aws-sdk-s3', require: false
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-
+gem 'ransack', '~> 2.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
