@@ -24,7 +24,7 @@ Rails.application.configure do
 
   # Compress JavaScripts and CSS.
   config.assets.configure do |env|
-    env.js_compressor  = :uglifier # or :closure, :yui
+    env.js_compressor  = Uglifier.new(harmony: true) # or :closure, :yui
     env.css_compressor = :sass # or :yui
   end
   # config.assets.css_compressor = :sass
