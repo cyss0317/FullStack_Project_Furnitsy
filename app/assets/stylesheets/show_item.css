@@ -1,27 +1,16 @@
 #show-quantity {
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  box-shadow: 0 1px 6px 0 rgba(34, 34, 34, 0.15);
-  display: flex;
-  font-family: inherit;
-  font-size: 17px;
-  height: 48px;
-  padding-left: 12px;
-  padding-right: 36px;
-  width: calc(60% - 2em);
-  border-radius: 6px;
-  background: #ffffff;
-  border-color: rgba(34, 34, 34, 0.15);
-  border-style: solid;
-  border-width: 1px;
-  color: #222222;
-  text-align: center;
-  text-align-last: center;
-  text-indent: 0.01px;
-  text-overflow: "";
-  cursor: pointer;
+    box-shadow: 0 1px 6px 0 rgba(34, 34, 34, 0.15);
+    display: flex;
+    font-family: inherit;
+    font-size: 17px;
+    height: 48px;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background: #ffffff;
+    border-color: rgba(34, 34, 34, 0.15);
+    color: #222222;
+    text-overflow: "";
+    cursor: pointer;
 }
 #show-quantity-container > label {
   font-size: 11px;

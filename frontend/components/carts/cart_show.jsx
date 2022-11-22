@@ -14,7 +14,6 @@ class CartShow extends React.Component {
   }
 
   render() {
-    // const { cartItems, numberOfProducts, allItems, updateCartItem, totalPrice, noCurrentUser, currentUser, allProducts, receiveAllProducts, deleteCartItem, receiveCartItems } = this.props;
     const {
       cartItems,
       items,
@@ -31,8 +30,6 @@ class CartShow extends React.Component {
 
     let numberOfProducts = 0;
     allItems.forEach((item) => (numberOfProducts += item.quantity));
-
-    // const products = Object.values(state.entities.products)
 
     let allProductsNameArray = [];
     allItems.forEach((item) => {
