@@ -141,19 +141,8 @@ class ProductShow extends React.Component {
         <p className="show-name">Name: {product.name} </p>
         <p className="show-color">Color: {product.color} </p>
         <div id="price-container">
-          <p className="show-price">
-            <span></span> ${product.price}.00{" "}
-          </p>
+          <p className="show-price">${product.price}.00 </p>
           <div>
-            <svg
-              id="price-svg"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M9.057,20.471L2.293,13.707a1,1,0,0,1,1.414-1.414l5.236,5.236,11.3-13.18a1,1,0,1,1,1.518,1.3Z"></path>
-            </svg>
             <b id="price-in-stock">In stock</b>
           </div>
         </div>

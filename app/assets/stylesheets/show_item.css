@@ -1,29 +1,16 @@
 #show-quantity {
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  box-shadow: 0 1px 6px 0 rgba(34, 34, 34, 0.15);
-  display: flex;
-
-  font-family: inherit;
-  font-size: 17px;
-  height: 48px;
-  padding-left: 12px;
-  padding-right: 36px;
-  width: 100%;
-  border-radius: 6px;
-  background: #ffffff;
-  border-color: rgba(34, 34, 34, 0.15);
-  border-style: solid;
-  border-width: 1px;
-  color: #222222;
-  text-align: center;
-  text-align-last: center;
-
-  text-indent: 0.01px;
-  text-overflow: "";
-  cursor: pointer;
+    box-shadow: 0 1px 6px 0 rgba(34, 34, 34, 0.15);
+    display: flex;
+    font-family: inherit;
+    font-size: 17px;
+    height: 48px;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background: #ffffff;
+    border-color: rgba(34, 34, 34, 0.15);
+    color: #222222;
+    text-overflow: "";
+    cursor: pointer;
 }
 #show-quantity-container > label {
   font-size: 11px;
@@ -36,7 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: calc(60% - 2em);
   height: 44px;
   background-color: black;
   border-radius: 30px;
@@ -51,7 +38,6 @@
 #price-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 .show-price {
   font-size: 25px;
@@ -65,6 +51,7 @@
 #price-in-stock {
   font-size: 14px;
   margin-left: 2px;
+  color: green;
 }
 
 .main-picture-container {
@@ -120,8 +107,29 @@
   }
 }
 
+@media only screen and (min-width: 1400px) {
+  .product-show-container {
+    display: grid;
+    grid-template-columns: 700px 1fr;
+    grid-template-rows: max(420px, 26vw) 1fr;
+    column-gap: 2rem;
+  }
+
+  .product-show-container > div:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .product-show-container > div:nth-child(2) {
+    grid-row: 0 / 1;
+    grid-column: 1;
+  }
+  .product-show-container > div:nth-child(3) {
+    grid-row: 1 / 3;
+    grid-column: 2;
+  }
+}
 .product-show-picture-container-inner {
-  width: clamp(200px, 100%, 500px);
+  width: clamp(200px, 100%, max(500px, 33vw));
   display: grid;
   grid-template: 1fr / 20% 1fr;
 }
@@ -321,7 +329,6 @@ svg:hover {
   border-bottom: 4px solid #22222220;
 }
 
-
 .buttons {
   width: 100%;
   height: 40px;
@@ -460,7 +467,6 @@ svg:hover {
   flex-direction: column;
 }
 
-
 #create-review > h1,
 #create-review > h3 {
   margin: 10px 0px 7px 0px;
@@ -565,7 +571,6 @@ ul {
   margin: 0;
   padding: 0;
 }
-
 
 #reviews section {
   display: flex;

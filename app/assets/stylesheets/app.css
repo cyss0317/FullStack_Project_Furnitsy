@@ -96,7 +96,6 @@ input:focus {
 }
 
 .header-searchbar {
-  /* width: 100%; */
   width: clamp(1rem, 50vw, 60vw);
   height: 43px;
   border: 2.2px solid black;
@@ -104,13 +103,11 @@ input:focus {
   padding-left: 15px;
   background-color: rgb(243, 243, 243);
 }
-/* get rid of outline when you click on input */
-/* input:focus {outline:none;} */
 
 .greeting-component {
   width: 10%;
 }
 
 .show-main-container {
-  margin: 0 4rem 0 4rem;
+  margin: 0px 5vw 0px 5vw;
 }

@@ -11,6 +11,7 @@ class CartShowItem extends React.Component {
       product_id: this.props.item.product_id,
       quantity: this.props.item.quantity,
     };
+
     this.updateCartItem = this.updateCartItem.bind(this);
     this.onChangeHandler = this.onChangeHandler.bind(this);
   }
