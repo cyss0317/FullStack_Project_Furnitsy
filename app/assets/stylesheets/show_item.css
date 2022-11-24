@@ -111,7 +111,7 @@
   .product-show-container {
     display: grid;
     grid-template-columns: 700px 1fr;
-    grid-template-rows: max(420px, 26vw) 1fr;
+    grid-template-rows: "max(420px, 26vw) 1fr" ;
     column-gap: 2rem;
   }
 
@@ -129,7 +129,7 @@
   }
 }
 .product-show-picture-container-inner {
-  width: clamp(200px, 100%, max(500px, 33vw));
+  width: clamp(200px, 100%, "max(500px, 33vw)");
   display: grid;
   grid-template: 1fr / 20% 1fr;
 }
