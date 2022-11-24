@@ -19,4 +19,3 @@ export function useCSS() {
   };
 }
 
-// export default useCSS;
