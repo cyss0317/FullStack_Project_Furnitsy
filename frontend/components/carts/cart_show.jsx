@@ -18,8 +18,6 @@ class CartShow extends React.Component {
       cartItems,
       items,
       updateCartItem,
-      noCurrentUser,
-      currentUser,
       allProducts,
       receiveAllProducts,
       deleteCartItem,
