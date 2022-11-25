@@ -47,5 +47,11 @@
   "bugs": {
     "url": "https://github.com/cyss0317/FullStack_Project_Sunny/issues"
   },
-  "homepage": "https://github.com/cyss0317/FullStack_Project_Sunny#readme"
+  "homepage": "https://github.com/cyss0317/FullStack_Project_Sunny#readme",
+  "devDependencies": {
+    "@types/react-dom": "^18.0.9",
+    "@types/react-router-dom": "^5.3.3",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.9.3"
+  }
 }
