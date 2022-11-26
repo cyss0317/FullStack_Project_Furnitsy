@@ -4,10 +4,17 @@ import CartHeaderContainer from "./carts/cart_header_container";
 import CategoryNavBar from "./products/Category_nav_bar";
 import { useHistory } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
-
+import MenuIcon from "@mui/icons-material/Menu";
+import { useEffect, useState } from "react";
+import { useWindowDimension } from "../util/windowDimension";
 const Header = () => {
   const history = useHistory();
   const keyword = useRef("");
+  const { width } = useWindowDimension();
+
+  useEffect(() => {
+    console.log(width);
+  }, [window.screen.innerWidth]);
 
   function hadleKeyword(e) {
     e.preventDefault();
@@ -16,6 +23,18 @@ const Header = () => {
     history.push({ pathname: `/search/${keyword.current}`, state: keyword });
     document.querySelector(".header-searchbar").value = "";
   }
+
+  const MenuBar = () => {
+    const [expand, setExpand] = useState(false);
+    return (
+      <div className="menu-bar-container">
+        <button className="nav-menu">
+          <MenuIcon />
+        </button>
+        <CategoryNavBar horizontal={false} right={width <= 650 && ".right-1vw"}/>
+      </div>
+    );
+  };
 
   const SearchBar = () => (
     <form id="search-bar-form" onSubmit={hadleKeyword}>
@@ -38,10 +57,10 @@ const Header = () => {
           Furnitsy
         </a>
         <SearchBar />
-        <GreetingContainer className="greeting-component" />
-        <CartHeaderContainer />
+        {width > 650 && <GreetingContainer className="greeting-component" />}
+        {width > 650 ? <CartHeaderContainer /> : <MenuBar />}
       </div>
-      <CategoryNavBar />
+      {width > 650 && <CategoryNavBar horizontal={true} />}
     </header>
   );
 };

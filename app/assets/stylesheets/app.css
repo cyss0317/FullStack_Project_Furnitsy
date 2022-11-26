@@ -96,7 +96,7 @@ input:focus {
 }
 
 .header-searchbar {
-  width: clamp(1rem, 50vw, 60vw);
+  width: clamp(1rem, 37vw, 60vw);
   height: 43px;
   border: 2.2px solid black;
   border-radius: 100px;
