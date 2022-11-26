@@ -1,4 +1,4 @@
-.nav-container {
+.nav-horizontal {
   display: flex;
   justify-content: space-evenly;
   padding: 0px 5vw 0px 5vw;
@@ -11,6 +11,39 @@
   font-weight: 100;
 }
 
+.nav-vertical {
+  margin-left: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  right: 1vw;
+
+}
+
+.right-1vw {
+  right: 1vw;
+}
+
+.right-2rem {
+  right: -2rem;
+}
+.right-8vw {
+  right: 8vw;
+}
+
+.nav-vertical > a, .nav-horizontal > a {
+  text-decoration: none;
+  color: #222222
+}
+
+.menu-bar-container {
+  position: relative;
+}
 /* #linked-in{
     background-image: url(https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/Octocat.png);
 } */

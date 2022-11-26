@@ -1,8 +1,10 @@
 import React from "react";
+import GreetingContainer from "../greeting_container";
 import { Link } from "react-router-dom";
+import { useWindowDimension } from "../../util/windowDimension";
 
 const CategoryNavBar = (props, params) => {
-  // const products = props.products;
+  const {width} = useWindowDimension();
   const categories = [
     "Couch and Sofa",
     "Dining Table",
@@ -11,21 +13,28 @@ const CategoryNavBar = (props, params) => {
     "Dining Chairs",
     "Outdoor Furniture",
   ];
+  const right = () => {
+    if ( width <= 450) {
+      return "right-8vw"
+    }
+    if (width <= 650) {
+      return "right-2rem"
+    } 
+  }
 
-  function changeBackground() {}
   return (
-    <nav className="nav-container">
+    <nav className={props.horizontal ? "nav-horizontal" : `nav-vertical ${right()}` }>
       {categories.map((category, index) => (
         <Link
           key={index}
           className="shadow-bottom"
           id="nav-bar-tag"
-          onClick={changeBackground}
           to={`/category/${category}`}
         >
           {category}
         </Link>
       ))}
+      {!props.horizontal && <GreetingContainer />}
     </nav>
   );
 };
