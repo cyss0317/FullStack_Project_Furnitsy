@@ -77,7 +77,6 @@ class ProductShow extends React.Component {
       <ul className="picture-container-list">
         {this.props.product.photoUrls.map((photo, index) => (
           <li key={index} className="picture-container-list-item-container">
-            {/* important! */}
             <img
               className="picture-container-list-item"
               src={photo}

@@ -25,8 +25,8 @@ const Footer = () => {
           <h1>About Furnitsy</h1>
         </div>
         <div id={`${width <= 600 ? "what_is_furnitsy_inner-horizontal" : "what_is_furnitsy_inner-vertical" }`}>
-          {explainations.map(obj => (
-            <div id="furnitsy_inner_div">
+          {explainations.map((obj, key) => (
+            <div key={`explaination-${key}`}id="furnitsy_inner_div">
               <h2>{obj.title}</h2>
               <p>{obj.body}</p>
             </div>
