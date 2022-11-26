@@ -24,14 +24,10 @@ const Header = () => {
     document.querySelector(".header-searchbar").value = "";
   }
 
-  const MenuDropdown = () => {
+  const MenuBar = () => {
     return (
-      <div
-        className="menu-bar-container"
-        hidden={!expand}
-        onClick={() => setExpand(!expand)}
-      >
-        <div className="menu-bar-background">
+      <div className="menu-bar-container" onClick={() => setExpand(!expand)}>
+        <div hidden={!expand} className="menu-bar-background">
           <CategoryNavBar
             expand={expand}
             horizontal={false}
@@ -60,7 +56,12 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo-searchbar-sign">
-        <a className="header-logo" href="/">
+        <a
+          className={`header-logo ${
+            width <= 375 ? "font-size-sm" : "font-size-lg"
+          }`}
+          href="/"
+        >
           Furnitsy
         </a>
         <SearchBar />
@@ -72,7 +73,7 @@ const Header = () => {
             <button className="nav-menu" onClick={() => setExpand(!expand)}>
               <MenuIcon />
             </button>
-            <MenuDropdown />
+            <MenuBar />
           </>
         )}
       </div>
