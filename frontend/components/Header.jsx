@@ -8,10 +8,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useEffect, useState } from "react";
 import { useWindowDimension } from "../util/windowDimension";
 const Header = () => {
+  const [expand, setExpand] = React.useState(false);
   const history = useHistory();
   const keyword = useRef("");
   const { width } = useWindowDimension();
-
   useEffect(() => {
     console.log(width);
   }, [window.screen.innerWidth]);
@@ -25,13 +25,21 @@ const Header = () => {
   }
 
   const MenuBar = () => {
-    const [expand, setExpand] = useState(false);
     return (
       <div className="menu-bar-container">
-        <button className="nav-menu">
+        <button
+          className="nav-menu"
+          onClick={() => setExpand(!expand)}
+        >
           <MenuIcon />
         </button>
-        <CategoryNavBar horizontal={false} right={width <= 650 && ".right-1vw"}/>
+        <div hidden={!expand}>
+          <CategoryNavBar
+            expand={expand}
+            horizontal={false}
+            right={width <= 650 && ".right-1vw"}
+          />
+        </div>
       </div>
     );
   };
