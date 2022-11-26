@@ -1,35 +1,36 @@
 import React from "react";
+import { useWindowDimension } from "../util/windowDimension";
 
+const explainations = [
+  {
+    title: "What is Furnitsy?",
+    body: "Furnitsy is a furniture store, where my mother in law buys and sells Ashely furnitures.",
+  },
+  {
+    title: "Sell furnitures to customers",
+    body: "We sell Ashely furnitures on our website. Whatever you can find this website, you can also find it on actual Ashley furnitures.",
+  },
+  {
+    title: "Peace of mind",
+    body: " Your privacy is the highest priority of our dedicated team. And if you ever need assistance, we are always ready to step in for support.",
+  },
+];
 const Footer = () => {
+  const { width } = useWindowDimension();
+
   return (
     <footer>
       <div className="what_is_furnitsy">
         <div>
-          <h1>What is Furnitsy?</h1>
+          <h1>About Furnitsy</h1>
         </div>
-        <div id="what_is_furnitsy_inner">
-          <div id="furnitsy_inner_div">
-            <h2>A community doing good</h2>
-            <p>
-              Furnitsy is a furniture store, where my mother in law buys and
-              sells Ashely furnitures.{" "}
-            </p>
-          </div>
-          <div id="furnitsy_inner_div">
-            <h2>Sell furnitures to customers</h2>
-            <p>
-              We sell Ashely furnitures on our website. Whatever you can find on
-              this website, you can also find it on actual Ashley furnitures.
-            </p>
-          </div>
-          <div id="furnitsy_inner_div">
-            <h2>Peace of mind</h2>
-            <p>
-              Your privacy is the highest priority of our dedicated team. And if
-              you ever need assistance, we are always ready to step in for
-              support.
-            </p>
-          </div>
+        <div id={`${width <= 600 ? "what_is_furnitsy_inner-horizontal" : "what_is_furnitsy_inner-vertical" }`}>
+          {explainations.map(obj => (
+            <div id="furnitsy_inner_div">
+              <h2>{obj.title}</h2>
+              <p>{obj.body}</p>
+            </div>
+          ))}
         </div>
         <div>
           <a
