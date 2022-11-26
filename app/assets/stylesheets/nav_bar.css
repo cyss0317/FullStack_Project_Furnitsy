@@ -12,6 +12,7 @@
 }
 
 .nav-vertical {
+  width: 210px;
   margin-left: 0.5rem;
   display: flex;
   gap: 0.5rem;
@@ -33,6 +34,17 @@
   left: 0;
   top: 0;
 
+}
+
+
+#nav-bar-tag:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transform: scale(1.1);
+  background-color: #22222205;
+  padding: 0.2rem;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  transition: .3s;
 }
 
 .right-1vw {

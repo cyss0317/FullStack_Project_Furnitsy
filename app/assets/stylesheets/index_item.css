@@ -88,6 +88,13 @@ element.style {
   margin: 10px;
   object-fit: cover;
 }
+.hot-items-image-thumnail-lg {
+  width: 25vmax;
+  height: 25vmax;
+  border-radius: 50%;
+  margin: 10px;
+  object-fit: cover;
+}
 
 .thumnail-p {
   text-decoration: none;
