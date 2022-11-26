@@ -24,19 +24,18 @@ const Header = () => {
     document.querySelector(".header-searchbar").value = "";
   }
 
-  const MenuBar = () => {
+  const MenuDropdown = () => {
     return (
-      <div className="menu-bar-container">
-        <button
-          className="nav-menu"
-          onClick={() => setExpand(!expand)}
-        >
-          <MenuIcon />
-        </button>
-        <div hidden={!expand}>
+      <div
+        className="menu-bar-container"
+        hidden={!expand}
+        onClick={() => setExpand(!expand)}
+      >
+        <div className="menu-bar-background">
           <CategoryNavBar
             expand={expand}
             horizontal={false}
+            setExpand={() => setExpand(!expand)}
             right={width <= 650 && ".right-1vw"}
           />
         </div>
@@ -66,7 +65,16 @@ const Header = () => {
         </a>
         <SearchBar />
         {width > 650 && <GreetingContainer className="greeting-component" />}
-        {width > 650 ? <CartHeaderContainer /> : <MenuBar />}
+        {width > 650 ? (
+          <CartHeaderContainer />
+        ) : (
+          <>
+            <button className="nav-menu" onClick={() => setExpand(!expand)}>
+              <MenuIcon />
+            </button>
+            <MenuDropdown />
+          </>
+        )}
       </div>
       {width > 650 && <CategoryNavBar horizontal={true} />}
     </header>

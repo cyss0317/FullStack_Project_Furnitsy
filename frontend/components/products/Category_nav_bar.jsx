@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useWindowDimension } from "../../util/windowDimension";
 
 const CategoryNavBar = (props, params) => {
-  const { expand } = props;
+  const { setExpand } = props;
   const { width } = useWindowDimension();
   const categories = [
     "Couch and Sofa",
@@ -16,10 +16,10 @@ const CategoryNavBar = (props, params) => {
   ];
   const right = () => {
     if (width <= 450) {
-      return "right-2vw";
+      return "right-1rem";
     }
     if (width <= 650) {
-      return "right-2rem";
+      return "right-1rem";
     }
   };
 
@@ -27,7 +27,7 @@ const CategoryNavBar = (props, params) => {
     <nav
       hidden={true}
       className={
-        props.horizontal ? "nav-horizontal" : `nav-vertical ${right()}`
+        props.horizontal ? "nav-horizontal" : `nav-vertical ${right()} top-3_5`
       }
     >
       {categories.map((category, index) => (
@@ -35,6 +35,7 @@ const CategoryNavBar = (props, params) => {
           key={index}
           className="shadow-bottom"
           id="nav-bar-tag"
+          onClick={setExpand}
           to={`/category/${category}`}
         >
           {category}
