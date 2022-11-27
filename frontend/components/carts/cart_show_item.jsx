@@ -85,7 +85,12 @@ class CartShowItem extends React.Component {
               </button>
             }
             <form onSubmit={this.deleteHandler} id="quantity-update-form">
-              <input className="update-quantity-input" type="number" value={this.state.quantity} onChange={this.onChangeHandler}/>
+              <input
+                className="update-quantity-input"
+                type="number"
+                value={this.state.quantity}
+                onChange={this.onChangeHandler}
+              />
               <input className="remove-button" type="submit" value="Remove" />
             </form>
           </div>

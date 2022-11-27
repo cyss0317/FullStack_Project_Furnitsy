@@ -7,6 +7,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useEffect, useState } from "react";
 import { useWindowDimension } from "../util/windowDimension";
+
 const Header = () => {
   const [expand, setExpand] = React.useState(false);
   const history = useHistory();

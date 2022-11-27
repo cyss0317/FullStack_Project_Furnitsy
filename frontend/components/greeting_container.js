@@ -3,9 +3,10 @@ import Greeting from "./greeting";
 import { logout } from "../actions/session_actions";
 import { openModal } from "../actions/modal_actions";
 
-const mSTP = (state) => {
+const mSTP = (state, ownProps) => {
   return {
     currentUser: state.entities.users[state.session.id],
+    horizontal: ownProps.horizontal,
   };
 };
 

@@ -1,11 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import CartHeaderContainer from "./carts/cart_header_container";
 
-const Greeting = ({ currentUser, logout, openModal }) => {
+const Greeting = ({ currentUser, logout, openModal, horizontal }) => {
   const ifLoggedIn = () => (
-    <div className="welcome-message-and-logout-button">
-      <p className="welcome-message">Welcome, {currentUser.first_name}</p>
-      <button className="logout-button" onClick={logout}>
+    <div
+      className={`flex gap-05 ${
+        horizontal === false && "menu-bar-logout-container flex-col"
+      }`}
+    >
+      <div className="flex flex-row gap-1 justify-space-between">
+        <p className="welcome-message">Welcome, {currentUser.first_name}</p>
+        {horizontal === false && <CartHeaderContainer />}
+      </div>
+      <button className="log-button" onClick={logout}>
         Logout
       </button>
     </div>
@@ -13,18 +20,13 @@ const Greeting = ({ currentUser, logout, openModal }) => {
 
   const ifLoggedOut = () => (
     <div className="signup-login">
-      {/* <Link className="signup"to={`/signup`}>Sign Up</Link> */}
-      <button className="login" onClick={() => openModal("Login")}>
+      <button className="log-button" onClick={() => openModal("Login")}>
         Login
       </button>
-      {/* &nbsp;<span className="or">or</span>&nbsp;
-            <button className='signup' onClick={() => openModal("Sign Up")}>Sign Up</button> */}
     </div>
   );
 
   return currentUser ? ifLoggedIn() : ifLoggedOut();
-  // ifLoggedIn(currentUser, logout)
-  // answered, why do we need to pass these as param
 };
 
 export default Greeting;

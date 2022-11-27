@@ -92,8 +92,11 @@
 .demo-button:active {
   transform: scale(1);
 }
-
-.logout-button {
+.menu-bar-logout-container {
+  border-top: 2px solid #22222260;
+  padding-top: 0.6rem;
+}
+.log-button {
   background-color: #565656; /* dark gray */
   border: none;
   color: white;

@@ -1,6 +1,4 @@
 import React from "react";
-import { Route } from "react-router";
-import { ProductIndexContainer } from "../products/products_index_container";
 import { Link } from "react-router-dom";
 
 const CartHeader = ({ items, currentUser, logout, openModal }) => {
@@ -23,7 +21,6 @@ const CartHeader = ({ items, currentUser, logout, openModal }) => {
           alt="Vectors Download Shopping Cart Free Icon"
         />
       </Link>
-      {/* question2!! need to double click */}
     </div>
   );
   const ifLoggedOut = () => (
