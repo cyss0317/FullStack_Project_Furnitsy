@@ -1,7 +1,6 @@
 .recently-view-item {
   object-fit: contain;
   border-radius: 30px;
-
 }
 
 .recently-viewed-container > p {
@@ -55,9 +54,9 @@
 }
 
 .recently-view-item a span {
-  position: relative;
-  top: -46px;
-  right: -10px;
+  position: absolute;
+  top: -39px;
+  right: 19px;
   background-color: rgb(245, 245, 245);
   border-radius: 15px;
   border: 0.6px #258635;
@@ -142,11 +141,13 @@
 .recently-view-image {
   text-decoration: none;
   font-weight: bolder;
+  position: relative;
 }
 
 #recently-view-item a span {
   display: flex;
   flex-direction: column;
+  /* position: absolute; */
   /* background-color: rgb(245, 245, 245); */
   /* border-radius: 15px; */
   /* border: .6px #258635; */
@@ -190,8 +191,8 @@
 }
 
 .recently-viewed-items li img {
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   border-radius: 20px;
   object-fit: cover;
   border: 1px solid #22222240;

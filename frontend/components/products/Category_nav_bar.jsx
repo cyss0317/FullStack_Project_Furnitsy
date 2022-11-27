@@ -14,14 +14,17 @@ const CategoryNavBar = (props, params) => {
     "Dining Chairs",
     "Outdoor Furniture",
   ];
-  const right = () => {
-    if (width <= 450) {
-      return "right-1rem";
-    }
-    if (width <= 650) {
-      return "right-1rem";
-    }
-  };
+  const right = () =>
+    React.useMemo(() => {
+      {
+        if (width <= 450) {
+          return "right-1rem";
+        }
+        if (width <= 650) {
+          return "right-1rem";
+        }
+      }
+    }, [width]);
 
   return (
     <nav
