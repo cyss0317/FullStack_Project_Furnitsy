@@ -8,6 +8,26 @@
   padding-right: 36px;
   /* box-sizing: content-box; */
 }
+.custom-shape-divider-top-1669523967 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: -5;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1669523967 svg {
+    position: relative;
+    display: block;
+    width: calc(115% + 1.3px);
+    height: 115px;
+}
+
+.custom-shape-divider-top-1669523967 .shape-fill {
+    fill: #DDEBE3;
+}
 
 .index-container-logo {
   font-size: 33px;

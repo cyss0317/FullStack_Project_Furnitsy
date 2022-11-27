@@ -1,8 +1,4 @@
 .what_is_furnitsy {
-  background-image: url("https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/images/main_bottom_background.JPG");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   width: 100%;
   margin-top: 30px;
   object-fit: cover;
@@ -11,6 +7,27 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+.custom-shape-divider-bottom-1669524354 {
+  z-index: -5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1669524354 svg {
+  position: relative;
+  display: block;
+  width: calc(115% + 1.3px);
+  height: 413px;
+}
+
+.custom-shape-divider-bottom-1669524354 .shape-fill {
+  fill: #eeb16155;
 }
 
 #what_is_furnitsy_inner-horizontal {
@@ -25,7 +42,7 @@
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 2rem 6vw 2rem 6vw;
 }
 
 #what_is_furnitsy_inner-horizontal #furnitsy_inner_div:nth-child(1) {

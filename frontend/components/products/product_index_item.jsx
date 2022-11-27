@@ -15,7 +15,11 @@ const ProductIndexItem = (props) => {
         className="hot-items-image-thumnails"
       >
         <img
-          className={width <= 480 ? "hot-items-image-thumnail-lg" : "hot-items-image-thumnail"}
+          className={
+            width <= 480
+              ? "hot-items-image-thumnail-lg"
+              : "hot-items-image-thumnail"
+          }
           onMouseEnter={(e) => applyEnlargeEffect(e)}
           onMouseLeave={(e) => removeEnlargeEffect(e)}
           src={product.photoUrls[0]}

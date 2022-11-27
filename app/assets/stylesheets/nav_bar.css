@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   padding: 0px 5vw 0px 5vw;
+  font-size: 1.2rem;
 }
 
 .nav-item {
@@ -10,7 +11,6 @@
 
   font-weight: 100;
 }
-
 
 .nav-vertical {
   width: 210px;
@@ -34,25 +34,24 @@
   height: 100%;
   left: 0;
   top: 0;
-
 }
 
-
 #nav-bar-tag:hover {
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
   transform: scale(1.1);
   background-color: #22222205;
   padding: 0.2rem;
   font-size: 1.2rem;
   border-radius: 1rem;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .right-1vw {
   right: 1vw;
 }
 
-.right-1rem{
+.right-1rem {
   right: 1rem;
 }
 
@@ -66,9 +65,10 @@
   top: 3.5rem;
 }
 
-.nav-vertical > a, .nav-horizontal > a {
+.nav-vertical > a,
+.nav-horizontal > a {
   text-decoration: none;
-  color: #222222
+  color: #222222;
 }
 
 .menu-bar-container {

@@ -146,7 +146,9 @@ class ProductShow extends React.Component {
         >
           <div id="price-container">
             <div>
-              <p className="show-price">${product.price}.00 <span id="price-in-stock">In stock</span> </p>
+              <p className="show-price">
+                ${product.price}.00 <span id="price-in-stock">In stock</span>{" "}
+              </p>
             </div>
             <div className="quantity-container">
               <label>Quantity</label>
