@@ -112,7 +112,7 @@ input:focus {
   border: 2.2px solid black;
   border-radius: 100px;
   padding-left: 15px;
-  background-color: rgb(243, 243, 243);
+  background-color: white;
 }
 
 .greeting-component {
