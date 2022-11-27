@@ -91,8 +91,8 @@ const Header = () => {
           Furnitsy
         </a>
         <SearchBar />
-        {width > 650 && <GreetingContainer className="greeting-component" />}
-        {width > 650 ? (
+        {width > 720 && <GreetingContainer className="greeting-component" />}
+        {width > 720 ? (
           <CartHeaderContainer />
         ) : (
           <>

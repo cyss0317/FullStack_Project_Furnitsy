@@ -50,40 +50,24 @@ class CartShowItem extends React.Component {
                 src={item.photoUrls[0]}
               />
             </Link>
+          </div>
+          <div id="cart-item-title">
             <Link
               to={`/products/${item.product.id}`}
               id="cart-item-description"
             >
-              <p>{item.product.category}</p>
-              <p>{item.product.name}</p>
-              <p>{item.product.color}</p>
+              <p>
+                {item.product.category}
+                {item.product.name}Color: {item.product.color}
+              </p>
             </Link>
           </div>
           <div id="cart-item-quantity">
             <p>Quantities</p>
             <br />
-            {/* <select
-              name="quantity"
-              id="show-quantity"
-              defaultValue={this.state.quantity}
-              onChange={this.onChangeHandler}
-            >
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select> */}
-            {
-              // this.onChangeHandler() ?
-              <button id="update-cartItem" onClick={this.updateCartItem}>
-                Update Quantity
-              </button>
-            }
+            <button id="update-cartItem" onClick={this.updateCartItem}>
+              Update Quantity
+            </button>
             <form onSubmit={this.deleteHandler} id="quantity-update-form">
               <input
                 className="update-quantity-input"

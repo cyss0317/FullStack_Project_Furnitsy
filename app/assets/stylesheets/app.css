@@ -11,7 +11,7 @@ body {
 }
 #counts-main-div {
   position: relative;
-  right: 15px;
+  margin-right: 1rem;
 }
 .gap-2 {
   gap: 2rem;
