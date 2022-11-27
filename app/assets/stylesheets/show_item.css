@@ -27,6 +27,7 @@
 }
 
 #add-to-cart {
+  min-width: 190px;
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -43,12 +44,25 @@
   height: 44px;
 }
 
-#price-container {
-  display: flex;
-  flex-direction: row;
-  gap: 5rem;
-  align-items: center;
+@media only screen and (max-width: 340px) {
+  #price-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
 }
+
+@media only screen and (min-width: 340px) {
+  #price-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    align-items: center;
+  }
+
+}
+
 
 .gap-1 {
   gap: 1rem

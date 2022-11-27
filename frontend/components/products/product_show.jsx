@@ -2,7 +2,6 @@ import React from "react";
 import ReviewIndex from "../reviews/reviews_index";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-
 class ProductShow extends React.Component {
   constructor(props) {
     super(props);
