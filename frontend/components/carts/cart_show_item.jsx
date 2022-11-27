@@ -60,10 +60,9 @@ class CartShowItem extends React.Component {
             </Link>
           </div>
           <div id="cart-item-quantity">
-            <p>quantities</p>
-            {/* <label >Quantity</label> */}
+            <p>Quantities</p>
             <br />
-            <select
+            {/* <select
               name="quantity"
               id="show-quantity"
               defaultValue={this.state.quantity}
@@ -78,14 +77,15 @@ class CartShowItem extends React.Component {
               <option value="7">7</option>
               <option value="8">8</option>
               <option value="9">9</option>
-            </select>
+            </select> */}
             {
               // this.onChangeHandler() ?
               <button id="update-cartItem" onClick={this.updateCartItem}>
                 Update Quantity
               </button>
             }
-            <form onSubmit={this.deleteHandler}>
+            <form onSubmit={this.deleteHandler} id="quantity-update-form">
+              <input className="update-quantity-input" type="number" value={this.state.quantity} onChange={this.onChangeHandler}/>
               <input className="remove-button" type="submit" value="Remove" />
             </form>
           </div>

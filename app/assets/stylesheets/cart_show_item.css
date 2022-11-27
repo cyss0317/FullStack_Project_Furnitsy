@@ -176,3 +176,15 @@
   object-fit: cover;
   border: 1px solid #22222260;
 }
+.update-quantity-input {
+  border-radius: 0.2rem;
+  border: 0.5px solid;
+  width: 2.5rem;
+}
+#quantity-update-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
