@@ -13,6 +13,7 @@ class ProductShow extends React.Component {
       quantity: 1,
       index: 0,
     };
+    this.values = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
     this.clickPictureHandler = this.clickPictureHandler.bind(this);
     this.rightSvgClickhandler = this.rightSvgClickhandler.bind(this);
@@ -139,34 +140,29 @@ class ProductShow extends React.Component {
         <br />
         <p className="show-name">Name: {product.name} </p>
         <p className="show-color">Color: {product.color} </p>
-        <div id="price-container">
-          <p className="show-price">${product.price}.00 </p>
-          <div>
-            <b id="price-in-stock">In stock</b>
-          </div>
-        </div>
         <form
           align="center"
           id="show-quantity-container"
           onSubmit={this.addToCartHandler}
         >
-          <label>Quantity</label>
-          <select
-            name="quantity"
-            id="show-quantity"
-            defaultValue={this.state.quantity}
-            onChange={this.onChangeHandler}
-          >
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
+          <div id="price-container">
+            <div>
+              <p className="show-price">${product.price}.00 <span id="price-in-stock">In stock</span> </p>
+            </div>
+            <div className="quantity-container">
+              <label>Quantity</label>
+              <select
+                name="quantity"
+                id="show-quantity"
+                defaultValue={this.state.quantity}
+                onChange={this.onChangeHandler}
+              >
+                {this.values.map((ele) => (
+                  <option key={`quantity-value-${ele}`}>{ele}</option>
+                ))}
+              </select>
+            </div>
+          </div>
           <div id="add-to-cart-container">
             <input id="add-to-cart" type="submit" value="Add to cart" />
           </div>
