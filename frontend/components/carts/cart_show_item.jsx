@@ -10,6 +10,7 @@ class CartShowItem extends React.Component {
       cart_id: this.props.item.cart_id,
       product_id: this.props.item.product_id,
       quantity: this.props.item.quantity,
+      screenWidth: window.innerWidth,
     };
 
     this.updateCartItem = this.updateCartItem.bind(this);
@@ -56,10 +57,27 @@ class CartShowItem extends React.Component {
               to={`/products/${item.product.id}`}
               id="cart-item-description"
             >
+              <p>{item.product.category}</p>
               <p>
-                {item.product.category}
-                {item.product.name}Color: {item.product.color}
+                {item.product.name.split(" ").length > 4
+                  ? item.product.name
+                      .split(" ")
+                      .map((word, idx) => {
+                        if (this.state.screenWidth <= 400) {
+                          if (idx < 3) {
+                            return word;
+                          }
+                          if (idx === 3) {
+                            return "...";
+                          }
+                        } else {
+                          return word;
+                        }
+                      })
+                      .join(" ")
+                  : item.product.name}
               </p>
+              <p>Color: {item.product.color}</p>
             </Link>
           </div>
           <div id="cart-item-quantity">
