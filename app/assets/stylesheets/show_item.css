@@ -104,6 +104,11 @@
     margin-top: 2rem;
     order: 3;
   }
+
+  .cart-image {
+    width: 2rem !important;
+    max-width: 3rem;
+  }
 }
 
 @media only screen and (min-width: 850px) {
