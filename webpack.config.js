@@ -1,8 +1,14 @@
 const path = require("path");
+var webpack = require("webpack");
 
 module.exports = {
   mode: "development",
-  entry: "./src/Furnitsy.tsx",
+  entry: "./frontend/Furnitsy.tsx",
+  plugins: [
+    new webpack.ProvidePlugin({
+      _: "lodash",
+    }),
+  ],
   module: {
     rules: [
       {
@@ -11,14 +17,22 @@ module.exports = {
       },
       {
         test: /\.(js)x?$/,
-        exclude: /node_modules/,
-        use: "babel-loader",
+        exclude: /(node_modules)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/env", "@babel/react"],
+          },
+        },
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules)/,
         use: {
           loader: "babel-loader",
+          options: {
+            presets: ["@babel/env", "@babel/react"],
+          },
         },
       },
       {
@@ -35,7 +49,8 @@ module.exports = {
       },
     ],
   },
-  devtool: "inline-source-map",
+  // devtool: "inline-source-map",
+  devtool: "source-map",
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
