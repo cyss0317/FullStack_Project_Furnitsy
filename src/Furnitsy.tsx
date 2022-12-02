@@ -1,13 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Root from "./components/root";
+import Root from "./components/root.jsx";
 import { fetchCart } from "./actions/carts_actions";
 import { ThunkReceiveCartItems } from "./actions/cart_items_actions";
 
 import configureStore from "./store/store";
 
+declare global {
+  interface Window {
+    currentUser: any,
+    store: any,
+    getState: any;
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
+
 
   // saves login user's session into preloadedState, that is being used to create store
   // prevents to refresh session when page is refreshed, keeps the user logged in.

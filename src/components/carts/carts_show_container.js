@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import CartShow from "./cart_show";
+import CartShow from "./cart_show.jsx";
 import {
   ThunkDeleteCartItem,
   ThunkReceiveCartItems,

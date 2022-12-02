@@ -1,28 +1,46 @@
 const path = require("path");
 
 module.exports = {
-  context: __dirname,
-  entry: "./frontend/Furnitsy.jsx",
-  output: {
-    path: path.resolve(__dirname, "app", "assets", "javascripts"),
-    filename: "bundle.js",
-  },
-  resolve: {
-    extensions: [".js", ".jsx", "*"],
-  },
+  mode: "development",
+  entry: "./src/Furnitsy.tsx",
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /(node_modules)/,
+        test: /\.json$/,
+        use: "json-loader",
+      },
+      {
+        test: /\.(js)x?$/,
+        exclude: /node_modules/,
+        use: "babel-loader",
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
         use: {
           loader: "babel-loader",
+        },
+      },
+      {
+        test: /\.(ts)x?$/,
+        exclude: /node_modules|\.d\.ts$/, // this line as well
+        use: {
+          loader: "ts-loader",
           options: {
-            presets: ["@babel/env", "@babel/react"],
+            compilerOptions: {
+              noEmit: false, // this option will solve the issue
+            },
           },
         },
       },
     ],
   },
-  devtool: "source-map",
+  devtool: "inline-source-map",
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
+  },
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
+  },
 };
