@@ -27,7 +27,7 @@ export const login = (user: User) => (dispatch) =>
       (error) => dispatch(receiveErrors(error.responseJSON))
     )
     .then((user) => dispatch(fetchCart(user.id)))
-    .then((user) => dispatch(ThunkReceiveCartItems()));
+    .then(() => dispatch(ThunkReceiveCartItems()));
 
 export const logout = () => (dispatch) =>
   SessionApiUtil.$logout()
@@ -43,5 +43,5 @@ export const signup = (user: User) => (dispatch) => {
       (res: User) => dispatch(receiveCurrentUser(res)),
       (error) => dispatch(receiveErrors(error.responseJSON))
     )
-    .then((user) => dispatch(fetchCart(user.id)));
+    .then(() => dispatch(fetchCart(user.id)));
 };

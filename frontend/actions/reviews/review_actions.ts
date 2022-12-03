@@ -1,4 +1,4 @@
-import { Review, ReviewId } from "./types";
+import { Review, ReviewId, ReviewActionType } from "./types";
 import * as reviewAPIUtil from "../../util/review_api_util";
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const RECEIVE_ALL_REVIEWS = "RECEIVE_ALL_REVIEWS";
@@ -9,32 +9,32 @@ export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
 export const UPDATE_REVIEW = "UPDATE_REVIEW";
 
 export const receiveReview = (review: Review) => ({
-  type: RECEIVE_REVIEW,
+  type: ReviewActionType.RECEIVE_REVIEW,
   review,
 });
 
 export const receiveAllReviews = (reviews: Array<Review>) => ({
-  type: RECEIVE_ALL_REVIEWS,
+  type: ReviewActionType.RECEIVE_ALL_REVIEWS,
   reviews,
 });
 
 export const createReview = (review: Review) => ({
-  type: CREATE_REVIEW,
+  type: ReviewActionType.CREATE_REVIEW,
   review,
 });
 
 export const deleteReview = (reviewId: ReviewId) => ({
-  type: DELETE_REVIEW,
+  type: ReviewActionType.DELETE_REVIEW,
   reviewId,
 });
 
 export const updateReview = (review: Review) => ({
-  type: UPDATE_REVIEW,
+  type: ReviewActionType.UPDATE_REVIEW,
   review,
 });
 
 export const receiveReviewErrors = (errors) => ({
-  type: RECEIVE_REVIEW_ERRORS,
+  type: ReviewActionType.RECEIVE_REVIEW_ERRORS,
   errors,
 });
 

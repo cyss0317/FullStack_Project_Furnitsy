@@ -1,17 +1,17 @@
-import { Product } from "./types";
+import { Product, ProductActionType  } from "./types";
 import * as ProductAPIUtil from "../../util/product_api_util";
 export const RECEIVE_PRODUCT = "RECEIVE_PRODUCT";
 export const RECEIVE_PRODUCTS = "RECEIVE_PRODUCTS";
 
 export const receiveProduct = (product: Product) => {
   return {
-    type: RECEIVE_PRODUCT,
+    type: ProductActionType.RECEIVE_PRODUCT,
     product,
   };
 };
 
 export const receiveProducts = (products: Array<Product>) => ({
-  type: RECEIVE_PRODUCTS,
+  type: ProductActionType.RECEIVE_PRODUCTS,
   products,
 });
 

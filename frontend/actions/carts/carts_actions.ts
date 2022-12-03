@@ -1,11 +1,10 @@
 import * as cartAPIUtil from "../../util/cart_api_util";
-import { Cart } from "./types";
-import { User } from "."
+import { Cart, CartActionType } from "./types";
 
 export const RECEIVE_CART = "RECEIVE_CART";
 
 export const receiveCart = (cart: Cart) => ({
-  type: RECEIVE_CART,
+  type: CartActionType.RECEIVE_CART,
   cart,
 });
 
