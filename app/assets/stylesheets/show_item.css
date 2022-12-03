@@ -62,6 +62,9 @@
   }
 }
 
+.gap-05 {
+  gap: 0.5rem;
+}
 .gap-1 {
   gap: 1rem;
 }
@@ -100,6 +103,11 @@
   .product-show-container > div:nth-child(2) {
     margin-top: 2rem;
     order: 3;
+  }
+
+  .cart-image {
+    width: 2rem !important;
+    max-width: 3rem;
   }
 }
 

@@ -52,7 +52,7 @@ Users can sign up and sign in by checking its credentials and used Modal to give
 
 2. Check out the instruction file inside Config and folllow the instruction
 3. Inside the main folder, run "bundle install" => This will install the libraries that RoR requires to be ran
-4. From the main folder, run "cd frontend" and run "npm install" => This will install all the libraries that React.js and JavaScript require to be ran.
+4. From the main folder, run "cd src" and run "npm install" => This will install all the libraries that React.js and JavaScript require to be ran.
 5. Install PostgreSQL => This will store the data when we run command "rails db:setup"
 IMPORTANT!!!
     1. If you own M1 macbook, please go to Applications folder and make a duplicate of "terminal"
