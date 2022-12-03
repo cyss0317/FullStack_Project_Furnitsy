@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import Greeting from "./greeting.jsx";
-import { logout } from "../actions/session_actions";
-import { openModal } from "../actions/modal_actions";
+import { logout } from "../actions/sessions/session_actions";
+import { openModal } from "../actions/modal/modal_actions";
 
 const mSTP = (state, ownProps) => {
   return {

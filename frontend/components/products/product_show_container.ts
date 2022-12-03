@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import ProductShow from "./product_show.jsx";
-import { ThunkReceiveProduct } from "../../actions/product_actions";
+import { ThunkReceiveProduct } from "../../actions/products/product_actions";
 import {
   ThunkCreateCartItem,
   ThunkDeleteCartItem,
@@ -11,8 +11,8 @@ import {
   ThunkDeleteReview,
   ThunkCreateReview,
   ThunkUpdateReview,
-} from "../../actions/review_actions";
-import { openModal } from "../../actions/modal_actions";
+} from "../../actions/reviews/review_actions";
+import { openModal } from "../../actions/modal/modal_actions";
 
 const mSTP = (state, ownProps) => {
   const product = state.entities.products[ownProps.match.params.productId];

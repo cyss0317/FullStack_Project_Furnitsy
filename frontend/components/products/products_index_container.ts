@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import ProductIndex from "./product_Index.js";
-import { ThunkReceiveProducts } from "../../actions/product_actions";
+import { ThunkReceiveProducts } from "../../actions/products/product_actions";
 
 const mSTP = (state, window) => {
   const products = Object.values(state.entities.products);

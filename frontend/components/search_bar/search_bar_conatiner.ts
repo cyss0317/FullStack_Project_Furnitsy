@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { ThunkReceiveProducts } from "../../actions/product_actions";
+import { ThunkReceiveProducts } from "../../actions/products/product_actions";
 import SearchBar from "./search_bar.jsx";
 
 const mSTP = (state, ownProps) => ({

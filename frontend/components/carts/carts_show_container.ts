@@ -5,7 +5,7 @@ import {
   ThunkReceiveCartItems,
   ThunkUpdateCartItem,
 } from "actions/cart_items_actions";
-import { ThunkReceiveProducts } from "../../actions/product_actions";
+import { ThunkReceiveProducts } from "../../actions/products/product_actions";
 
 export const mSTP = (state) => {
   return {

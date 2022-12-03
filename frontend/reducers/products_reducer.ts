@@ -1,4 +1,7 @@
-import { RECEIVE_PRODUCTS, RECEIVE_PRODUCT } from "../actions/product_actions";
+import {
+  RECEIVE_PRODUCTS,
+  RECEIVE_PRODUCT,
+} from "../actions/products/product_actions";
 
 const ProductsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);

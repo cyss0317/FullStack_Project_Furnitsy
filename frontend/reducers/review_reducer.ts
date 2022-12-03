@@ -4,7 +4,7 @@ import {
   CREATE_REVIEW,
   DELETE_REVIEW,
   EDIT_REVIEW,
-} from "../actions/review_actions";
+} from "../actions/reviews/review_actions";
 
 const ReviewReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
