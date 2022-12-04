@@ -1,6 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { CartItem } from "actions/cart_items/types"
 
+interface CartShowItemProps {
+  deleteCartItem: () => void;
+  updateCartItem: (cartItem) => Promise<CartItem> => React.Dispatch
+}
 class CartShowItem extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +25,7 @@ class CartShowItem extends React.Component {
   onChangeHandler(e) {
     let updateButton = document.getElementById("update-cartItem");
     this.setState({ quantity: parseInt(e.currentTarget.value) });
-    updateButton.style.display = "block";
+    if (updateButton) updateButton.style.display = "block";
   }
 
   updateCartItem(e) {

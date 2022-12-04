@@ -1,10 +1,11 @@
 import { connect } from "react-redux";
 import CartShow from "./cart_show.js";
+import { CartItem, CartItemId } from "actions/cart_items/types";
 import {
   ThunkDeleteCartItem,
   ThunkReceiveCartItems,
   ThunkUpdateCartItem,
-} from "actions/cart_items_actions";
+} from "actions/cart_items/cart_items_actions";
 import { ThunkReceiveProducts } from "../../actions/products/product_actions";
 
 export const mSTP = (state) => {
@@ -18,8 +19,8 @@ export const mSTP = (state) => {
 };
 
 export const mDTP = (dispatch) => ({
-  deleteCartItem: (cartItemId) => dispatch(ThunkDeleteCartItem(cartItemId)),
-  updateCartItem: (cartItem) => dispatch(ThunkUpdateCartItem(cartItem)),
+  deleteCartItem: (cartItemId: CartItemId) => dispatch(ThunkDeleteCartItem(cartItemId)),
+  updateCartItem: (cartItem: CartItem) => dispatch(ThunkUpdateCartItem(cartItem)),
   receiveCartItems: () => dispatch(ThunkReceiveCartItems()),
   receiveAllProducts: () => dispatch(ThunkReceiveProducts()),
 });

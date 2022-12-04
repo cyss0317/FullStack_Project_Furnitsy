@@ -3,8 +3,7 @@ import {
   DELETE_CART_ITEM,
   RECEIVE_CART_ITEMS,
   UPDATE_CART_ITEM,
-} from "actions/cart_items_actions";
-import { OPEN_MODAL } from "../actions/modal/modal_actions";
+} from "actions/cart_items/cart_items_actions";
 
 const CartItemsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
