@@ -1,7 +1,12 @@
+import { Product } from "actions/products/types";
+
 export type CartItemId = number;
 export interface CartItem {
+  id: number;
   cart_id: CartItemId;
   product_id: number;
+  quantity: number;
+  product: Product; 
 }
 
 export enum CartItemActionType {

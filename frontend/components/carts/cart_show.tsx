@@ -1,9 +1,22 @@
 import React from "react";
 import CartShowItem from "./cart_show_item.js";
-import { Link, Redirect } from "react-router-dom";
-import ProductIndexContainer from "../products/products_index_container";
+import { Link } from "react-router-dom";
+import { CartItem, CartItemId } from "actions/cart_items/types.js";
+import { User } from "actions/types/index.js";
+import { Product } from "actions/products/types.js";
 
-class CartShow extends React.Component {
+type CartShowProps = {
+  items: Array<CartItem>;
+  noCurrentUser: number | null;
+  cartItems: Array<CartItem>;
+  currentUser: User;
+  allProducts: Array<Product>;
+  deleteCartItem: (cartItemId: CartItemId) => void;
+  updateCartItem: (cartItem: CartItem) => void;
+  receiveCartItems: () => Promise<Array<CartItem>>;
+  receiveAllProducts: () => Promise<Array<Product>>;
+};
+class CartShow extends React.Component<CartShowProps> {
   constructor(props) {
     super(props);
   }
@@ -28,13 +41,6 @@ class CartShow extends React.Component {
 
     let numberOfProducts = 0;
     allItems.forEach((item) => (numberOfProducts += item.quantity));
-
-    let allProductsNameArray = [];
-    allItems.forEach((item) => {
-      if (!allProductsNameArray.includes(item.product.name)) {
-        item.product.name;
-      }
-    });
 
     let totalPrice = 0;
     allItems.forEach(
@@ -69,8 +75,6 @@ class CartShow extends React.Component {
                   {allItems.map((item) => (
                     <CartShowItem
                       deleteCartItem={deleteCartItem}
-                      receiveAllProducts={receiveAllProducts}
-                      receiveCartItems={receiveCartItems}
                       updateCartItem={updateCartItem}
                       allProducts={allProducts}
                       totalPrice={totalPrice}

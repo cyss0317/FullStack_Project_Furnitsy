@@ -1,12 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CartItem } from "actions/cart_items/types"
+import { CartItem, CartItemId } from "actions/cart_items/types";
+import { User } from "actions/types/index";
+import { Product } from "actions/products/types";
+type CartShowItemProps = {
+  allProducts: Array<Product>;
+  totalPrice: number;
+  item: CartItem;
+  key: number;
+  deleteCartItem: (cartItemId: CartItemId) => void;
+  updateCartItem: (cartItem: CartItem) => void;
+};
 
-interface CartShowItemProps {
-  deleteCartItem: () => void;
-  updateCartItem: (cartItem) => Promise<CartItem> => React.Dispatch
-}
-class CartShowItem extends React.Component {
+type CartShowItemState = {
+  id: number;
+  cart_id: number;
+  product_id: number;
+  quantity: number;
+  screenWidth: number;
+};
+class CartShowItem extends React.Component<
+  CartShowItemProps,
+  CartShowItemState
+> {
   constructor(props) {
     super(props);
     this.deleteHandler = this.deleteHandler.bind(this);
