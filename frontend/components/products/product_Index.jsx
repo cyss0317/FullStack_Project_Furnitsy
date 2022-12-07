@@ -1,5 +1,5 @@
 import React from "react";
-import ProductIndexItem from "./product_index_item.js";
+import ProductIndexItem from "./product_index_item.jsx";
 import RecentlyViewItemIndex from "./recently_view_item_index.jsx";
 import { withRouter } from "react-router";
 

@@ -1,8 +1,11 @@
+//@ts-nocheck
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { CartItem, CartItemId } from "actions/cart_items/types";
 import { User } from "actions/types/index";
 import { Product } from "actions/products/types";
+
 type CartShowItemProps = {
   allProducts: Array<Product>;
   totalPrice: number;
@@ -12,12 +15,15 @@ type CartShowItemProps = {
   updateCartItem: (cartItem: CartItem) => void;
 };
 
-type CartShowItemState = {
+interface CartUpdate {
   id: number;
   cart_id: number;
   product_id: number;
   quantity: number;
-  screenWidth: number;
+}
+type CartShowItemState = {
+  cartItem: CartUpdate;
+  screenWidth?: number;
 };
 class CartShowItem extends React.Component<
   CartShowItemProps,
@@ -27,10 +33,12 @@ class CartShowItem extends React.Component<
     super(props);
     this.deleteHandler = this.deleteHandler.bind(this);
     this.state = {
-      id: this.props.item.id,
-      cart_id: this.props.item.cart_id,
-      product_id: this.props.item.product_id,
-      quantity: this.props.item.quantity,
+      cartItem: {
+        id: this.props.item.id,
+        cart_id: this.props.item.cart_id,
+        product_id: this.props.item.product_id,
+        quantity: this.props.item.quantity,
+      },
       screenWidth: window.innerWidth,
     };
 
@@ -40,13 +48,13 @@ class CartShowItem extends React.Component<
 
   onChangeHandler(e) {
     let updateButton = document.getElementById("update-cartItem");
-    this.setState({ quantity: parseInt(e.currentTarget.value) });
+    this.setState({cartItem: { ...this.state.cartItem, quantity: parseInt(e.currentTarget.value) }});
     if (updateButton) updateButton.style.display = "block";
   }
 
   updateCartItem(e) {
     e.preventDefault;
-    this.props.updateCartItem(this.state);
+    this.props.updateCartItem(this.state.cartItem);
   }
 
   deleteHandler(e) {
@@ -57,6 +65,8 @@ class CartShowItem extends React.Component<
   render() {
     const { item, totalPrice, allProducts, updateCartItem } = this.props;
     let tax = totalPrice * 0.0825;
+    console.log(this.state);
+
     let subtotal = totalPrice + tax;
     allProducts.length === 0 ? null : allProducts[item.id];
     return (
@@ -64,24 +74,24 @@ class CartShowItem extends React.Component<
         <div className="cart-show-item-container-info">
           <div id="hello">
             <Link
-              to={`/products/${item.product.id}`}
+              to={`/products/${item.product?.id}`}
               className="cart-show-image-thumnails"
             >
               <img
                 className="cart-show-image-thumnail"
-                src={item.photoUrls[0]}
+                src={item.photoUrls?.[0]}
               />
             </Link>
           </div>
           <div id="cart-item-title">
             <Link
-              to={`/products/${item.product.id}`}
+              to={`/products/${item.product?.id}`}
               id="cart-item-description"
             >
-              <p>{item.product.category}</p>
+              <p>{item.product?.category}</p>
               <p>
-                {item.product.name.split(" ").length > 4
-                  ? item.product.name
+                {item.product?.name.split(" ").length > 4
+                  ? item.product?.name
                       .split(" ")
                       .map((word, idx) => {
                         if (this.state.screenWidth <= 400) {

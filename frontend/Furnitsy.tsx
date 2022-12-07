@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Root from "./components/root.jsx";
-import { User } from "actions/types/index";
-import { fetchCart } from "actions/carts/carts_actions";
+import { User } from "./actions/types/index";
+import { fetchCart } from "./actions/carts/carts_actions";
 import { ThunkReceiveCartItems } from "./actions/cart_items/cart_items_actions";
 
 import configureStore from "./store/store";

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import GreetingContainer from "./greeting_container";
 import CartHeaderContainer from "./carts/cart_header_container";
-import CategoryNavBar from "./products/Category_nav_bar.js";
+import CategoryNavBar from "./products/Category_nav_bar.jsx";
 import { useHistory } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";

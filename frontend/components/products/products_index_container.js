@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import ProductIndex from "./product_Index.js";
+import ProductIndex from "./product_Index.jsx";
 import { ThunkReceiveProducts } from "../../actions/products/product_actions";
 
 const mSTP = (state, window) => {

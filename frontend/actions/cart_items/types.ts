@@ -1,4 +1,5 @@
 import { Product } from "actions/products/types";
+import { Cart } from "actions/carts/types";
 
 export type CartItemId = number;
 export interface CartItem {
@@ -6,7 +7,10 @@ export interface CartItem {
   cart_id: CartItemId;
   product_id: number;
   quantity: number;
-  product: Product; 
+  product?: Product; 
+  photoUrls?: Array<string>;
+  cart?: Cart
+
 }
 
 export enum CartItemActionType {

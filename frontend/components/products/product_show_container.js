@@ -4,7 +4,7 @@ import { ThunkReceiveProduct } from "../../actions/products/product_actions";
 import {
   ThunkCreateCartItem,
   ThunkDeleteCartItem,
-} from "actions/cart_items_actions";
+} from "../../actions/cart_items/cart_items_actions";
 import {
   ThunkFetchReview,
   ThunkFetchAllReviews,

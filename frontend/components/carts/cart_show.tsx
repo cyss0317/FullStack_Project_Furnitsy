@@ -1,12 +1,13 @@
+//@ts-nocheck
 import React from "react";
-import CartShowItem from "./cart_show_item.js";
+import CartShowItem from "./cart_show_item";
 import { Link } from "react-router-dom";
 import { CartItem, CartItemId } from "actions/cart_items/types.js";
 import { User } from "actions/types/index.js";
 import { Product } from "actions/products/types.js";
 
 type CartShowProps = {
-  items: Array<CartItem>;
+  items: Array<Product>;
   noCurrentUser: number | null;
   cartItems: Array<CartItem>;
   currentUser: User;
@@ -27,6 +28,7 @@ class CartShow extends React.Component<CartShowProps> {
   }
 
   render() {
+    console.log("hello", this.props)
     const {
       cartItems,
       items,
@@ -38,13 +40,12 @@ class CartShow extends React.Component<CartShowProps> {
     } = this.props;
     let allItems =
       Object.values(items).length !== 0 ? Object.values(items) : [];
-
     let numberOfProducts = 0;
     allItems.forEach((item) => (numberOfProducts += item.quantity));
 
     let totalPrice = 0;
     allItems.forEach(
-      (item) => (totalPrice += item.product.price * item.quantity)
+      (item) => (totalPrice +=item.product.price * item.quantity)
     );
     if (cartItems === undefined) {
       return null;

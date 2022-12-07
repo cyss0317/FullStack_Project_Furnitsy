@@ -1,3 +1,5 @@
+import { Review } from "actions/types/index"
+
 export type ProductId = number;
 export interface Product {
   id: ProductId;
@@ -8,6 +10,8 @@ export interface Product {
   color: string;
   price: number;
   highlights: Text;
+  photoUrls: Array<string>;
+  reviews: Array<Review>;
 }
 
 export enum ProductActionType {
