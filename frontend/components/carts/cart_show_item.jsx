@@ -62,30 +62,25 @@ class CartShowItem extends React.Component {
           <div id="cart-item-quantity">
             <p>Quantities</p>
             <br />
-            {/* <select
-              name="quantity"
-              id="show-quantity"
-              defaultValue={this.state.quantity}
-              onChange={this.onChangeHandler}
+            <form
+              className="flex flex-col gap-05 justify-center align-center"
+              onSubmit={this.updateCartItem}
             >
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select> */}
-            {
-              // this.onChangeHandler() ?
-              <button id="update-cartItem" onClick={this.updateCartItem}>
+              <button
+                id="update-cartItem"
+                type="submit"
+                onClick={this.updateCartItem}
+              >
                 Update Quantity
               </button>
-            }
+              <input
+                className="update-quantity-input"
+                type="number"
+                value={this.state.quantity}
+                onChange={this.onChangeHandler}
+              />
+            </form>
             <form onSubmit={this.deleteHandler} id="quantity-update-form">
-              <input className="update-quantity-input" type="number" value={this.state.quantity} onChange={this.onChangeHandler}/>
               <input className="remove-button" type="submit" value="Remove" />
             </form>
           </div>
