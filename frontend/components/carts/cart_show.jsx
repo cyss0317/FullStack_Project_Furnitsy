@@ -1,8 +1,17 @@
 import React from "react";
 import CartShowItem from "./cart_show_item";
 import { Link, Redirect } from "react-router-dom";
-import ProductIndexContainer from "../products/products_index_container";
-
+// type CartShowProps = {
+//   items: Array<Product>;
+//   noCurrentUser: number | null;
+//   cartItems: Array<CartItem>;
+//   currentUser: User;
+//   allProducts: Array<Product>;
+//   deleteCartItem: (cartItemId: CartItemId) => void;
+//   updateCartItem: (cartItem: CartItem) => void;
+//   receiveCartItems: () => Promise<Array<CartItem>>;
+//   receiveAllProducts: () => Promise<Array<Product>>;
+// };
 class CartShow extends React.Component {
   constructor(props) {
     super(props);
@@ -14,6 +23,7 @@ class CartShow extends React.Component {
   }
 
   render() {
+    console.log("hello", this.props)
     const {
       cartItems,
       items,
@@ -25,20 +35,12 @@ class CartShow extends React.Component {
     } = this.props;
     let allItems =
       Object.values(items).length !== 0 ? Object.values(items) : [];
-
     let numberOfProducts = 0;
     allItems.forEach((item) => (numberOfProducts += item.quantity));
 
-    let allProductsNameArray = [];
-    allItems.forEach((item) => {
-      if (!allProductsNameArray.includes(item.product.name)) {
-        item.product.name;
-      }
-    });
-
     let totalPrice = 0;
     allItems.forEach(
-      (item) => (totalPrice += item.product.price * item.quantity)
+      (item) => (totalPrice +=item.product.price * item.quantity)
     );
     if (cartItems === undefined) {
       return null;
@@ -69,8 +71,6 @@ class CartShow extends React.Component {
                   {allItems.map((item) => (
                     <CartShowItem
                       deleteCartItem={deleteCartItem}
-                      receiveAllProducts={receiveAllProducts}
-                      receiveCartItems={receiveCartItems}
                       updateCartItem={updateCartItem}
                       allProducts={allProducts}
                       totalPrice={totalPrice}

@@ -115,7 +115,6 @@
   border: none;
   border-radius: 15px;
   font-size: 20px;
-  /* margin: 10px 0 36px 0; */
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 9px;
@@ -133,8 +132,6 @@
   transform: scale(1.1);
   transition: 0.15s;
 
-  /* border: 1px solid #FAECD5; */
-  /* border: 1px solid #eeb161; */
 }
 .submit_to_email:active {
   transform: scale(1);

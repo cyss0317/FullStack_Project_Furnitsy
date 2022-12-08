@@ -1,16 +1,3 @@
-/* sign up and sign in styling */
-/* .signup-login, .welcome-message-and-logout-button {
-	position: absolute;
-    top: 8px;
-    right: 8px;
-
-    font-size: 15px;
-
- } */
-/* .signup{
-	padding: 0;
-} */
-
 body {
   font-family: "Recursive", sans-serif;
   font-weight: bold;
@@ -22,13 +9,7 @@ body {
 }
 
 .signup,
-.login {
-  /* padding-left: 6px;
-	padding-right: 6px;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	text-decoration: none;
-	color: black; */
+.log-button {
   padding: 0;
   background: none;
   color: inherit;
@@ -36,27 +17,21 @@ body {
   font: inherit;
   cursor: pointer;
   outline: inherit;
+    width: 100%;
+
 }
 
 .signup:hover,
-.login:hover {
+.log-button:hover {
   cursor: pointer;
-  /* text-decoration:underline; */
   font-size: 16px;
   font-weight: bold;
   transform: scale(1.1);
   transition: 0.15s;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  width: fit-content;
 }
 .signup:active,
-.login:active {
+.log-button:active {
   transform: scale(1);
-}
-
-.welcome-message-and-logout-button {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
 }
