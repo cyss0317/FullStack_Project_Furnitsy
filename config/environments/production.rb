@@ -24,9 +24,9 @@ Rails.application.configure do
 
   # Compress JavaScripts and CSS.
   config.assets.configure do |env|
-  env.js_compressor  = :uglifier # or :closure, :yui
-  env.css_compressor = :sass   # or :yui
-end
+    env.js_compressor = :uglifier # or :closure, :yui
+    env.css_compressor = :sass # or :yui
+  end
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
@@ -57,7 +57,7 @@ end
   config.log_level = :debug
 
   # Prepend all log lines with the following tags.
-  config.log_tags = [ :request_id ]
+  config.log_tags = [:request_id]
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
@@ -86,7 +86,7 @@ end
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)

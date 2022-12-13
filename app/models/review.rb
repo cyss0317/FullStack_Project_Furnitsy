@@ -12,17 +12,14 @@
 #  updated_at :datetime         not null
 #
 class Review < ApplicationRecord
-    validates :user_id, :product_id, :comment, presence: true
-    validates :rating, presence: true, numericality: {greater_than: 0}
+  validates :user_id, :product_id, :comment, presence: true
+  validates :rating, presence: true, numericality: { greater_than: 0 }
 
+  belongs_to :user,
+             foreign_key: :user_id,
+             class_name: :User
 
-    belongs_to :user,
-        foreign_key: :user_id,
-        class_name: :User
-
-    belongs_to :product,
-        foreign_key: :product_id,
-        class_name: :Product
-
-    
+  belongs_to :product,
+             foreign_key: :product_id,
+             class_name: :Product
 end

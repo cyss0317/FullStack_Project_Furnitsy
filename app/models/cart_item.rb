@@ -10,16 +10,13 @@
 #  quantity   :integer
 #
 class CartItem < ApplicationRecord
-    validates :cart_id, presence: true
+  validates :cart_id, presence: true
 
+  belongs_to :cart,
+             class_name: :Cart,
+             foreign_key: :cart_id
 
-    belongs_to :cart,
-        class_name: :Cart,
-        foreign_key: :cart_id
-
-    belongs_to :product,
-        foreign_key: :product_id,
-        class_name: :Product
-    
-
+  belongs_to :product,
+             foreign_key: :product_id,
+             class_name: :Product
 end

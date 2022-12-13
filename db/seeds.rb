@@ -13,11 +13,10 @@ CartItem.delete_all
 
 # User.create({email: "demo_user", password: "password", first_name:"DEMO_USER"})
 
-require_relative './seeds/01_couches.rb'
-require_relative './seeds/02_tables.rb'
-require_relative './seeds/03_beds.rb'
-require_relative './seeds/04_chairs.rb'
-
+require_relative './seeds/01_couches'
+require_relative './seeds/02_tables'
+require_relative './seeds/03_beds'
+require_relative './seeds/04_chairs'
 
 # category: "Couch and Sofa"
 # category: "Console Table"

@@ -14,16 +14,15 @@
 #  highlights  :text
 #
 class Product < ApplicationRecord
-    validates :name, :description, :category, :color, :price, presence: true
-    
-    has_many_attached :images
+  validates :name, :description, :category, :color, :price, presence: true
 
-    has_many :cart_items,
-        foreign_key: :product_id,
-        class_name: :CartItem
+  has_many_attached :images
 
-    has_many :reviews,
-        foreign_key: :product_id,
-        class_name: :Review
+  has_many :cart_items,
+           foreign_key: :product_id,
+           class_name: :CartItem
 
+  has_many :reviews,
+           foreign_key: :product_id,
+           class_name: :Review
 end
