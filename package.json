@@ -2,7 +2,6 @@
   "name": "Sunny",
   "private": true,
   "dependencies": {
-    "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.8",
     "@babel/preset-react": "^7.14.5",
     "@emotion/react": "^11.10.5",
@@ -32,7 +31,7 @@
     "npm": "6.14.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "webpack --watch --mode=development",
     "postinstall": "webpack"
   },
@@ -48,10 +47,12 @@
   },
   "homepage": "https://github.com/cyss0317/FullStack_Project_Sunny#readme",
   "devDependencies": {
+    "@babel/core": "^7.20.5",
     "@types/react-dom": "^18.0.9",
     "@types/react-router-dom": "^5.3.3",
     "babel-loader": "^9.1.0",
     "babel-preset-env": "^1.7.0",
+    "jest": "^29.3.1",
     "ts-loader": "^9.4.1",
     "typescript": "^4.9.3",
     "webpack": "^5.75.0"
