@@ -41,15 +41,23 @@ class ProductIndex extends React.Component {
     return (
       <div className="index-main-container">
         <div className="products-index-container">
-          <h2 className="index-container-logo">
-            Furnitures made just for you.
-          </h2>
-          <p className="best-selling-items">Best selling items</p>
-          <ul className="products-index-container-ul">
-            {couchAndSofa.map((product) => (
-              <ProductIndexItem product={product} key={product.id} />
-            ))}
-          </ul>
+          {!this.state.randomItem10.length ? (
+            <h2 className="index-container-logo">
+              If you're seeing this message, I'm currently having issue with seeding the seed file due to the Heroku update.
+            </h2>
+          ) : (
+            <>
+              <h2 className="index-container-logo">
+                Furnitures made just for you.
+              </h2>
+              <p className="best-selling-items">Best selling items</p>
+              <ul className="products-index-container-ul">
+                {couchAndSofa.map((product) => (
+                  <ProductIndexItem product={product} key={product.id} />
+                ))}
+              </ul>
+            </>
+          )}
         </div>
         <div className="recently-viewed-container">
           <div id="recently-words">
