@@ -9,6 +9,7 @@
     "@material-ui/icons": "^4.11.3",
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.14",
+    "@types/scheduler": "^0.16.2",
     "babel-preset-es2015": "^6.24.1",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
