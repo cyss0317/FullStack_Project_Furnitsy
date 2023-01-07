@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: Sunny_production
+  adapter: postgresql
+  database: db/production.sqlite3
   username: Sunny
   password: <%= ENV['SUNNY_DATABASE_PASSWORD'] %>
