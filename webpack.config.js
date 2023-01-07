@@ -1,8 +1,7 @@
 const path = require("path");
- const { merge } = require("webpack-merge");
- const common = require("./webpack.common.js");
 
-module.exports = merge(common,{
+
+module.exports = {
   context: __dirname,
   entry: "./frontend/Furnitsy.jsx",
   output: {
@@ -27,4 +26,5 @@ module.exports = merge(common,{
     ],
   },
   devtool: "source-map",
-});
+  mode: "development",
+};
