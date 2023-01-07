@@ -42,7 +42,7 @@ class ProductIndex extends React.Component {
       <div className="index-main-container">
         <div className="products-index-container">
           {!this.state.randomItem10.length ? (
-            <h2 className="index-container-logo">
+            <h2 className="margin3">
               If you're seeing this message, I'm currently having issue with seeding the seed file due to the Heroku update.
             </h2>
           ) : (

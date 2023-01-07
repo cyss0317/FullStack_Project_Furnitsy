@@ -127,3 +127,7 @@ input:focus {
 .show-main-container {
   margin: 0px 5vw 0px 5vw;
 }
+
+.margin3 {
+  margin: 3rem;
+}
