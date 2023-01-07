@@ -33,7 +33,8 @@
   "scripts": {
     "test": "jest",
     "start": "webpack --watch --mode=development",
-    "postinstall": "webpack"
+    "postinstall": "webpack",
+    "build": "yarn --cwd client install --ignore-engines && yarn --cwd client build"
   },
   "repository": {
     "type": "git",
