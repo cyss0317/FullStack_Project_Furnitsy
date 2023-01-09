@@ -51,7 +51,7 @@ class CartShow extends React.Component {
 
     if (numberOfProducts === 0) {
       return (
-        <div className="margin3">
+        <div className="margin6vw">
           <h1>There is nothing in your cart</h1>
           <Link to="/">Continue shopping?</Link>
         </div>
