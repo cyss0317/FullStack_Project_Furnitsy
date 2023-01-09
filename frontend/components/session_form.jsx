@@ -13,6 +13,9 @@ class SessionForm extends React.Component {
     this.demoHandler = this.demoHandler.bind(this);
   }
 
+
+  // window.closeModal = this.props.closeModal
+
   submitHandler(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
@@ -27,7 +30,12 @@ class SessionForm extends React.Component {
     );
     // this.setState({email:user.email})
     // this.setState({ password:user.password})
-    this.props.login(user).then(this.props.closeModal);
+    try {
+      this.props.login(user).then(this.props.closeModal);
+      this.props.closeModal();
+    } catch (err) {
+
+    }
   }
 
   changeHandler(field) {
