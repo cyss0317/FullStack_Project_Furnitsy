@@ -23,7 +23,7 @@ class CartShow extends React.Component {
   }
 
   render() {
-    console.log("hello", this.props)
+    console.log("hello", this.props);
     const {
       cartItems,
       items,
@@ -40,7 +40,7 @@ class CartShow extends React.Component {
 
     let totalPrice = 0;
     allItems.forEach(
-      (item) => (totalPrice +=item.product.price * item.quantity)
+      (item) => (totalPrice += item.product.price * item.quantity)
     );
     if (cartItems === undefined) {
       return null;

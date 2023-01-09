@@ -13,7 +13,6 @@ class SessionForm extends React.Component {
     this.demoHandler = this.demoHandler.bind(this);
   }
 
-
   // window.closeModal = this.props.closeModal
 
   submitHandler(e) {
@@ -33,9 +32,7 @@ class SessionForm extends React.Component {
     try {
       this.props.login(user).then(this.props.closeModal);
       this.props.closeModal();
-    } catch (err) {
-
-    }
+    } catch (err) {}
   }
 
   changeHandler(field) {
