@@ -11,7 +11,7 @@ User.delete_all
 Cart.delete_all
 CartItem.delete_all
 
-# User.create({email: "demo_user", password: "password", first_name:"DEMO_USER"})
+User.create({ email: 'demo_user', password: 'password', first_name: 'DEMO_USER' })
 
 require_relative './seeds/01_couches'
 require_relative './seeds/02_tables'
