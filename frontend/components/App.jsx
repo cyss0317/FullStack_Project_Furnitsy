@@ -3,7 +3,7 @@ import LoginFormContainer from "./login_form_container";
 import SignupFormContainer from "./signup_form_container";
 import Footer from "./Footer";
 import Header from "./Header";
-import { Route, Switch, Link } from "react-router";
+import { Route, Switch } from "react-router";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import Modal from "./modal";
 import ProductIndexContainer from "./products/products_index_container";
@@ -12,11 +12,8 @@ import CartShowContainer from "./carts/carts_show_container";
 import ProductNavContainer from "./products/product_nav_container";
 import SearchBarContainer from "./search_bar/search_bar_conatiner";
 import { withRouter } from "react-router-dom";
-import { useHistory } from "react-router-dom";
-import SearchIcon from "@mui/icons-material/Search";
 
 const App = () => {
-  //  TODO: Refactor the search feature to send the search param to the backend and filter the items
   return (
     <>
       <Modal />

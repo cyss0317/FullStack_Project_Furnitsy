@@ -2,6 +2,8 @@ import React from "react";
 import ProductIndexItem from "./product_index_item";
 import RecentlyViewItemIndex from "./recently_view_item_index";
 import { withRouter } from "react-router";
+import ReactLoading from "react-loading";
+import ClipLoader from "react-spinners/ClipLoader";
 
 class ProductIndex extends React.Component {
   constructor(props) {
@@ -42,10 +44,13 @@ class ProductIndex extends React.Component {
       <div className="index-main-container">
         <div className="products-index-container">
           {!this.state.randomItem10.length ? (
-            <h2 className="margin3">
-              If you're seeing this message, I'm currently having issue with
-              seeding the seed file due to the Heroku update.
-            </h2>
+            <ClipLoader
+              color="white"
+              loading={true}
+              size="15rem"
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
           ) : (
             <>
               <h2 className="index-container-logo">
