@@ -13,7 +13,6 @@ class SessionForm extends React.Component {
     this.demoHandler = this.demoHandler.bind(this);
   }
 
-
   submitHandler(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
