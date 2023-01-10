@@ -13,11 +13,9 @@ export const useWindowDimension = () => {
 
   useEffect(() => {
     const handleResize = () => setWindowDimension(getWindowDimension());
-    console.log("before clean up", windowDimension);
     window.addEventListener("resize", handleResize);
 
     return () => {
-      console.log("in clean up function", windowDimension);
       window.addEventListener("resize", handleResize);
     };
   }, []);

@@ -4,13 +4,8 @@ import { logout } from "../../actions/session_actions";
 import { openModal } from "../../actions/modal_actions";
 
 export const mSTP = (state) => {
-  // const allItems = Object.values(state.entities.cartItems)
-  // let numberOfProducts = 0;
-  // allItems.forEach((item) => numberOfProducts += item.quantity)
-
   return {
     items: state.entities.cartItems,
-    // numberOfProducts: numberOfProducts,
     currentUser: state.entities.users[state.session.id],
   };
 };

@@ -14,7 +14,6 @@ const mDTP = (dispatch) => {
     action: (user) => dispatch(login(user)),
     signup: (user) => dispatch(signup(user)),
     otherForm: (
-      //login modal question
       <button
         className="session-form-submit"
         onClick={() => dispatch(openModal("Sign Up"))}

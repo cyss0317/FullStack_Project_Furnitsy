@@ -1,9 +1,15 @@
 class Api::CartItemsController < ApplicationController
   before_action :require_login, only: [:destroy]
   def create
+    @cart_item = current_user.cart.cart_items.find_by(product_id: cart_item_params[:product_id])
+    if @cart_item
+      @cart_item.update!(quantity: @cart_item.quantity + cart_item_params[:quantity].to_i)
+      render :show
+      return
+    end
+
     @cart_item = CartItem.new(cart_item_params)
     @cart_item.cart_id = current_user.cart.id
-    # grab the cart id from cuyrrent user
     if @cart_item.save
       render :show
     else

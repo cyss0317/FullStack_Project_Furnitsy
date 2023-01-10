@@ -23,7 +23,6 @@ const CartHeader = ({ items, currentUser, logout, openModal }) => {
           alt="Vectors Download Shopping Cart Free Icon"
         />
       </Link>
-      {/* question2!! need to double click */}
     </div>
   );
   const ifLoggedOut = () => (

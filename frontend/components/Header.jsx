@@ -13,7 +13,6 @@ const Header = () => {
   const keyword = useRef("");
   const { width } = useWindowDimension();
   useEffect(() => {
-    console.log(width);
   }, [window.screen.innerWidth]);
 
   function hadleKeyword(e) {

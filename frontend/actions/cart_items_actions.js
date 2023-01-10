@@ -7,8 +7,6 @@ export const UPDATE_CART_ITEM = "UPDATE_CART_ITEM";
 export const createCartItem = (cartItem) => ({
   type: CREATE_CART_ITEM,
   cartItem,
-  // important!!!!
-  // cartItem is being passed down from thunkaction in line 29
 });
 
 export const receiveCartItems = (cartItems) => ({
@@ -19,7 +17,6 @@ export const receiveCartItems = (cartItems) => ({
 export const deleteCartItem = (cartItemId) => ({
   type: DELETE_CART_ITEM,
   cartItemId,
-  // cartItems
 });
 
 export const editCartItem = (cartItem) => ({

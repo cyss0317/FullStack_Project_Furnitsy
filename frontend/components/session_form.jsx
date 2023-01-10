@@ -13,7 +13,6 @@ class SessionForm extends React.Component {
     this.demoHandler = this.demoHandler.bind(this);
   }
 
-  // window.closeModal = this.props.closeModal
 
   submitHandler(e) {
     e.preventDefault();
@@ -27,8 +26,6 @@ class SessionForm extends React.Component {
       {},
       { email: "demo_user", password: "password" }
     );
-    // this.setState({email:user.email})
-    // this.setState({ password:user.password})
     try {
       this.props.login(user).then(this.props.closeModal);
       this.props.closeModal();
@@ -124,7 +121,6 @@ class SessionForm extends React.Component {
             <button className="demo-button" onClick={this.demoHandler}>
               Demo-User
             </button>
-            {/* <button className="demo-button" onClick={this.props.otherForm}>Sign up</button> */}
             {this.props.otherForm}
           </div>
         </form>

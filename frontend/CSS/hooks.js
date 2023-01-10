@@ -2,7 +2,6 @@ export function useCSS() {
   const removeEnlargeEffect = (e) => {
     const img = e.target;
     const salesInfo = img.nextElementSibling;
-    console.log(salesInfo);
     img.className = e.target.className.replace(" hover-enlarge", "");
     salesInfo.className = salesInfo.className.replace(" hover-enlarge", "");
   };

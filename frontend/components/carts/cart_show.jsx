@@ -1,17 +1,6 @@
 import React from "react";
 import CartShowItem from "./cart_show_item";
 import { Link, Redirect } from "react-router-dom";
-// type CartShowProps = {
-//   items: Array<Product>;
-//   noCurrentUser: number | null;
-//   cartItems: Array<CartItem>;
-//   currentUser: User;
-//   allProducts: Array<Product>;
-//   deleteCartItem: (cartItemId: CartItemId) => void;
-//   updateCartItem: (cartItem: CartItem) => void;
-//   receiveCartItems: () => Promise<Array<CartItem>>;
-//   receiveAllProducts: () => Promise<Array<Product>>;
-// };
 class CartShow extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +12,6 @@ class CartShow extends React.Component {
   }
 
   render() {
-    console.log("hello", this.props);
     const {
       cartItems,
       items,
@@ -79,7 +67,6 @@ class CartShow extends React.Component {
                     />
                   ))}
                 </ul>
-                {/* images and name category quantity price */}
 
                 <div id="cart-show-price">
                   <div id="cart-show-price-div">

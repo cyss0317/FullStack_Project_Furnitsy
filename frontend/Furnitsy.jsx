@@ -9,8 +9,6 @@ import configureStore from "./store/store";
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
 
-  // saves login user's session into preloadedState, that is being used to create store
-  // prevents to refresh session when page is refreshed, keeps the user logged in.
   let store;
   if (window.currentUser) {
     let preloadedState = {
