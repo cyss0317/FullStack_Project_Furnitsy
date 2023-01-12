@@ -14,7 +14,6 @@ import SearchBarContainer from "./search_bar/search_bar_conatiner";
 import { withRouter } from "react-router-dom";
 
 const App = () => {
-  const 
   return (
     <>
       <Modal />

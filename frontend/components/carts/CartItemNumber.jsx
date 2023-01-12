@@ -1,5 +1,5 @@
 import React from "react";
-function CartItemNumber({ numberOfProducts = 0 }) {
+function CartItemNumber({ numberOfProducts }) {
   return (
     <div id="counts-container">
       <p className="cart-header-counts">

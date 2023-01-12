@@ -1,21 +1,26 @@
 import React, { useRef } from "react";
 import GreetingContainer from "./greeting_container";
 import CartHeaderContainer from "./carts/cart_header_container";
+import { connect } from "react-redux";
 import CategoryNavBar from "./products/Category_nav_bar";
 import { useHistory } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
-import CartItemNumber from "./carts/CartItemNumber"
+import CartItemNumber from "./carts/CartItemNumber";
 import { useEffect } from "react";
 import { useWindowDimension } from "../util/windowDimension";
 import configureStore from "../store/store";
 
-function Header(){
+function Header(props) {
   const [expand, setExpand] = React.useState(false);
   const history = useHistory();
   const keyword = useRef("");
   const { width } = useWindowDimension();
-  console.log(configureStore().getState())
+  const allItems = Object.values(props.cartItemNumber);
+
+  let numberOfProducts = 0;
+  allItems.forEach((item) => (numberOfProducts += item.quantity));
+
   useEffect(() => {}, [window.screen.innerWidth]);
 
   function hadleKeyword(e) {
@@ -97,7 +102,7 @@ function Header(){
           <CartHeaderContainer />
         ) : (
           <div className="relative">
-            <CartItemNumber numberOfProducts={8} />
+            <CartItemNumber numberOfProducts={numberOfProducts} />
             <button className="nav-menu" onClick={() => setExpand(!expand)}>
               <MenuIcon />
             </button>
@@ -109,6 +114,9 @@ function Header(){
       <HeaderBackground />
     </header>
   );
-};
+}
 
-export default Header;
+const mSTP = (state) => ({
+  cartItemNumber: state.entities.cartItems,
+});
+export default connect(mSTP)(Header);

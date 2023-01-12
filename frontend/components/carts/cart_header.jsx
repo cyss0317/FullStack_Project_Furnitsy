@@ -11,12 +11,11 @@ const CartHeader = ({ items, currentUser, logout, openModal }) => {
 
   const ifLoggedIn = () => (
     <div id="counts-main-div">
-      <CartItemNumber numberOfProducts={numberOfProducts} />
-      {/* <div id="counts-container">
+      <div id="counts-container">
         <p className="cart-header-counts">
           {isNaN(numberOfProducts) ? 0 : numberOfProducts}
         </p>
-      </div> */}
+      </div>
       <Link to="/cart_items" title="Image from freeiconspng.com">
         <img
           className="cart-image"
