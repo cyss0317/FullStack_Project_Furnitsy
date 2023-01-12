@@ -5,13 +5,17 @@ import CategoryNavBar from "./products/Category_nav_bar";
 import { useHistory } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useEffect, useState } from "react";
+import CartItemNumber from "./carts/CartItemNumber"
+import { useEffect } from "react";
 import { useWindowDimension } from "../util/windowDimension";
-const Header = () => {
+import configureStore from "../store/store";
+
+function Header(){
   const [expand, setExpand] = React.useState(false);
   const history = useHistory();
   const keyword = useRef("");
   const { width } = useWindowDimension();
+  console.log(configureStore().getState())
   useEffect(() => {}, [window.screen.innerWidth]);
 
   function hadleKeyword(e) {
@@ -92,12 +96,13 @@ const Header = () => {
         {width > 650 ? (
           <CartHeaderContainer />
         ) : (
-          <>
+          <div className="relative">
+            <CartItemNumber numberOfProducts={8} />
             <button className="nav-menu" onClick={() => setExpand(!expand)}>
               <MenuIcon />
             </button>
             <MenuBar />
-          </>
+          </div>
         )}
       </div>
       {width > 650 && <CategoryNavBar horizontal={true} />}

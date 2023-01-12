@@ -1,5 +1,6 @@
 import React from "react";
 import { Route } from "react-router";
+import CartItemNumber from "./CartItemNumber";
 import { ProductIndexContainer } from "../products/products_index_container";
 import { Link } from "react-router-dom";
 
@@ -10,11 +11,12 @@ const CartHeader = ({ items, currentUser, logout, openModal }) => {
 
   const ifLoggedIn = () => (
     <div id="counts-main-div">
-      <div id="counts-container">
+      <CartItemNumber numberOfProducts={numberOfProducts} />
+      {/* <div id="counts-container">
         <p className="cart-header-counts">
           {isNaN(numberOfProducts) ? 0 : numberOfProducts}
         </p>
-      </div>
+      </div> */}
       <Link to="/cart_items" title="Image from freeiconspng.com">
         <img
           className="cart-image"
