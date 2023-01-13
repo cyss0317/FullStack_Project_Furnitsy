@@ -22,7 +22,7 @@ function Header(props) {
   let numberOfProducts = 0;
   allItems.forEach((item) => (numberOfProducts += item.quantity));
 
-  useEffect(() => {}, [window.screen.innerWidth]);
+  // useEffect(() => {}, [window.screen.innerWidth]);
 
   function hadleKeyword(e) {
     e.preventDefault();

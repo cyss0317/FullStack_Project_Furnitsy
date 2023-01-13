@@ -14,23 +14,22 @@ const CategoryNavBar = (props, params) => {
     "Dining Chairs",
     "Outdoor Furniture",
   ];
-  const right = () =>
-    React.useMemo(() => {
-      {
-        if (width <= 450) {
-          return "right-1rem";
-        }
-        if (width <= 650) {
-          return "right-1rem";
-        }
+  const right = React.useMemo(() => {
+    {
+      if (width <= 450) {
+        return "right-1rem";
       }
-    }, [width]);
+      if (width <= 650) {
+        return "right-1rem";
+      }
+    }
+  }, [width]);
 
   return (
     <nav
       hidden={true}
       className={
-        horizontal ? "nav-horizontal" : `nav-vertical ${right()} top-3_5`
+        horizontal ? "nav-horizontal" : `nav-vertical right-1rem top-3_5`
       }
     >
       {categories.map((category, index) => (
