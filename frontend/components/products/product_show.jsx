@@ -172,7 +172,7 @@ class ProductShow extends React.Component {
               value="Add to cart"
               onClick={() => {
                 this.setState({ ...this.state, addedToCart: true });
-                this.props.openModal("Added")
+                this.props.openModal("Added");
               }}
             />
           </div>

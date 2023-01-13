@@ -104,7 +104,10 @@ function Header(props) {
         ) : (
           <div className="relative">
             {currentUser && (
-              <CartItemNumber css="right-2_8" numberOfProducts={numberOfProducts} />
+              <CartItemNumber
+                css="right-2_8"
+                numberOfProducts={numberOfProducts}
+              />
             )}
             <button className="nav-menu" onClick={() => setExpand(!expand)}>
               <MenuIcon />
