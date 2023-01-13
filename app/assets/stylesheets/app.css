@@ -139,3 +139,7 @@ input:focus {
 .relative {
   display: relative;
 }
+
+.right-2_8 {
+  right: -2.8rem;
+}

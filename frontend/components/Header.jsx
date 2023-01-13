@@ -13,10 +13,11 @@ import configureStore from "../store/store";
 
 function Header(props) {
   const [expand, setExpand] = React.useState(false);
+  const { cartItemNumber, currentUser } = props;
   const history = useHistory();
   const keyword = useRef("");
   const { width } = useWindowDimension();
-  const allItems = Object.values(props.cartItemNumber);
+  const allItems = Object.values(cartItemNumber);
 
   let numberOfProducts = 0;
   allItems.forEach((item) => (numberOfProducts += item.quantity));
@@ -102,7 +103,9 @@ function Header(props) {
           <CartHeaderContainer />
         ) : (
           <div className="relative">
-            <CartItemNumber numberOfProducts={numberOfProducts} />
+            {currentUser && (
+              <CartItemNumber css="right-2_8" numberOfProducts={numberOfProducts} />
+            )}
             <button className="nav-menu" onClick={() => setExpand(!expand)}>
               <MenuIcon />
             </button>
@@ -118,5 +121,6 @@ function Header(props) {
 
 const mSTP = (state) => ({
   cartItemNumber: state.entities.cartItems,
+  currentUser: state.entities.users[state.session.id],
 });
 export default connect(mSTP)(Header);
