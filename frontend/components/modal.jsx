@@ -16,6 +16,15 @@ const Modal = ({ modal, closeModal }) => {
     case "Sign Up":
       component = <SignupFormContainer />;
       break;
+    case "Added":
+      component = (
+        <div className="session-container">
+          <div className="x-closing-button" onClick={closeModal}>&#215;</div>
+          <div>This item has been added to the cart.</div>
+          {/* <section className="modal-screen"></section> */}
+        </div>
+      );
+      break;
     default:
       return null;
   }

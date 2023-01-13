@@ -11,6 +11,7 @@ class ProductShow extends React.Component {
       mainPic: props.photoUrls[0],
       quantity: 1,
       index: 0,
+      addedToCart: false,
     };
     this.values = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -165,7 +166,15 @@ class ProductShow extends React.Component {
             </div>
           </div>
           <div id="add-to-cart-container">
-            <input id="add-to-cart" type="submit" value="Add to cart" />
+            <input
+              id="add-to-cart"
+              type="submit"
+              value="Add to cart"
+              onClick={() => {
+                this.setState({ ...this.state, addedToCart: true });
+                this.props.openModal("Added")
+              }}
+            />
           </div>
         </form>
         <div id="">
