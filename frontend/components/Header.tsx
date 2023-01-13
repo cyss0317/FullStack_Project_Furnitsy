@@ -11,7 +11,12 @@ import { useEffect } from "react";
 import { useWindowDimension } from "../util/windowDimension";
 import configureStore from "../store/store";
 
-function Header(props) {
+interface HeaderProps {
+  cartItemNumber: Array<any>;
+  currentUser: any;
+  dispatch: any;
+}
+function Header(props: HeaderProps) {
   const [expand, setExpand] = React.useState(false);
   const { cartItemNumber, currentUser } = props;
   const history = useHistory();
