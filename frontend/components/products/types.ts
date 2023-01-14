@@ -1,23 +1,9 @@
-import { CartItem } from "../carts/types";
+import { Review } from "../reviews/types";
+import { CreatedAt } from "../types";
 
-export interface CreatedAt {
-  created_at?: string;
-  updated_at?: string;
-}
-
-export interface
-
-export interface Review extends CreatedAt {
-  user_id: number;
-  product_id: number;
-  comment: Text;
-  rating: number;
-  helpful?: number;
-  user: User;
-  product: Product;
-}
-
-export interface Product {
+export type ProductId = string;
+export interface Product extends CreatedAt {
+  id: ProductId;
   name: string;
   description: Text;
   category: string;
@@ -26,5 +12,5 @@ export interface Product {
   price: number;
   highlights: Text;
   photoUrls: Array<string>;
-  reviews: Review;
+  reviews: Array<Review>;
 }
