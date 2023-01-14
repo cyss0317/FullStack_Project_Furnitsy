@@ -7,3 +7,12 @@ export interface Cart {
   updated_at: string;
 }
 
+export interface CartItem {
+  cart_id: number;
+  product_id: number;
+  id: number;
+  quantity: number;
+  created_at: string;
+  updated_at: string;
+}
+
