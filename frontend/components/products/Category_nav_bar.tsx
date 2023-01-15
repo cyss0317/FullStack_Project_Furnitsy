@@ -3,7 +3,14 @@ import GreetingContainer from "../greeting_container";
 import { Link } from "react-router-dom";
 import { useWindowDimension } from "../../util/windowDimension";
 
-const CategoryNavBar = (props, params) => {
+interface CategoryNavBar {
+  expand: boolean;
+  horizontal: boolean;
+  right: string;
+  setExpand: () => void;
+}
+const CategoryNavBar = (props: CategoryNavBar, params) => {
+  console.log(props);
   const { horizontal, setExpand } = props;
   const { width } = useWindowDimension();
   const categories = [
