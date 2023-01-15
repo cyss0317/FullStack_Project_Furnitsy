@@ -4,8 +4,23 @@ import RecentlyViewItemIndex from "./recently_view_item_index";
 import { withRouter } from "react-router";
 import ReactLoading from "react-loading";
 import ClipLoader from "react-spinners/ClipLoader";
+import { Product } from "./types";
 
-class ProductIndex extends React.Component {
+interface ProductIndexProps {
+  accentChairs: Array<Product>;
+  coffeeTable: Array<Product>;
+  couchAndSofa: Array<Product>;
+  diningChairs: Array<Product>;
+  diningTable: Array<Product>;
+  products: Array<Product>;
+  fetchProducts: () => void;
+}
+
+interface ProductIndexState {
+  randomItem10: Array<Product>;
+}
+
+class ProductIndex extends React.Component<ProductIndexProps, ProductIndexState> {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,12 +29,13 @@ class ProductIndex extends React.Component {
   }
 
   componentDidMount() {
+    // @ts-ignore
     this.props.fetchProducts().then(() => {
       let productsArr = Object.values(this.props.products);
-      let temp = [];
+      let temp: Array<Product> = [];
       while (temp.length < 10) {
         let random =
-          productsArr[Math.floor(Math.random() * productsArr.length)];
+          productsArr[Math.floor(Math.random() * productsArr.length)] as Product;
         if (!temp.includes(random)) {
           temp.push(random);
         }
@@ -71,5 +87,5 @@ class ProductIndex extends React.Component {
     );
   }
 }
-
+// @ts-ignore
 export default withRouter(ProductIndex);

@@ -1,7 +1,4 @@
 import React from "react";
-import { Route } from "react-router";
-import CartItemNumber from "./CartItemNumber";
-import { ProductIndexContainer } from "../products/products_index_container";
 import { Link } from "react-router-dom";
 
 const CartHeader = ({ items, currentUser, logout, openModal }) => {
