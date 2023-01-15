@@ -2,8 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useCSS } from "../../CSS/hooks";
 import { useWindowDimension } from "../../util/windowDimension";
+import { Product } from "./types";
 
-const ProductIndexItem = (props) => {
+interface ProductIndexItemProps {
+  product: Product
+}
+
+const ProductIndexItem = (props: ProductIndexItemProps) => {
   const { product } = props;
   const { width } = useWindowDimension();
   const { removeEnlargeEffect, applyEnlargeEffect } = useCSS();
@@ -15,6 +20,7 @@ const ProductIndexItem = (props) => {
         className="hot-items-image-thumnails"
       >
         <img
+          alt={`${product.name}-image`}
           className={
             width <= 480
               ? "hot-items-image-thumnail-lg"
