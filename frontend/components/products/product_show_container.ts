@@ -13,16 +13,16 @@ import {
   ThunkUpdateReview,
 } from "../../actions/review_actions";
 import { openModal } from "../../actions/modal_actions";
+import { Review } from "../reviews/types";
+import { Product } from "./types";
 
 const mSTP = (state, ownProps) => {
-  const product = state.entities.products[ownProps.match.params.productId];
+  const product = state.entities.products[ownProps.match.params.productId] as Product;
   const productId = parseInt(ownProps.match.params.productId);
-  const reviewsArray = Object.values(state.entities.reviews);
+  const reviewsArray = Object.values(state.entities.reviews) as Array<Review>;
   const productReviews = reviewsArray.filter(
     (review) => review.product_id === productId
-  );
-
-  const reviews = Object.values(state.entities.reviews);
+  ) as Array<Review>;
 
   let photoUrls;
   if (product === undefined) {

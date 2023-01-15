@@ -2,6 +2,11 @@ import React from "react";
 import ReviewIndex from "../reviews/reviews_index";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
+interface ProductShowProps {
+
+}
+
 class ProductShow extends React.Component {
   constructor(props) {
     super(props);
@@ -134,6 +139,8 @@ class ProductShow extends React.Component {
   productInfo() {
     const { product } = this.props;
     const arrHighlights = product.highlights.split("!");
+      console.log(this.props);
+
     return (
       <div className="product-show-info">
         <p className="show-category">{product.category} </p>

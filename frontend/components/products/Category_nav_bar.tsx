@@ -10,7 +10,6 @@ interface CategoryNavBar {
   setExpand: () => void;
 }
 const CategoryNavBar = (props: CategoryNavBar, params) => {
-  console.log(props);
   const { horizontal, setExpand } = props;
   const { width } = useWindowDimension();
   const categories = [
