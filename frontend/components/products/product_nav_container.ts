@@ -1,9 +1,10 @@
 import { connect } from "react-redux";
 import ProductNavIndex from "./product_nav_index";
 import { ThunkReceiveProducts } from "../../actions/product_actions";
+import { Product } from "./types"
 
 const mSTP = (state, ownProps) => {
-  const products = Object.values(state.entities.products);
+  const products = Object.values(state.entities.products) as Array<Product>;
 
   let couchAndSofa = products.filter(
     (product) => product.category === "Couch and Sofa"
