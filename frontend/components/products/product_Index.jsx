@@ -14,8 +14,8 @@ class ProductIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchProducts().then((products) => {
-      let productsArr = Object.values(products.products);
+    this.props.fetchProducts().then(() => {
+      let productsArr = Object.values(this.props.products);
       let temp = [];
       while (temp.length < 10) {
         let random =
@@ -29,17 +29,7 @@ class ProductIndex extends React.Component {
   }
 
   render() {
-    const {
-      products,
-      couchAndSofa,
-      coffeeTable,
-      recentlyViews,
-      outdoor,
-      diningTable,
-      diningChairs,
-      kidsBunkBed,
-      accentChairs,
-    } = this.props;
+    const { couchAndSofa } = this.props;
     return (
       <div className="index-main-container">
         <div className="products-index-container">

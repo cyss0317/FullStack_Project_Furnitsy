@@ -10,8 +10,8 @@ class CartShow extends React.Component {
     this.props.receiveCartItems();
     this.props.receiveAllProducts();
   }
-
   render() {
+    console.log("cart show", this.props);
     const {
       cartItems,
       items,

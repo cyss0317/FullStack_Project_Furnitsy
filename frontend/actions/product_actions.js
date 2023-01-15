@@ -22,6 +22,6 @@ export const ThunkReceiveProduct = (productId) => (dispatch) =>
   );
 
 export const ThunkReceiveProducts = () => (dispatch) =>
-  ProductAPIUtil.$receiveProducts().then((res) =>
-    dispatch(receiveProducts(res))
-  );
+  ProductAPIUtil.$receiveProducts().then((res) => {
+    dispatch(receiveProducts(res));
+  });

@@ -7,13 +7,16 @@ import { useHistory } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
 import CartItemNumber from "./carts/CartItemNumber";
-import { useEffect } from "react";
 import { useWindowDimension } from "../util/windowDimension";
-import configureStore from "../store/store";
+import { Cart } from "./carts/types";
+import { User } from "./types";
 
+interface CartItemNumber {
+  cart: Cart;
+}
 interface HeaderProps {
   cartItemNumber: Array<any>;
-  currentUser: any;
+  currentUser: User;
   dispatch: any;
 }
 function Header(props: HeaderProps) {
