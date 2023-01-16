@@ -7,18 +7,22 @@ interface ProductShowProps {
 
 }
 
-class ProductShow extends React.Component {
+interface ProductShowStates {
+  mainPic: string;
+  quantity: number;
+  index: number;
+  addedToCart: boolean;
+}
+class ProductShow extends React.Component<ProductShowProps, ProductShowStates> {
   constructor(props) {
     super(props);
 
     this.state = {
-      // errors: this.props.errors,
       mainPic: props.photoUrls[0],
       quantity: 1,
       index: 0,
       addedToCart: false,
     };
-    this.values = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
     this.clickPictureHandler = this.clickPictureHandler.bind(this);
     this.rightSvgClickhandler = this.rightSvgClickhandler.bind(this);
@@ -28,6 +32,8 @@ class ProductShow extends React.Component {
     this.productImages = this.productImages.bind(this);
     this.productInfo = this.productInfo.bind(this);
   }
+
+  values = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   componentDidMount() {
     this.props.fetchProduct(this.props.match.params.productId);
@@ -139,7 +145,7 @@ class ProductShow extends React.Component {
   productInfo() {
     const { product } = this.props;
     const arrHighlights = product.highlights.split("!");
-      console.log(this.props);
+    console.log(this.props);
 
     return (
       <div className="product-show-info">
@@ -207,6 +213,8 @@ class ProductShow extends React.Component {
   }
 
   render() {
+    console.log(this.props);
+
     if (this.props.product === undefined) {
       return null;
     }
