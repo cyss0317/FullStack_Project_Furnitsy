@@ -1,3 +1,5 @@
-json.extract! cart_item, :id, :cart_id, :product_id, :quantity
+json.extract! cart_item, :id, :cart_id, :quantity
 json.cart cart_item.cart
-json.product cart_item.product
+json.product do
+  json.partial! "api/products/product", product: cart_item.product
+end

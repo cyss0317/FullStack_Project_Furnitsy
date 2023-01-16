@@ -1,14 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Product } from "../products/types";
+import { Cart, CartItem } from "./types";
 
-class CartShowItem extends React.Component {
+interface Item {
+  cart: Cart;
+  product: Product;
+  quantity: number;
+}
+interface CartShowItemProps {
+  item: Item;
+  allProducts: any;
+  // deleteCartItem: (id: number) => void(id);
+  // updateCartItem: (id: number) => void(id);
+}
+interface CartShowItemState {
+  id: number;
+  cart_id: number;
+  product_id: string;
+  quantity: number;
+}
+class CartShowItem extends React.Component<
+  CartShowItemProps,
+  CartShowItemState
+> {
   constructor(props) {
     super(props);
     this.deleteHandler = this.deleteHandler.bind(this);
     this.state = {
-      id: this.props.item.id,
-      cart_id: this.props.item.cart_id,
-      product_id: this.props.item.product_id,
+      id: this.props.item.cart.id,
+      cart_id: this.props.item.cart.id,
+      product_id: this.props.item.product.id,
       quantity: this.props.item.quantity,
     };
 
@@ -29,14 +51,15 @@ class CartShowItem extends React.Component {
 
   deleteHandler(e) {
     e.preventDefault();
-    this.props.deleteCartItem(this.props.item.id);
+    this.props.deleteCartItem(this.props.item.cart.id);
   }
 
   render() {
     const { item, totalPrice, allProducts, updateCartItem } = this.props;
     let tax = totalPrice * 0.0825;
     let subtotal = totalPrice + tax;
-    allProducts.length === 0 ? null : allProducts[item.id];
+    allProducts.length === 0 ? null : allProducts[item.product.id];
+    console.log("cartshowItem", this.props);
     return (
       <li className={`cart-show-item-container`}>
         <div className="cart-show-item-container-info">
@@ -46,8 +69,9 @@ class CartShowItem extends React.Component {
               className="cart-show-image-thumnails"
             >
               <img
+                alt={`${item.product.name}-image`}
                 className="cart-show-image-thumnail"
-                src={item.photoUrls[0]}
+                src={item.product.photoUrls[0]}
               />
             </Link>
             <Link
@@ -74,6 +98,7 @@ class CartShowItem extends React.Component {
                 Update Quantity
               </button>
               <input
+                aria-label="quantity to update"
                 className="update-quantity-input"
                 type="number"
                 value={this.state.quantity}

@@ -6,7 +6,7 @@ import { CartItem } from "./types";
 
 interface CartHeaderProps {
   currentUser: User;
-  items: { [key: number]: CartItem};
+  items: { [key: number]: CartItem };
   openModal: (action: string) => void;
 }
 

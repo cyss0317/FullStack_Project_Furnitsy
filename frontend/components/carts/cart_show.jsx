@@ -24,7 +24,9 @@ class CartShow extends React.Component {
       Object.values(items).length !== 0 ? Object.values(items) : [];
     let numberOfProducts = 0;
     allItems.forEach((item) => (numberOfProducts += item.quantity));
-
+    window.items = items;
+    window.props = this.props;
+    console.log("cartShow", this.props, allItems);
     let totalPrice = 0;
     allItems.forEach(
       (item) => (totalPrice += item.product.price * item.quantity)
