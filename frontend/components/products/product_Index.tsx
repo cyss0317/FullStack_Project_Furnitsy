@@ -1,6 +1,6 @@
 import React from "react";
 import ProductIndexItem from "./product_index_item";
-import RecentlyViewItemIndexProps from "./recently_view_item_index";
+import RecentlyViewItemIndex from "./recently_view_item_index";
 import { withRouter } from "react-router";
 import ReactLoading from "react-loading";
 import ClipLoader from "react-spinners/ClipLoader";

@@ -26,4 +26,4 @@ const RecentlyViewItemIndex = (props: RecentlyViewItemIndexProps) => {
   );
 };
 
-export default RecentlyViewItemIndexProps;
+export default RecentlyViewItemIndex;
