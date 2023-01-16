@@ -1,8 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useCSS } from "../../CSS/hooks";
+import { Product } from "./types";
 
-const RecentlyViewItemIndex = (props) => {
+interface RecentlyViewItemIndex {
+  product: Product
+}
+
+const RecentlyViewItemIndex = (props: RecentlyViewItemIndex) => {
   const { product } = props;
   const { removeEnlargeEffect, applyEnlargeEffect } = useCSS();
 

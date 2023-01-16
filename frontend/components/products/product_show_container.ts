@@ -14,7 +14,7 @@ import {
 } from "../../actions/review_actions";
 import { openModal } from "../../actions/modal_actions";
 import { Review } from "../reviews/types";
-import { Product } from "./types";
+import { Product, ProductId } from "./types";
 
 const mSTP = (state, ownProps) => {
   const product = state.entities.products[ownProps.match.params.productId] as Product;
@@ -35,7 +35,6 @@ const mSTP = (state, ownProps) => {
     product: product,
     photoUrls: photoUrls,
     cartId: state.entities.cart.id,
-    cartItems: state.entities.cartItems,
     currentUser: state.entities.users[state.session.id],
     errors: state.errors,
     reviews: state.entities.reviews,

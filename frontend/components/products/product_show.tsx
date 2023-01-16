@@ -1,10 +1,33 @@
 import React from "react";
 import ReviewIndex from "../reviews/reviews_index";
+import { CartItem } from "../carts/types";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 interface ProductShowProps {
+  cartId: number;
+  reviewErrors: any;
+  product: any;
+  photoUrls: any;
+  currentUser: any;
+  errors: any;
+  reviews: any;
+  productId: any;
+  currentUserId: any;
+  sessionId: any;
+  reviewsArray: any;
+  productReviews: any;
+  match: any;
 
+  fetchProduct: any;
+  createCartItem: any;
+  deleteCartItem: any;
+  openModal: any;
+  fetchReview: any;
+  fetchAllReviews: any;
+  deleteReview: any;
+  createReview: any;
+  updateReview: any;
 }
 
 interface ProductShowStates {
@@ -12,6 +35,7 @@ interface ProductShowStates {
   quantity: number;
   index: number;
   addedToCart: boolean;
+  errors: string;
 }
 class ProductShow extends React.Component<ProductShowProps, ProductShowStates> {
   constructor(props) {
@@ -22,6 +46,7 @@ class ProductShow extends React.Component<ProductShowProps, ProductShowStates> {
       quantity: 1,
       index: 0,
       addedToCart: false,
+      errors: "",
     };
 
     this.clickPictureHandler = this.clickPictureHandler.bind(this);
