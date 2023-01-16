@@ -1,7 +1,21 @@
 import React from "react";
 import ProductNavShowList from "./product_nav_show_list";
-import { useCSS } from "../../CSS/hooks";
-class ProductNavIndex extends React.Component {
+import { Product } from "./types";
+
+interface ProductNavIndexProps {
+  products: Array<Product>;
+  couchAndSofa: Array<Product>;
+  outdoorFurniture: Array<Product>;
+  diningTable: Array<Product>;
+  coffeeTable: Array<Product>;
+  beds: Array<Product>;
+  accentChairs: Array<Product>;
+  diningChairs: Array<Product>;
+  categoryName: any;
+  fetchProducts: any;
+}
+
+class ProductNavIndex extends React.Component<ProductNavIndexProps> {
   constructor(props) {
     super(props);
   }

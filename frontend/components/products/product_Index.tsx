@@ -1,6 +1,6 @@
 import React from "react";
 import ProductIndexItem from "./product_index_item";
-import RecentlyViewItemIndex from "./recently_view_item_index";
+import RecentlyViewItemIndexProps from "./recently_view_item_index";
 import { withRouter } from "react-router";
 import ReactLoading from "react-loading";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -20,7 +20,10 @@ interface ProductIndexState {
   randomItem10: Array<Product>;
 }
 
-class ProductIndex extends React.Component<ProductIndexProps, ProductIndexState> {
+class ProductIndex extends React.Component<
+  ProductIndexProps,
+  ProductIndexState
+> {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,8 +37,9 @@ class ProductIndex extends React.Component<ProductIndexProps, ProductIndexState>
       let productsArr = Object.values(this.props.products);
       let temp: Array<Product> = [];
       while (temp.length < 10) {
-        let random =
-          productsArr[Math.floor(Math.random() * productsArr.length)] as Product;
+        let random = productsArr[
+          Math.floor(Math.random() * productsArr.length)
+        ] as Product;
         if (!temp.includes(random)) {
           temp.push(random);
         }

@@ -17,7 +17,9 @@ import { Review } from "../reviews/types";
 import { Product, ProductId } from "./types";
 
 const mSTP = (state, ownProps) => {
-  const product = state.entities.products[ownProps.match.params.productId] as Product;
+  const product = state.entities.products[
+    ownProps.match.params.productId
+  ] as Product;
   const productId = parseInt(ownProps.match.params.productId);
   const reviewsArray = Object.values(state.entities.reviews) as Array<Review>;
   const productReviews = reviewsArray.filter(

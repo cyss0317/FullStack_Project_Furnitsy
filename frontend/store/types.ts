@@ -31,9 +31,8 @@ export interface UI {
 }
 export interface EntityState {
   cart: Cart;
-  cartItems: {[key: number]: CartItem};
-  products: {[key: number]: Product};
-  reviews: {[key: number]: Review};
-  users: {[key:number]: User} 
-
+  cartItems: { [key: number]: CartItem };
+  products: { [key: number]: Product };
+  reviews: { [key: number]: Review };
+  users: { [key: number]: User };
 }

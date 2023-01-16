@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { useCSS } from "../../CSS/hooks";
 import { Product } from "./types";
 
-interface RecentlyViewItemIndex {
-  product: Product
+interface RecentlyViewItemIndexProps {
+  product: Product;
 }
 
-const RecentlyViewItemIndex = (props: RecentlyViewItemIndex) => {
+const RecentlyViewItemIndex = (props: RecentlyViewItemIndexProps) => {
   const { product } = props;
   const { removeEnlargeEffect, applyEnlargeEffect } = useCSS();
 
@@ -15,6 +15,7 @@ const RecentlyViewItemIndex = (props: RecentlyViewItemIndex) => {
     <li className={`recently-view-item`}>
       <Link to={`/products/${product.id}`} className="recently-view-image">
         <img
+          alt={`${product.name}-image`}
           src={product.photoUrls[0]}
           onMouseEnter={(e) => applyEnlargeEffect(e)}
           onMouseLeave={(e) => removeEnlargeEffect(e)}
@@ -25,4 +26,4 @@ const RecentlyViewItemIndex = (props: RecentlyViewItemIndex) => {
   );
 };
 
-export default RecentlyViewItemIndex;
+export default RecentlyViewItemIndexProps;

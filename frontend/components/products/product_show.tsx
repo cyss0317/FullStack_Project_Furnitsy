@@ -18,6 +18,7 @@ interface ProductShowProps {
   reviewsArray: any;
   productReviews: any;
   match: any;
+  key: any;
 
   fetchProduct: any;
   createCartItem: any;
@@ -127,6 +128,7 @@ class ProductShow extends React.Component<ProductShowProps, ProductShowStates> {
     const mainImage = () => (
       <div className="main-picture-container">
         <button
+          aria-label="browse picuture to the left"
           className="svg-button"
           id="left-svg-button"
           onClick={this.leftSvgClickhandler}
@@ -146,6 +148,7 @@ class ProductShow extends React.Component<ProductShowProps, ProductShowStates> {
           alt=""
         />
         <button
+          aria-label="browse picuture to the right"
           className="svg-button"
           id="right-svg-button"
           onClick={this.rightSvgClickhandler}
@@ -179,7 +182,7 @@ class ProductShow extends React.Component<ProductShowProps, ProductShowStates> {
         <p className="show-name">Name: {product.name} </p>
         <p className="show-color">Color: {product.color} </p>
         <form
-          align="center"
+          // align="center"
           id="show-quantity-container"
           onSubmit={this.addToCartHandler}
         >
@@ -192,6 +195,7 @@ class ProductShow extends React.Component<ProductShowProps, ProductShowStates> {
             <div className="quantity-container">
               <label>Quantity</label>
               <select
+                aria-label="amount of product you want to add to cart"
                 name="quantity"
                 id="show-quantity"
                 defaultValue={this.state.quantity}

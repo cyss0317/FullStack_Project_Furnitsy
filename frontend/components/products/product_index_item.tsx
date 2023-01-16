@@ -5,7 +5,7 @@ import { useWindowDimension } from "../../util/windowDimension";
 import { Product } from "./types";
 
 interface ProductIndexItemProps {
-  product: Product
+  product: Product;
 }
 
 const ProductIndexItem = (props: ProductIndexItemProps) => {
