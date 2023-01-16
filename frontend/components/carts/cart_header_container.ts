@@ -3,6 +3,7 @@ import CartHeader from "./cart_header";
 import { logout } from "../../actions/session_actions";
 import { openModal } from "../../actions/modal_actions";
 
+
 export const mSTP = (state) => {
   return {
     items: state.entities.cartItems,

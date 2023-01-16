@@ -1,7 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Product } from "../products/types";
+import { User } from "../types";
+import { CartItem } from "./types";
 
-const CartHeader = ({ items, currentUser, logout, openModal }) => {
+interface CartHeaderProps {
+  currentUser: User;
+  items: { [key: number]: CartItem};
+  openModal: (action: string) => void;
+}
+
+const CartHeader = ({ items, currentUser, openModal }: CartHeaderProps) => {
   const allItems = Object.values(items);
   let numberOfProducts = 0;
   allItems.forEach((item) => (numberOfProducts += item.quantity));

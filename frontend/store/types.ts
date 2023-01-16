@@ -10,6 +10,10 @@ export interface StoreState {
   ui?: UI;
 }
 
+export interface MSTProps {
+  state: StoreState;
+}
+
 export type ReviewError = Array<string>;
 export type SessionError = Array<string>;
 
