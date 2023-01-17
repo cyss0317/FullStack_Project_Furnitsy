@@ -13,7 +13,7 @@ interface CartShowItemProps {
   allProducts: any;
   totalPrice: number;
   deleteCartItem: (id: number) => any;
-  updateCartItem: (id: number) => any;
+  updateCartItem: (cartItem: CartItem) => any;
 }
 interface CartShowItemState {
   id: number;

@@ -12,6 +12,6 @@ export interface CartItem extends CreatedAt {
   cart_id: number;
   id: number;
   quantity: number;
-  product: Product;
-  cart: Cart;
+  product?: Product;
+  cart?: Cart;
 }

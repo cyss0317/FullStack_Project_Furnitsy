@@ -5,6 +5,7 @@ export const CREATE_REVIEW = "CREATE_REVIEW";
 export const DELETE_REVIEW = "DELETE_REVIEW";
 export const EDIT_REVIEW = "EDIT_REVIEW";
 export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
+export const UPDATE_REVIEW = "UPDATE_REVIEW";
 
 export const receiveReview = (review) => ({
   type: RECEIVE_REVIEW,
@@ -35,8 +36,6 @@ export const receiveReviewErrors = (errors) => ({
   type: RECEIVE_REVIEW_ERRORS,
   errors,
 });
-
-//thunk
 
 export const ThunkFetchReview = (reviewId) => (dispatch) =>
   reviewAPIUtil.$receiveReview(reviewId).then(

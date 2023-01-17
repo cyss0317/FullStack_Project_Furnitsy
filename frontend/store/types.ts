@@ -10,6 +10,10 @@ export interface StoreState {
   ui?: UI;
 }
 
+export interface State {
+  state: StoreState;
+}
+
 export interface MSTProps {
   state: StoreState;
 }

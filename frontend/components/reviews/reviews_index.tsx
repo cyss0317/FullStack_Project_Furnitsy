@@ -1,6 +1,40 @@
 import React from "react";
+import { SessionId } from "../../store/types";
+import { Product } from "../products/types";
+import { User, UserId } from "../types";
+import { Review } from "./types";
 
-class ReviewIndex extends React.Component {
+interface ReviewIndexProps {
+  reviewErrors: Array<string>;
+  product: Product;
+  photoUrls: Array<string>;
+  cartId: number;
+  currentUser: User;
+  errors: any;
+  reviews: Array<Review>;
+  productId: number;
+  currentUserId: UserId;
+  sessionId: SessionId;
+  reviewsArray: any;
+
+  fetchProduct: any;
+  createCartItem: any;
+  deleteCartItem: any;
+  openModal: any;
+  fetchReview: any;
+  fetchAllReviews: any;
+  deleteReview: any;
+  createReview: any;
+  updateReview: any;
+}
+interface ReviewIndexStates {
+  user_id: number | string;
+  product_id: number;
+  comment: number | string;
+  rating: number;
+  helpful?: any;
+}
+class ReviewIndex extends React.Component<ReviewIndexProps, ReviewIndexStates> {
   constructor(props) {
     super(props);
     this.state = {
@@ -239,6 +273,9 @@ class ReviewIndex extends React.Component {
                   onChange={(e) => this.onChangeHandler(e)}
                   value={this.state.comment}
                 />
+                <label htmlFor="error" title="text">
+                  Errors:{" "}
+                </label>
                 <input id="review-submit" type="submit" />
               </form>
             </div>
