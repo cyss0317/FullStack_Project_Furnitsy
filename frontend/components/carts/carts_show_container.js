@@ -9,7 +9,6 @@ import { ThunkReceiveProducts } from "../../actions/product_actions";
 
 export const mSTP = (state) => {
   return {
-    items: state.entities.cartItems,
     noCurrentUser: state.session.id,
     cartItems: state.entities.cartItems,
     currentUser: state.entities.users[state.session.id],

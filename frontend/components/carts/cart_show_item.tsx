@@ -11,8 +11,9 @@ interface Item {
 interface CartShowItemProps {
   item: Item;
   allProducts: any;
-  // deleteCartItem: (id: number) => void(id);
-  // updateCartItem: (id: number) => void(id);
+  totalPrice: number;
+  deleteCartItem: (id: number) => any;
+  updateCartItem: (id: number) => any;
 }
 interface CartShowItemState {
   id: number;
@@ -41,7 +42,7 @@ class CartShowItem extends React.Component<
   onChangeHandler(e) {
     let updateButton = document.getElementById("update-cartItem");
     this.setState({ quantity: parseInt(e.currentTarget.value) });
-    updateButton.style.display = "block";
+    if (updateButton) updateButton.style.display = "block";
   }
 
   updateCartItem(e) {

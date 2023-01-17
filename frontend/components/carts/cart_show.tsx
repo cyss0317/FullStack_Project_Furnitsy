@@ -1,7 +1,22 @@
 import React from "react";
 import CartShowItem from "./cart_show_item";
-import { Link, Redirect } from "react-router-dom";
-class CartShow extends React.Component {
+import { Link } from "react-router-dom";
+import { CartItem } from "./types";
+import { Product } from "../products/types";
+import { User } from "../types";
+
+interface CartShowProps {
+  cartItems: { [key: number]: CartItem };
+  // noCurrentUser: state.session.id;
+  currentUser: User;
+  allProducts: { [key: number]: Product };
+  deleteCartItem: any;
+  updateCartItem: any;
+  receiveCartItems: any;
+  receiveAllProducts: any;
+}
+
+class CartShow extends React.Component<CartShowProps> {
   constructor(props) {
     super(props);
   }
@@ -11,25 +26,15 @@ class CartShow extends React.Component {
     this.props.receiveAllProducts();
   }
   render() {
-    const {
-      cartItems,
-      items,
-      updateCartItem,
-      allProducts,
-      receiveAllProducts,
-      deleteCartItem,
-      receiveCartItems,
-    } = this.props;
+    const { cartItems, updateCartItem, allProducts, deleteCartItem } =
+      this.props;
     let allItems =
-      Object.values(items).length !== 0 ? Object.values(items) : [];
+      Object.values(cartItems).length !== 0 ? Object.values(cartItems) : [];
     let numberOfProducts = 0;
-    allItems.forEach((item) => (numberOfProducts += item.quantity));
-    window.items = items;
-    window.props = this.props;
-    console.log("cartShow", this.props, allItems);
+    allItems.forEach((cartItem) => (numberOfProducts += cartItem.quantity));
     let totalPrice = 0;
     allItems.forEach(
-      (item) => (totalPrice += item.product.price * item.quantity)
+      (cartItem) => (totalPrice += cartItem.product.price * cartItem.quantity)
     );
     if (cartItems === undefined) {
       return null;
