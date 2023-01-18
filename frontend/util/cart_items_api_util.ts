@@ -1,4 +1,7 @@
-export const $createCartItem = (productId, quantity) =>
+import { CartItem, CartItemId } from "../components/carts/types";
+import { ProductId } from "../components/products/types";
+
+export const $createCartItem = (productId: ProductId, quantity: number) =>
   $.ajax({
     method: "POST",
     url: "/api/cart_items",
@@ -10,13 +13,13 @@ export const $receiveCartItems = () =>
     url: "/api/cart_items",
   });
 
-export const $deleteCartItem = (cartItemId) =>
+export const $deleteCartItem = (cartItemId: CartItemId) =>
   $.ajax({
     method: "DELETE",
     url: `/api/cart_items/${cartItemId}`,
   });
 
-export const $updateCartItem = (cartItem) =>
+export const $updateCartItem = (cartItem: CartItem) =>
   $.ajax({
     method: "PATCH",
     url: `/api/cart_items/${cartItem.id}`,

@@ -269,7 +269,6 @@ class ReviewIndex extends React.Component<ReviewIndexProps, ReviewIndexStates> {
                 {errors.length !== 0 ? this.renderErrors(errors.review) : ""}
                 <textarea
                   id="create-review-form-input"
-                  type="text"
                   onChange={(e) => this.onChangeHandler(e)}
                   value={this.state.comment}
                 />

@@ -1,7 +1,12 @@
 import React from "react";
 import { useWindowDimension } from "../util/windowDimension";
 
-const explainations = [
+interface Explanation {
+  title: string;
+  body: string;
+}
+
+const explanations: Array<Explanation> = [
   {
     title: "What is Furnitsy?",
     body: "Furnitsy is a furniture store, where my mother in law buys and sells Ashely furnitures.",
@@ -57,7 +62,7 @@ const Footer = () => {
               : "what_is_furnitsy_inner-vertical"
           }`}
         >
-          {explainations.map((obj, key) => (
+          {explanations.map((obj, key) => (
             <div key={`explaination-${key}`} id="furnitsy_inner_div">
               <h2>{obj.title}</h2>
               <p>{obj.body}</p>

@@ -1,4 +1,6 @@
-export const $receiveProduct = (productId) =>
+import { ProductId } from "../components/products/types";
+
+export const $receiveProduct = (productId: ProductId) =>
   $.ajax({
     url: `/api/products/${productId}`,
   });

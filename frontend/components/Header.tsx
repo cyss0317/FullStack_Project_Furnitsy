@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useRef } from "react";
 import GreetingContainer from "./greeting_container";
 import CartHeaderContainer from "./carts/cart_header_container";
@@ -11,9 +12,9 @@ import { useWindowDimension } from "../util/windowDimension";
 import { Cart } from "./carts/types";
 import { User } from "./types";
 
-interface CartItemNumber {
-  cart: Cart;
-}
+// interface CartItemNumber {
+//   cart: Cart;
+// }
 interface HeaderProps {
   cartItemNumber: Array<any>;
   currentUser: User;
@@ -34,9 +35,10 @@ function Header(props: HeaderProps) {
 
   function hadleKeyword(e) {
     e.preventDefault();
-    if (keyword.length) return;
+    if (keyword.current.length) return;
 
     history.push({ pathname: `/search/${keyword.current}`, state: keyword });
+    // @ts-ignore
     document.querySelector(".header-searchbar").value = "";
   }
 
@@ -73,7 +75,7 @@ function Header(props: HeaderProps) {
             expand={expand}
             horizontal={false}
             setExpand={() => setExpand(!expand)}
-            right={width <= 650 && ".right-1vw"}
+            right={width <= 650 ? ".right-1vw" : ""}
           />
         </div>
       </div>

@@ -1,7 +1,19 @@
 import React from "react";
 import CartHeaderContainer from "./carts/cart_header_container";
+import { User } from "./types";
 
-const Greeting = ({ currentUser, logout, openModal, horizontal }) => {
+interface GreetingProps {
+  currentUser: User;
+  logout: () => void;
+  openModal: (action: string) => void;
+  horizontal: boolean;
+}
+const Greeting = ({
+  currentUser,
+  logout,
+  openModal,
+  horizontal,
+}: GreetingProps) => {
   const ifLoggedIn = () => (
     <div
       className={`flex gap-05 ${

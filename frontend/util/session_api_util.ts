@@ -1,11 +1,13 @@
-export const $signup = (user) =>
+import { User } from "../components/types";
+
+export const $signup = (user: User) =>
   $.ajax({
     method: "POST",
     url: "/api/users",
     data: { user },
   });
 
-export const $login = (user) =>
+export const $login = (user: User) =>
   $.ajax({
     method: "POST",
     url: "/api/session",

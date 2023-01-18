@@ -1,8 +1,25 @@
 import React from "react";
 import ProductNavShowList from "../products/product_nav_show_list";
 import { Link } from "react-router-dom";
+import { Product } from "../products/types";
 
-class SearchBar extends React.Component {
+interface SearchBarProps {
+  products: Array<Product>;
+  keyword: string;
+  filteredByState: Array<Product>;
+  receiveProducts: () => any;
+}
+
+interface SearchBarStates {
+  color: string;
+  bed: string;
+  table: string;
+  outdoor: string;
+  couch: string;
+  filteredByState: Array<Product>;
+}
+
+class SearchBar extends React.Component<SearchBarProps, SearchBarStates> {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,31 +37,32 @@ class SearchBar extends React.Component {
   }
 
   filterByState(field, e) {
-    let filteredProducts = [];
-    this.setState({ [field]: e.currentTarget.value });
-    filteredProducts.forEach((product) => {
-      if (
-        product.color === this.state.field &&
-        !this.props.filteredByState.includes(product)
-      ) {
-        this.props.filteredByState.push(product);
-      }
-    });
+    let filteredProducts: Array<Product> = [];
+    // this.setState({ [field]: e.currentTarget.value });
+    // filteredProducts.forEach((product) => {
+    //   if (
+    //     product.color === this.state.field &&
+    //     !this.props.filteredByState.includes(product)
+    //   ) {
+    //     this.props.filteredByState.push(product);
+    //   }
+    // });
   }
 
   render() {
     const { products, keyword } = this.props;
     if (products === undefined) return null;
     let keywords = keyword.split(" ");
-    let filteredProducts = [];
-    let productsByColor = [];
-    let productsByBed = [];
-    let productsByCouch = [];
-    let productsBySofa = [];
-    let productsByOutdoor = [];
-    let productsByTable = [];
+    let filteredProducts: Array<Product> = [];
+    let productsByColor: Array<Product> = [];
+    let productsByBed: Array<Product> = [];
+    let productsByCouch: Array<Product> = [];
+    let productsBySofa: Array<Product> = [];
+    let productsByOutdoor: Array<Product> = [];
+    let productsByTable: Array<Product> = [];
 
     products.forEach((product) => {
+      let item = product;
       keywords.forEach((word) => {
         let byName = product.name.toLowerCase().includes(word.toLowerCase());
         let byColor = product.color.toLowerCase().includes(word.toLowerCase());
@@ -80,7 +98,7 @@ class SearchBar extends React.Component {
     ) : this.props.filteredByState ? (
       <section>
         <div>
-          <form onSubmit={this.submitHandler}>
+          <form>
             <label htmlFor="">
               by Gray
               <input

@@ -8,6 +8,9 @@ export interface Cart extends CreatedAt {
   user_id: UserId;
 }
 
+export type CartItemId = number;
+export type CartId = number;
+
 export interface CartItem extends CreatedAt {
   cart_id: number;
   id: number;
