@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'boot'
 
 require 'rails/all'
@@ -8,6 +10,7 @@ Bundler.require(*Rails.groups)
 
 module Sunny
   class Application < Rails::Application
+    config.autoloader = :classic
     config.assets.initialize_on_precompile = false
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2

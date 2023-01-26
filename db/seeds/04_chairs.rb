@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'open-uri'
 p1 = Product.create({ name: 'Safavieh Nynette Sofa Chair', description: 'Make a bold statement in any room with the retro mid-century look of this sofa chair. Its geometric angles allow for a generous seat with maximum style. A designer favorite, its light gray velvet and legs with goldtone caps bring instant character to any modern space.',
                       highlights: '

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'open-uri'
 
 p1 = Product.create({ name: 'Havalance Dining Table and 6 Chairs Set', description: 'Have your fill of modern farmhouse style with the Havalance 7-piece dining set. Distressed, vintage-style finishes blend weathered neutrals for an utterly charming effect. The table boasts robust legs for a hearty, substantial look while the bent slat back design and cushioned upholstered seat of the dining chairs cater to your aesthetic.',

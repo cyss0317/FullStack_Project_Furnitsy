@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: carts
@@ -21,6 +23,4 @@ class Cart < ApplicationRecord
   has_many :products,
            through: :cart_items,
            source: :product
-
-  
 end
