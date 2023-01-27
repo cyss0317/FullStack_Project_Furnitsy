@@ -12,9 +12,6 @@ import { useWindowDimension } from "../util/windowDimension";
 import { Cart } from "./carts/types";
 import { User } from "./types";
 
-// interface CartItemNumber {
-//   cart: Cart;
-// }
 interface HeaderProps {
   cartItemNumber: Array<any>;
   currentUser: User;
@@ -31,7 +28,6 @@ function Header(props: HeaderProps) {
   let numberOfProducts = 0;
   allItems.forEach((item) => (numberOfProducts += item.quantity));
 
-  // useEffect(() => {}, [window.screen.innerWidth]);
 
   function hadleKeyword(e) {
     e.preventDefault();
