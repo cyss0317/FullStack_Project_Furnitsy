@@ -9,5 +9,6 @@ describe("Footer", () => {
     expect(container).toMatchSnapshot();
     expect(screen.getByText("What is Furnitsy?")).toBeInTheDocument();
     expect(screen.getByText("Sell furnitures to customers")).toBeInTheDocument();
+    expect(screen.getByText("Peace of mind")).toBeInTheDocument();
   });
 })
