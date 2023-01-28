@@ -8,3 +8,5 @@ AllCops:
     - './db/seeds/04_chairs.rb'
 Style/Documentation:
   Enabled: false
+Metrics/MethodLength:
+  Max: 1000
