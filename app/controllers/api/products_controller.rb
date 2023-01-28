@@ -1,28 +1,32 @@
-class Api::ProductsController < ApplicationController
-  def index
-    @products = Product.all
-    render :index
-  end
+# frozen_string_literal: true
 
-  def show
-    @product = Product.find_by(id: params[:id])
-    if @product
-      render :show
-    else
-      render json: @product.errors.full_messages, status: 404
+module Api
+  class ProductsController < ApplicationController
+    def index
+      @products = Product.all
+      render :index
     end
-  end
 
-  def show_search_result
-    res = []
-    params[:words].each do |_word|
-      result.concat(Product.find_by_sql['SELECT * FROM products WHERE name LIKE ? '])
+    def show
+      @product = Product.find_by(id: params[:id])
+      if @product
+        render :show
+      else
+        render json: @product.errors.full_messages, status: 404
+      end
     end
-  end
 
-  private
+    def show_search_result
+      res = []
+      params[:words].each do |_word|
+        result.concat(Product.find_by_sql['SELECT * FROM products WHERE name LIKE ? '])
+      end
+    end
 
-  def product_params
-    params.require(:product).permit(:id, :name, :color, :category, :price, images: [])
+    private
+
+    def product_params
+      params.require(:product).permit(:id, :name, :color, :category, :price, images: [])
+    end
   end
 end

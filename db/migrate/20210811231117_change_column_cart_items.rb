@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ChangeColumnCartItems < ActiveRecord::Migration[5.2]
   def change
     remove_column :cart_items, :quantity

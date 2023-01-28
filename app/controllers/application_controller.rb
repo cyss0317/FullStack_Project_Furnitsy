@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
@@ -36,9 +38,10 @@ class ApplicationController < ActionController::Base
     underscore_hash = lambda do |hash|
       hash.transform_keys!(&:underscore)
       hash.each do |_key, value|
-        if value.is_a?(ActionController::Parameters)
+        case value
+        when ActionController::Parameters
           underscore_hash.call(value)
-        elsif value.is_a?(Array)
+        when Array
           value.each do |item|
             next unless item.is_a?(ActionController::Parameters)
 

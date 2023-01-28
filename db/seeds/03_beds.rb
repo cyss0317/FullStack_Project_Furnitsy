@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'open-uri'
 p1 = Product.create({ name: 'Hyndell Queen Upholstered Panel Storage Bed', description: 'By pairing contemporary design with rich elements, the Hyndell queen panel bed is sure to bring sophistication and a touch of romance to your bedroom. The bed’s dark espresso finish and sumptuous velvet upholstery—made even more dramatic with the addition of a low-profile storage footboard—complement the luxurious style. Plushly padded button tufting on the headboard is love at first touch.',
                       highlights: "

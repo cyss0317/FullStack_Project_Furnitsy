@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'open-uri'
 p1 = Product.create(name: 'Belcampo Sofa', description: 'The sumptuously comfortable Belcampo sofa makes it easy to camp out in style. Inspired by quality menswear, the linen-weave upholstery naturally works in a rich jute tone. Crisply tailored box cushions and roll arms give the sofa a modern classic shape sure to complement so many aesthetics. Sporting shades of warm terracotta and indigo blue, four decorative pillows add fashionable flair.',
                     highlights: "

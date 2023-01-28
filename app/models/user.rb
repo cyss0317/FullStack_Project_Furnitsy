@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: users
@@ -31,7 +33,7 @@ class User < ApplicationRecord
 
   def self.find_by_credentials(email, password)
     @user = User.find_by(email: email)
-    return unless @user && @user.is_password?(password)
+    return unless @user&.is_password?(password)
 
     @user
   end

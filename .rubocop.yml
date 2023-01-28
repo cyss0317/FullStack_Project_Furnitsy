@@ -1,0 +1,10 @@
+AllCops:
+  Exclude:
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - './db/seeds/01_couches.rb'
+    - './db/seeds/02_tables.rb'
+    - './db/seeds/03_beds.rb'
+    - './db/seeds/04_chairs.rb'
+Style/Documentation:
+  Enabled: false
