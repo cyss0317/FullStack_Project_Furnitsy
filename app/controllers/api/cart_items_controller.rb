@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/AbcSize
 class CartItemsController < ApplicationController
   before_action :require_login, only: [:destroy]
 
@@ -59,3 +60,4 @@ class CartItemsController < ApplicationController
     params.require(:cart_item).permit(:id, :cart_id, :product_id, :quantity)
   end
 end
+# rubocop:enable Metrics/AbcSize

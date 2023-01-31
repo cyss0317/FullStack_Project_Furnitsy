@@ -17,7 +17,6 @@ module Api
     end
 
     def show_search_result
-      res = []
       params[:words].each do |_word|
         result.concat(Product.find_by_sql['SELECT * FROM products WHERE name LIKE ? '])
       end
