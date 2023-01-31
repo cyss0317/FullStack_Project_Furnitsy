@@ -4,7 +4,7 @@ import SessionForm from "./session_form";
 import { login, signup } from "../actions/session_actions";
 import { openModal, closeModal } from "../actions/modal_actions";
 
-const mSTP = (state, ownProps) => ({
+const mSTP = (state) => ({
   errors: state.errors.session,
   formType: "Login",
 });

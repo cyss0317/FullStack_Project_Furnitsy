@@ -44,7 +44,7 @@ class ProductNavIndex extends React.Component<ProductNavIndexProps> {
       accentChairs,
       diningChairs,
     ];
-    let currentCategory = categoryName
+    const currentCategory = categoryName
       .split(" ")
       .map((word, index) => {
         return index === 0
@@ -52,7 +52,7 @@ class ProductNavIndex extends React.Component<ProductNavIndexProps> {
           : word[0].toUpperCase() + word.slice(1);
       })
       .join("");
-    let index = categories_selector.indexOf(eval(currentCategory));
+    const index = categories_selector.indexOf(eval(currentCategory));
 
     if (categories_selector[index] === undefined) {
       return null;

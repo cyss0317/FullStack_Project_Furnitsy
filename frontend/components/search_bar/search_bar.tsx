@@ -36,8 +36,8 @@ class SearchBar extends React.Component<SearchBarProps, SearchBarStates> {
     this.props.receiveProducts();
   }
 
-  filterByState(field, e) {
-    let filteredProducts: Array<Product> = [];
+  // filterByState(field, e) {
+    // const filteredProducts: Array<Product> = [];
     // this.setState({ [field]: e.currentTarget.value });
     // filteredProducts.forEach((product) => {
     //   if (
@@ -47,25 +47,18 @@ class SearchBar extends React.Component<SearchBarProps, SearchBarStates> {
     //     this.props.filteredByState.push(product);
     //   }
     // });
-  }
+  // }
 
   render() {
     const { products, keyword } = this.props;
     if (products === undefined) return null;
-    let keywords = keyword.split(" ");
-    let filteredProducts: Array<Product> = [];
-    let productsByColor: Array<Product> = [];
-    let productsByBed: Array<Product> = [];
-    let productsByCouch: Array<Product> = [];
-    let productsBySofa: Array<Product> = [];
-    let productsByOutdoor: Array<Product> = [];
-    let productsByTable: Array<Product> = [];
+    const keywords = keyword.split(" ");
+    const filteredProducts: Array<Product> = [];
 
     products.forEach((product) => {
-      let item = product;
       keywords.forEach((word) => {
-        let byName = product.name.toLowerCase().includes(word.toLowerCase());
-        let byColor = product.color.toLowerCase().includes(word.toLowerCase());
+        const byName = product.name.toLowerCase().includes(word.toLowerCase());
+        const byColor = product.color.toLowerCase().includes(word.toLowerCase());
         if (
           byName &&
           byName !== byColor &&
@@ -104,7 +97,7 @@ class SearchBar extends React.Component<SearchBarProps, SearchBarStates> {
               <input
                 type="radio"
                 value={this.state.color}
-                onClick={(e) => this.filterByState("color", e)}
+                // onClick={(e) => this.filterByState("color", e)}
               />
             </label>
             <input type="submit" />

@@ -1,7 +1,6 @@
 import * as React from "react";
 import GreetingContainer from "../greeting_container";
 import { Link } from "react-router-dom";
-import { useWindowDimension } from "../../util/windowDimension";
 
 interface CategoryNavBar {
   expand: boolean;
@@ -9,9 +8,8 @@ interface CategoryNavBar {
   right: string;
   setExpand: () => void;
 }
-const CategoryNavBar = (props: CategoryNavBar, params) => {
+const CategoryNavBar = (props: CategoryNavBar ) => {
   const { horizontal, setExpand } = props;
-  const { width } = useWindowDimension();
   const categories = [
     "Couch and Sofa",
     "Dining Table",
@@ -20,16 +18,7 @@ const CategoryNavBar = (props: CategoryNavBar, params) => {
     "Dining Chairs",
     "Outdoor Furniture",
   ];
-  const right = React.useMemo(() => {
-    {
-      if (width <= 450) {
-        return "right-1rem";
-      }
-      if (width <= 650) {
-        return "right-1rem";
-      }
-    }
-  }, [width]);
+
 
   return (
     <nav

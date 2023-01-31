@@ -28,7 +28,7 @@ class CartShow extends React.Component<CartShowProps> {
   render() {
     const { cartItems, updateCartItem, allProducts, deleteCartItem } =
       this.props;
-    let allItems =
+    const allItems =
       Object.values(cartItems).length !== 0 ? Object.values(cartItems) : [];
     let numberOfProducts = 0;
     allItems.forEach((cartItem) => (numberOfProducts += cartItem.quantity));
@@ -42,8 +42,8 @@ class CartShow extends React.Component<CartShowProps> {
       return null;
     }
 
-    let tax = totalPrice * 0.0825;
-    let subtotal = totalPrice + tax;
+    const tax = totalPrice * 0.0825;
+    const subtotal = totalPrice + tax;
 
     if (numberOfProducts === 0) {
       return (
