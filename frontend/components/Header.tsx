@@ -28,7 +28,6 @@ function Header(props: HeaderProps) {
   let numberOfProducts = 0;
   allItems.forEach((item) => (numberOfProducts += item.quantity));
 
-
   function hadleKeyword(e) {
     e.preventDefault();
     if (keyword.current.length) return;

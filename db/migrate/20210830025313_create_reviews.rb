@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateReviews < ActiveRecord::Migration[5.2]
   def change
     create_table :reviews do |t|
@@ -6,7 +8,6 @@ class CreateReviews < ActiveRecord::Migration[5.2]
       t.text :comment, null: false
       t.float :rating, null: false
       t.integer :helpful
-
       t.timestamps
     end
     add_index :reviews, :user_id

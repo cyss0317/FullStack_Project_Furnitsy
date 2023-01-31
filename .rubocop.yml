@@ -1,0 +1,13 @@
+AllCops:
+  Exclude:
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - './db/seeds/01_couches.rb'
+    - './db/seeds/02_tables.rb'
+    - './db/seeds/03_beds.rb'
+    - './db/seeds/04_chairs.rb'
+    - './app/views/api/products/_product.json.jbuilder'
+Style/Documentation:
+  Enabled: false
+Metrics/MethodLength:
+  Max: 1000
