@@ -126,7 +126,6 @@ class ReviewIndex extends React.Component<ReviewIndexProps, ReviewIndexStates> {
     );
   }
   renderErrors(errors) {
-    const errorsArr = Object.values(errors);
     return errors.length !== 0 ? (
       <div className="errors-container">
         <ul className="errors">
@@ -160,6 +159,7 @@ class ReviewIndex extends React.Component<ReviewIndexProps, ReviewIndexStates> {
     let userReviews;
     let userReview;
     if (currentUser === undefined) {
+      /* empty */
     } else {
       userReviews = reviewsArray.filter(
         (review) => review.user_id === currentUserId

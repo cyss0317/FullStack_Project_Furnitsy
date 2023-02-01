@@ -3,7 +3,7 @@ import ProductIndex from "./product_Index";
 import { ThunkReceiveProducts } from "../../actions/product_actions";
 import { Product } from "./types";
 
-const mSTP = (state ) => {
+const mSTP = (state) => {
   const products = Object.values(state.entities.products) as Array<Product>;
 
   const couchAndSofa = products.filter(

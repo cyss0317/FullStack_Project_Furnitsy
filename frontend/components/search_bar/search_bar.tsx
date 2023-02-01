@@ -37,16 +37,16 @@ class SearchBar extends React.Component<SearchBarProps, SearchBarStates> {
   }
 
   // filterByState(field, e) {
-    // const filteredProducts: Array<Product> = [];
-    // this.setState({ [field]: e.currentTarget.value });
-    // filteredProducts.forEach((product) => {
-    //   if (
-    //     product.color === this.state.field &&
-    //     !this.props.filteredByState.includes(product)
-    //   ) {
-    //     this.props.filteredByState.push(product);
-    //   }
-    // });
+  // const filteredProducts: Array<Product> = [];
+  // this.setState({ [field]: e.currentTarget.value });
+  // filteredProducts.forEach((product) => {
+  //   if (
+  //     product.color === this.state.field &&
+  //     !this.props.filteredByState.includes(product)
+  //   ) {
+  //     this.props.filteredByState.push(product);
+  //   }
+  // });
   // }
 
   render() {
@@ -58,7 +58,9 @@ class SearchBar extends React.Component<SearchBarProps, SearchBarStates> {
     products.forEach((product) => {
       keywords.forEach((word) => {
         const byName = product.name.toLowerCase().includes(word.toLowerCase());
-        const byColor = product.color.toLowerCase().includes(word.toLowerCase());
+        const byColor = product.color
+          .toLowerCase()
+          .includes(word.toLowerCase());
         if (
           byName &&
           byName !== byColor &&

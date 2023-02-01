@@ -8,7 +8,7 @@ interface CategoryNavBar {
   right: string;
   setExpand: () => void;
 }
-const CategoryNavBar = (props: CategoryNavBar ) => {
+const CategoryNavBar = (props: CategoryNavBar) => {
   const { horizontal, setExpand } = props;
   const categories = [
     "Couch and Sofa",
@@ -18,7 +18,6 @@ const CategoryNavBar = (props: CategoryNavBar ) => {
     "Dining Chairs",
     "Outdoor Furniture",
   ];
-
 
   return (
     <nav

@@ -14,7 +14,9 @@ const ReviewReducer = (oldState = {}, action) => {
     case RECEIVE_REVIEW:
       return Object.assign({}, oldState, { [action.review.id]: action.review });
     case RECEIVE_ALL_REVIEWS:
+      // eslint-disable-next-line no-case-declarations
       let reviews = Object.values(action.reviews);
+      // eslint-disable-next-line no-case-declarations
       let newState = {};
       reviews.forEach((review) => {
         newState[review.id] = review;

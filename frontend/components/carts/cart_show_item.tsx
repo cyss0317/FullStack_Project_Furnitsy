@@ -56,7 +56,7 @@ class CartShowItem extends React.Component<
   }
 
   render() {
-    const { item, allProducts,  } = this.props;
+    const { item, allProducts } = this.props;
     allProducts.length === 0 ? null : allProducts[item.product.id];
     console.log("cartshowItem", this.props);
     return (

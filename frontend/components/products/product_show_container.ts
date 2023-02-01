@@ -14,7 +14,7 @@ import {
 } from "../../actions/review_actions";
 import { openModal } from "../../actions/modal_actions";
 import { Review } from "../reviews/types";
-import { Product} from "./types";
+import { Product } from "./types";
 
 const mSTP = (state, ownProps) => {
   const product = state.entities.products[
