@@ -40,7 +40,7 @@ class CartShowItem extends React.Component<
   }
 
   onChangeHandler(e) {
-    let updateButton = document.getElementById("update-cartItem");
+    const updateButton = document.getElementById("update-cartItem");
     this.setState({ quantity: parseInt(e.currentTarget.value) });
     if (updateButton) updateButton.style.display = "block";
   }
@@ -56,9 +56,7 @@ class CartShowItem extends React.Component<
   }
 
   render() {
-    const { item, totalPrice, allProducts, updateCartItem } = this.props;
-    let tax = totalPrice * 0.0825;
-    let subtotal = totalPrice + tax;
+    const { item, allProducts } = this.props;
     allProducts.length === 0 ? null : allProducts[item.product.id];
     console.log("cartshowItem", this.props);
     return (

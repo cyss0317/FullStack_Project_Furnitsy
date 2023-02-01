@@ -1,6 +1,5 @@
 import React from "react";
 import ReviewIndex from "../reviews/reviews_index";
-import { CartItem } from "../carts/types";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
@@ -72,7 +71,7 @@ class ProductShow extends React.Component<ProductShowProps, ProductShowStates> {
   }
   rightSvgClickhandler(e) {
     e.preventDefault();
-    let newIndex =
+    const newIndex =
       this.props.photoUrls.indexOf(this.state.mainPic) + 1 >
       this.props.photoUrls.length + 1
         ? 0
@@ -83,7 +82,7 @@ class ProductShow extends React.Component<ProductShowProps, ProductShowStates> {
 
   leftSvgClickhandler(e) {
     e.preventDefault();
-    let newIndex =
+    const newIndex =
       this.props.photoUrls.indexOf(this.state.mainPic) - 1 < 0
         ? this.props.photoUrls.length - 1
         : this.props.photoUrls.indexOf(this.state.mainPic) - 1;

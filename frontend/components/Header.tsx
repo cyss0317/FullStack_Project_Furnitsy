@@ -9,7 +9,6 @@ import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
 import CartItemNumber from "./carts/CartItemNumber";
 import { useWindowDimension } from "../util/windowDimension";
-import { Cart } from "./carts/types";
 import { User } from "./types";
 
 interface HeaderProps {

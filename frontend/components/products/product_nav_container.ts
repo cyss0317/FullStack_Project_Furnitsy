@@ -6,23 +6,23 @@ import { Product } from "./types";
 const mSTP = (state, ownProps) => {
   const products = Object.values(state.entities.products) as Array<Product>;
 
-  let couchAndSofa = products.filter(
+  const couchAndSofa = products.filter(
     (product) => product.category === "Couch and Sofa"
   );
-  let outdoorFurniture = products.filter(
+  const outdoorFurniture = products.filter(
     (product) => product.category === "Outdoor Furniture"
   );
-  let diningTable = products.filter(
+  const diningTable = products.filter(
     (product) => product.category === "Dining Table"
   );
-  let coffeeTable = products.filter(
+  const coffeeTable = products.filter(
     (product) => product.category === "Coffee Table"
   );
-  let beds = products.filter((product) => product.category === "Beds");
-  let accentChairs = products.filter(
+  const beds = products.filter((product) => product.category === "Beds");
+  const accentChairs = products.filter(
     (product) => product.category === "Accent Chairs"
   );
-  let diningChairs = products.filter(
+  const diningChairs = products.filter(
     (product) => product.category === "Dining Chairs"
   );
 

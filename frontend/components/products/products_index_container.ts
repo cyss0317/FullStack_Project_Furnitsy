@@ -3,26 +3,26 @@ import ProductIndex from "./product_Index";
 import { ThunkReceiveProducts } from "../../actions/product_actions";
 import { Product } from "./types";
 
-const mSTP = (state, window) => {
+const mSTP = (state) => {
   const products = Object.values(state.entities.products) as Array<Product>;
 
-  let couchAndSofa = products.filter(
+  const couchAndSofa = products.filter(
     (product) => product.category === "Couch and Sofa"
   );
-  let outdoor = products.filter((product) => product.category === "Outdoor");
-  let diningTable = products.filter(
+  const outdoor = products.filter((product) => product.category === "Outdoor");
+  const diningTable = products.filter(
     (product) => product.category === "Dining Table"
   );
-  let coffeeTable = products.filter(
+  const coffeeTable = products.filter(
     (product) => product.category === "Coffee Table"
   );
-  let kidsBunkBed = products.filter(
+  const kidsBunkBed = products.filter(
     (product) => product.category === "Kids Bunk Bed"
   );
-  let accentChairs = products.filter(
+  const accentChairs = products.filter(
     (product) => product.category === "Accent Chairs"
   );
-  let diningChairs = products.filter(
+  const diningChairs = products.filter(
     (product) => product.category === "Dining Chairs"
   );
 

@@ -61,10 +61,9 @@ class ReviewIndex extends React.Component<ReviewIndexProps, ReviewIndexStates> {
 
   createReview(e) {
     e.preventDefault();
-    var x = document.getElementById("review-submit");
     this.props
       .createReview(this.state)
-      .then((res) => this.setState({ comment: "", rating: 1, helpful: 0 }));
+      .then(() => this.setState({ comment: "", rating: 1, helpful: 0 }));
   }
 
   onChangeHandler(e) {
@@ -127,7 +126,6 @@ class ReviewIndex extends React.Component<ReviewIndexProps, ReviewIndexStates> {
     );
   }
   renderErrors(errors) {
-    let errorsArr = Object.values(errors);
     return errors.length !== 0 ? (
       <div className="errors-container">
         <ul className="errors">
@@ -161,6 +159,7 @@ class ReviewIndex extends React.Component<ReviewIndexProps, ReviewIndexStates> {
     let userReviews;
     let userReview;
     if (currentUser === undefined) {
+      /* empty */
     } else {
       userReviews = reviewsArray.filter(
         (review) => review.user_id === currentUserId
@@ -171,12 +170,12 @@ class ReviewIndex extends React.Component<ReviewIndexProps, ReviewIndexStates> {
           : userReviews.filter((review) => review.product_id === productId)[0];
     }
 
-    let productReviews = reviewsArray.filter(
+    const productReviews = reviewsArray.filter(
       (review) => review.product_id === productId
     );
     let totalRating = 0;
     productReviews.forEach((review) => (totalRating += review.rating));
-    let avgRating = Math.round(totalRating / productReviews.length);
+    const avgRating = Math.round(totalRating / productReviews.length);
 
     return (
       <div id="reviews-main-container">
