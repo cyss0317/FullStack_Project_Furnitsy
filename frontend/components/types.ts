@@ -13,5 +13,5 @@ export interface User extends CreatedAt {
   session_token: string;
   password_digest: string;
   first_name: string;
-  reviews: Array<Review>;
+  reviews?: Array<Review>;
 }
