@@ -77,7 +77,8 @@ const Footer = () => {
           >
             <img
               src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/LI-Logo.png"
-              alt=""
+              alt="LinkedIn Logo"
+              loading="lazy"
               width="160"
               height="50"
             />
@@ -85,7 +86,8 @@ const Footer = () => {
           <a id="github" href="https://github.com/cyss0317" target="_blank">
             <img
               src="https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/Octocat.png"
-              alt=""
+              alt="Github Logo"
+              loading="lazy"
               width="100"
               height="80"
             />

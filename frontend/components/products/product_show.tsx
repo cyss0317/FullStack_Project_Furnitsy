@@ -115,6 +115,7 @@ class ProductShow extends React.Component<ProductShowProps, ProductShowStates> {
         {this.props.product.photoUrls.map((photo, index) => (
           <li key={index} className="picture-container-list-item-container">
             <img
+              loading="lazy"
               className="picture-container-list-item"
               src={photo}
               alt={photo}
@@ -138,6 +139,7 @@ class ProductShow extends React.Component<ProductShowProps, ProductShowStates> {
           />
         </button>
         <img
+          loading="lazy"
           className="picture-container-main"
           src={
             this.state.mainPic === undefined

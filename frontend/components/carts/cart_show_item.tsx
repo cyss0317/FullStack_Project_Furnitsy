@@ -68,6 +68,7 @@ class CartShowItem extends React.Component<
               className="cart-show-image-thumnails"
             >
               <img
+                loading="lazy"
                 alt={`${item.product.name}-image`}
                 className="cart-show-image-thumnail"
                 src={item.product.photoUrls[0]}

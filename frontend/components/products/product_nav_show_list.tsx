@@ -13,6 +13,7 @@ const ProductNavShowList = (props: ProductNavShowListProps) => {
     <li key={product.id} id={`recently-view-item`}>
       <Link to={`/products/${product.id}`} className="recently-view-image">
         <img
+          loading="lazy"
           alt={`${product.name}-image`}
           src={product.photoUrls[0]}
           onMouseEnter={(e) => applyEnlargeEffect(e)}
