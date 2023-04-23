@@ -17,7 +17,10 @@ body {
   font: inherit;
   cursor: pointer;
   outline: inherit;
-    width: 100%;
+  width: 100%;
+  transition: 0.15s;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 
 }
 
@@ -26,12 +29,9 @@ body {
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  transform: scale(1.1);
-  transition: 0.15s;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+  transform: scale(1.2);
 }
-.signup:active,
+/* .signup:active,
 .log-button:active {
   transform: scale(1);
-}
+} */

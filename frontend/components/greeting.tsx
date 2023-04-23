@@ -31,11 +31,9 @@ const Greeting = ({
   );
 
   const ifLoggedOut = () => (
-    <div className="signup-login">
-      <button className="log-button" onClick={() => openModal("Login")}>
-        Login
-      </button>
-    </div>
+    <button className="log-button" onClick={() => openModal("Login")}>
+      Login
+    </button>
   );
 
   return currentUser ? ifLoggedIn() : ifLoggedOut();

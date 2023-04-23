@@ -183,7 +183,7 @@ svg {
 
 svg:hover {
   background-color: rgba(237, 231, 231, 0.351);
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 #right-svg-button {

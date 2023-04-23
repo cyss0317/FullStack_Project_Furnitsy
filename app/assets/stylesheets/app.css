@@ -90,6 +90,7 @@ body {
   font-size: 1.5rem;
 }
 .header {
+  padding-bottom: 1rem;
   top: 0;
   position: sticky;
   margin-bottom: 1.5rem;
@@ -100,11 +101,11 @@ body {
   font-family: "Love Ya Like A Sister", cursive;
   color: #f1641e;
   transform: rotate(-5deg);
+  transition: transform 0.15s;
 }
 .header-logo:hover {
   cursor: pointer;
   transform: scale(1.05);
-  transition: 0.15s;
 }
 .header-logo:active {
   transform: scale(0.9);

@@ -29,8 +29,7 @@ const CategoryNavBar = (props: CategoryNavBar) => {
       {categories.map((category, index) => (
         <Link
           key={index}
-          className="shadow-bottom"
-          id="nav-bar-tag"
+          className="shadow-bottom nav-bar-tag"
           onClick={setExpand}
           to={`/category/${category}`}
         >
