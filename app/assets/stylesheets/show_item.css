@@ -285,6 +285,7 @@
     display: block;
     object-fit: contain;
     margin: auto;
+    height: 100%;
   }
   .picture-container-list {
     grid-row: 1 / 7;

@@ -162,11 +162,9 @@ class ProductShow extends React.Component<ProductShowProps, ProductShowStates> {
       </div>
     );
     return (
-      <div>
-        <div className="product-show-picture-container-inner">
-          {imageList()}
-          {mainImage()}
-        </div>
+      <div className="product-show-picture-container-inner">
+        {imageList()}
+        {mainImage()}
       </div>
     );
   }
