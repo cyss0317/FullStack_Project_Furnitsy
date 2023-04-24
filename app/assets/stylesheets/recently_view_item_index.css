@@ -31,17 +31,16 @@
   font-size: 13px;
   background-color: transparent;
   padding: 4px 8px 4px 8px;
+  transition: 0.1s;
 }
 
 .remove-button:hover {
   cursor: pointer;
   transform: scale(1.1);
-  transition: 0.3s;
 }
 
 .remove-button:active {
   transform: scale(0.95);
-  transition: 0.3s;
 }
 
 .recently-view-item link img {
@@ -92,6 +91,7 @@
   border-radius: 20px;
   object-fit: cover;
   border: 1px solid #22222240;
+  transition: 0.2s;
 }
 
 #recently-view-item link img {
@@ -113,6 +113,7 @@
   border-radius: 1rem;
   line-height: 1.2;
   font-size: 1.2rem;
+  transition: 0.2sec;
 }
 
 .nav-container {
@@ -120,13 +121,9 @@
 }
 
 .nav-container > a:hover {
-  /* text-decoration-color: #22222260; */
   box-shadow: #22222280 -2px 14px 13px -10px;
   transform: scale(1.1);
-  transition: 0.4sec;
   font-weight: bold;
-  /* border-bottom: 2px solid #22222260; */
-  /* padding-bottom: 0.5rem; */
 }
 .nav-static {
   display: flex;
@@ -142,6 +139,7 @@
   text-decoration: none;
   font-weight: bolder;
   position: relative;
+  transition: 0.2s;
 }
 
 #recently-view-item a span {

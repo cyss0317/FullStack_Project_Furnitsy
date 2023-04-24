@@ -16,14 +16,12 @@ const Greeting = ({
 }: GreetingProps) => {
   const ifLoggedIn = () => (
     <div
-      className={`flex gap-05 ${
+      className={`flex flex-row gap-05 justify-space-between align-items-center ${
         horizontal === false && "menu-bar-logout-container flex-col"
       }`}
     >
-      <div className="flex flex-row gap-1 justify-space-between">
-        <p className="welcome-message">Welcome, {currentUser.first_name}</p>
-        {horizontal === false && <CartHeaderContainer />}
-      </div>
+      <p className="welcome-message">Welcome, {currentUser.first_name}</p>
+      {horizontal === false && <CartHeaderContainer />}
       <button className="log-button" onClick={logout}>
         Logout
       </button>

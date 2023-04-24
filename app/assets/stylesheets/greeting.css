@@ -12,24 +12,32 @@ body {
 .log-button {
   padding: 0;
   background: none;
-  color: inherit;
+  /* color: inherit; */
   border: none;
   font: inherit;
   cursor: pointer;
   outline: inherit;
-  width: 100%;
+  width: clamp(75px, 100px, 150px);
+  padding: 0.5rem 1rem 0.5rem 1rem;
   transition: 0.15s;
   border-bottom-style: solid;
   border-bottom-width: 1px;
 
+  background-color: #565656; /* dark gray */
+  color: white;
+  /* padding: 4px 13px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 15px;
 }
 
 .signup:hover,
 .log-button:hover {
   cursor: pointer;
-  font-size: 16px;
   font-weight: bold;
-  transform: scale(1.2);
+  transform: scale(1.025);
 }
 /* .signup:active,
 .log-button:active {

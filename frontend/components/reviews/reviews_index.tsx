@@ -271,9 +271,6 @@ class ReviewIndex extends React.Component<ReviewIndexProps, ReviewIndexStates> {
                   onChange={(e) => this.onChangeHandler(e)}
                   value={this.state.comment}
                 />
-                <label htmlFor="error" title="text">
-                  Errors:{" "}
-                </label>
                 <input id="review-submit" type="submit" />
               </form>
             </div>

@@ -147,3 +147,7 @@ input:focus {
 .right-2_8 {
   right: -3.1rem;
 }
+
+.align-items-center {
+  align-items: center;
+}
