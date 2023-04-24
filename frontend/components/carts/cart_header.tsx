@@ -24,6 +24,7 @@ const CartHeader = ({ items, currentUser, openModal }: CartHeaderProps) => {
       <Link to="/cart_items" title="Image from freeiconspng.com">
         <img
           className="cart-image"
+          loading="lazy"
           src="https://www.freeiconspng.com/uploads/shopping-cart-icon-2.png"
           width="350"
           alt="Vectors Download Shopping Cart Free Icon"
@@ -41,6 +42,7 @@ const CartHeader = ({ items, currentUser, openModal }: CartHeaderProps) => {
       <a title="Image from freeiconspng.com" onClick={() => openModal("Login")}>
         <img
           className="cart-image"
+          loading="lazy"
           src="https://www.freeiconspng.com/uploads/shopping-cart-icon-2.png"
           width="350"
           alt="Vectors Download Shopping Cart Free Icon"

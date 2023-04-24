@@ -20,6 +20,7 @@ const ProductIndexItem = (props: ProductIndexItemProps) => {
         className="hot-items-image-thumnails"
       >
         <img
+          loading="lazy"
           alt={`${product.name}-image`}
           className={
             width <= 480

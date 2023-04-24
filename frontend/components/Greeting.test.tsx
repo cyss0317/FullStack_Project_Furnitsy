@@ -13,8 +13,15 @@ describe("Greeting", () => {
       session_token: "1234",
       password_digest: "1234",
       first_name: "Demo",
-    } 
-    render(<Greeting currentUser={user} logout={logout} openModal={openModal} horizontal={true} />);
+    };
+    render(
+      <Greeting
+        currentUser={user}
+        logout={logout}
+        openModal={openModal}
+        horizontal={true}
+      />
+    );
     expect(screen.getByText("Welcome, Demo")).toBeInTheDocument();
-  })
-})
+  });
+});
