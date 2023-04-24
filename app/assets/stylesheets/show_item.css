@@ -174,26 +174,24 @@
   border-radius: 10rem;
 }
 
-svg {
+.main-picture-container > .svg-button > svg {
   color: #7b7a7a;
-
   width: 34px;
+  transition: 0.15s;
   height: 34px;
 }
 
-svg:hover {
+.main-picture-container > .svg-button > svg:hover {
   background-color: rgba(237, 231, 231, 0.351);
-  border-radius: 50%;
+  transform: scale(1.2);
+
 }
 
 #right-svg-button {
   position: absolute;
   right: 1%;
   top: 47%;
-}
-#right-svg-button:hover {
   cursor: pointer;
-  /* background-color: rgba(222, 222, 222, 0.351) ; */
 }
 
 #left-svg-button {
@@ -201,18 +199,8 @@ svg:hover {
   left: 1%;
   z-index: 2;
   top: 47%;
-}
-
-#left-svg-button:hover {
   cursor: pointer;
-  /* background-color: rgba(222, 222, 222, 0.351) ; */
 }
-
-/* .svg-button:hover {
-    cursor: pointer;
-    background-color: rgba(222, 222, 222, 0.351) ;
-
-} */
 
 #show-page-footer {
   background-image: url(https://furnitsy-furniture-images.s3.us-east-2.amazonaws.com/show_page_background.jpg);
@@ -255,7 +243,7 @@ svg:hover {
 }
 
 .picture-container-main {
-  border-radius: 1px;
+  border-radius: 0.5rem;
   margin: 0 auto 0 auto;
 }
 
@@ -285,9 +273,7 @@ svg:hover {
     border: 5px rgb(139, 129, 129);
     border-radius: 8px !important;
     padding: -1px;
-  }
-  .picture-container-list-item {
-    /* width */
+    transition: 0.1s;
   }
 }
 
@@ -317,8 +303,7 @@ svg:hover {
     border: 5px rgb(139, 129, 129);
     border-radius: 8px !important;
     padding: -1px;
-    /* margin: 7px; */
-    /* overflow: hidden !important; */
+    transition: 0.15s;
   }
 }
 
@@ -327,7 +312,6 @@ svg:hover {
   border: 1px solid #22222260;
   border-radius: 18px !important;
   transform: scale(1.1);
-  transition: 0.15s;
 }
 .picture-container-list-item:active {
   transform: scale(1);
@@ -413,15 +397,14 @@ svg:hover {
   outline: none;
   border: none;
   background-color: white;
+  transition: 0.1s;
 }
 
 .buttons:hover {
   background-color: rgb(244, 244, 244);
-  transition: all 0.1s linear;
   cursor: pointer;
   border-radius: 15px;
   transform: scale(1.1);
-  transition: 0.15s;
   border: 0.2px rgb(179, 179, 179);
 }
 .buttons:active {
@@ -437,13 +420,12 @@ svg:hover {
   outline: none;
   border: none;
   background-color: white;
+  transition: 0.1s;
 }
 .highlights-button:hover {
   background-color: rgb(244, 244, 244);
-  transition: all 0.1s linear;
   cursor: pointer;
   border-radius: 15px;
-  transition: 0.15s;
   transform: scale(1.1);
   border: 0.2px rgb(179, 179, 179);
 }
@@ -451,9 +433,12 @@ svg:hover {
   transform: scale(1);
 }
 
+#add-to-cart {
+  transition: 0.15s;
+}
+
 #add-to-cart:hover {
   transform: scale(1.05);
-  transition: 0.15s;
   cursor: pointer;
 }
 
@@ -492,22 +477,23 @@ svg:hover {
   border-radius: 30px;
   color: white;
   font-size: 17px;
+  cursor: pointer;
+  transition: 0.1s;
 }
 #review-submit:hover {
-  cursor: pointer;
+  transform: scale(1.025);
 }
 #review-login {
   padding: 5px 8px 5px 8px;
   border-radius: 2rem;
+  transition: 0.1s;
 }
 #review-login:hover {
   cursor: pointer;
   transform: scale(1.1);
-  transition: 0.1s;
 }
 #review-login:active {
   transform: scale(0.9);
-  transition: 0.1s;
 }
 
 .rating > input:checked ~ label {

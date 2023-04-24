@@ -73,22 +73,30 @@
   border-color: #565656;
 }
 
+.session-form-submit {
+  transition: 0.15s;
+}
+
 .session-form-submit:hover {
   cursor: pointer;
   box-shadow: 2px 2px 2px rgb(121, 119, 117);
   transform: scale(1.1);
-  transition: 0.15s;
 }
+
 .session-form-submit:active {
   transform: scale(1);
+}
+
+.demo-button {
+  transition: 1.5s;
 }
 
 .demo-button:hover {
   cursor: pointer;
   transform: scale(1.1);
-  transition: 1.5s;
   box-shadow: 2px 2px 2px rgb(121, 119, 117);
 }
+
 .demo-button:active {
   transform: scale(1);
 }
@@ -96,22 +104,10 @@
   border-top: 2px solid #22222260;
   padding-top: 0.6rem;
 }
-.log-button {
-  background-color: #565656; /* dark gray */
-  border: none;
-  color: white;
-  padding: 4px 13px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 13px;
-  border-radius: 15px;
-}
 
 .logout-button:hover {
   cursor: pointer;
   transform: scale(1.1);
-  transition: 0.15s;
 }
 .logout-button:active {
   transform: scale(1);

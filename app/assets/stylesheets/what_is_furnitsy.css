@@ -110,19 +110,16 @@
 }
 
 .submit_to_email {
-  /* border: 1px solid #222222; */
   outline: none;
   border: none;
   border-radius: 15px;
   font-size: 20px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 9px;
-  padding-right: 9px;
+  padding: 6px 9px 6px 9px;
   margin-bottom: 36px;
   margin-top: 10px;
   color: #222222;
   background-color: #eeb161;
+  transition: 0.15s;
 }
 
 .submit_to_email:hover {
@@ -130,7 +127,6 @@
   background-color: #f37c40;
   color: #e9dac7;
   transform: scale(1.1);
-  transition: 0.15s;
 
 }
 .submit_to_email:active {

@@ -116,16 +116,17 @@
     grid-column: 8 / 9;
   }
 }
+#counts-main-div {
+  transition: 0.1s;
+}
 
 #counts-main-div:hover {
   cursor: pointer;
   transform: scale(1.1);
-  transition: 0.1s;
 }
 
 #counts-main-div:active {
   transform: scale(0.9);
-  transition: 0.05s;
 }
 #update-cartItem {
   background: none;
