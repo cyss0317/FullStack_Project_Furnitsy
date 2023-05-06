@@ -6,8 +6,16 @@
   left: 0;
   background: rgba(0, 0, 0, 0.7);
   z-index: 10;
-  animation: fade-in 0.5s ease-in;
-  opacity:0
+  animation: fade-in 0.2s ease-in-out;
+  /* opacity:0 */
+}
+
+.fade-in {
+  animation: fade-in 0.2s ease-in-out;
+}
+
+.fade-out {
+  animation: fade-out 0.2s ease-in-out;
 }
 
 .modal-child {
@@ -24,18 +32,22 @@
 
 @keyframes fade-in {
   0% {
+    transform: translate(100%, 0%);
     opacity: 0;
   }
   100% {
+    transition: translate(0%, 0%);
     opacity: 1;
   }
 }
 
-@keyframs fade-out {
+@keyframes fade-out {
   0% {
     opacity: 1;
+    transition: translate(0%, 0%);
   }
   100% {
     opacity: 0;
+    transform: translate(100%, 0%);
   }
 }
