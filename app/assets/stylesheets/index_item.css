@@ -134,3 +134,15 @@ element.style {
   transform: scale(1.05);
   transition: 0.1s;
 }
+
+a {
+  text-decoration: none;
+  color: #22222290;
+  cursor: pointer;
+}
+
+.link:hover {
+  transition: 0.1s;
+  transform: scale(1.05);
+  text-decoration:underline;
+}

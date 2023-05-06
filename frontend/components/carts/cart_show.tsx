@@ -59,7 +59,7 @@ class CartShow extends React.Component<CartShowProps> {
             <div className="cart-show-container">
               <div id="items-in-your-cart">
                 <h1>{numberOfProducts} items in your cart</h1>
-                <p>Keep shopping</p>
+                <Link className="link" to="/">Keep shopping</Link>
               </div>
 
               <div id="cart-items-and-total">
