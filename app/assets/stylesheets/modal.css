@@ -6,6 +6,8 @@
   left: 0;
   background: rgba(0, 0, 0, 0.7);
   z-index: 10;
+  animation: fade-in 0.5s ease-in;
+  opacity:0
 }
 
 .modal-child {
@@ -18,4 +20,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframs fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
