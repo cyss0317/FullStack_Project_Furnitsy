@@ -270,6 +270,8 @@
     align-items: center;
   }
   .picture-container-list-item {
+    min-width: 100px;
+    width: 95%;
     border: 5px rgb(139, 129, 129);
     border-radius: 8px !important;
     padding: -1px;
@@ -299,6 +301,7 @@
     align-items: center;
   }
   .picture-container-list-item {
+    min-width: 100px;
     width: 95%;
     height: 80%;
     border: 5px rgb(139, 129, 129);
