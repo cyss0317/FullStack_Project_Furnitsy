@@ -129,3 +129,8 @@ element.style {
 .shadow-bottom {
   box-shadow: #22222230 0px 10px 10px -10px;
 }
+
+#thumnail-span:hover {
+  transform: scale(1.05);
+  transition: 0.1s;
+}

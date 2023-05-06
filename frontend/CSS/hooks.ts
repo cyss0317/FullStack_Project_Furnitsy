@@ -2,15 +2,15 @@ export function useCSS() {
   const removeEnlargeEffect = (e) => {
     const img = e.target;
     const salesInfo = img.nextElementSibling;
-    img.className = e.target.className.replace(" hover-enlarge", "");
-    salesInfo.className = salesInfo.className.replace(" hover-enlarge", "");
+    img.classList.toggle("hover-enlarge");
+    salesInfo.classList.toggle("hover-enlarge");
   };
 
   const applyEnlargeEffect = (e) => {
     const img = e.target;
     const salesInfo = img.nextElementSibling;
-    img.className += " hover-enlarge";
-    salesInfo.className += " hover-enlarge";
+    img.classList.toggle("hover-enlarge");
+    salesInfo.classList.toggle("hover-enlarge");
   };
   return {
     removeEnlargeEffect,

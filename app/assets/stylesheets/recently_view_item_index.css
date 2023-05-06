@@ -161,6 +161,10 @@
   padding-right: 9px;
   min-width: 25px;
 }
+#recently-view-item a span:hover {
+  transform: scale(1.05);
+  transition: 0.1s;
+}
 
 .recently-view-item link img {
   display: block;
