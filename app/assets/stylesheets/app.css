@@ -64,6 +64,7 @@ body {
 
 #search-bar-submit {
   outline: none;
+  color: #f1641e;
   border: none;
   background-color: transparent;
   position: absolute;
@@ -118,7 +119,7 @@ input:focus {
 .header-searchbar {
   width: clamp(1rem, 37vw, 60vw);
   height: 43px;
-  border: 2.2px solid black;
+  border: 2.2px solid #f1641e;
   border-radius: 100px;
   padding-left: 15px;
   background-color: white;
