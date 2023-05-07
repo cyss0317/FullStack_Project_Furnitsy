@@ -38,6 +38,7 @@
   border-radius: 30px;
   color: white;
   font-size: 17px;
+  transition: 0.15s;
 }
 #add-to-cart-container {
   width: 100%;
@@ -184,7 +185,6 @@
 .main-picture-container > .svg-button > svg:hover {
   background-color: rgba(237, 231, 231, 0.351);
   transform: scale(1.2);
-
 }
 
 #right-svg-button {
@@ -437,9 +437,6 @@
   transform: scale(1);
 }
 
-#add-to-cart {
-  transition: 0.15s;
-}
 
 #add-to-cart:hover {
   transform: scale(1.05);

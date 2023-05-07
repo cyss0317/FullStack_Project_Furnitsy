@@ -28,7 +28,10 @@ class SessionForm extends React.Component {
     try {
       this.props.login(user).then(this.props.closeModal);
       this.props.closeModal();
-    } catch (err) {}
+    } catch (err) {
+      // eslint-disable-next-line no-undef
+      console.log(err)
+    }
   }
 
   changeHandler(field) {
@@ -57,12 +60,9 @@ class SessionForm extends React.Component {
           </div>
         </div>
         <form className="session-forms" onSubmit={this.submitHandler}>
-          <p className="welcome-message">
-            <span className="furnitsy-logo">Sign in to continue</span>{" "}
-          </p>
           <p className="form-type-message">
             {" "}
-            Sign in or register with your email address{" "}
+            Sign in or register with your email address to continue{" "}
           </p>
           <div>{this.props.errors.length > 0 ? this.renderErrors() : ""}</div>
 
