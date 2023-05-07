@@ -223,7 +223,7 @@ class ProductShow extends React.Component<ProductShowProps, ProductShowStates> {
           <div></div>
         </div>
 
-        <section className="show-description button">
+        <section className="show-description ">
           <h2 className="description flex-center-center">Description :</h2>
           <p> {product.description} </p>
         </section>
