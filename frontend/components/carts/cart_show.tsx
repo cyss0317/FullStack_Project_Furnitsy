@@ -7,7 +7,6 @@ import { User } from "../types";
 
 interface CartShowProps {
   cartItems: { [key: number]: CartItem };
-  // noCurrentUser: state.session.id;
   currentUser: User;
   allProducts: { [key: number]: Product };
   deleteCartItem: any;

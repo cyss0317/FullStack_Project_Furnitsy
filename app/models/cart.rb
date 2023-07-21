@@ -23,4 +23,8 @@ class Cart < ApplicationRecord
   has_many :products,
            through: :cart_items,
            source: :product
+
+  def current_cart(cart_id)
+    Cart.find_by(cart_id)
+  end
 end

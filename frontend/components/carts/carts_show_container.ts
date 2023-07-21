@@ -7,7 +7,7 @@ import {
 } from "../../actions/cart_items_actions";
 import { ThunkReceiveProducts } from "../../actions/product_actions";
 
-export const mSTP = (state) => {
+export const mSTP = (state, ownProps) => {
   return {
     noCurrentUser: state.session.id,
     cartItems: state.entities.cartItems,
@@ -15,7 +15,7 @@ export const mSTP = (state) => {
     allProducts: state.entities.products,
   };
 };
-
+// TODO: pass in cart Id
 export const mDTP = (dispatch) => ({
   deleteCartItem: (cartItemId) => dispatch(ThunkDeleteCartItem(cartItemId)),
   updateCartItem: (cartItem) => dispatch(ThunkUpdateCartItem(cartItem)),

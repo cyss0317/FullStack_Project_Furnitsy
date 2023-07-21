@@ -6,7 +6,8 @@ module Api
     before_action :require_login, only: [:destroy]
 
     def create
-      @cart_item = current_user.cart.cart_items.find_by(product_id: cart_item_params[:product_id])
+      @cart = Cart.current_cart(params[:cart_id])
+      @cart_item = @cart.cart_items.find_or_create_by(product_id: cart_item_params[:product_id])
       if @cart_item
         @cart_item.update!(quantity: @cart_item.quantity + cart_item_params[:quantity].to_i)
         render :show
@@ -30,7 +31,6 @@ module Api
                     end
 
       if @cart_items
-        # @cart_items
         render :index
       elsif !current_user
         redirect_to api_session_url

@@ -7,8 +7,9 @@ Rails.application.routes.draw do
     resources :users, only: %i[create show]
     resources :products, only: %i[show index]
     resource :session, only: %i[create destroy]
-    resources :cart_items, only: %i[create index destroy update]
-    resources :carts, only: %i[create show]
+    resources :carts, only: %i[create show] do
+      resources :cart_items, only: %i[create index destroy update]
+    end
     resources :reviews, only: %i[create destroy update show index]
   end
 end
