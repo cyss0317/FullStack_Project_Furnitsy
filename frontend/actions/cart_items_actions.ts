@@ -24,22 +24,22 @@ export const editCartItem = (cartItem) => ({
   cartItem: cartItem,
 });
 
-export const ThunkCreateCartItem = (productId, quantity) => (dispatch) =>
-  CartItemsAPIUtil.$createCartItem(productId, quantity).then((cartItem) =>
+export const ThunkCreateCartItem = (productId, quantity, cartId) => (dispatch) =>
+  CartItemsAPIUtil.$createCartItem(productId, quantity, cartId).then((cartItem) =>
     dispatch(createCartItem(cartItem))
   );
 
-export const ThunkReceiveCartItems = () => (dispatch) =>
-  CartItemsAPIUtil.$receiveCartItems().then((cartItems) =>
+export const ThunkReceiveCartItems = (cartId) => (dispatch) =>
+  CartItemsAPIUtil.$receiveCartItems(cartId).then((cartItems) =>
     dispatch(receiveCartItems(cartItems))
   );
 
-export const ThunkUpdateCartItem = (cartItem) => (dispatch) =>
-  CartItemsAPIUtil.$updateCartItem(cartItem).then((cartItem) =>
+export const ThunkUpdateCartItem = (cartItem, cartId) => (dispatch) =>
+  CartItemsAPIUtil.$updateCartItem(cartItem, cartId).then((cartItem) =>
     dispatch(editCartItem(cartItem))
   );
 
-export const ThunkDeleteCartItem = (cartItemId) => (dispatch) =>
-  CartItemsAPIUtil.$deleteCartItem(cartItemId).then(() =>
+export const ThunkDeleteCartItem = (cartItemId, cartId) => (dispatch) =>
+  CartItemsAPIUtil.$deleteCartItem(cartItemId, cartId).then(() =>
     dispatch(deleteCartItem(cartItemId))
   );
