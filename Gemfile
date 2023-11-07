@@ -42,8 +42,9 @@ gem 'ransack', '~> 2.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'rspec-rails', '~> 4.x'
   gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rspec-rails', '~> 5.x'
 end
 # gem 'pg', '0.18.1', group: :production
 gem 'rails_12factor', group: :production
@@ -73,7 +74,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-
-config.generators do |g|
-  g.factory_bot suffix: "factory"
-end
+# config.generators do |g|
+#   g.factory_bot suffix: "factory"
+# end
