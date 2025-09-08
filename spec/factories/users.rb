@@ -6,4 +6,10 @@ FactoryBot.define do
     password { 'abcdefg123' }
     first_name { Faker::Name.first_name }
   end
+
+  trait(:with_cart) do
+    after(:create) do |user|
+      
+    end
+  end
 end
