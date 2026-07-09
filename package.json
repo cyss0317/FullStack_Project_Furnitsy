@@ -51,7 +51,7 @@
   },
   "homepage": "https://github.com/cyss0317/FullStack_Project_Sunny#readme",
   "devDependencies": {
-    "@babel/core": "^7.20.12",
+    "@babel/core": "^7.29.6",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "@babel/preset-env": "^7.20.2",
@@ -77,6 +77,6 @@
     "ts-jest": "^29.0.5",
     "ts-loader": "^9.4.2",
     "typescript": "^4.9.5",
-    "webpack": "^5.75.0"
+    "webpack": "^5.107.2"
   }
 }
